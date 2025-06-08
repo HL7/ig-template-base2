@@ -43,6 +43,11 @@
       <li>
         <a href="#tabs-snap">{{site.data.stringsBase['{{[lang]}}']['SnapshotTable']}}</a>
       </li>
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+      <li>
+        <a href="#tabs-obligations">{{site.data.stringsBase['{{[lang]}}']['Obligations']}}</a>
+      </li>
+{% endif %}
 {% unless excludexml == 'y' %}
       <!--<li>
         <a href="#tabs-xml">{{site.data.stringsBase['{{[lang]}}']['PseudoXML']}}</a>
@@ -74,6 +79,25 @@
         <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
+
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-diff-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
+          <a name="tx"> </a>
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv-diff"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endunless%}
+
         </div>
       </div>
     </div>
@@ -82,9 +106,36 @@
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           {% include StructureDefinition-{{[id]}}-snapshot{{[langsuffix]}}.xhtml %}
+
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariants %}
+            {% include StructureDefinition-{{[id]}}-inv{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariants.size <= 218 %}
+            <a name="inv-snap"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv{{[langsuffix]}}.xhtml %}
+          {% endunless%}
         </div>
       </div>
     </div>
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+    <a name="tabs-obligations"> </a>
+    <div id="tabs-obligations">
+      <div id="tbl-obligations">
+        <div id="tbl-obligations-inner">
+          {% include StructureDefinition-{{[id]}}-obligations{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>
+    </div>
+{% endif %}
 {% unless excludexml == 'y' %}
     <!--<a name="tabs-xml"> </a>
     <div id="tabs-xml">
@@ -134,6 +185,21 @@
         <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-diff-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv-all-diff"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endunless%}
         </div>
       </div>
       <div id="all-tbl-snap">
@@ -142,8 +208,30 @@
         </p>
         <div id="all-tbl-snap-inner">
           {% include StructureDefinition-{{[id]}}-snapshot-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariants %}
+            {% include StructureDefinition-{{[id]}}-inv{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariants.size <= 218 %}
+            <a name="inv-all-snap"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv{{[langsuffix]}}.xhtml %}
+          {% endunless%}
         </div>
       </div>
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+      <div id="all-tbl-obligations">
+        <div id="all-tbl-obligations-inner">
+          {% include StructureDefinition-{{[id]}}-obligations-all{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>
+{% endif %}
 {% unless excludexml == 'y' %}
       <!--<div id="all-xml">
         <p>

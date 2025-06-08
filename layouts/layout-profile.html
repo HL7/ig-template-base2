@@ -105,9 +105,13 @@
       <div id="tbl-key">
         <div id="tbl-key-inner">
           {% include StructureDefinition-{{[id]}}-snapshot-by-key{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-by-key-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx-key{{[langsuffix]}}.xhtml %}
-        
+
           {% capture invariantskey %}
             {% include StructureDefinition-{{[id]}}-inv-key{{[langsuffix]}}.xhtml %}
           {% endcapture %}
@@ -126,6 +130,11 @@
         <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
+
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-diff-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
           <a name="tx"> </a>
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
@@ -147,6 +156,11 @@
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           {% include StructureDefinition-{{[id]}}-snapshot{{[langsuffix]}}.xhtml %}
+
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx{{[langsuffix]}}.xhtml %}
         
@@ -251,6 +265,9 @@
         </p>
         <div id="all-tbl-key-inner">
           {% include StructureDefinition-{{[id]}}-snapshot-by-key-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-by-key-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx-key{{[langsuffix]}}.xhtml %}
         
@@ -272,6 +289,9 @@
         <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-diff-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
         
@@ -292,6 +312,9 @@
         </p>
         <div id="all-tbl-snap-inner">
           {% include StructureDefinition-{{[id]}}-snapshot-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx{{[langsuffix]}}.xhtml %}
         
