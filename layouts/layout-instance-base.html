@@ -20,7 +20,7 @@
 {% unless example %}
   {% if '{{[type]}}' == 'CapabilityStatement' %}
       <p>
-      <a href="{{[id]}}.openapi.json" no-download="true">{{site.data.stringsBase['{{[lang]}}']['Swagger']}}</a> | <a href="{{[id]}}.openapi.json" download>{{site.data.stringsBase['{{[lang]}}']['Download']}}</a>
+      <a href="../{{[id]}}.openapi.json" no-download="true">{{site.data.stringsBase['{{[lang]}}']['Swagger']}}</a> | <a href="../{{[id]}}.openapi.json" download>{{site.data.stringsBase['{{[lang]}}']['Download']}}</a>
       </p>
   {% endif %}
 {% endunless %}

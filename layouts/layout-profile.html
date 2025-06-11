@@ -401,7 +401,7 @@
     </div>
   </div>
   <p>&#160;</p>
-  <p>{{site.data.stringsBase['{{[lang]}}']['OtherReps']}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV']}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel']}}</a>{% unless modelType == 'Logical Model' %}, <a href="../{{[type]}}-{{[id]}}.sch">{{site.data.stringsBase['{{[lang]}}']['Schematron']}}</a>
+  <p>{{site.data.stringsBase['{{[lang]}}']['OtherReps']}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV']}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel']}}</a>{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}, <a href="../{{[type]}}-{{[id]}}.sch">{{site.data.stringsBase['{{[lang]}}']['Schematron']}}</a>
 {% endunless %} 
   </p>
 
