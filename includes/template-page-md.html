@@ -17,6 +17,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 {:toc}
 * This will not be displayed
 </div>
+{% if site.data.languages.defLang != include.lang %}
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+{% if site.data.pages[localPage].translated[include.lang] %}
+{{site.data.stringsBase[include.lang]['TRANS_HLP']}}
+{% else %}
+{{site.data.stringsBase[include.lang]['NO_TRANS']}}
+{% endif %}
+</p>
+{% endif %}
 {% include {{path}}.md %}
 {% endcapture %}
 
