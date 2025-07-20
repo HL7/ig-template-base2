@@ -1,282 +1,346 @@
 # ActorDefinitionName
 msgid ""
 msgstr ""
+"Project-Id-Version: FHIR\n"
+"Report-Msgid-Bugs-To: you@example.com\n"
+"POT-Creation-Date: 2025-07-19 23:16+0000\n"
+"PO-Revision-Date: 2025-07-19 23:16+0000\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ActorDefinitionName
+#, fuzzy
 msgid "Requirements: Actor Definitions"
 msgstr "المتطلبات: تعريفات الممثل"
 
 # ActorDefinitionDesc
 #: ActorDefinitionDesc
+#, fuzzy
 msgid "The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide."
 msgstr "تحدد القطع الأثرية التالية أنواع الأفراد و/أو الأنظمة التي ستتفاعل كجزء من حالات الاستخدام التي يغطيها دليل التنفيذ هذا."
 
 # RequirementsName
 #: RequirementsName
+#, fuzzy
 msgid "Requirements: Formal Requirements"
 msgstr "المتطلبات: المتطلبات الرسمية"
 
 # RequirementsDesc
 #: RequirementsDesc
+#, fuzzy
 msgid "The following artifacts describe the specific requirements to be met by systems compliant with the implementation guide."
 msgstr "تصف الأدوات التالية المتطلبات المحددة التي يجب أن تستوفيها الأنظمة المتوافقة مع دليل التنفيذ."
 
 # CapabilityStatementName
 #: CapabilityStatementName
+#, fuzzy
 msgid "Behavior: Capability Statements"
 msgstr "السلوك: بيانات القدرات"
 
 # CapabilityStatementDesc
 #: CapabilityStatementDesc
+#, fuzzy
 msgid "The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."
 msgstr "تحدد النماذج التالية القدرات المحددة التي من المتوقع أن تمتلكها أنواع مختلفة من الأنظمة من أجل الامتثال لدليل التنفيذ هذا.  من المتوقع أن تعلن الأنظمة التي تتوافق مع دليل التنفيذ هذا التوافق مع واحد أو أكثر من بيانات القدرات التالية."
 
 # OperationDefinitionName
 #: OperationDefinitionName
+#, fuzzy
 msgid "Behavior: Operation Definitions"
 msgstr "السلوك: تعريفات العملية"
 
 # OperationDefinitionDesc
 #: OperationDefinitionDesc
+#, fuzzy
 msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
 msgstr "هذه عمليات مخصصة يمكن أن تدعمها و/أو تستدعيها الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # MessageDefinitionName
 #: MessageDefinitionName
+#, fuzzy
 msgid "Behavior: Message Definitions"
 msgstr "السلوك: تعريفات الرسائل"
 
 # MessageDefinitionDesc
 #: MessageDefinitionDesc
+#, fuzzy
 msgid "These define the types of messages that can be sent and/or received by systems conforming to this implementation guide."
 msgstr "تحدد أنواع الرسائل التي يمكن إرسالها و/أو استقبالها من قبل الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # SearchParameterName
 #: SearchParameterName
+#, fuzzy
 msgid "Behavior: Search Parameters"
 msgstr "السلوك: معلمات البحث"
 
 # SearchParameterDesc
 #: SearchParameterDesc
+#, fuzzy
 msgid "These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."
 msgstr "تحدد هذه الخصائص التي يمكن من خلالها البحث في خادم RESTful.  يمكن استخدامها أيضًا لفرز الموارد ذات الصلة وتضمينها."
 
 # ActivityDefinitionName
 #: ActivityDefinitionName
+#, fuzzy
 msgid "Knowledge Artifacts: Activity Definitions"
 msgstr "التحف المعرفية: تعريفات النشاط"
 
 # ActivityDefinitionDesc
 #: ActivityDefinitionDesc
+#, fuzzy
 msgid "These define activities that can be performed as part of content in this implementation guide."
 msgstr "تحدد هذه الأنشطة التي يمكن القيام بها كجزء من المحتوى في دليل التنفيذ هذا."
 
 # PlanDefinitionName
 #: PlanDefinitionName
+#, fuzzy
 msgid "Knowledge Artifacts: Plan Definitions"
 msgstr "التحف المعرفية: تعريفات الخطة"
 
 # PlanDefinitionDesc
 #: PlanDefinitionDesc
+#, fuzzy
 msgid "These define workflows, rules, strategies, or protocols as part of content in this implementation guide."
 msgstr "هذه تحدد مهام سير العمل أو القواعد أو الاستراتيجيات أو البروتوكولات كجزء من محتوى دليل التنفيذ هذا."
 
 # MeasureName
 #: MeasureName
+#, fuzzy
 msgid "Knowledge Artifacts: Measure"
 msgstr "التحف المعرفية: القياس"
 
 # MeasureDesc
 #: MeasureDesc
+#, fuzzy
 msgid "These define measures as part of content in this implementation guide."
 msgstr "تحدد هذه التدابير كجزء من محتوى دليل التنفيذ هذا."
 
 # LibraryName
 #: LibraryName
+#, fuzzy
 msgid "Knowledge Artifacts: Libraries"
 msgstr "التحف المعرفية: المكتبات"
 
 # LibraryDesc
 #: LibraryDesc
+#, fuzzy
 msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
 msgstr "هذه تحدد المنطق ومجموعات الأصول والمكتبات الأخرى كجزء من المحتوى في دليل التنفيذ هذا."
 
 # GraphDefinitionName
 #: GraphDefinitionName
+#, fuzzy
 msgid "Structures: Graph Definitions"
 msgstr "الهياكل: تعريفات الرسم البياني"
 
 # GraphDefinitionDesc
 #: GraphDefinitionDesc
+#, fuzzy
 msgid "These define collections of interrelated resources that are useful to pass around as a group."
 msgstr "هذه تحدد مجموعات من الموارد المترابطة التي من المفيد تمريرها كمجموعة."
 
 # LogicalModelName
 #: LogicalModelName
+#, fuzzy
 msgid "Structures: Logical Models"
 msgstr "الهياكل: النماذج المنطقية"
 
 # LogicalModelDesc
 #: LogicalModelDesc
+#, fuzzy
 msgid "These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."
 msgstr "وتحدد هذه النماذج نماذج البيانات التي تمثل المجال الذي يغطيه دليل التنفيذ هذا بمصطلحات أكثر ملاءمة للأعمال من موارد FHIR الأساسية."
 
 # QuestionnaireName
 #: QuestionnaireName
+#, fuzzy
 msgid "Structures: Questionnaires"
 msgstr "الهياكل: الاستبيانات"
 
 # QuestionnaireDesc
 #: QuestionnaireDesc
+#, fuzzy
 msgid "These define forms used by systems conforming to this implementation guide to capture or expose data to end users."
 msgstr "تحدد هذه النماذج المستخدمة من قبل الأنظمة المتوافقة مع دليل التنفيذ هذا لالتقاط البيانات أو كشفها للمستخدمين النهائيين."
 
 # AbstractProfileName
 #: AbstractProfileName
+#, fuzzy
 msgid "Structures: Abstract Profiles"
 msgstr "الهياكل: الملامح المجردة"
 
 # AbstractProfileDesc
 #: AbstractProfileDesc
+#, fuzzy
 msgid "These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly.  I.e. instances can conform to profiles *based* on these abstract profiles, but do not declare conformance to the abstract profiles themselves."
 msgstr "هذه هي ملفات التعريف الخاصة بالموارد أو أنواع البيانات التي تصف الأنماط المستخدمة من قبل ملفات التعريف الأخرى، ولكن لا يمكن إنشاؤها مباشرة.  أي أن النماذج يمكن أن تتوافق مع ملفات التعريف *بناءً* على هذه الملفات الشخصية المجردة، ولكنها لا تعلن التوافق مع ملفات التعريف المجردة نفسها."
 
 # ResourceProfileName
 #: ResourceProfileName
+#, fuzzy
 msgid "Structures: Resource Profiles"
 msgstr "الهياكل: لمحات عن الموارد"
 
 # ResourceProfileDesc
 #: ResourceProfileDesc
+#, fuzzy
 msgid "These define constraints on FHIR resources for systems conforming to this implementation guide."
 msgstr "تحدد هذه القيود على موارد FHIR للأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # DataTypeName
 #: DataTypeName
+#, fuzzy
 msgid "Structures: Data Type Profiles"
 msgstr "الهياكل: ملفات تعريف نوع البيانات"
 
 # DataTypeDesc
 #: DataTypeDesc
+#, fuzzy
 msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
 msgstr "تحدد هذه القيود على أنواع بيانات FHIR للأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # ExtensionName
 #: ExtensionName
+#, fuzzy
 msgid "Structures: Extension Definitions"
 msgstr "الهياكل: تعريفات التمديدات"
 
 # ExtensionDesc
 #: ExtensionDesc
+#, fuzzy
 msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
 msgstr "تحدد هذه القيود على أنواع بيانات FHIR للأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # ValueSetName
 #: ValueSetName
+#, fuzzy
 msgid "Terminology: Value Sets"
 msgstr "المصطلحات: مجموعات القيم"
 
 # ValueSetDesc
 #: ValueSetDesc
+#, fuzzy
 msgid "These define sets of codes used by systems conforming to this implementation guide."
 msgstr "تحدد مجموعات الرموز المستخدمة من قبل الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # CodeSystemName
 #: CodeSystemName
+#, fuzzy
 msgid "Terminology: Code Systems"
 msgstr "المصطلحات: أنظمة الرموز"
 
 # CodeSystemDesc
 #: CodeSystemDesc
+#, fuzzy
 msgid "These define new code systems used by systems conforming to this implementation guide."
 msgstr "هذه تحدد أنظمة التعليمات البرمجية الجديدة التي تستخدمها الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # NamingSystemName
 #: NamingSystemName
+#, fuzzy
 msgid "Terminology: Naming Systems"
 msgstr "المصطلحات: أنظمة التسمية"
 
 # NamingSystemDesc
 #: NamingSystemDesc
+#, fuzzy
 msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
 msgstr "تحدد هذه المعرفات و/أو هويات نظام الرموز المستخدمة من قبل الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # StructureMapName
 #: StructureMapName
+#, fuzzy
 msgid "Terminology: Structure Maps"
 msgstr "المصطلحات: خرائط الهيكل"
 
 # StructureMapDesc
 #: StructureMapDesc
+#, fuzzy
 msgid "These define transformations to convert between data structures used by systems conforming to this implementation guide."
 msgstr "تحدد هذه التحويلات للتحويل بين بنيات البيانات المستخدمة من قبل الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # ConceptMapName
 #: ConceptMapName
+#, fuzzy
 msgid "Terminology: Concept Maps"
 msgstr "المصطلحات: خرائط المفاهيم"
 
 # ConceptMapDesc
 #: ConceptMapDesc
+#, fuzzy
 msgid "These define transformations to convert between codes by systems conforming with this implementation guide."
 msgstr "تحدد هذه التحويلات للتحويل بين الرموز بواسطة الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # TestPlanName
 #: TestPlanName
+#, fuzzy
 msgid "Testing Artifacts: TestPlans"
 msgstr "اختبار القطع الأثرية: خطط الاختبار"
 
 # TestPlanDesc
 #: TestPlanDesc
+#, fuzzy
 msgid "These test plans are available to verify test coverage for this implementation guide"
 msgstr "خطط الاختبار هذه متاحة للتحقق من تغطية الاختبار لدليل التنفيذ هذا"
 
 # TestScriptName
 #: TestScriptName
+#, fuzzy
 msgid "Testing Artifacts: TestScripts"
 msgstr "أدوات الاختبار: نصوص الاختبار"
 
 # TestScriptDesc
 #: TestScriptDesc
+#, fuzzy
 msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
 msgstr "تعريفات الاختبار هذه متاحة لمحركات اختبار FHIR للتحقق من توافق الأنظمة مع دليل التنفيذ هذا"
 
 # ExampleScenarioName
 #: ExampleScenarioName
+#, fuzzy
 msgid "Example: Example Scenarios"
 msgstr "أمثلة: أمثلة على سيناريوهات"
 
 # ExampleScenarioDesc
 #: ExampleScenarioDesc
+#, fuzzy
 msgid "These define groups of interrelated examples that demonstrate one or more of the workflows supported by this implementation guide."
 msgstr "تحدد هذه الأمثلة مجموعات من الأمثلة المترابطة التي توضح واحدة أو أكثر من مهام سير العمل التي يدعمها دليل التنفيذ هذا."
 
 # ExampleName
 #: ExampleName
+#, fuzzy
 msgid "Example: Example Instances"
 msgstr "مثال: أمثلة على المثيلات"
 
 # ExampleDesc
 #: ExampleDesc
+#, fuzzy
 msgid "These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
 msgstr "هذه أمثلة توضح كيف يمكن أن تبدو البيانات التي تنتجها وتستهلكها الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # ExampleSupportingName
 #: ExampleSupportingName
+#, fuzzy
 msgid "Example: Example Supporting Instances"
 msgstr "مثال: أمثلة على المثيلات الداعمة"
 
 # ExampleSupportingDesc
 #: ExampleSupportingDesc
+#, fuzzy
 msgid "These are example instances that are not governed by this implementation guide, but which are necessary to support other examples defined in the IG."
 msgstr "هذه أمثلة على أمثلة لا يحكمها دليل التنفيذ هذا، ولكنها ضرورية لدعم الأمثلة الأخرى المحددة في دليل التنفيذ."
 
 # OtherName
 #: OtherName
+#, fuzzy
 msgid "Other"
 msgstr "أخرى"
 
 # OtherDesc
 #: OtherDesc
+#, fuzzy
 msgid "These are resources that are used within this implementation guide that do not fit into one of the other categories."
 msgstr "هذه هي الموارد المستخدمة في دليل التنفيذ هذا والتي لا تندرج ضمن إحدى الفئات الأخرى."
