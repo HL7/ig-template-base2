@@ -1,562 +1,682 @@
 # NO_TRANS
 msgid ""
 msgstr ""
+"Project-Id-Version: FHIR\n"
+"Report-Msgid-Bugs-To: you@example.com\n"
+"POT-Creation-Date: 2025-07-19 23:16+0000\n"
+"PO-Revision-Date: 2025-07-19 23:16+0000\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: NO_TRANS
+#, fuzzy
 msgid "There is no translation page available for the current page, so it has been rendered in the default language"
 msgstr "لا توجد صفحة ترجمة متاحة للصفحة الحالية، لذلك تم تقديمها باللغة الافتراضية"
 
 # TRANS_HLP
 #: TRANS_HLP
+#, fuzzy
 msgid "This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)."
 msgstr "تتضمن هذه الصفحة ترجمات من لغة المصدر الأصلية التي تم تأليف الدليل بها.  يمكن العثور على معلومات عن هذه الترجمات وتعليمات حول كيفية تقديم الملاحظات على الترجمات [هنا] (translationinfo.html)."
 
 # Experimental
 #: Experimental
+#, fuzzy
 msgid "Experimental"
 msgstr "تجريبي"
 
 # Swagger
 #: Swagger
+#, fuzzy
 msgid "Raw OpenAPI-Swagger Definition file"
 msgstr "ملف تعريف OpenAPI-Swagger الخام"
 
 # Download
 #: Download
+#, fuzzy
 msgid "Download"
 msgstr "تنزيل"
 
 # NoTestPlan
 #: NoTestPlan
+#, fuzzy
 msgid "No test plans are currently available for the %ARTIFACT%."
 msgstr "لا توجد خطط اختبار متوفرة حالياً ل %ARTIFACT%."
 
 # NoTestScript
 #: NoTestScript
+#, fuzzy
 msgid "No test scripts are currently available for the %ARTIFACT%."
 msgstr "لا تتوفر حالياً أي برامج نصية للاختبار ل %ARTIFACT%."
 
 # ChangeHistory
 #: ChangeHistory
+#, fuzzy
 msgid "Change History"
 msgstr "تغيير التاريخ"
 
 # HistoryOfChange
 #: HistoryOfChange
+#, fuzzy
 msgid "History of changes for %ARTIFACT%."
 msgstr "تاريخ التغييرات في %ARTIFACT%."
 
 # CodeSystemValuesets
 #: CodeSystemValuesets
+#, fuzzy
 msgid "This Code system is referenced in the definition of the following value sets:"
 msgstr "تتم الإشارة إلى نظام الرموز هذا في تعريف مجموعات القيم التالية:"
 
 # Contained
 #: Contained
+#, fuzzy
 msgid "Contained resources"
 msgstr "الموارد المحتواة"
 
 # FormalExtension
 #: FormalExtension
+#, fuzzy
 msgid "Formal Views of Extension Content"
 msgstr "الآراء الرسمية لمحتوى الإرشاد"
 
 # FormalProfile
 #: FormalProfile
+#, fuzzy
 msgid "Formal Views of Profile Content"
 msgstr "طرق العرض الرسمية لمحتوى الملف الشخصي"
 
 # ReadingStructures
 #: ReadingStructures
+#, fuzzy
 msgid "Description of Profiles, Differentials, Snapshots, and their representations"
 msgstr "وصف الملامح والفوارق واللقطات وتمثيلاتها"
 
 # KeyElementsTable
 #: KeyElementsTable
+#, fuzzy
 msgid "Key Elements Table"
 msgstr "جدول العناصر الرئيسية"
 
 # DifferentialTable
 #: DifferentialTable
+#, fuzzy
 msgid "Differential Table"
 msgstr "الجدول التفاضلي"
 
 # SnapshotTable
 #: SnapshotTable
+#, fuzzy
 msgid "Snapshot Table"
 msgstr "جدول اللقطات"
 
 # PseudoXML
 #: PseudoXML
+#, fuzzy
 msgid "Pseudo XML"
 msgstr "Pseudo XML الزائف"
 
 # PseudoJSON
 #: PseudoJSON
+#, fuzzy
 msgid "Pseudo JSON"
 msgstr "JSON الزائف"
 
 # PseudoTTL
 #: PseudoTTL
+#, fuzzy
 msgid "Pseudo TTL"
 msgstr "TTL زائف TTL"
 
 # StatisticsReferences
 #: StatisticsReferences
+#, fuzzy
 msgid "Statistics/References"
 msgstr "الإحصائيات/المراجع"
 
 # AllTables
 #: AllTables
+#, fuzzy
 msgid "All"
 msgstr "الكل"
 
 # Derived
 #: Derived
+#, fuzzy
 msgid "This structure is derived from %ARTIFACT%"
 msgstr "هذا التركيب مشتق من %ARTIFACT%"
 
 # KeyElementsView
 #: KeyElementsView
+#, fuzzy
 msgid "Key Elements View"
 msgstr "عرض العناصر الرئيسية"
 
 # DifferentialView
 #: DifferentialView
+#, fuzzy
 msgid "Differential View"
 msgstr "العرض التفاضلي"
 
 # SnapshotView
 #: SnapshotView
+#, fuzzy
 msgid "Snapshot View"
 msgstr "عرض اللقطة"
 
 # XMLTemplate
 #: XMLTemplate
+#, fuzzy
 msgid "XML Template"
 msgstr "قالب XML"
 
 # JSONTemplate
 #: JSONTemplate
+#, fuzzy
 msgid "JSON Template"
 msgstr "قالب JSON"
 
 # TTLTemplate
 #: TTLTemplate
+#, fuzzy
 msgid "TTL Template"
 msgstr "قالب TTL"
 
 # OtherReps
 #: OtherReps
+#, fuzzy
 msgid "Other representations of profile:"
 msgstr "تمثيلات أخرى للملف الشخصي:"
 
 # CSV
 #: CSV
+#, fuzzy
 msgid "CSV"
 msgstr "CSV"
 
 # Excel
 #: Excel
+#, fuzzy
 msgid "Excel"
 msgstr "إكسل"
 
 # Schematron
 #: Schematron
+#, fuzzy
 msgid "Schematron"
 msgstr "سكيماترون"
 
 # Example
 #: Example
+#, fuzzy
 msgid "Example"
 msgstr "مثال على ذلك"
 
 # Examples
 #: Examples
+#, fuzzy
 msgid "Examples"
 msgstr "أمثلة"
 
 # Raw
 #: Raw
+#, fuzzy
 msgid "Raw %FMT%"
 msgstr "النسبة المئوية الخام %FMT%"
 
 # Abstract
 #: Abstract
+#, fuzzy
 msgid "Abstract"
 msgstr "الخلاصة"
 
 # DetailedDescriptions
 #: DetailedDescriptions
+#, fuzzy
 msgid "Detailed Descriptions"
 msgstr "الأوصاف التفصيلية"
 
 # DefinitionsFor
 #: DefinitionsFor
+#, fuzzy
 msgid "Definitions for the %MODEL%"
 msgstr "تعريفات ل %MODEL%"
 
 # NoExamples
 #: NoExamples
+#, fuzzy
 msgid "No examples are currently available for the %ID% Profile."
 msgstr "لا توجد أمثلة متوفرة حالياً لملف التعريف %ID%."
 
 # ExamplesForProfile
 #: ExamplesForProfile
+#, fuzzy
 msgid "Examples for the %ID% Profile."
 msgstr "أمثلة لـ %ID% الملف الشخصي"
 
 # FormatProfile
 #: FormatProfile
+#, fuzzy
 msgid "%FMT% Profile"
 msgstr "%ملف تعريف %FMT%"
 
 # FormatRep
 #: FormatRep
+#, fuzzy
 msgid "%FMT% representation of the %ID% %TYPE%."
 msgstr "%تمثيل %FMT% لـ %ID% %النوع %النوع %."
 
 # Mappings
 #: Mappings
+#, fuzzy
 msgid "Mappings"
 msgstr "التعيينات"
 
 # MappingsFor
 #: MappingsFor
+#, fuzzy
 msgid "Mappings for the %ID% %TYPE%."
 msgstr "التعيينات الخاصة بـ %ID% %النوع %النوع %."
 
 # ChangesIn
 #: ChangesIn
+#, fuzzy
 msgid "Changes in the %ID% %TYPE%."
 msgstr "التغييرات في %ID% %النوع %النوع %."
 
 # Testing
 #: Testing
+#, fuzzy
 msgid "Testing"
 msgstr "الاختبار"
 
 # TestScripts
 #: TestScripts
+#, fuzzy
 msgid "Test Scripts"
 msgstr "البرامج النصية للاختبار"
 
 # Expansion
 #: Expansion
+#, fuzzy
 msgid "Expansion"
 msgstr "التوسعة"
 
 # Content
 #: Content
+#, fuzzy
 msgid "Content"
 msgstr "المحتوى"
 
 # XML
 #: XML
+#, fuzzy
 msgid "XML"
 msgstr "XML"
 
 # JSON
 #: JSON
+#, fuzzy
 msgid "JSON"
 msgstr "JSON"
 
 # TTL
 #: TTL
+#, fuzzy
 msgid "TTL"
 msgstr "TTL"
 
 # History
 #: History
+#, fuzzy
 msgid "History"
 msgstr "التاريخ"
 
 # Extension
 #: Extension
+#, fuzzy
 msgid "Extension"
 msgstr "التمديد"
 
 # LogicalModel
 #: LogicalModel
+#, fuzzy
 msgid "Logical Model"
 msgstr "النموذج المنطقي"
 
 # ResourceProfile
 #: ResourceProfile
+#, fuzzy
 msgid "Resource Profile"
 msgstr "الملف الشخصي للموارد"
 
 # DataTypeProfile
 #: DataTypeProfile
+#, fuzzy
 msgid "Data Type Profile"
 msgstr "ملف تعريف نوع البيانات"
 
 # Links
 #: Links
+#, fuzzy
 msgid "Links"
 msgstr "الروابط"
 
 # Notes
 #: Notes
+#, fuzzy
 msgid "Notes"
 msgstr "الملاحظات"
 
 # VisitFCP
 #: VisitFCP
+#, fuzzy
 msgid "Visit the FHIR Community Process Specification Registry"
 msgstr "تفضل بزيارة سجل مواصفات عملية مجتمع FHIR"
 
 # CountryFlag
 #: CountryFlag
+#, fuzzy
 msgid "flag"
 msgstr "العلم"
 
 # PrevPage
 #: PrevPage
+#, fuzzy
 msgid "< prev"
 msgstr "<السابق"
 
 # NextPage
 #: NextPage
+#, fuzzy
 msgid "next >"
 msgstr "التالي >"
 
 # PageBottom
 #: PageBottom
+#, fuzzy
 msgid "bottom"
 msgstr "القاع"
 
 # PageTop
 #: PageTop
+#, fuzzy
 msgid "top"
 msgstr "أعلى"
 
 # IGCopyright
 #: IGCopyright
+#, fuzzy
 msgid "IG © %YEAR%"
 msgstr "IG © %YEAR%."
 
 # IGPackage
 #: IGPackage
+#, fuzzy
 msgid "Package %PKG% based on %FHIRVER%."
 msgstr "الحزمة %PKG% استناداً إلى %FHIRVER%."
 
 # GeneratedDate
 #: GeneratedDate
+#, fuzzy
 msgid "Generated %DATE%"
 msgstr "تم إنشاء %التاريخ٪٪"
 
 # PageStandardsStatus
 #: PageStandardsStatus
+#, fuzzy
 msgid "Page standards status"
 msgstr "حالة معايير الصفحة"
 
 # StandardsStatus
 #: StandardsStatus
+#, fuzzy
 msgid "Standards Status"
 msgstr "حالة المعايير"
 
 # FromNormative
 #: FromNormative
+#, fuzzy
 msgid "from v%NORMVER%"
 msgstr "من v%NORMVER%"
 
 # MaturityLevel
 #: MaturityLevel
+#, fuzzy
 msgid "Maturity Level"
 msgstr "مستوى النضج"
 
 # OfficialURL
 #: OfficialURL
+#, fuzzy
 msgid "Official URL"
 msgstr "عنوان URL الرسمي"
 
 # CopyURL
 #: CopyURL
+#, fuzzy
 msgid "Click to copy URL"
 msgstr "انقر لنسخ عنوان URL"
 
 # CopyVersioned
 #: CopyVersioned
+#, fuzzy
 msgid "Click to copy versioned URL"
 msgstr "انقر لنسخ عنوان URL المنسوخ"
 
 # Version
 #: Version
+#, fuzzy
 msgid "Version"
 msgstr "الإصدار"
 
 # ResourceDate
 #: ResourceDate
+#, fuzzy
 msgid "as of %RESDATE%"
 msgstr "اعتبارًا من %RESDATE%"
 
 # Responsible
 #: Responsible
+#, fuzzy
 msgid "Responsible"
 msgstr "مسؤول"
 
 # Realm
 #: Realm
+#, fuzzy
 msgid "Realm"
 msgstr "عالم"
 
 # ComputableName
 #: ComputableName
+#, fuzzy
 msgid "Computable Name"
 msgstr "اسم قابل للحساب"
 
 # OtherIdentifiers
 #: OtherIdentifiers
+#, fuzzy
 msgid "Other Identifiers"
 msgstr "معرّفات أخرى"
 
 # Keywords
 #: Keywords
+#, fuzzy
 msgid "Keywords"
 msgstr "الكلمات المفتاحية"
 
 # Usage
 #: Usage
+#, fuzzy
 msgid "Usage"
 msgstr "الاستخدام"
 
 # CopyrightLegal
 #: CopyrightLegal
+#, fuzzy
 msgid "Copyright/Legal"
 msgstr "حقوق الطبع والنشر/قانوني"
 
 # NarrativeContent
 #: NarrativeContent
+#, fuzzy
 msgid "Narrative Content"
 msgstr "المحتوى السردي"
 
 # TableOfContents
 #: TableOfContents
+#, fuzzy
 msgid "Table of Contents"
 msgstr "جدول المحتويات"
 
 # QAReport
 #: QAReport
+#, fuzzy
 msgid "QA Report"
 msgstr "تقرير ضمان الجودة"
 
 # ReadingTerminology
 #: ReadingTerminology
+#, fuzzy
 msgid "Description of the above table(s)"
 msgstr "وصف الجدول (الجداول) أعلاه"
 
 # TestPlans
 #: TestPlans
+#, fuzzy
 msgid "Test Plans"
 msgstr "خطط الاختبار"
 
 # Actors
 #: Actors
+#, fuzzy
 msgid "Actors"
 msgstr "الممثلون"
 
 # Diagram
 #: Diagram
+#, fuzzy
 msgid "Diagram"
 msgstr "الرسم البياني"
 
 # Processes
 #: Processes
+#, fuzzy
 msgid "Processes"
 msgstr "العمليات"
 
 # Instances
 #: Instances
+#, fuzzy
 msgid "Instances"
 msgstr "المثيلات"
 
 # WorkInProgress
 #: WorkInProgress
+#, fuzzy
 msgid "The content in this section has not undergone work group review and may be significantly revised prior to the next ballot."
 msgstr "لم يخضع محتوى هذا القسم لمراجعة مجموعة العمل وقد يتم تنقيحه بشكل كبير قبل الاقتراع التالي."
 
 # Contents
 #: Contents
+#, fuzzy
 msgid "Contents"
 msgstr "المحتويات"
 
 # Globals
 #: Globals
+#, fuzzy
 msgid "Globals"
 msgstr "غلوبالز"
 
 # GlobalProfiles
 #: GlobalProfiles
+#, fuzzy
 msgid "Global Profiles"
 msgstr "الملامح العالمية"
 
 # ArtifactsIntro
 #: ArtifactsIntro
+#, fuzzy
 msgid "This page provides a list of the FHIR artifacts defined as part of this implementation guide."
 msgstr "توفر هذه الصفحة قائمة بأدوات FHIR المحددة كجزء من دليل التنفيذ هذا."
 
 # Derive
 #: Derive
+#, fuzzy
 msgid "This structure is derived from %ARTIFACT%"
 msgstr "هذا التركيب مشتق من %ARTIFACT%"
 
 # ArtifactsSummary
 #: ArtifactsSummary
+#, fuzzy
 msgid "Artifacts Summary"
 msgstr "ملخص القطع الأثرية"
 
 # Language
 #: Language
+#, fuzzy
 msgid "Language"
 msgstr "اللغة"
 
 # UMLDiagram
 #: UMLDiagram
+#, fuzzy
 msgid "UML Diagram"
 msgstr "مخطط UML البياني"
 
 # Obligations
 #: Obligations
+#, fuzzy
 msgid "Obligations"
 msgstr "الالتزامات"
 
 # OpenEHR
 #: OpenEHR
+#, fuzzy
 msgid "openEHR View"
 msgstr "طريقة عرض OpenEHR"
 
 # QuestionnaireTree
 #: QuestionnaireTree
+#, fuzzy
 msgid "Tree view"
 msgstr "عرض الشجرة"
 
 # QuestionnaireSample
 #: QuestionnaireSample
+#, fuzzy
 msgid "Sample Rendering"
 msgstr "نموذج العرض"
 
 # QuestionnaireLogic
 #: QuestionnaireLogic
+#, fuzzy
 msgid "Form Logic"
 msgstr "منطق الشكل"
 
 # QuestionnaireResponses
 #: QuestionnaireResponses
+#, fuzzy
 msgid "Sample completed form"
 msgstr "نموذج نموذج مكتمل"
 
 # TestQuestionnaire
 #: TestQuestionnaire
+#, fuzzy
 msgid "Test this Questionnaire"
 msgstr "اختبر هذا الاستبيان"
 
 # ResponsesQuestionnaire
 #: ResponsesQuestionnaire
+#, fuzzy
 msgid "Responses for this Questionnaire"
 msgstr "الردود على هذا الاستبيان"
 
 # NoQuestionnaireResponses
 #: NoQuestionnaireResponses
+#, fuzzy
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "لا توجد حاليًا أي مثيلات استبيان استبيانات محددة لهذا الاستبيان في هذا الدليل."
