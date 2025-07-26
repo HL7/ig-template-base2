@@ -27,7 +27,7 @@
     "QuestionnaireName": "Structures: Questionnaires",
     "QuestionnaireDesc": "These define forms used by systems conforming to this implementation guide to capture or expose data to end users.",
     "AbstractProfileName": "Structures: Abstract Profiles",
-    "AbstractProfileDesc": "These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly.  I.e. instances can conform to profiles *based* on these abstract profiles, but do not declare conformance to the abstract profiles themselves.",
+    "AbstractProfileDesc": "These are profiles on resources or data types that describe patterns used by other profiles but cannot be instantiated directly.  I.e. instances can conform to profiles *based* on these abstract profiles, but do not declare conformance to the abstract profiles themselves.",
     "ResourceProfileName": "Structures: Resource Profiles",
     "ResourceProfileDesc": "These define constraints on FHIR resources for systems conforming to this implementation guide.",
     "DataTypeName": "Structures: Data Type Profiles",
