@@ -7,8 +7,8 @@ function doRedirect() {
   for (i=0;i<langs.length;i++) {
     if ((userLang == langs[i]) || userLang.startsWith(langs[i]+"-")) {
       window.location.replace(langs[i]+"/"+pageName);
+      return;
     }
-    return;
   }
   window.location.replace(langs[0]+"/"+pageName);
 }
