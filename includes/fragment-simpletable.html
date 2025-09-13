@@ -1,5 +1,5 @@
 {% if site.data.resources[resource_].status.status or site.data.resources[resource_].status.standards-status %}
-  <table class="{{site.data.resources[resource_].status.class}}">
+  <table class="{{site.data.resources[resource_].status.class}}" data-fhir="generated">
     <tr>
 {% if site.data.resources[resource_].status.fmm %}
   {% assign colspan = 1 %}

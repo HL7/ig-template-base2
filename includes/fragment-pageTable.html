@@ -1,5 +1,5 @@
 {% if site.data.pages[localPage].status or site.data.pages[localPage].fmm %}
-  <table class="{{site.data.pages[localPage].statusclass}}">
+  <table class="{{site.data.pages[localPage].statusclass}}" data-fhir="generated">
     <tr>
   {% if site.data.pages[localPage].status %}
       <td>
