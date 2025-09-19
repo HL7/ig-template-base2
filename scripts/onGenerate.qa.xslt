@@ -12,22 +12,32 @@
     <xsl:apply-templates select="f:definition/f:resource"/>
   </xsl:template>
   <xsl:template match="@*|node()"/>
-  <xsl:template match="f:definition/f:resource[f:extension[@url='http://hl7.org/fhir/StructureDefinition/implementationguide-page']]">
-    <xsl:if test="not(f:name)">
+  <xsl:template match="f:definition/f:resource">
+    <xsl:if test="preceding-sibling::f:resource[f:name/@value=current()/f:name/@value]">
       <xsl:call-template name="raiseIssue">
         <xsl:with-param name="severity">error</xsl:with-param>
-        <xsl:with-param name="code">required</xsl:with-param>
-        <xsl:with-param name="details" select="concat('Unable to find ImplementationGuide.definition.resource.name for the resource ', f:reference/f:reference/@value, '.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.')"/>
-        <xsl:with-param name="location" select="concat('ImplementationGuide.definition.resource[', count(preceding::f:resource), ']')"/>
+        <xsl:with-param name="code">business-rule</xsl:with-param>
+        <xsl:with-param name="details" select="concat('There are multiple resources with the same title &quot;', f:name/@value, '&quot;.  This is not allowed because it produces duplicate entries in the table of contents.')"/>
+        <xsl:with-param name="location" select="concat('ImplementationGuide.definition.resource[', count(preceding-sibling::f:resource), ']')"/>
       </xsl:call-template>
     </xsl:if>
-    <xsl:if test="not(f:description)">
-      <xsl:call-template name="raiseIssue">
-        <xsl:with-param name="severity">warning</xsl:with-param>
-        <xsl:with-param name="code">invariant</xsl:with-param>
-        <xsl:with-param name="details" select="concat('Unable to find ImplementationGuide.definition.resource.description for the resource ', f:reference/f:reference/@value, '.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.')"/>
-        <xsl:with-param name="location" select="concat('ImplementationGuide.definition.resource[', count(preceding::f:resource), ']')"/>
-      </xsl:call-template>
+    <xsl:if test="f:extension[@url='http://hl7.org/fhir/StructureDefinition/implementationguide-page']">
+      <xsl:if test="not(f:name)">
+        <xsl:call-template name="raiseIssue">
+          <xsl:with-param name="severity">error</xsl:with-param>
+          <xsl:with-param name="code">required</xsl:with-param>
+          <xsl:with-param name="details" select="concat('Unable to find ImplementationGuide.definition.resource.name for the resource ', f:reference/f:reference/@value, '.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.')"/>
+          <xsl:with-param name="location" select="concat('ImplementationGuide.definition.resource[', count(preceding::f:resource), ']')"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:if test="not(f:description)">
+        <xsl:call-template name="raiseIssue">
+          <xsl:with-param name="severity">warning</xsl:with-param>
+          <xsl:with-param name="code">invariant</xsl:with-param>
+          <xsl:with-param name="details" select="concat('Unable to find ImplementationGuide.definition.resource.description for the resource ', f:reference/f:reference/@value, '.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.')"/>
+          <xsl:with-param name="location" select="concat('ImplementationGuide.definition.resource[', count(preceding::f:resource), ']')"/>
+        </xsl:call-template>
+      </xsl:if>
     </xsl:if>
   </xsl:template>
 </xsl:stylesheet>  
