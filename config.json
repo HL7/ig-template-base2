@@ -36,6 +36,11 @@
       "name": "change-history",
       "description": "Resource Change History",
       "isHistory": true
+    },
+    {
+      "name": "ai",
+      "description": "AI-Friendly View",
+      "isHistory": true
     }
   ],
   "_formats-documentation": "Lists the formats in the order format-specific pages should be generated.  (Note that suppressed formats won't appear, even if listed here.)",
@@ -85,15 +90,23 @@
   },
   "defaults": {
     "_documentation": "this object contains the default publishing policy for different types. Anything not mentioned defaults to true",
+    "ImplementationGuide": {
+      "template-base": "",
+      "template-format": "",
+      "template-change-history":"",
+      "base": "index.html"
+    },
     "Any": {
       "java": false,
       "template-base": "template/layouts/layout-instance-base.html",
       "template-format": "template/layouts/layout-instance-format.html",
+      "template-ai": "template/layouts/layout-ai.html",
       "base": "{{[type]}}-{{[id]}}.html",
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "list-types": "CodeSystem|ValueSet|NamingSystem",
       "template-change-history": "template/layouts/layout-changehistory.html",
-      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html",
+      "ai": "{{[type]}}-{{[id]}}.ai.html"
     },
     "example": {
       "java": false,
@@ -103,12 +116,6 @@
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "template-change-history": "template/layouts/layout-changehistory.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
-    },
-    "ImplementationGuide": {
-      "template-base": "",
-      "template-format": "",
-      "template-change-history":"",
-      "base": "index.html"
     },
     "StructureDefinition:extension": {
       "template-base": "template/layouts/layout-ext.html",
