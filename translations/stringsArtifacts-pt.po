@@ -1,7 +1,3 @@
-# ActorDefinitionName
-msgid ""
-msgstr ""
-
 #: ActorDefinitionName
 msgid "Requirements: Actor Definitions"
 msgstr "Requisitos: Definições de actores"
@@ -41,6 +37,16 @@ msgstr "Comportamento: Definições de operações"
 msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
 msgstr "Trata-se de operações personalizadas que podem ser suportadas e/ou invocadas por sistemas em conformidade com o presente guia de implementação."
 
+# EventDefinitionName
+#: EventDefinitionName
+msgid "Behavior: Event Definitions"
+msgstr "Поведение: определения событий"
+
+# EventDefinitionDesc
+#: EventDefinitionDesc
+msgid "Defines system and business occurrences that drive a need for data to flow from systems in this implementation guide."
+msgstr "В этом руководстве по внедрению определяются системные и бизнес-события, которые обуславливают необходимость передачи данных из систем."
+
 # MessageDefinitionName
 #: MessageDefinitionName
 msgid "Behavior: Message Definitions"
@@ -60,6 +66,16 @@ msgstr "Comportamento: Parâmetros de pesquisa"
 #: SearchParameterDesc
 msgid "These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."
 msgstr "Estas definem as propriedades pelas quais um servidor RESTful pode ser pesquisado.  Também podem ser utilizadas para ordenar e incluir recursos relacionados."
+
+# SubscriptionTopicName
+#: SubscriptionTopicName
+msgid "Behavior: Subscription Topics"
+msgstr "Поведение: Темы подписки"
+
+# SubscriptionTopicDesc
+#: SubscriptionTopicDesc
+msgid "These define the types of information that can be subscribed to on systems conforming to this this implementation guide."
+msgstr "Они определяют типы информации, на которые можно подписаться в системах, соответствующих настоящему руководству по внедрению."
 
 # ActivityDefinitionName
 #: ActivityDefinitionName
@@ -100,6 +116,36 @@ msgstr "Artefactos de conhecimento: Bibliotecas"
 #: LibraryDesc
 msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
 msgstr "Estes definem a lógica, as colecções de activos e outras bibliotecas como parte do conteúdo deste guia de implementação."
+
+# EvidenceName
+#: EvidenceName
+msgid "Knowledge Artifacts: Evidence"
+msgstr "Артефакты знаний: Доказательства"
+
+# EvidenceDesc
+#: EvidenceDesc
+msgid "Indicates research or other information that justifies or support the information exchange defined in this implemetnation guide."
+msgstr "Указывает на исследование или другую информацию, которая обосновывает или поддерживает обмен информацией, определенный в настоящем руководстве по внедрению."
+
+# EvidenceVariableName
+#: EvidenceVariableName
+msgid "Knowledge Artifacts: Evidence Variables"
+msgstr "Артефакты знаний: Переменные доказательства"
+
+# EvidenceVariableDesc
+#: EvidenceVariableDesc
+msgid "Components of the research that justify or support the information exchange defined in this implementation guide."
+msgstr "Компоненты исследования, которые обосновывают или поддерживают обмен информацией, определенный в настоящем руководстве по внедрению."
+
+# CitationNameName
+#: CitationNameName
+msgid "Knowledge Artifacts: Citations"
+msgstr "Артефакты знаний: Цитаты"
+
+# CitationNameDesc
+#: CitationNameDesc
+msgid "Supports referencing artifacts defined in this implementation guide."
+msgstr "Поддерживает ссылки на артефакты, определенные в этом руководстве по внедрению."
 
 # GraphDefinitionName
 #: GraphDefinitionName
@@ -201,6 +247,16 @@ msgstr "Terminologia: Sistemas de nomes"
 msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
 msgstr "Definem os identificadores e/ou as identidades dos sistemas de códigos utilizados pelos sistemas conformes com o presente guia de implementação."
 
+# TerminologyCapName
+#: TerminologyCapName
+msgid "Terminology: Terminology Capabilities"
+msgstr "Терминология: Возможности терминологии"
+
+# TerminologyCapDesc
+#: TerminologyCapDesc
+msgid "Parameters that define the expansion of value sets used within the implementation guide."
+msgstr "Параметры, определяющие расширение наборов значений, используемых в руководстве по внедрению."
+
 # StructureMapName
 #: StructureMapName
 msgid "Terminology: Structure Maps"
@@ -240,6 +296,46 @@ msgstr "Artefactos de teste: TestScripts"
 #: TestScriptDesc
 msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
 msgstr "Estas definições de teste estão disponíveis para os motores de teste FHIR para verificar se os sistemas estão em conformidade com este guia de implementação"
+
+# ConditionDefinitionName
+#: ConditionDefinitionName
+msgid "Clinical: Condition Definitions"
+msgstr "Клинические: Определения состояний"
+
+# ConditionDefinitionDesc
+#: ConditionDefinitionDesc
+msgid "Formal descriptions of conditions and symptoms relevant to the use of this implementation guide."
+msgstr "Формальные описания состояний и симптомов, имеющих отношение к использованию данного руководства по внедрению."
+
+# ObservationDefinitionName
+#: ObservationDefinitionName
+msgid "Clinical: Observation Definitions"
+msgstr "Клинические: Определения наблюдений"
+
+# ObservationDefinitionDesc
+#: ObservationDefinitionDesc
+msgid "Formal descriptions of types of observations relevant to the use of this implementation guide."
+msgstr "Формальные описания типов наблюдений, имеющих отношение к использованию настоящего руководства по внедрению."
+
+# SpecimenDefinitionName
+#: SpecimenDefinitionName
+msgid "Clinical: Specimen Definitions"
+msgstr "Клинические: определения образцов"
+
+# SpecimenDefinitionDesc
+#: SpecimenDefinitionDesc
+msgid "Formal descriptions of the types of specimens relevant to the use of this implementation guide."
+msgstr "Формальные описания типов образцов, имеющих отношение к использованию настоящего руководства по внедрению."
+
+# ChargeItemDefinitionName
+#: ChargeItemDefinitionName
+msgid "Clinical: Charge Item Definitions"
+msgstr "Клинические: Определения пунктов оплаты"
+
+# ChargeItemDefinitionDesc
+#: ChargeItemDefinitionDesc
+msgid "Definitions of chargeable costs relevant to the use of this implementation guide."
+msgstr "Определения подлежащих оплате расходов, имеющих отношение к использованию настоящего руководства по внедрению."
 
 # ExampleScenarioName
 #: ExampleScenarioName

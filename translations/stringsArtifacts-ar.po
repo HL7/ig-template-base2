@@ -1,7 +1,3 @@
-# ActorDefinitionName
-msgid ""
-msgstr ""
-
 #: ActorDefinitionName
 msgid "Requirements: Actor Definitions"
 msgstr "المتطلبات: تعريفات الممثل"
@@ -41,6 +37,16 @@ msgstr "السلوك: تعريفات العملية"
 msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
 msgstr "هذه عمليات مخصصة يمكن أن تدعمها و/أو تستدعيها الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
+# EventDefinitionName
+#: EventDefinitionName
+msgid "Behavior: Event Definitions"
+msgstr "السلوك: تعريفات الأحداث"
+
+# EventDefinitionDesc
+#: EventDefinitionDesc
+msgid "Defines system and business occurrences that drive a need for data to flow from systems in this implementation guide."
+msgstr "يقوم هذا الدليل التنفيذي بتعريف أحداث النظام والأعمال التي تؤدي إلى الحاجة إلى تدفق البيانات من الأنظمة."
+
 # MessageDefinitionName
 #: MessageDefinitionName
 msgid "Behavior: Message Definitions"
@@ -60,6 +66,16 @@ msgstr "السلوك: معلمات البحث"
 #: SearchParameterDesc
 msgid "These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."
 msgstr "تحدد هذه الخصائص التي يمكن من خلالها البحث في خادم RESTful.  يمكن استخدامها أيضًا لفرز الموارد ذات الصلة وتضمينها."
+
+# SubscriptionTopicName
+#: SubscriptionTopicName
+msgid "Behavior: Subscription Topics"
+msgstr "السلوك: مواضيع الاشتراك"
+
+# SubscriptionTopicDesc
+#: SubscriptionTopicDesc
+msgid "These define the types of information that can be subscribed to on systems conforming to this this implementation guide."
+msgstr "تحدد هذه أنواع المعلومات التي يمكن الاشتراك فيها على الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
 # ActivityDefinitionName
 #: ActivityDefinitionName
@@ -100,6 +116,36 @@ msgstr "التحف المعرفية: المكتبات"
 #: LibraryDesc
 msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
 msgstr "هذه تحدد المنطق ومجموعات الأصول والمكتبات الأخرى كجزء من المحتوى في دليل التنفيذ هذا."
+
+# EvidenceName
+#: EvidenceName
+msgid "Knowledge Artifacts: Evidence"
+msgstr "قطع المعرفة: الأدلة"
+
+# EvidenceDesc
+#: EvidenceDesc
+msgid "Indicates research or other information that justifies or support the information exchange defined in this implemetnation guide."
+msgstr "يشير إلى البحث أو المعلومات الأخرى التي تبرر أو تدعم تبادل المعلومات المحدد في دليل التنفيذ هذا."
+
+# EvidenceVariableName
+#: EvidenceVariableName
+msgid "Knowledge Artifacts: Evidence Variables"
+msgstr "قطع المعرفة: متغيرات الأدلة"
+
+# EvidenceVariableDesc
+#: EvidenceVariableDesc
+msgid "Components of the research that justify or support the information exchange defined in this implementation guide."
+msgstr "مكونات البحث التي تبرر أو تدعم تبادل المعلومات المحددة في دليل التنفيذ هذا."
+
+# CitationNameName
+#: CitationNameName
+msgid "Knowledge Artifacts: Citations"
+msgstr "قطع المعرفة: الاستشهادات"
+
+# CitationNameDesc
+#: CitationNameDesc
+msgid "Supports referencing artifacts defined in this implementation guide."
+msgstr "يدعم الإشارة إلى القطع الأثرية المحددة في دليل التنفيذ هذا."
 
 # GraphDefinitionName
 #: GraphDefinitionName
@@ -201,6 +247,16 @@ msgstr "المصطلحات: أنظمة التسمية"
 msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
 msgstr "تحدد هذه المعرفات و/أو هويات نظام الرموز المستخدمة من قبل الأنظمة المتوافقة مع دليل التنفيذ هذا."
 
+# TerminologyCapName
+#: TerminologyCapName
+msgid "Terminology: Terminology Capabilities"
+msgstr "المصطلحات: قدرات المصطلحات"
+
+# TerminologyCapDesc
+#: TerminologyCapDesc
+msgid "Parameters that define the expansion of value sets used within the implementation guide."
+msgstr "المعلمات التي تحدد توسيع مجموعات القيم المستخدمة في دليل التنفيذ."
+
 # StructureMapName
 #: StructureMapName
 msgid "Terminology: Structure Maps"
@@ -240,6 +296,46 @@ msgstr "أدوات الاختبار: نصوص الاختبار"
 #: TestScriptDesc
 msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
 msgstr "تعريفات الاختبار هذه متاحة لمحركات اختبار FHIR للتحقق من توافق الأنظمة مع دليل التنفيذ هذا"
+
+# ConditionDefinitionName
+#: ConditionDefinitionName
+msgid "Clinical: Condition Definitions"
+msgstr "السريرية: تعريفات الحالة"
+
+# ConditionDefinitionDesc
+#: ConditionDefinitionDesc
+msgid "Formal descriptions of conditions and symptoms relevant to the use of this implementation guide."
+msgstr "الأوصاف الرسمية للحالات والأعراض ذات الصلة باستخدام دليل التنفيذ هذا."
+
+# ObservationDefinitionName
+#: ObservationDefinitionName
+msgid "Clinical: Observation Definitions"
+msgstr "السريرية: تعريفات الملاحظة"
+
+# ObservationDefinitionDesc
+#: ObservationDefinitionDesc
+msgid "Formal descriptions of types of observations relevant to the use of this implementation guide."
+msgstr "الأوصاف الرسمية لأنواع الملاحظات ذات الصلة باستخدام دليل التنفيذ هذا."
+
+# SpecimenDefinitionName
+#: SpecimenDefinitionName
+msgid "Clinical: Specimen Definitions"
+msgstr "السريرية: تعريفات العينات"
+
+# SpecimenDefinitionDesc
+#: SpecimenDefinitionDesc
+msgid "Formal descriptions of the types of specimens relevant to the use of this implementation guide."
+msgstr "الأوصاف الرسمية لأنواع العينات ذات الصلة باستخدام دليل التنفيذ هذا."
+
+# ChargeItemDefinitionName
+#: ChargeItemDefinitionName
+msgid "Clinical: Charge Item Definitions"
+msgstr "سريريًا: تعريفات عناصر الشحنة"
+
+# ChargeItemDefinitionDesc
+#: ChargeItemDefinitionDesc
+msgid "Definitions of chargeable costs relevant to the use of this implementation guide."
+msgstr "تعريفات التكاليف القابلة للفرض ذات الصلة باستخدام دليل التنفيذ هذا."
 
 # ExampleScenarioName
 #: ExampleScenarioName

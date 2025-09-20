@@ -40,6 +40,9 @@
       <xsl:with-param name="prefix" select="'-test'"/>
     </xsl:call-template>
     <xsl:call-template name="doGrouping">
+      <xsl:with-param name="prefix" select="'-clin'"/>
+    </xsl:call-template>
+    <xsl:call-template name="doGrouping">
       <xsl:with-param name="prefix" select="'-ex'"/>
     </xsl:call-template>
     <xsl:call-template name="doGrouping">

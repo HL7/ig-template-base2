@@ -1,7 +1,3 @@
-# ActorDefinitionName
-msgid ""
-msgstr ""
-
 #: ActorDefinitionName
 msgid "Requirements: Actor Definitions"
 msgstr "Vereisten: Actordefinities"
@@ -41,6 +37,16 @@ msgstr "Gedrag: Werking Definities"
 msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
 msgstr "Dit zijn aangepaste operaties die ondersteund kunnen worden door en/of aangeroepen kunnen worden door systemen die voldoen aan deze implementatiegids."
 
+# EventDefinitionName
+#: EventDefinitionName
+msgid "Behavior: Event Definitions"
+msgstr "Gedrag: Gebeurtenisdefinities"
+
+# EventDefinitionDesc
+#: EventDefinitionDesc
+msgid "Defines system and business occurrences that drive a need for data to flow from systems in this implementation guide."
+msgstr "In deze implementatiehandleiding worden systeem- en bedrijfsgebeurtenissen gedefinieerd die de behoefte aan gegevensstroom vanuit systemen stimuleren."
+
 # MessageDefinitionName
 #: MessageDefinitionName
 msgid "Behavior: Message Definitions"
@@ -60,6 +66,16 @@ msgstr "Gedrag: Zoekparameters"
 #: SearchParameterDesc
 msgid "These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."
 msgstr "Deze definiëren de eigenschappen waarmee een RESTful server kan worden doorzocht.  Ze kunnen ook worden gebruikt om gerelateerde bronnen te sorteren en op te nemen."
+
+# SubscriptionTopicName
+#: SubscriptionTopicName
+msgid "Behavior: Subscription Topics"
+msgstr "Gedrag: Abonnementsonderwerpen"
+
+# SubscriptionTopicDesc
+#: SubscriptionTopicDesc
+msgid "These define the types of information that can be subscribed to on systems conforming to this this implementation guide."
+msgstr "Deze definiëren de typen informatie waarop geabonneerd kan worden op systemen die voldoen aan deze implementatiehandleiding."
 
 # ActivityDefinitionName
 #: ActivityDefinitionName
@@ -100,6 +116,36 @@ msgstr "Kennisartefacten: Bibliotheken"
 #: LibraryDesc
 msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
 msgstr "Deze definiëren logica, assetverzamelingen en andere bibliotheken als onderdeel van de inhoud in deze implementatiegids."
+
+# EvidenceName
+#: EvidenceName
+msgid "Knowledge Artifacts: Evidence"
+msgstr "Kennisartefacten: bewijs"
+
+# EvidenceDesc
+#: EvidenceDesc
+msgid "Indicates research or other information that justifies or support the information exchange defined in this implemetnation guide."
+msgstr "Geeft onderzoek of andere informatie aan die de in deze implementatiehandleiding gedefinieerde informatie-uitwisseling rechtvaardigt of ondersteunt."
+
+# EvidenceVariableName
+#: EvidenceVariableName
+msgid "Knowledge Artifacts: Evidence Variables"
+msgstr "Kennisartefacten: bewijsvariabelen"
+
+# EvidenceVariableDesc
+#: EvidenceVariableDesc
+msgid "Components of the research that justify or support the information exchange defined in this implementation guide."
+msgstr "Onderdelen van het onderzoek die de in deze implementatiegids gedefinieerde informatie-uitwisseling rechtvaardigen of ondersteunen."
+
+# CitationNameName
+#: CitationNameName
+msgid "Knowledge Artifacts: Citations"
+msgstr "Kennisartefacten: citaten"
+
+# CitationNameDesc
+#: CitationNameDesc
+msgid "Supports referencing artifacts defined in this implementation guide."
+msgstr "Ondersteunt het verwijzen naar artefacten die in deze implementatiehandleiding zijn gedefinieerd."
 
 # GraphDefinitionName
 #: GraphDefinitionName
@@ -201,6 +247,16 @@ msgstr "Terminologie: Naamgevingssystemen"
 msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
 msgstr "Deze definiëren identiteiten van identificatiesystemen en/of codesystemen die gebruikt worden door systemen die voldoen aan deze implementatiegids."
 
+# TerminologyCapName
+#: TerminologyCapName
+msgid "Terminology: Terminology Capabilities"
+msgstr "Terminologie: Terminologiemogelijkheden"
+
+# TerminologyCapDesc
+#: TerminologyCapDesc
+msgid "Parameters that define the expansion of value sets used within the implementation guide."
+msgstr "Parameters die de uitbreiding van waardesets definiëren die in de implementatiehandleiding worden gebruikt."
+
 # StructureMapName
 #: StructureMapName
 msgid "Terminology: Structure Maps"
@@ -240,6 +296,46 @@ msgstr "Test artefacten: TestScripts"
 #: TestScriptDesc
 msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
 msgstr "Deze testdefinities zijn beschikbaar voor FHIR test engines om te controleren of systemen voldoen aan deze implementatiegids."
+
+# ConditionDefinitionName
+#: ConditionDefinitionName
+msgid "Clinical: Condition Definitions"
+msgstr "Klinisch: Definities van aandoeningen"
+
+# ConditionDefinitionDesc
+#: ConditionDefinitionDesc
+msgid "Formal descriptions of conditions and symptoms relevant to the use of this implementation guide."
+msgstr "Formele beschrijvingen van aandoeningen en symptomen die relevant zijn voor het gebruik van deze implementatiegids."
+
+# ObservationDefinitionName
+#: ObservationDefinitionName
+msgid "Clinical: Observation Definitions"
+msgstr "Klinisch: Observatiedefinities"
+
+# ObservationDefinitionDesc
+#: ObservationDefinitionDesc
+msgid "Formal descriptions of types of observations relevant to the use of this implementation guide."
+msgstr "Formele beschrijvingen van soorten observaties die relevant zijn voor het gebruik van deze implementatiegids."
+
+# SpecimenDefinitionName
+#: SpecimenDefinitionName
+msgid "Clinical: Specimen Definitions"
+msgstr "Klinisch: Specimendefinities"
+
+# SpecimenDefinitionDesc
+#: SpecimenDefinitionDesc
+msgid "Formal descriptions of the types of specimens relevant to the use of this implementation guide."
+msgstr "Formele beschrijvingen van de soorten specimens die relevant zijn voor het gebruik van deze implementatiegids."
+
+# ChargeItemDefinitionName
+#: ChargeItemDefinitionName
+msgid "Clinical: Charge Item Definitions"
+msgstr "Klinisch: Definities van kostenposten"
+
+# ChargeItemDefinitionDesc
+#: ChargeItemDefinitionDesc
+msgid "Definitions of chargeable costs relevant to the use of this implementation guide."
+msgstr "Definities van in rekening te brengen kosten die relevant zijn voor het gebruik van deze implementatiegids."
 
 # ExampleScenarioName
 #: ExampleScenarioName

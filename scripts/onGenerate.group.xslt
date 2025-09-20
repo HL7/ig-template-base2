@@ -60,12 +60,17 @@
               <xsl:when test="$infoExt='Requirements'">-req-requirements</xsl:when>
               <xsl:when test="$infoExt='CapabilityStatement'">-dyn-capabilitystatement</xsl:when>
               <xsl:when test="$infoExt='OperationDefinition'">-dyn-operationdefinition</xsl:when>
+              <xsl:when test="$infoExt='EventDefinition'">-dyn-eventdefinition</xsl:when>
               <xsl:when test="$infoExt='MessageDefinition'">-dyn-messagedefinition</xsl:when>
               <xsl:when test="$infoExt='SearchParameter'">-dyn-searchparameter</xsl:when>
+              <xsl:when test="$infoExt='SuscriptionTopic'">-dyn-subscriptiontopic</xsl:when>
               <xsl:when test="$infoExt='ActivityDefinition'">-ka-activitydefinition</xsl:when>
-              <xsl:when test="$infoExt='Measure'">-ka-measure</xsl:when>
               <xsl:when test="$infoExt='PlanDefinition'">-ka-plandefinition</xsl:when>
+              <xsl:when test="$infoExt='Measure'">-ka-measure</xsl:when>
               <xsl:when test="$infoExt='Library'">-ka-library</xsl:when>
+              <xsl:when test="$infoExt='Evidence'">-ka-evidence</xsl:when>
+              <xsl:when test="$infoExt='EvidenceVariable'">-ka-evidencevariable</xsl:when>
+              <xsl:when test="$infoExt='Citation'">-ka-citation</xsl:when>
               <xsl:when test="$infoExt='GraphDefinition'">-str-graphdefinition</xsl:when>
               <xsl:when test="starts-with($infoExt,'StructureDefinition:logical')">-str-logicalmodel</xsl:when>
               <xsl:when test="$infoExt='Questionnaire'">-str-questionnaire</xsl:when>
@@ -76,11 +81,16 @@
               <xsl:when test="$infoExt='ValueSet'">-term-valueset</xsl:when>
               <xsl:when test="$infoExt='CodeSystem'">-term-codesystem</xsl:when>
               <xsl:when test="$infoExt='NamingSystem'">-term-namingsystem</xsl:when>
+              <xsl:when test="$infoExt='TerminologyCapabilities'">-term-terminologycapabilities</xsl:when>
               <xsl:when test="$infoExt='StructureMap'">-map-structuremap</xsl:when>
               <xsl:when test="$infoExt='ConceptMap'">-map-conceptmap</xsl:when>
-              <xsl:when test="$infoExt='ExampleScenario'">-ex-examplescenario</xsl:when>
               <xsl:when test="$infoExt='TestPlan'">-test-testplan</xsl:when>
               <xsl:when test="$infoExt='TestScript'">-test-testscript</xsl:when>
+              <xsl:when test="$infoExt='ConditionDefinition'">-clin-conditiondefinition</xsl:when>
+              <xsl:when test="$infoExt='ObservationDefinition'">-clin-observationdefinition</xsl:when>
+              <xsl:when test="$infoExt='SpecimenDefinition'">-clin-specimendefinition</xsl:when>
+              <xsl:when test="$infoExt='ChargeItemDefinition'">-clin-chargeitemdefinition</xsl:when>
+              <xsl:when test="$infoExt='ExampleScenario'">-ex-examplescenario</xsl:when>
               <xsl:otherwise>-other</xsl:otherwise>
             </xsl:choose>
           </xsl:variable>
