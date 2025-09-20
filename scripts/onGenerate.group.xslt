@@ -63,7 +63,7 @@
               <xsl:when test="$infoExt='EventDefinition'">-dyn-eventdefinition</xsl:when>
               <xsl:when test="$infoExt='MessageDefinition'">-dyn-messagedefinition</xsl:when>
               <xsl:when test="$infoExt='SearchParameter'">-dyn-searchparameter</xsl:when>
-              <xsl:when test="$infoExt='SuscriptionTopic'">-dyn-subscriptiontopic</xsl:when>
+              <xsl:when test="$infoExt='SubscriptionTopic'">-dyn-subscriptiontopic</xsl:when>
               <xsl:when test="$infoExt='ActivityDefinition'">-ka-activitydefinition</xsl:when>
               <xsl:when test="$infoExt='PlanDefinition'">-ka-plandefinition</xsl:when>
               <xsl:when test="$infoExt='Measure'">-ka-measure</xsl:when>
