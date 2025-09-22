@@ -1,15 +1,34 @@
-# ActorDefinitionName
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-19 06:30+0000\n"
+"PO-Revision-Date: 2025-09-19 07:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
 
 #: ActorDefinitionName
 msgid "Requirements: Actor Definitions"
-msgstr "Требования: Определения актеров"
+msgstr "Требования: Определения участников"
 
 # ActorDefinitionDesc
 #: ActorDefinitionDesc
-msgid "The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide."
-msgstr "Следующие артефакты определяют типы людей и/или систем, которые будут взаимодействовать в рамках сценариев использования, рассматриваемых в данном руководстве по внедрению."
+msgid ""
+"The following artifacts define the types of individuals and/or systems that "
+"will interact as part of the use cases covered by this implementation guide."
+msgstr ""
+"Следующие артефакты определяют типы лиц и/или систем, которые будут "
+"взаимодействовать в рамках сценариев использования, рассматриваемых в данном "
+"руководстве по внедрению."
 
 # RequirementsName
 #: RequirementsName
@@ -18,18 +37,32 @@ msgstr "Требования: Формальные требования"
 
 # RequirementsDesc
 #: RequirementsDesc
-msgid "The following artifacts describe the specific requirements to be met by systems compliant with the implementation guide."
-msgstr "Следующие артефакты описывают конкретные требования, которым должны соответствовать системы, отвечающие руководству по внедрению."
+msgid ""
+"The following artifacts describe the specific requirements to be met by "
+"systems compliant with the implementation guide."
+msgstr ""
+"Следующие артефакты описывают конкретные требования, которым должны "
+"соответствовать системы, отвечающие руководству по внедрению."
 
 # CapabilityStatementName
 #: CapabilityStatementName
 msgid "Behavior: Capability Statements"
-msgstr "Поведение: Заявления о способностях"
+msgstr "Поведение: Заявления о возможностях"
 
 # CapabilityStatementDesc
 #: CapabilityStatementDesc
-msgid "The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."
-msgstr "Следующие артефакты определяют конкретные возможности, которыми должны обладать системы различных типов, чтобы соответствовать данному руководству по внедрению.  Ожидается, что системы, соответствующие данному руководству по внедрению, заявят о соответствии одному или нескольким из следующих заявлений о возможностях."
+msgid ""
+"The following artifacts define the specific capabilities that different "
+"types of systems are expected to have in order to comply with this "
+"implementation guide.  Systems conforming to this implementation guide are "
+"expected to declare conformance to one or more of the following capability "
+"statements."
+msgstr ""
+"Следующие артефакты определяют конкретные возможности, которыми должны "
+"обладать системы различных типов, чтобы соответствовать данному руководству "
+"по внедрению. Ожидается, что системы, соответствующие данному руководству по "
+"внедрению, заявят о соответствии одному или нескольким из следующих "
+"заявлений о возможностях."
 
 # OperationDefinitionName
 #: OperationDefinitionName
@@ -38,8 +71,12 @@ msgstr "Поведение: Определения операций"
 
 # OperationDefinitionDesc
 #: OperationDefinitionDesc
-msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
-msgstr "Это пользовательские операции, которые могут поддерживаться и/или вызываться системами, соответствующими данному руководству по реализации."
+msgid ""
+"These are custom operations that can be supported by and/or invoked by "
+"systems conforming to this implementation guide."
+msgstr ""
+"Это пользовательские операции, которые могут поддерживаться и/или вызываться "
+"системами, соответствующими данному руководству по внедрению."
 
 # MessageDefinitionName
 #: MessageDefinitionName
@@ -48,8 +85,12 @@ msgstr "Поведение: Определения сообщений"
 
 # MessageDefinitionDesc
 #: MessageDefinitionDesc
-msgid "These define the types of messages that can be sent and/or received by systems conforming to this implementation guide."
-msgstr "Они определяют типы сообщений, которые могут быть отправлены и/или получены системами, соответствующими данному руководству по внедрению."
+msgid ""
+"These define the types of messages that can be sent and/or received by "
+"systems conforming to this implementation guide."
+msgstr ""
+"Они определяют типы сообщений, которые могут быть отправлены и/или получены "
+"системами, соответствующими данному руководству по внедрению."
 
 # SearchParameterName
 #: SearchParameterName
@@ -58,18 +99,27 @@ msgstr "Поведение: Параметры поиска"
 
 # SearchParameterDesc
 #: SearchParameterDesc
-msgid "These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."
-msgstr "Они определяют свойства, по которым можно осуществлять поиск на RESTful-сервере.  Они также могут использоваться для сортировки и включения связанных ресурсов."
+msgid ""
+"These define the properties by which a RESTful server can be searched.  They "
+"can also be used for sorting and including related resources."
+msgstr ""
+"Они определяют свойства, по которым можно осуществлять поиск на RESTful-"
+"сервере.  Они также могут использоваться для сортировки и включения "
+"связанных ресурсов."
 
 # ActivityDefinitionName
 #: ActivityDefinitionName
 msgid "Knowledge Artifacts: Activity Definitions"
-msgstr "Артефакты знаний: Определения деятельности"
+msgstr "Артефакты знаний: Определения видов деятельности"
 
 # ActivityDefinitionDesc
 #: ActivityDefinitionDesc
-msgid "These define activities that can be performed as part of content in this implementation guide."
-msgstr "Они определяют действия, которые могут быть выполнены в рамках содержания данного руководства по внедрению."
+msgid ""
+"These define activities that can be performed as part of content in this "
+"implementation guide."
+msgstr ""
+"Они определяют действия, которые могут быть выполнены в рамках содержания "
+"данного руководства по внедрению."
 
 # PlanDefinitionName
 #: PlanDefinitionName
@@ -78,18 +128,24 @@ msgstr "Артефакты знаний: Определения плана"
 
 # PlanDefinitionDesc
 #: PlanDefinitionDesc
-msgid "These define workflows, rules, strategies, or protocols as part of content in this implementation guide."
-msgstr "Они определяют рабочие процессы, правила, стратегии или протоколы, являющиеся частью содержимого данного руководства по внедрению."
+msgid ""
+"These define workflows, rules, strategies, or protocols as part of content "
+"in this implementation guide."
+msgstr ""
+"Они определяют рабочие процессы, правила, стратегии или протоколы, "
+"являющиеся частью содержимого данного руководства по внедрению."
 
 # MeasureName
 #: MeasureName
 msgid "Knowledge Artifacts: Measure"
-msgstr "Артефакты знаний: Измерение"
+msgstr "Артефакты знаний: Показатели/Метрики"
 
 # MeasureDesc
 #: MeasureDesc
 msgid "These define measures as part of content in this implementation guide."
-msgstr "Эти меры являются частью содержания данного руководства по внедрению."
+msgstr ""
+"Они определяют показатели как часть содержания данного руководства по "
+"внедрению"
 
 # LibraryName
 #: LibraryName
@@ -98,18 +154,26 @@ msgstr "Артефакты знаний: Библиотеки"
 
 # LibraryDesc
 #: LibraryDesc
-msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
-msgstr "Они определяют логику, коллекции активов и другие библиотеки как часть контента в данном руководстве по внедрению."
+msgid ""
+"These define logic, asset collections and other libraries as part of content "
+"in this implementation guide."
+msgstr ""
+"Они определяют логику, коллекции активов и другие библиотеки как часть "
+"контента в данном руководстве по внедрению."
 
 # GraphDefinitionName
 #: GraphDefinitionName
 msgid "Structures: Graph Definitions"
-msgstr "Структуры: Определения графов"
+msgstr "Структуры: Определения графов данных"
 
 # GraphDefinitionDesc
 #: GraphDefinitionDesc
-msgid "These define collections of interrelated resources that are useful to pass around as a group."
-msgstr "Они определяют коллекции взаимосвязанных ресурсов, которые полезно передавать по кругу."
+msgid ""
+"These define collections of interrelated resources that are useful to pass "
+"around as a group."
+msgstr ""
+"Они определяют коллекции взаимосвязанных ресурсов, которые полезно "
+"передавать по кругу."
 
 # LogicalModelName
 #: LogicalModelName
@@ -118,18 +182,29 @@ msgstr "Структуры: Логические модели"
 
 # LogicalModelDesc
 #: LogicalModelDesc
-msgid "These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."
-msgstr "Они определяют модели данных, которые представляют область, охватываемую данным руководством по внедрению, в более удобных для бизнеса терминах, чем базовые ресурсы FHIR."
+msgid ""
+"These define data models that represent the domain covered by this "
+"implementation guide in more business-friendly terms than the underlying "
+"FHIR resources."
+msgstr ""
+"Они определяют модели данных, которые представляют область, охватываемую "
+"данным руководством по внедрению, в более удобных для бизнеса терминах, чем "
+"базовые ресурсы FHIR."
 
 # QuestionnaireName
 #: QuestionnaireName
 msgid "Structures: Questionnaires"
-msgstr "Структуры: анкеты"
+msgstr "Структуры: Опросники"
 
 # QuestionnaireDesc
 #: QuestionnaireDesc
-msgid "These define forms used by systems conforming to this implementation guide to capture or expose data to end users."
-msgstr "Они определяют формы, используемые системами, соответствующими данному руководству по внедрению, для получения или предоставления данных конечным пользователям."
+msgid ""
+"These define forms used by systems conforming to this implementation guide "
+"to capture or expose data to end users."
+msgstr ""
+"Они определяют формы, используемые системами, соответствующими данному "
+"руководству по внедрению, для получения или предоставления данных конечным "
+"пользователям."
 
 # AbstractProfileName
 #: AbstractProfileName
@@ -138,8 +213,17 @@ msgstr "Структуры: Абстрактные профили"
 
 # AbstractProfileDesc
 #: AbstractProfileDesc
-msgid "These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly.  I.e. instances can conform to profiles *based* on these abstract profiles, but do not declare conformance to the abstract profiles themselves."
-msgstr "Это профили ресурсов или типов данных, которые описывают шаблоны, используемые другими профилями, но не могут быть инстанцированы напрямую.  То есть экземпляры могут соответствовать профилям, *основанным* на этих абстрактных профилях, но не декларируют соответствие самим абстрактным профилям."
+msgid ""
+"These are profiles on resources or data types that describe patterns used by "
+"other profiles, but cannot be instantiated directly.  I.e. instances can "
+"conform to profiles *based* on these abstract profiles, but do not declare "
+"conformance to the abstract profiles themselves."
+msgstr ""
+"Это профили ресурсов или типов данных, которые описывают шаблоны, "
+"используемые другими профилями, но не могут быть инстанцированы напрямую.  "
+"То есть экземпляры могут соответствовать профилям, *основанным* на этих "
+"абстрактных профилях, но не декларируют соответствие самим абстрактным "
+"профилям."
 
 # ResourceProfileName
 #: ResourceProfileName
@@ -148,8 +232,12 @@ msgstr "Структуры: Профили ресурсов"
 
 # ResourceProfileDesc
 #: ResourceProfileDesc
-msgid "These define constraints on FHIR resources for systems conforming to this implementation guide."
-msgstr "Они определяют ограничения на ресурсы FHIR для систем, соответствующих данному руководству по внедрению."
+msgid ""
+"These define constraints on FHIR resources for systems conforming to this "
+"implementation guide."
+msgstr ""
+"Они определяют ограничения на ресурсы FHIR для систем, соответствующих "
+"данному руководству по внедрению."
 
 # DataTypeName
 #: DataTypeName
@@ -158,18 +246,17 @@ msgstr "Структуры: Профили типов данных"
 
 # DataTypeDesc
 #: DataTypeDesc
-msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
-msgstr "Они определяют ограничения на типы данных FHIR для систем, соответствующих данному руководству по реализации."
+msgid ""
+"These define constraints on FHIR data types for systems conforming to this "
+"implementation guide."
+msgstr ""
+"Они определяют ограничения на типы данных FHIR для систем, соответствующих "
+"данному руководству по внедрению."
 
 # ExtensionName
 #: ExtensionName
 msgid "Structures: Extension Definitions"
 msgstr "Структуры: Определения расширений"
-
-# ExtensionDesc
-#: ExtensionDesc
-msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
-msgstr "Они определяют ограничения на типы данных FHIR для систем, соответствующих данному руководству по реализации."
 
 # ValueSetName
 #: ValueSetName
@@ -178,8 +265,12 @@ msgstr "Терминология: Наборы значений"
 
 # ValueSetDesc
 #: ValueSetDesc
-msgid "These define sets of codes used by systems conforming to this implementation guide."
-msgstr "Они определяют наборы кодов, используемых системами, соответствующими данному руководству по внедрению."
+msgid ""
+"These define sets of codes used by systems conforming to this implementation "
+"guide."
+msgstr ""
+"Они определяют наборы кодов, используемых системами, соответствующими "
+"данному руководству по внедрению."
 
 # CodeSystemName
 #: CodeSystemName
@@ -188,8 +279,12 @@ msgstr "Терминология: Системы кодов"
 
 # CodeSystemDesc
 #: CodeSystemDesc
-msgid "These define new code systems used by systems conforming to this implementation guide."
-msgstr "Они определяют новые системы кодов, используемые системами, соответствующими данному руководству по внедрению."
+msgid ""
+"These define new code systems used by systems conforming to this "
+"implementation guide."
+msgstr ""
+"Они определяют новые системы кодов, используемые системами, соответствующими "
+"данному руководству по внедрению."
 
 # NamingSystemName
 #: NamingSystemName
@@ -198,18 +293,26 @@ msgstr "Терминология: Системы именования"
 
 # NamingSystemDesc
 #: NamingSystemDesc
-msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
-msgstr "Они определяют идентификаторы и/или кодовые системы, используемые системами, соответствующими данному руководству по внедрению."
+msgid ""
+"These define identifier and/or code system identities used by systems "
+"conforming to this implementation guide."
+msgstr ""
+"Они определяют идентификаторы и/или кодовые системы, используемые системами, "
+"соответствующими данному руководству по внедрению."
 
 # StructureMapName
 #: StructureMapName
 msgid "Terminology: Structure Maps"
-msgstr "Терминология: Карты структуры"
+msgstr "Терминология: Карты преобразования структур"
 
 # StructureMapDesc
 #: StructureMapDesc
-msgid "These define transformations to convert between data structures used by systems conforming to this implementation guide."
-msgstr "Они определяют преобразования для конвертации между структурами данных, используемыми системами, соответствующими данному руководству по реализации."
+msgid ""
+"These define transformations to convert between data structures used by "
+"systems conforming to this implementation guide."
+msgstr ""
+"Они определяют преобразования для конвертации между структурами данных, "
+"используемыми системами, соответствующими данному руководству по внедрению."
 
 # ConceptMapName
 #: ConceptMapName
@@ -218,8 +321,12 @@ msgstr "Терминология: Концептуальные карты"
 
 # ConceptMapDesc
 #: ConceptMapDesc
-msgid "These define transformations to convert between codes by systems conforming with this implementation guide."
-msgstr "Они определяют преобразования для конвертации между кодами систем, соответствующих данному руководству по внедрению."
+msgid ""
+"These define transformations to convert between codes by systems conforming "
+"with this implementation guide."
+msgstr ""
+"Они определяют преобразования для конвертации между кодами систем, "
+"соответствующих данному руководству по внедрению."
 
 # TestPlanName
 #: TestPlanName
@@ -228,8 +335,12 @@ msgstr "Артефакты тестирования: TestPlans"
 
 # TestPlanDesc
 #: TestPlanDesc
-msgid "These test plans are available to verify test coverage for this implementation guide"
-msgstr "Эти планы тестирования доступны для проверки покрытия тестами данного руководства по реализации"
+msgid ""
+"These test plans are available to verify test coverage for this "
+"implementation guide"
+msgstr ""
+"Эти планы тестирования доступны для проверки покрытия тестами данного "
+"руководства по внедрению"
 
 # TestScriptName
 #: TestScriptName
@@ -238,8 +349,12 @@ msgstr "Артефакты тестирования: TestScripts"
 
 # TestScriptDesc
 #: TestScriptDesc
-msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
-msgstr "Эти тестовые определения доступны для тестовых движков FHIR для проверки соответствия систем данному руководству по внедрению."
+msgid ""
+"These test definitions are available to FHIR test engines to verify systems "
+"are conforming to this implementation guide"
+msgstr ""
+"Эти тестовые определения доступны для тестовых движков FHIR для проверки "
+"соответствия систем данному руководству по внедрению."
 
 # ExampleScenarioName
 #: ExampleScenarioName
@@ -248,8 +363,12 @@ msgstr "Пример: Примерные сценарии"
 
 # ExampleScenarioDesc
 #: ExampleScenarioDesc
-msgid "These define groups of interrelated examples that demonstrate one or more of the workflows supported by this implementation guide."
-msgstr "Они определяют группы взаимосвязанных примеров, демонстрирующих один или несколько рабочих процессов, поддерживаемых данным руководством по внедрению."
+msgid ""
+"These define groups of interrelated examples that demonstrate one or more of "
+"the workflows supported by this implementation guide."
+msgstr ""
+"Они определяют группы взаимосвязанных примеров, демонстрирующих один или "
+"несколько рабочих процессов, поддерживаемых данным руководством по внедрению."
 
 # ExampleName
 #: ExampleName
@@ -258,8 +377,13 @@ msgstr "Пример: Примеры экземпляров"
 
 # ExampleDesc
 #: ExampleDesc
-msgid "These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
-msgstr "Это примеры экземпляров, которые показывают, как могут выглядеть данные, создаваемые и потребляемые системами, соответствующими данному руководству по внедрению."
+msgid ""
+"These are example instances that show what data produced and consumed by "
+"systems conforming with this implementation guide might look like."
+msgstr ""
+"Это примеры экземпляров, которые показывают, как могут выглядеть данные, "
+"создаваемые и потребляемые системами, соответствующими данному руководству "
+"по внедрению."
 
 # ExampleSupportingName
 #: ExampleSupportingName
@@ -268,8 +392,13 @@ msgstr "Пример: Пример поддерживающих экземпля
 
 # ExampleSupportingDesc
 #: ExampleSupportingDesc
-msgid "These are example instances that are not governed by this implementation guide, but which are necessary to support other examples defined in the IG."
-msgstr "Это примеры, которые не регулируются данным руководством по внедрению, но которые необходимы для поддержки других примеров, определенных в IG."
+msgid ""
+"These are example instances that are not governed by this implementation "
+"guide, but which are necessary to support other examples defined in the IG."
+msgstr ""
+"Это примеры, которые не регулируются данным руководством по внедрению, но "
+"которые необходимы для поддержки других примеров, определенных в руководстве "
+"по внедрению."
 
 # OtherName
 #: OtherName
@@ -278,5 +407,9 @@ msgstr "Другие"
 
 # OtherDesc
 #: OtherDesc
-msgid "These are resources that are used within this implementation guide that do not fit into one of the other categories."
-msgstr "Это ресурсы, которые используются в рамках данного руководства по внедрению и не входят ни в одну из других категорий."
+msgid ""
+"These are resources that are used within this implementation guide that do "
+"not fit into one of the other categories."
+msgstr ""
+"Это ресурсы, которые используются в рамках данного руководства по внедрению "
+"и не входят ни в одну из других категорий."
