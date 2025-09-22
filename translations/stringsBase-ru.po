@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-19 07:42+0000\n"
-"PO-Revision-Date: 2025-09-19 09:29+0000\n"
+"PO-Revision-Date: 2025-09-22 10:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -242,7 +242,7 @@ msgstr "%FMT% Профиль"
 # FormatRep
 #: FormatRep
 msgid "%FMT% representation of the %ID% %TYPE%."
-msgstr "%FMT% представление %ID% %TYPE%."
+msgstr "%FMT% представление %ID% %TYPE%"
 
 # Mappings
 #: Mappings
@@ -342,7 +342,7 @@ msgstr "флаг"
 # PrevPage
 #: PrevPage
 msgid "< prev"
-msgstr "< prev"
+msgstr "< Предыдущая"
 
 # NextPage
 #: NextPage
@@ -427,7 +427,7 @@ msgstr "Ответственный"
 # Realm
 #: Realm
 msgid "Realm"
-msgstr "Realm"
+msgstr "Юрисдикция"
 
 # ComputableName
 #: ComputableName
@@ -516,12 +516,12 @@ msgstr "Содержание"
 # Globals
 #: Globals
 msgid "Globals"
-msgstr "Globals"
+msgstr "Глобальные профили"
 
 # GlobalProfiles
 #: GlobalProfiles
 msgid "Global Profiles"
-msgstr "Глобальные профили"
+msgstr "Глобальные определения профилей"
 
 # ArtifactsIntro
 #: ArtifactsIntro
@@ -555,7 +555,7 @@ msgstr "Обязательства"
 # OpenEHR
 #: OpenEHR
 msgid "openEHR View"
-msgstr "openEHR View"
+msgstr "Представление openEHR"
 
 # QuestionnaireTree
 #: QuestionnaireTree
