@@ -17,7 +17,7 @@
       <xsl:call-template name="raiseIssue">
         <xsl:with-param name="severity">error</xsl:with-param>
         <xsl:with-param name="code">business-rule</xsl:with-param>
-        <xsl:with-param name="details" select="concat('There are multiple resources with the same title &quot;', f:name/@value, '&quot;.  This is not allowed because it produces duplicate entries in the table of contents.')"/>
+        <xsl:with-param name="details" select="concat('There are multiple resources with the same title [', f:name/@value, '].  This is not allowed because it produces duplicate entries in the table of contents.')"/>
         <xsl:with-param name="location" select="concat('ImplementationGuide.definition.resource[', count(preceding-sibling::f:resource), ']')"/>
       </xsl:call-template>
     </xsl:if>
