@@ -1,0 +1,597 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 07:00+0000\n"
+"PO-Revision-Date: 2025-09-22 11:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: NO_TRANS
+msgid ""
+"There is no translation page available for the current page, so it has been "
+"rendered in the default language"
+msgstr ""
+"Joriy sahifa uchun tarjima sahifasi mavjud emas, shuning uchun u standart "
+"tilida ko‘rsatildi"
+
+# TRANS_HLP
+#: TRANS_HLP
+msgid ""
+"This page includes translations from the original source language in which "
+"the guide was authored.  Information on these translations and instructions "
+"on how to provide feedback on the translations can be found [here]"
+"(translationinfo.html)."
+msgstr ""
+"Ushbu sahifa qo‘llanma yozilgan asl manba tilidan tarjimalarni o‘z ichiga "
+"oladi. Ushbu tarjimalar haqidagi ma’lumot va ularga fikr bildirish bo‘yicha "
+"ko‘rsatmalarni [bu yerda](translationinfo.html) topishingiz mumkin."
+
+# Experimental
+#: Experimental
+msgid "Experimental"
+msgstr "Eksperimental"
+
+# Swagger
+#: Swagger
+msgid "Raw OpenAPI-Swagger Definition file"
+msgstr "Raw OpenAPI-Swagger ta’rif fayli"
+
+# Download
+#: Download
+msgid "Download"
+msgstr "Yuklab olish"
+
+# NoTestPlan
+#: NoTestPlan
+msgid "No test plans are currently available for the %ARTIFACT%."
+msgstr "%ARTIFACT% uchun hozircha test rejalar mavjud emas."
+
+# NoTestScript
+#: NoTestScript
+msgid "No test scripts are currently available for the %ARTIFACT%."
+msgstr "%ARTIFACT% uchun hozircha test skriptlari mavjud emas."
+
+# ChangeHistory
+#: ChangeHistory
+msgid "Change History"
+msgstr "O‘zgarishlar tarixi"
+
+# HistoryOfChange
+#: HistoryOfChange
+msgid "History of changes for %ARTIFACT%."
+msgstr "%ARTIFACT% uchun o‘zgarishlar tarixi."
+
+# CodeSystemValuesets
+#: CodeSystemValuesets
+msgid ""
+"This Code system is referenced in the definition of the following value sets:"
+msgstr "Ushbu kod tizimi quyidagi qiymatlar to‘plamida ishlatilgan:"
+
+# Contained
+#: Contained
+msgid "Contained resources"
+msgstr "Ichki resurslar"
+
+# FormalExtension
+#: FormalExtension
+msgid "Formal Views of Extension Content"
+msgstr "Kengaytma mazmunining rasmiy ko‘rinishlari"
+
+# FormalProfile
+#: FormalProfile
+msgid "Formal Views of Profile Content"
+msgstr "Profil mazmunining rasmiy ko‘rinishlari"
+
+# ReadingStructures
+#: ReadingStructures
+msgid ""
+"Description of Profiles, Differentials, Snapshots, and their representations"
+msgstr ""
+"Profillar, differentsiyalar, snapshotlar va ularning tasvirlari ta’rifi"
+
+# KeyElementsTable
+#: KeyElementsTable
+msgid "Key Elements Table"
+msgstr "Asosiy elementlar jadvali"
+
+# DifferentialTable
+#: DifferentialTable
+msgid "Differential Table"
+msgstr "Differensial jadval"
+
+# SnapshotTable
+#: SnapshotTable
+msgid "Snapshot Table"
+msgstr "Snapshot jadvali"
+
+# PseudoXML
+#: PseudoXML
+msgid "Pseudo XML"
+msgstr "Psevdo XML"
+
+# PseudoJSON
+#: PseudoJSON
+msgid "Pseudo JSON"
+msgstr "Psevdo JSON"
+
+# PseudoTTL
+#: PseudoTTL
+msgid "Pseudo TTL"
+msgstr "Psevdo TTL"
+
+# StatisticsReferences
+#: StatisticsReferences
+msgid "Statistics/References"
+msgstr "Statistika/Havolalar"
+
+# AllTables
+#: AllTables
+msgid "All"
+msgstr "Barchasi"
+
+# Derive
+#: Derive
+msgid "This structure is derived from %ARTIFACT%"
+msgstr "Ushbu tuzilma %ARTIFACT% asosida yaratilgan"
+
+# KeyElementsView
+#: KeyElementsView
+msgid "Key Elements View"
+msgstr "Asosiy elementlar ko'rinishi"
+
+# DifferentialView
+#: DifferentialView
+msgid "Differential View"
+msgstr "Differensial ko‘rinish"
+
+# SnapshotView
+#: SnapshotView
+msgid "Snapshot View"
+msgstr "Snapshot ko‘rinishi"
+
+# XMLTemplate
+#: XMLTemplate
+msgid "XML Template"
+msgstr "XML shablon"
+
+# JSONTemplate
+#: JSONTemplate
+msgid "JSON Template"
+msgstr "JSON shabloni"
+
+# TTLTemplate
+#: TTLTemplate
+msgid "TTL Template"
+msgstr "TTL shabloni"
+
+# OtherReps
+#: OtherReps
+msgid "Other representations of profile:"
+msgstr "Profilning boshqa ko‘rinishlari:"
+
+# CSV
+#: CSV
+msgid "CSV"
+msgstr "CSV"
+
+# Excel
+#: Excel
+msgid "Excel"
+msgstr "Excel"
+
+# Schematron
+#: Schematron
+msgid "Schematron"
+msgstr "Schematron"
+
+# Example
+#: Example
+msgid "Example"
+msgstr "Misol"
+
+# Examples
+#: Examples
+msgid "Examples"
+msgstr "Misollar"
+
+# Raw
+#: Raw
+msgid "Raw %FMT%"
+msgstr "Raw %FMT%"
+
+# Abstract
+#: Abstract
+msgid "Abstract"
+msgstr "Annotatsiya"
+
+# DetailedDescriptions
+#: DetailedDescriptions
+msgid "Detailed Descriptions"
+msgstr "Batafsil ta’riflar"
+
+# DefinitionsFor
+#: DefinitionsFor
+msgid "Definitions for the %MODEL%"
+msgstr "%MODEL% uchun ta’riflar"
+
+# NoExamples
+#: NoExamples
+msgid "No examples are currently available for the %ID% Profile."
+msgstr "%ID% profili uchun hozircha misollar mavjud emas."
+
+# ExamplesForProfile
+#: ExamplesForProfile
+msgid "Examples for the %ID% Profile."
+msgstr "%ID% profili uchun misollar."
+
+# FormatProfile
+#: FormatProfile
+msgid "%FMT% Profile"
+msgstr "%FMT% Profili"
+
+# FormatRep
+#: FormatRep
+msgid "%FMT% representation of the %ID% %TYPE%."
+msgstr "%ID% %TYPE% ning %FMT% ko‘rinishi."
+
+# Mappings
+#: Mappings
+msgid "Mappings"
+msgstr "Mosliklar"
+
+# MappingsFor
+#: MappingsFor
+msgid "Mappings for the %ID% %TYPE%."
+msgstr "%ID% %TYPE% uchun mosliklar."
+
+# ChangesIn
+#: ChangesIn
+msgid "Changes in the %ID% %TYPE%."
+msgstr "%ID% %TYPE% dagi o‘zgarishlar."
+
+# Testing
+#: Testing
+msgid "Testing"
+msgstr "Sinov"
+
+# TestScripts
+#: TestScripts
+msgid "Test Scripts"
+msgstr "Test skriptlari"
+
+# Expansion
+#: Expansion
+msgid "Expansion"
+msgstr "Kengaytirilgan ro‘yxat"
+
+# Content
+#: Content
+msgid "Content"
+msgstr "Mazmun"
+
+# XML
+#: XML
+msgid "XML"
+msgstr "XML"
+
+# JSON
+#: JSON
+msgid "JSON"
+msgstr "JSON"
+
+# TTL
+#: TTL
+msgid "TTL"
+msgstr "TTL"
+
+# History
+#: History
+msgid "History"
+msgstr "Tarix"
+
+# Extension
+#: Extension
+msgid "Extension"
+msgstr "Kengaytma"
+
+# LogicalModel
+#: LogicalModel
+msgid "Logical Model"
+msgstr "Mantiqiy model"
+
+# ResourceProfile
+#: ResourceProfile
+msgid "Resource Profile"
+msgstr "Resurss profili"
+
+# DataTypeProfile
+#: DataTypeProfile
+msgid "Data Type Profile"
+msgstr "Ma’lumot turi profili"
+
+# Links
+#: Links
+msgid "Links"
+msgstr "Havolalar"
+
+# Notes
+#: Notes
+msgid "Notes"
+msgstr "Izohlar"
+
+# VisitFCP
+#: VisitFCP
+msgid "Visit the FHIR Community Process Specification Registry"
+msgstr ""
+"FHIR hamjamiyati jarayoni spetsifikatsiyalari reyestriga tashrif buyuring"
+
+# CountryFlag
+#: CountryFlag
+msgid "flag"
+msgstr "bayroqcha"
+
+# PrevPage
+#: PrevPage
+msgid "< prev"
+msgstr "< oldingi"
+
+# NextPage
+#: NextPage
+msgid "next >"
+msgstr "keyingi >"
+
+# PageBottom
+#: PageBottom
+msgid "bottom"
+msgstr "pastga"
+
+# PageTop
+#: PageTop
+msgid "top"
+msgstr "yuqoriga"
+
+# IGCopyright
+#: IGCopyright
+msgid "IG © %YEAR%"
+msgstr "IG © %YEAR%"
+
+# IGPackage
+#: IGPackage
+msgid "Package %PKG% based on %FHIRVER%."
+msgstr "%FHIRVER% asosidagi %PKG% paketi."
+
+# GeneratedDate
+#: GeneratedDate
+msgid "Generated %DATE%"
+msgstr "%DATE% yaratilgan"
+
+# PageStandardsStatus
+#: PageStandardsStatus
+msgid "Page standards status"
+msgstr "Sahifa standartlari holati"
+
+# StandardsStatus
+#: StandardsStatus
+msgid "Standards Status"
+msgstr "Standartlar holati"
+
+# FromNormative
+#: FromNormative
+msgid "from v%NORMVER%"
+msgstr "v%NORMVER% versiyasidan boshlab"
+
+# MaturityLevel
+#: MaturityLevel
+msgid "Maturity Level"
+msgstr "Yetuklik darajasi"
+
+# OfficialURL
+#: OfficialURL
+msgid "Official URL"
+msgstr "Rasmiy URL"
+
+# CopyURL
+#: CopyURL
+msgid "Click to copy URL"
+msgstr "URL manzilni nusxalash uchun bosing"
+
+# CopyVersioned
+#: CopyVersioned
+msgid "Click to copy versioned URL"
+msgstr "Versiyalangan URL manzilni nusxalash uchun bosing"
+
+# Version
+#: Version
+msgid "Version"
+msgstr "Versiya"
+
+# ResourceDate
+#: ResourceDate
+msgid "as of %RESDATE%"
+msgstr "%RESDATE% holatiga ko‘ra"
+
+# Responsible
+#: Responsible
+msgid "Responsible"
+msgstr "Mas’ul"
+
+# Realm
+#: Realm
+msgid "Realm"
+msgstr "Yurisdiksiya"
+
+# ComputableName
+#: ComputableName
+msgid "Computable Name"
+msgstr "Kompyuterda qayta ishlanadigan nom"
+
+# OtherIdentifiers
+#: OtherIdentifiers
+msgid "Other Identifiers"
+msgstr "Boshqa identifikatorlar"
+
+# Keywords
+#: Keywords
+msgid "Keywords"
+msgstr "Kalit so‘zlar"
+
+# Usage
+#: Usage
+msgid "Usage"
+msgstr "Qo‘llanish"
+
+# CopyrightLegal
+#: CopyrightLegal
+msgid "Copyright/Legal"
+msgstr "Mualliflik huquqi/Huquqiy ma’lumot"
+
+# NarrativeContent
+#: NarrativeContent
+msgid "Narrative Content"
+msgstr "Matnli mazmun"
+
+# TableOfContents
+#: TableOfContents
+msgid "Table of Contents"
+msgstr "Mundarija"
+
+# QAReport
+#: QAReport
+msgid "QA Report"
+msgstr "Sifat nazorati hisoboti"
+
+# ReadingTerminology
+#: ReadingTerminology
+msgid "Description of the above table(s)"
+msgstr "Yuqoridagi jadval(lar) ta’rifi"
+
+# TestPlans
+#: TestPlans
+msgid "Test Plans"
+msgstr "Sinov rejalari"
+
+# Actors
+#: Actors
+msgid "Actors"
+msgstr "Ishtirokchilar"
+
+# Diagram
+#: Diagram
+msgid "Diagram"
+msgstr "Diagramma"
+
+# Processes
+#: Processes
+msgid "Processes"
+msgstr "Jarayonlar"
+
+# Instances
+#: Instances
+msgid "Instances"
+msgstr "Instansiyalar"
+
+# WorkInProgress
+#: WorkInProgress
+msgid ""
+"The content in this section has not undergone work group review and may be "
+"significantly revised prior to the next ballot."
+msgstr ""
+"Ushbu bo‘limdagi mazmun ishchi guruh ko‘rib chiqishidan o‘tmagan va keyingi "
+"ovoz berishdan oldin sezilarli darajada qayta ko‘rib chiqilishi mumkin."
+
+# Contents
+#: Contents
+msgid "Contents"
+msgstr "Mazmunlar"
+
+# Globals
+#: Globals
+msgid "Globals"
+msgstr "Global moslamalar"
+
+# GlobalProfiles
+#: GlobalProfiles
+msgid "Global Profiles"
+msgstr "Global profillar"
+
+# ArtifactsIntro
+#: ArtifactsIntro
+msgid ""
+"This page provides a list of the FHIR artifacts defined as part of this "
+"implementation guide."
+msgstr ""
+"Ushbu sahifada ushbu amalga oshirish qo‘llanmasi doirasida ta’riflangan FHIR "
+"artefaktlari ro‘yxati keltirilgan."
+
+# ArtifactsSummary
+#: ArtifactsSummary
+msgid "Artifacts Summary"
+msgstr "Artefaktlar sharhi"
+
+# Language
+#: Language
+msgid "Language"
+msgstr "Til"
+
+# UMLDiagram
+#: UMLDiagram
+msgid "UML Diagram"
+msgstr "UML diagrammasi"
+
+# Obligations
+#: Obligations
+msgid "Obligations"
+msgstr "Majburiyatlar"
+
+# OpenEHR
+#: OpenEHR
+msgid "openEHR View"
+msgstr "openEHR ko‘rinishi"
+
+# QuestionnaireTree
+#: QuestionnaireTree
+msgid "Tree view"
+msgstr "Daraxtsimon ko‘rinish"
+
+# QuestionnaireSample
+#: QuestionnaireSample
+msgid "Sample Rendering"
+msgstr "Namunaviy ko‘rinishi"
+
+# QuestionnaireLogic
+#: QuestionnaireLogic
+msgid "Form Logic"
+msgstr "Forma mantiqi"
+
+# QuestionnaireResponses
+#: QuestionnaireResponses
+msgid "Sample completed form"
+msgstr "Namunaviy to‘ldirilgan forma"
+
+# TestQuestionnaire
+#: TestQuestionnaire
+msgid "Test this Questionnaire"
+msgstr "Ushbu so‘rovnomani sinab ko‘ring"
+
+# ResponsesQuestionnaire
+#: ResponsesQuestionnaire
+msgid "Responses for this Questionnaire"
+msgstr "Ushbu So‘rovnoma uchun javoblar"
+
+# NoQuestionnaireResponses
+#: NoQuestionnaireResponses
+msgid ""
+"There are currently no QuestionnaireResponse instances for this "
+"Questionnaire defined in this IG."
+msgstr ""
+"Ushbu IG doirasida ushbu So‘rovnoma uchun hozircha QuestionnaireResponse "
+"namunalar mavjud emas."

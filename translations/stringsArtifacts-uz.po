@@ -1,0 +1,413 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 10:37+0000\n"
+"PO-Revision-Date: 2025-09-22 11:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: ActorDefinitionName
+msgid "Requirements: Actor Definitions"
+msgstr "Requirements: Ishtirokchilar ta’rifi"
+
+# ActorDefinitionDesc
+#: ActorDefinitionDesc
+msgid ""
+"The following artifacts define the types of individuals and/or systems that "
+"will interact as part of the use cases covered by this implementation guide."
+msgstr ""
+"Quyidagi artefaktlar ushbu qo‘llanma doirasida ko‘rib chiqilgan qo‘llanilish "
+"holatlarida ishtirok etadigan shaxslar va/yoki tizimlarning turlarini "
+"belgilaydi."
+
+# RequirementsName
+#: RequirementsName
+msgid "Requirements: Formal Requirements"
+msgstr "Requirements: Rasmiy talablar"
+
+# RequirementsDesc
+#: RequirementsDesc
+msgid ""
+"The following artifacts describe the specific requirements to be met by "
+"systems compliant with the implementation guide."
+msgstr ""
+"Quyidagi artefaktlar ushbu qo‘llanma bilan mos tizimlar bajarishi lozim "
+"bo‘lgan aniq talablarni belgilaydi."
+
+# CapabilityStatementName
+#: CapabilityStatementName
+msgid "Behavior: Capability Statements"
+msgstr "Behavior: Imkoniyat bayonotlari"
+
+# CapabilityStatementDesc
+#: CapabilityStatementDesc
+msgid ""
+"The following artifacts define the specific capabilities that different "
+"types of systems are expected to have in order to comply with this "
+"implementation guide.  Systems conforming to this implementation guide are "
+"expected to declare conformance to one or more of the following capability "
+"statements."
+msgstr ""
+"Quyidagi artefaktlar ushbu amalga oshirish qo‘llanmasiga rioya qilish uchun "
+"turli tizimlar ega bo‘lishi lozim bo‘lgan maxsus imkoniyatlarni belgilaydi. "
+"Ushbu qo‘llanma bilan mos tizimlar quyida ko‘rsatilgan imkoniyat "
+"bayonotlaridan bittasi yoki bir nechtasiga muvofiqligini e’lon qilishi kerak."
+
+# OperationDefinitionName
+#: OperationDefinitionName
+msgid "Behavior: Operation Definitions"
+msgstr "Behavior: Amal ta’riflari"
+
+# OperationDefinitionDesc
+#: OperationDefinitionDesc
+msgid ""
+"These are custom operations that can be supported by and/or invoked by "
+"systems conforming to this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan qo‘llab-quvvatlanishi "
+"va/yoki chaqirilishi mumkin bo‘lgan maxsus amallardir."
+
+# MessageDefinitionName
+#: MessageDefinitionName
+msgid "Behavior: Message Definitions"
+msgstr "Behavior: Xabar ta’riflari"
+
+# MessageDefinitionDesc
+#: MessageDefinitionDesc
+msgid ""
+"These define the types of messages that can be sent and/or received by "
+"systems conforming to this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan yuborilishi va/yoki qabul "
+"qilinishi mumkin bo‘lgan xabar turlarini belgilaydi."
+
+# SearchParameterName
+#: SearchParameterName
+msgid "Behavior: Search Parameters"
+msgstr "Behavior: Qidiruv parametrlari"
+
+# SearchParameterDesc
+#: SearchParameterDesc
+msgid ""
+"These define the properties by which a RESTful server can be searched.  They "
+"can also be used for sorting and including related resources."
+msgstr ""
+"Bular RESTful serverda izlash imkonini beruvchi xususiyatlarni belgilaydi. "
+"Shuningdek, ular tartiblash va bog‘liq resurslarni qo‘shish uchun ham "
+"ishlatilishi mumkin."
+
+# ActivityDefinitionName
+#: ActivityDefinitionName
+msgid "Knowledge Artifacts: Activity Definitions"
+msgstr "Knowledge Artifacts: Faoliyat ta’riflari"
+
+# ActivityDefinitionDesc
+#: ActivityDefinitionDesc
+msgid ""
+"These define activities that can be performed as part of content in this "
+"implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma mazmunida bajarilishi mumkin bo‘lgan faoliyatlarni "
+"belgilaydi."
+
+# PlanDefinitionName
+#: PlanDefinitionName
+msgid "Knowledge Artifacts: Plan Definitions"
+msgstr "Knowledge Artifacts: Reja ta’riflari"
+
+# PlanDefinitionDesc
+#: PlanDefinitionDesc
+msgid ""
+"These define workflows, rules, strategies, or protocols as part of content "
+"in this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma mazmuni tarkibidagi ish oqimlari, qoidalar, "
+"strategiyalar yoki protokollarni belgilaydi."
+
+# MeasureName
+#: MeasureName
+msgid "Knowledge Artifacts: Measure"
+msgstr "Knowledge Artifacts: O‘lchov"
+
+# MeasureDesc
+#: MeasureDesc
+msgid "These define measures as part of content in this implementation guide."
+msgstr "Bular ushbu qo‘llanma mazmuni tarkibidagi o‘lchovlarni belgilaydi."
+
+# LibraryName
+#: LibraryName
+msgid "Knowledge Artifacts: Libraries"
+msgstr "Knowledge Artifacts: Kutubxonalar"
+
+# LibraryDesc
+#: LibraryDesc
+msgid ""
+"These define logic, asset collections and other libraries as part of content "
+"in this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma mazmuni tarkibidagi mantiqiy qoidalar, aktivlar "
+"to‘plamlari va boshqa kutubxonalarni belgilaydi."
+
+# GraphDefinitionName
+#: GraphDefinitionName
+msgid "Structures: Graph Definitions"
+msgstr "Structures: Grafik ta’riflari"
+
+# GraphDefinitionDesc
+#: GraphDefinitionDesc
+msgid ""
+"These define collections of interrelated resources that are useful to pass "
+"around as a group."
+msgstr ""
+"Bular bir guruh sifatida birga uzatilishi foydali bo‘lgan o‘zaro bog‘liq "
+"resurslar to‘plamini belgilaydi."
+
+# LogicalModelName
+#: LogicalModelName
+msgid "Structures: Logical Models"
+msgstr "Structures: Mantiqiy modellari"
+
+# LogicalModelDesc
+#: LogicalModelDesc
+msgid ""
+"These define data models that represent the domain covered by this "
+"implementation guide in more business-friendly terms than the underlying "
+"FHIR resources."
+msgstr ""
+"Bular ushbu qo‘llanma qamrab olgan sohaga oid ma’lumotlarni FHIR "
+"resurslariga qaraganda ko‘proq biznesga qulay shaklda ifodalovchi ma’lumot "
+"modellarini belgilaydi."
+
+# QuestionnaireName
+#: QuestionnaireName
+msgid "Structures: Questionnaires"
+msgstr "Structures: So‘rovnomalar"
+
+# QuestionnaireDesc
+#: QuestionnaireDesc
+msgid ""
+"These define forms used by systems conforming to this implementation guide "
+"to capture or expose data to end users."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan foydalanuvchilardan "
+"ma’lumot yig‘ish yoki ularga ko‘rsatish uchun ishlatiladigan shakllarni "
+"belgilaydi."
+
+# AbstractProfileName
+#: AbstractProfileName
+msgid "Structures: Abstract Profiles"
+msgstr "Structures: Abstrakt profillar"
+
+# AbstractProfileDesc
+#: AbstractProfileDesc
+msgid ""
+"These are profiles on resources or data types that describe patterns used by "
+"other profiles, but cannot be instantiated directly.  I.e. instances can "
+"conform to profiles *based* on these abstract profiles, but do not declare "
+"conformance to the abstract profiles themselves."
+msgstr ""
+"Bular boshqa profillarda qo‘llaniladigan naqshlarni tavsiflovchi, biroq "
+"bevosita instansiya yaratib bo‘lmaydigan resurslar yoki ma’lumot turi "
+"profillaridir. Ya’ni, instansiyalar ushbu abstrakt profillarga asoslangan "
+"profillarga muvofiq bo‘lishi mumkin, ammo o‘zlari to‘g‘ridan-to‘g‘ri "
+"abstrakt profillarga muvofiqligini e’lon qilmaydi."
+
+# ResourceProfileName
+#: ResourceProfileName
+msgid "Structures: Resource Profiles"
+msgstr "Structures: Resurs profillari"
+
+# ResourceProfileDesc
+#: ResourceProfileDesc
+msgid ""
+"These define constraints on FHIR resources for systems conforming to this "
+"implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar uchun FHIR resurslariga "
+"qo‘yiladigan cheklovlarni belgilaydi."
+
+# DataTypeName
+#: DataTypeName
+msgid "Structures: Data Type Profiles"
+msgstr "Structures: Ma’lumot turi profillari"
+
+# DataTypeDesc
+#: DataTypeDesc
+msgid ""
+"These define constraints on FHIR data types for systems conforming to this "
+"implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar uchun FHIR ma’lumot turlariga "
+"qo‘yiladigan cheklovlarni belgilaydi."
+
+# ExtensionName
+#: ExtensionName
+msgid "Structures: Extension Definitions"
+msgstr "Structures: Kengaytma ta’riflari"
+
+# ValueSetName
+#: ValueSetName
+msgid "Terminology: Value Sets"
+msgstr "Terminology: Qiymat to‘plamlari"
+
+# ValueSetDesc
+#: ValueSetDesc
+msgid ""
+"These define sets of codes used by systems conforming to this implementation "
+"guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan ishlatiladigan kodlar "
+"to‘plamlarini belgilaydi."
+
+# CodeSystemName
+#: CodeSystemName
+msgid "Terminology: Code Systems"
+msgstr "Terminology: Kod tizimlari"
+
+# CodeSystemDesc
+#: CodeSystemDesc
+msgid ""
+"These define new code systems used by systems conforming to this "
+"implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan ishlatiladigan yangi kod "
+"tizimlarini belgilaydi."
+
+# NamingSystemName
+#: NamingSystemName
+msgid "Terminology: Naming Systems"
+msgstr "Terminology: Nomlash tizimlari"
+
+# NamingSystemDesc
+#: NamingSystemDesc
+msgid ""
+"These define identifier and/or code system identities used by systems "
+"conforming to this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan ishlatiladigan "
+"identifikatorlar va/yoki kod tizimlari identifikatsiyalarini belgilaydi."
+
+# StructureMapName
+#: StructureMapName
+msgid "Terminology: Structure Maps"
+msgstr "Terminology: Tuzilma xaritalari"
+
+# StructureMapDesc
+#: StructureMapDesc
+msgid ""
+"These define transformations to convert between data structures used by "
+"systems conforming to this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan ishlatiladigan ma’lumot "
+"tuzilmalarini bir-biriga aylantirish uchun bajariladigan o‘zgartirishlarni "
+"belgilaydi."
+
+# ConceptMapName
+#: ConceptMapName
+msgid "Terminology: Concept Maps"
+msgstr "Terminology: Konsept xaritalari"
+
+# ConceptMapDesc
+#: ConceptMapDesc
+msgid ""
+"These define transformations to convert between codes by systems conforming "
+"with this implementation guide."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar tomonidan kodlarni bir-biriga "
+"aylantirish uchun bajariladigan o‘zgartirishlarni belgilaydi."
+
+# TestPlanName
+#: TestPlanName
+msgid "Testing Artifacts: TestPlans"
+msgstr "Testing Artifacts: TestPlans"
+
+# TestPlanDesc
+#: TestPlanDesc
+msgid ""
+"These test plans are available to verify test coverage for this "
+"implementation guide"
+msgstr ""
+"Bular ushbu qo‘llanma bo‘yicha sinov qamrovini tekshirish uchun mavjud sinov "
+"rejalaridir."
+
+# TestScriptName
+#: TestScriptName
+msgid "Testing Artifacts: TestScripts"
+msgstr "Testing Artifacts: TestScripts"
+
+# TestScriptDesc
+#: TestScriptDesc
+msgid ""
+"These test definitions are available to FHIR test engines to verify systems "
+"are conforming to this implementation guide"
+msgstr ""
+"Bular FHIR test mexanizmlari tomonidan ishlatilishi mumkin bo‘lgan sinov "
+"ta’riflaridir, ular orqali tizimlarning ushbu qo‘llanma bilan muvofiqligi "
+"tekshiriladi."
+
+# ExampleScenarioName
+#: ExampleScenarioName
+msgid "Example: Example Scenarios"
+msgstr "Example: Namunaviy ssenariylar"
+
+# ExampleScenarioDesc
+#: ExampleScenarioDesc
+msgid ""
+"These define groups of interrelated examples that demonstrate one or more of "
+"the workflows supported by this implementation guide."
+msgstr ""
+"Bular qo‘llanma tomonidan qo‘llab-quvvatlanadigan ish jarayonlaridan birini "
+"yoki bir nechtasini namoyish qiluvchi o‘zaro bog‘liq misollar guruhlarini "
+"belgilaydi."
+
+# ExampleName
+#: ExampleName
+msgid "Example: Example Instances"
+msgstr "Example: Namunaviy instansiyalar"
+
+# ExampleDesc
+#: ExampleDesc
+msgid ""
+"These are example instances that show what data produced and consumed by "
+"systems conforming with this implementation guide might look like."
+msgstr ""
+"Bular ushbu qo‘llanma bilan mos tizimlar ishlab chiqarishi va iste’mol "
+"qilishi mumkin bo‘lgan ma’lumotlarning qanday ko‘rinishga ega bo‘lishini "
+"ko‘rsatadigan namunaviy instansiyalardir."
+
+# ExampleSupportingName
+#: ExampleSupportingName
+msgid "Example: Example Supporting Instances"
+msgstr "Example: Qo‘llab-quvvatlovchi namunaviy instansiyalar"
+
+# ExampleSupportingDesc
+#: ExampleSupportingDesc
+msgid ""
+"These are example instances that are not governed by this implementation "
+"guide, but which are necessary to support other examples defined in the IG."
+msgstr ""
+"Bular qo‘llanma bilan tartibga solinmagan, biroq qo‘llanmadagi boshqa "
+"misollarni qo‘llab-quvvatlash uchun zarur bo‘lgan namunaviy instansiyalardir."
+
+# OtherName
+#: OtherName
+msgid "Other"
+msgstr "Boshqalar"
+
+# OtherDesc
+#: OtherDesc
+msgid ""
+"These are resources that are used within this implementation guide that do "
+"not fit into one of the other categories."
+msgstr ""
+"Bular ushbu qo‘llanma ichida ishlatiladigan, lekin boshqa kategoriyalarga "
+"to‘g‘ri kelmaydigan resurslardir."
