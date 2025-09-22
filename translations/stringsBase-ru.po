@@ -1,17 +1,40 @@
-# en -> ru
-
-# NO_TRANS
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-19 07:42+0000\n"
+"PO-Revision-Date: 2025-09-19 09:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
 
 #: NO_TRANS
-msgid "There is no translation page available for the current page, so it has been rendered in the default language"
-msgstr "Для текущей страницы не существует страницы перевода, поэтому она отображается на языке по умолчанию"
+msgid ""
+"There is no translation page available for the current page, so it has been "
+"rendered in the default language"
+msgstr ""
+"Для текущей страницы не существует страницы перевода, поэтому она "
+"отображается на языке по умолчанию"
 
 # TRANS_HLP
 #: TRANS_HLP
-msgid "This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)."
-msgstr "На этой странице представлены переводы с языка оригинала, на котором было написано руководство.  Информацию об этих переводах и инструкции по предоставлению отзывов о переводах можно найти [здесь](translationinfo.html)."
+msgid ""
+"This page includes translations from the original source language in which "
+"the guide was authored.  Information on these translations and instructions "
+"on how to provide feedback on the translations can be found [here]"
+"(translationinfo.html)."
+msgstr ""
+"На этой странице представлены переводы с языка оригинала, на котором было "
+"написано руководство.  Информацию об этих переводах и инструкции по "
+"предоставлению отзывов о переводах можно найти [здесь](translationinfo.html)."
 
 # Experimental
 #: Experimental
@@ -50,8 +73,10 @@ msgstr "История изменений для %ARTIFACT%."
 
 # CodeSystemValuesets
 #: CodeSystemValuesets
-msgid "This Code system is referenced in the definition of the following value sets:"
-msgstr "Эта система кодов упоминается в определении следующих наборов значений:"
+msgid ""
+"This Code system is referenced in the definition of the following value sets:"
+msgstr ""
+"Эта система кодов упоминается в определении следующих наборов значений:"
 
 # Contained
 #: Contained
@@ -70,7 +95,8 @@ msgstr "Формальные представления содержимого �
 
 # ReadingStructures
 #: ReadingStructures
-msgid "Description of Profiles, Differentials, Snapshots, and their representations"
+msgid ""
+"Description of Profiles, Differentials, Snapshots, and their representations"
 msgstr "Описание профилей, дифференциалов, снимков и их представлений"
 
 # KeyElementsTable
@@ -115,11 +141,6 @@ msgstr "Все"
 
 # Derive
 #: Derive
-msgid "This structure is derived from %ARTIFACT%"
-msgstr "Эта структура получена из %ARTIFACT%"
-
-# Derived
-#: Derived
 msgid "This structure is derived from %ARTIFACT%"
 msgstr "Эта структура получена из %ARTIFACT%"
 
@@ -401,7 +422,7 @@ msgstr "по состоянию на %RESDATE%"
 # Responsible
 #: Responsible
 msgid "Responsible"
-msgstr "Ответственность"
+msgstr "Ответственный"
 
 # Realm
 #: Realm
@@ -461,7 +482,7 @@ msgstr "Планы испытаний"
 # Actors
 #: Actors
 msgid "Actors"
-msgstr "Актеры"
+msgstr "Участники"
 
 # Diagram
 #: Diagram
@@ -480,8 +501,12 @@ msgstr "Экземпляры"
 
 # WorkInProgress
 #: WorkInProgress
-msgid "The content in this section has not undergone work group review and may be significantly revised prior to the next ballot."
-msgstr "Содержание этого раздела не прошло проверку рабочей группы и может быть существенно пересмотрено до следующего голосования."
+msgid ""
+"The content in this section has not undergone work group review and may be "
+"significantly revised prior to the next ballot."
+msgstr ""
+"Содержание этого раздела не прошло проверку рабочей группы и может быть "
+"существенно пересмотрено до следующего голосования."
 
 # Contents
 #: Contents
@@ -500,8 +525,12 @@ msgstr "Глобальные профили"
 
 # ArtifactsIntro
 #: ArtifactsIntro
-msgid "This page provides a list of the FHIR artifacts defined as part of this implementation guide."
-msgstr "На этой странице представлен список артефактов FHIR, определенных в рамках данного руководства по внедрению."
+msgid ""
+"This page provides a list of the FHIR artifacts defined as part of this "
+"implementation guide."
+msgstr ""
+"На этой странице представлен список артефактов FHIR, определенных в рамках "
+"данного руководства по внедрению."
 
 # ArtifactsSummary
 #: ArtifactsSummary
@@ -531,7 +560,7 @@ msgstr "openEHR View"
 # QuestionnaireTree
 #: QuestionnaireTree
 msgid "Tree view"
-msgstr "Вид на дерево"
+msgstr "Древовидное представление"
 
 # QuestionnaireSample
 #: QuestionnaireSample
@@ -556,9 +585,13 @@ msgstr "Протестируйте этот вопросник"
 # ResponsesQuestionnaire
 #: ResponsesQuestionnaire
 msgid "Responses for this Questionnaire"
-msgstr "Ответы на этот вопросник"
+msgstr "Ответы на этот Опросный лист"
 
 # NoQuestionnaireResponses
 #: NoQuestionnaireResponses
-msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
-msgstr "В настоящее время в данном ИГ не определено ни одного экземпляра QuestionnaireResponse для этого вопросника."
+msgid ""
+"There are currently no QuestionnaireResponse instances for this "
+"Questionnaire defined in this IG."
+msgstr ""
+"В настоящее время в данном ИГ не определено ни одного экземпляра "
+"QuestionnaireResponse для этого вопросника."
