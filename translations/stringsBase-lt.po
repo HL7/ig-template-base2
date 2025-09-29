@@ -1,0 +1,578 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-19 07:42+0000\n"
+"PO-Revision-Date: 2025-09-22 10:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Lithuanian\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+# TRANS_HLP
+#: NO_TRANS
+msgid "There is no translation page available for the current page, so it has beenrendered in the default language"
+msgstr "Dabartiniam puslapiui nėra vertimo puslapio, todėl jis pateiktas numatytąja kalba"
+
+# Experimental
+#: TRANS_HLP
+msgid "This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)."
+msgstr "Šiame puslapyje pateikiami vertimai iš originalo kalbos, kuria buvo parašytas vadovas.  Informaciją apie šiuos vertimus ir instrukcijas, kaip pateikti atsiliepimus apie vertimus, galite rasti [čia](translationinfo.html)."
+
+# Swagger
+#: Experimental
+msgid "Experimental"
+msgstr "Eksperimentinis"
+
+# Download
+#: Swagger
+msgid "Raw OpenAPI-Swagger Definition file"
+msgstr "Neapdorotas OpenAPI-Swagger apibrėžimo failas"
+
+# NoTestPlan
+#: Download
+msgid "Download"
+msgstr "Atsisiųsti"
+
+# NoTestScript
+#: NoTestPlan
+msgid "No test plans are currently available for the %ARTIFACT%."
+msgstr "Šiuo metu nėra testavimo planų skirtų %ARTIFACT%."
+
+# ChangeHistory
+#: NoTestScript
+msgid "No test scripts are currently available for the %ARTIFACT%."
+msgstr "Šiuo metu nėra testavimo scenarijų skirtų %ARTIFACT%."
+
+# HistoryOfChange
+#: ChangeHistory
+msgid "Change History"
+msgstr "Keitimų istorija"
+
+# CodeSystemValuesets
+#: HistoryOfChange
+msgid "History of changes for %ARTIFACT%."
+msgstr "%ARTIFACT% pakeitimų istorija."
+
+# Contained
+#: CodeSystemValuesets
+msgid "This Code system is referenced in the definition of the following value sets:"
+msgstr "Ši kodų sistema minima apibrėžiant šiuos reikšmių rinkinius:"
+
+# FormalExtension
+#: Contained
+msgid "Contained resources"
+msgstr "Įtraukti resursai"
+
+# FormalProfile
+#: FormalExtension
+msgid "Formal Views of Extension Content"
+msgstr "Išplėtimų turinio formaliosios peržiūros"
+
+# ReadingStructures
+#: FormalProfile
+msgid "Formal Views of Profile Content"
+msgstr "Profilio turinio formaliosios peržiūros"
+
+# KeyElementsTable
+#: ReadingStructures
+msgid "Description of Profiles, Differentials, Snapshots, and their representations"
+msgstr "Profilių, skirtumų rinkinių, momentinių kopijų aprašas ir jų reprezentacijos"
+
+# DifferentialTable
+#: KeyElementsTable
+msgid "Key Elements Table"
+msgstr "Pagrindinių elementų lentelė"
+
+# SnapshotTable
+#: DifferentialTable
+msgid "Differential Table"
+msgstr "Skirtumų rinkinių lentelė"
+
+# PseudoXML
+#: SnapshotTable
+msgid "Snapshot Table"
+msgstr "Momentinės kopijos lentelė"
+
+# PseudoJSON
+#: PseudoXML
+msgid "Pseudo XML"
+msgstr "Pseudo XML"
+
+# PseudoTTL
+#: PseudoJSON
+msgid "Pseudo JSON"
+msgstr "Pseudo JSON"
+
+# StatisticsReferences
+#: PseudoTTL
+msgid "Pseudo TTL"
+msgstr "Pseudo TTL"
+
+# AllTables
+#: StatisticsReferences
+msgid "Statistics/References"
+msgstr "Statistika/Nuorodos"
+
+# Derive
+#: AllTables
+msgid "All"
+msgstr "Viskas"
+
+# KeyElementsView
+#: Derive
+msgid "This structure is derived from %ARTIFACT%"
+msgstr "Ši struktūra yra kilusi iš %ARTIFACT%"
+
+# DifferentialView
+#: KeyElementsView
+msgid "Key Elements View"
+msgstr "Pagrindinių elementų peržiūra"
+
+# SnapshotView
+#: DifferentialView
+msgid "Differential View"
+msgstr "Skirtumų rinkinių peržiūra"
+
+# XMLTemplate
+#: SnapshotView
+msgid "Snapshot View"
+msgstr "Momentinės kopijos peržiūra"
+
+# JSONTemplate
+#: XMLTemplate
+msgid "XML Template"
+msgstr "XML šablonas"
+
+# TTLTemplate
+#: JSONTemplate
+msgid "JSON Template"
+msgstr "JSON šablonas"
+
+# OtherReps
+#: TTLTemplate
+msgid "TTL Template"
+msgstr "TTL šablonas"
+
+# CSV
+#: OtherReps
+msgid "Other representations of profile:"
+msgstr "Kitos profilio reprezentacijos:"
+
+# Excel
+#: CSV
+msgid "CSV"
+msgstr "CSV"
+
+# Schematron
+#: Excel
+msgid "Excel"
+msgstr "Excel"
+
+# Example
+#: Schematron
+msgid "Schematron"
+msgstr "Schematron"
+
+# Examples
+#: Example
+msgid "Example"
+msgstr "Pavyzdys"
+
+# Raw
+#: Examples
+msgid "Examples"
+msgstr "Pavyzdžiai"
+
+# Abstract
+#: Raw
+msgid "Raw %FMT%"
+msgstr "Neapdorotas %FMT%"
+
+# DetailedDescriptions
+#: Abstract
+msgid "Abstract"
+msgstr "Santrauka"
+
+# DefinitionsFor
+#: DetailedDescriptions
+msgid "Detailed Descriptions"
+msgstr "Išsamūs aprašymai"
+
+# NoExamples
+#: DefinitionsFor
+msgid "Definitions for the %MODEL%"
+msgstr "%MODEL% apibrėžimai"
+
+# ExamplesForProfile
+#: NoExamples
+msgid "No examples are currently available for the %ID% Profile."
+msgstr "Šiuo metu nėra pavyzdžių, susijusių su %ID% profiliu."
+
+# FormatProfile
+#: ExamplesForProfile
+msgid "Examples for the %ID% Profile."
+msgstr "%ID% profilio pavyzdžiai."
+
+# FormatRep
+#: FormatProfile
+msgid "%FMT% Profile"
+msgstr "%FMT% profilis"
+
+# Mappings
+#: FormatRep
+msgid "%FMT% representation of the %ID% %TYPE%."
+msgstr "%FMT% reprezentacija %ID% %TYPE%"
+
+# MappingsFor
+#: Mappings
+msgid "Mappings"
+msgstr "Susiejimai"
+
+# ChangesIn
+#: MappingsFor
+msgid "Mappings for the %ID% %TYPE%."
+msgstr "Susiejimai %ID% %TYPE%."
+
+# Testing
+#: ChangesIn
+msgid "Changes in the %ID% %TYPE%."
+msgstr "Pakeitimai %ID% %TYPE%."
+
+# TestScripts
+#: Testing
+msgid "Testing"
+msgstr "Testavimas"
+
+# Expansion
+#: TestScripts
+msgid "Test Scripts"
+msgstr "Testavimo scenarijai"
+
+# Content
+#: Expansion
+msgid "Expansion"
+msgstr "Išplėtimas"
+
+# XML
+#: Content
+msgid "Content"
+msgstr "Turinys"
+
+# JSON
+#: XML
+msgid "XML"
+msgstr "XML"
+
+# TTL
+#: JSON
+msgid "JSON"
+msgstr "JSON"
+
+# History
+#: TTL
+msgid "TTL"
+msgstr "TTL"
+
+# Extension
+#: History
+msgid "History"
+msgstr "Istorija"
+
+# LogicalModel
+#: Extension
+msgid "Extension"
+msgstr "Pratęsimas"
+
+# ResourceProfile
+#: LogicalModel
+msgid "Logical Model"
+msgstr "Loginis modelis"
+
+# DataTypeProfile
+#: ResourceProfile
+msgid "Resource Profile"
+msgstr "Resursų profilis"
+
+# Links
+#: DataTypeProfile
+msgid "Data Type Profile"
+msgstr "Duomenų tipo profilis"
+
+# Notes
+#: Links
+msgid "Links"
+msgstr "Nuorodos"
+
+# VisitFCP
+#: Notes
+msgid "Notes"
+msgstr "Užrašai"
+
+# CountryFlag
+#: VisitFCP
+msgid "Visit the FHIR Community Process Specification Registry"
+msgstr "Apsilankykiti FHIR bendruomenės procesų specifikacijų registre"
+
+# PrevPage
+#: CountryFlag
+msgid "flag"
+msgstr "vėliava"
+
+# NextPage
+#: PrevPage
+msgid "< prev"
+msgstr "< ankstesnis"
+
+# PageBottom
+#: NextPage
+msgid "next >"
+msgstr "kitas >"
+
+# PageTop
+#: PageBottom
+msgid "bottom"
+msgstr "apačia"
+
+# IGCopyright
+#: PageTop
+msgid "top"
+msgstr "viršus"
+
+# IGPackage
+#: IGCopyright
+msgid "IG © %YEAR%"
+msgstr "IG © %YEAR%."
+
+# GeneratedDate
+#: IGPackage
+msgid "Package %PKG% based on %FHIRVER%."
+msgstr "Paketas %PKG% pagrįstas %FHIRVER%."
+
+# PageStandardsStatus
+#: GeneratedDate
+msgid "Generated %DATE%"
+msgstr "Sukurta %DATE%"
+
+# StandardsStatus
+#: PageStandardsStatus
+msgid "Page standards status"
+msgstr "Puslapio standartų būsena"
+
+# FromNormative
+#: StandardsStatus
+msgid "Standards Status"
+msgstr "Standartų būsena"
+
+# MaturityLevel
+#: FromNormative
+msgid "from v%NORMVER%"
+msgstr "iš v%NORMVER%"
+
+# OfficialURL
+#: MaturityLevel
+msgid "Maturity Level"
+msgstr "Brandos lygis"
+
+# CopyURL
+#: OfficialURL
+msgid "Official URL"
+msgstr "Oficialus URL"
+
+# CopyVersioned
+#: CopyURL
+msgid "Click to copy URL"
+msgstr "Spustelėkite, kad nukopijuotumėte URL"
+
+# Version
+#: CopyVersioned
+msgid "Click to copy versioned URL"
+msgstr "Spustelėkite, kad nukopijuotumėte versijuotą URL"
+
+# ResourceDate
+#: Version
+msgid "Version"
+msgstr "Versija"
+
+# Responsible
+#: ResourceDate
+msgid "as of %RESDATE%"
+msgstr "nuo %RESDATE%"
+
+# Realm
+#: Responsible
+msgid "Responsible"
+msgstr "Atsakingas"
+
+# ComputableName
+#: Realm
+msgid "Realm"
+msgstr "Sritis"
+
+# OtherIdentifiers
+#: ComputableName
+msgid "Computable Name"
+msgstr "Mašiniškai apdorojamas pavadinimas"
+
+# Keywords
+#: OtherIdentifiers
+msgid "Other Identifiers"
+msgstr "Kiti identifikatoriai"
+
+# Usage
+#: Keywords
+msgid "Keywords"
+msgstr "Raktiniai žodžiai"
+
+# CopyrightLegal
+#: Usage
+msgid "Usage"
+msgstr "Naudojimas"
+
+# NarrativeContent
+#: CopyrightLegal
+msgid "Copyright/Legal"
+msgstr "Autorių teisės/Teisinė informacija"
+
+# TableOfContents
+#: NarrativeContent
+msgid "Narrative Content"
+msgstr "Pasakojimo turinys"
+
+# QAReport
+#: TableOfContents
+msgid "Table of Contents"
+msgstr "Turinio lentelė"
+
+# ReadingTerminology
+#: QAReport
+msgid "QA Report"
+msgstr "Kokybės patikrinimo ataskaita"
+
+# TestPlans
+#: ReadingTerminology
+msgid "Description of the above table(s)"
+msgstr "Aukščiau pateiktos(-ų) lentelės(-ių) aprašymas(-ai)"
+
+# Actors
+#: TestPlans
+msgid "Test Plans"
+msgstr "Bandymų planai"
+
+# Diagram
+#: Actors
+msgid "Actors"
+msgstr "Dalyviai"
+
+# Processes
+#: Diagram
+msgid "Diagram"
+msgstr "Diagrama"
+
+# Instances
+#: Processes
+msgid "Processes"
+msgstr "Procesai"
+
+# WorkInProgress
+#: Instances
+msgid "Instances"
+msgstr "Pavyzdžiai"
+
+# Contents
+#: WorkInProgress
+msgid "The content in this section has not undergone work group review and may besignificantly revised prior to the next ballot."
+msgstr "Šio skirsnio turinys nebuvo peržiūrėtas darbo grupės ir gali būti iš esmės pakeistas prieš kitą balsavimą."
+
+# Globals
+#: Contents
+msgid "Contents"
+msgstr "Turinys"
+
+# GlobalProfiles
+#: Globals
+msgid "Globals"
+msgstr "Globalūs profiliai"
+
+# ArtifactsIntro
+#: GlobalProfiles
+msgid "Global Profiles"
+msgstr "Bendrieji profilių apibrėžimai"
+
+# ArtifactsSummary
+#: ArtifactsIntro
+msgid "This page provides a list of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Šiame puslapyje pateikiamas FHIR artefaktų, apibrėžtų šiame diegimo vadove, sąrašas."
+
+# Language
+#: ArtifactsSummary
+msgid "Artifacts Summary"
+msgstr "Artefaktų santrauka"
+
+# UMLDiagram
+#: Language
+msgid "Language"
+msgstr "Kalba"
+
+# Obligations
+#: UMLDiagram
+msgid "UML Diagram"
+msgstr "UML diagrama"
+
+# OpenEHR
+#: Obligations
+msgid "Obligations"
+msgstr "Įsipareigojimai"
+
+# QuestionnaireTree
+#: OpenEHR
+msgid "openEHR View"
+msgstr "openEHR peržiūra"
+
+# QuestionnaireSample
+#: QuestionnaireTree
+msgid "Tree view"
+msgstr "Medžio peržiūra"
+
+# QuestionnaireLogic
+#: QuestionnaireSample
+msgid "Sample Rendering"
+msgstr "Pavyzdinis atvaizdavimas"
+
+# QuestionnaireResponses
+#: QuestionnaireLogic
+msgid "Form Logic"
+msgstr "Klausimyno logika"
+
+# TestQuestionnaire
+#: QuestionnaireResponses
+msgid "Sample completed form"
+msgstr "Pavyzdinis užpildytas klausimynas"
+
+# ResponsesQuestionnaire
+#: TestQuestionnaire
+msgid "Test this Questionnaire"
+msgstr "Išbandykite šį klausimyną"
+
+# NoQuestionnaireResponses
+#: ResponsesQuestionnaire
+msgid "Responses for this Questionnaire"
+msgstr "Atsakymai į šį klausimyną"
+
+# null
+#: NoQuestionnaireResponses
+msgid "There are currently no Questionnaire Response instances for this Questionnaire defined in this IG."
+msgstr "Šiuo metu šiame IG nėra apibrėžta jokių šio klausimyno atsakymo pavyzdžių."
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+

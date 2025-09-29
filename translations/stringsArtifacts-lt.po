@@ -1,0 +1,408 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-19 06:30+0000\n"
+"PO-Revision-Date: 2025-09-19 07:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: Lithuanian\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+# ActorDefinitionDesc
+#: ActorDefinitionName
+msgid "Requirements: Actor Definitions"
+msgstr "Reikalavimai: Dalyvių apibrėžimai"
+
+# RequirementsName
+#: ActorDefinitionDesc
+msgid "The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide."
+msgstr "Šie artefaktai apibrėžia asmenų ir (arba) sistemų tipus, kurie sąveikaus įgyvendinimo vadove aprašytuose naudojimo scenarijuose."
+
+# RequirementsDesc
+#: RequirementsName
+msgid "Requirements: Formal Requirements"
+msgstr "Reikalavimai: Formalūs reikalavimai"
+
+# CapabilityStatementName
+#: RequirementsDesc
+msgid "The following artifacts describe the specific requirements to be met by systems compliant with the implementation guide."
+msgstr "Šie artefaktai aprašo specifinius reikalavimus, kuriuos turi atitikti sistemos, atitinkančios šį įgyvendinimo vadovą."
+
+# CapabilityStatementDesc
+#: CapabilityStatementName
+msgid "Behavior: Capability Statements"
+msgstr "Elgsena: Galimybių pareiškimai"
+
+# OperationDefinitionName
+#: CapabilityStatementDesc
+msgid "The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."
+msgstr "Šie artefaktai apibrėžia specifines galimybes, kurių tikimasi iš įvairių tipų sistemų, kad jos atitiktų šį įgyvendinimo vadovą. Tikimasi, kad šį įgyvendinimo vadovą atitinkančios sistemos deklaruos atitiktį vienam ar keliems iš šių galimybių pareiškimų."
+
+# OperationDefinitionDesc
+#: OperationDefinitionName
+msgid "Behavior: Operation Definitions"
+msgstr "Elgsena: Operacijų apibrėžimai"
+
+# EventDefinitionName
+#: OperationDefinitionDesc
+msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
+msgstr "Tai yra pritaikytos operacijos, kurias gali palaikyti ir (arba) iškviesti sistemos, atitinkančios šį įgyvendinimo vadovą."
+
+# EventDefinitionDesc
+#: EventDefinitionName
+msgid "Behavior: Event Definitions"
+msgstr "Elgsena: Įvykių apibrėžimai"
+
+# MessageDefinitionName
+#: EventDefinitionDesc
+msgid "Defines system and business occurrences that drive a need for data to flow from systems in this implementation guide."
+msgstr "Apibrėžia sistemos ir verslo įvykius, kurie skatina poreikį duomenims tekėti iš sistemų, nurodytų šiame įgyvendinimo vadove."
+
+# MessageDefinitionDesc
+#: MessageDefinitionName
+msgid "Behavior: Message Definitions"
+msgstr "Elgsena: Pranešimų apibrėžimai"
+
+# SearchParameterName
+#: MessageDefinitionDesc
+msgid "These define the types of messages that can be sent and/or received by systems conforming to this implementation guide."
+msgstr "Jie apibrėžia pranešimų tipus, kuriuos gali siųsti ir (arba) gauti sistemos, atitinkančios šį įgyvendinimo vadovą."
+
+# SearchParameterDesc
+#: SearchParameterName
+msgid "Behavior: Search Parameters"
+msgstr "Elgsena: Paieškos parametrai"
+
+# SubscriptionTopicName
+#: SearchParameterDesc
+msgid "These define the properties by which a RESTful server can be searched. They can also be used for sorting and including related resources."
+msgstr "Jie apibrėžia savybes, pagal kurias galima ieškoti RESTful serveryje. Jie taip pat gali būti naudojami rūšiavimui ir susijusių resursų įtraukimui."
+
+# SubscriptionTopicDesc
+#: SubscriptionTopicName
+msgid "Behavior: Subscription Topics"
+msgstr "Elgsena: Prenumeratos temos"
+
+# ActivityDefinitionName
+#: SubscriptionTopicDesc
+msgid "These define the types of information that can be subscribed to on systems conforming to this this implementation guide."
+msgstr "Jie apibrėžia informacijos tipus, kuriuos galima prenumeruoti sistemose, atitinkančiose šį įgyvendinimo vadovą."
+
+# ActivityDefinitionDesc
+#: ActivityDefinitionName
+msgid "Knowledge Artifacts: Activity Definitions"
+msgstr "Žinių artefaktai: Veiklos apibrėžimai"
+
+# PlanDefinitionName
+#: ActivityDefinitionDesc
+msgid "These define activities that can be performed as part of content in this implementation guide."
+msgstr "Jie apibrėžia veiklas, kurios gali būti atliekamos kaip šio įgyvendinimo vadovo turinio dalis."
+
+# PlanDefinitionDesc
+#: PlanDefinitionName
+msgid "Knowledge Artifacts: Plan Definitions"
+msgstr "Žinių artefaktai: Plano apibrėžimai"
+
+# MeasureName
+#: PlanDefinitionDesc
+msgid "These define workflows, rules, strategies, or protocols as part of content in this implementation guide."
+msgstr "Jie apibrėžia darbo eigas, taisykles, strategijas ar protokolus, kurie yra šio įgyvendinimo vadovo turinio dalis."
+
+# MeasureDesc
+#: MeasureName
+msgid "Knowledge Artifacts: Measure"
+msgstr "Žinių artefaktai: Priemonės/Rodikliai"
+
+# LibraryName
+#: MeasureDesc
+msgid "These define measures as part of content in this implementation guide."
+msgstr "Jie apibrėžia priemones, kurios yra šio įgyvendinimo vadovo turinio dalis."
+
+# LibraryDesc
+#: LibraryName
+msgid "Knowledge Artifacts: Libraries"
+msgstr "Žinių artefaktai: Bibliotekos"
+
+# EvidenceName
+#: LibraryDesc
+msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
+msgstr "Jie apibrėžia logiką, išteklių rinkinius ir kitas bibliotekas, kurios yra šio įgyvendinimo vadovo turinio dalis."
+
+# EvidenceDesc
+#: EvidenceName
+msgid "Knowledge Artifacts: Evidence"
+msgstr "Žinių artefaktai: Įrodymai"
+
+# EvidenceVariableName
+#: EvidenceDesc
+msgid "Indicates research or other information that justifies or support the information exchange defined in this implemetnation guide."
+msgstr "Nurodo tyrimus ar kitą informaciją, kuri pagrindžia ar palaiko šiame įgyvendinimo vadove apibrėžtą informacijos mainų procesą."
+
+# EvidenceVariableDesc
+#: EvidenceVariableName
+msgid "Knowledge Artifacts: Evidence Variables"
+msgstr "Žinių artefaktai: Įrodymų kintamieji"
+
+# CitationNameName
+#: EvidenceVariableDesc
+msgid "Components of the research that justify or support the information exchange defined in this implementation guide."
+msgstr "Tyrimo komponentai, kurie pagrindžia ar palaiko šiame įgyvendinimo vadove apibrėžtą informacijos mainų procesą."
+
+# CitationNameDesc
+#: CitationNameName
+msgid "Knowledge Artifacts: Citations"
+msgstr "Žinių artefaktai: Citatos"
+
+# GraphDefinitionName
+#: CitationNameDesc
+msgid "Supports referencing artifacts defined in this implementation guide."
+msgstr "Palaiko nuorodas į artefaktus, apibrėžtus šiame įgyvendinimo vadove."
+
+# GraphDefinitionDesc
+#: GraphDefinitionName
+msgid "Structures: Graph Definitions"
+msgstr "Struktūros: Grafų apibrėžimai"
+
+# LogicalModelName
+#: GraphDefinitionDesc
+msgid "These define collections of interrelated resources that are useful to pass around as a group."
+msgstr "Jie apibrėžia tarpusavyje susijusių resursų rinkinius, kuriuos naudinga perduoti kaip grupę."
+
+# LogicalModelDesc
+#: LogicalModelName
+msgid "Structures: Logical Models"
+msgstr "Struktūros: Loginiai modeliai"
+
+# QuestionnaireName
+#: LogicalModelDesc
+msgid "These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."
+msgstr "Jie apibrėžia duomenų modelius, kurie atspindi sritį, aprašytą šiame įgyvendinimo vadove, verslui palankesniais terminais nei baziniai FHIR resursai."
+
+# QuestionnaireDesc
+#: QuestionnaireName
+msgid "Structures: Questionnaires"
+msgstr "Struktūros: Klausimynai"
+
+# AbstractProfileName
+#: QuestionnaireDesc
+msgid "These define forms used by systems conforming to this implementation guide to capture or expose data to end users."
+msgstr "Jie apibrėžia formas, kurias naudoja sistemos, atitinkančios šį įgyvendinimo vadovą, duomenims rinkti ar pateikti galutiniams vartotojams."
+
+# AbstractProfileDesc
+#: AbstractProfileName
+msgid "Structures: Abstract Profiles"
+msgstr "Struktūros: Abstraktūs profiliai"
+
+# ResourceProfileName
+#: AbstractProfileDesc
+msgid "These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles *based* on these abstract profiles, but do not declare conformance to the abstract profiles themselves."
+msgstr "Tai yra resursų ar duomenų tipų profiliai, kurie aprašo kitų profilių naudojamus šablonus, bet negali būti tiesiogiai instancijuoti. T. y. egzemplioriai gali atitikti profilius, *pagrįstus* šiais abstrakčiais profiliais, bet nedeklaruoja atitikties patiems abstraktiems profiliams."
+
+# ResourceProfileDesc
+#: ResourceProfileName
+msgid "Structures: Resource Profiles"
+msgstr "Struktūros: Resursų profiliai"
+
+# DataTypeName
+#: ResourceProfileDesc
+msgid "These define constraints on FHIR resources for systems conforming to this implementation guide."
+msgstr "Jie apibrėžia FHIR resursų apribojimus sistemoms, atitinkančioms šį įgyvendinimo vadovą."
+
+# DataTypeDesc
+#: DataTypeName
+msgid "Structures: Data Type Profiles"
+msgstr "Struktūros: Duomenų tipų profiliai"
+
+# ExtensionName
+#: DataTypeDesc
+msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
+msgstr "Jie apibrėžia FHIR duomenų tipų apribojimus sistemoms, atitinkančioms šį įgyvendinimo vadovą."
+
+# ValueSetName
+#: ExtensionName
+msgid "Structures: Extension Definitions"
+msgstr "Struktūros: Plėtinių apibrėžimai"
+
+# ValueSetDesc
+#: ValueSetName
+msgid "Terminology: Value Sets"
+msgstr "Terminologija: Reikšmių rinkiniai"
+
+# CodeSystemName
+#: ValueSetDesc
+msgid "These define sets of codes used by systems conforming to this implementation guide."
+msgstr "Jie apibrėžia kodų rinkinius, naudojamus sistemų, atitinkančių šį įgyvendinimo vadovą."
+
+# CodeSystemDesc
+#: CodeSystemName
+msgid "Terminology: Code Systems"
+msgstr "Terminologija: Kodų sistemos"
+
+# NamingSystemName
+#: CodeSystemDesc
+msgid "These define new code systems used by systems conforming to this implementation guide."
+msgstr "Jie apibrėžia naujas kodų sistemas, naudojamas sistemų, atitinkančių šį įgyvendinimo vadovą."
+
+# NamingSystemDesc
+#: NamingSystemName
+msgid "Terminology: Naming Systems"
+msgstr "Terminologija: Pavadinimų sistemos"
+
+# TerminologyCapName
+#: NamingSystemDesc
+msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
+msgstr "Jie apibrėžia identifikatorių ir (arba) kodų sistemų tapatybes, naudojamas sistemų, atitinkančių šį įgyvendinimo vadovą."
+
+# TerminologyCapDesc
+#: TerminologyCapName
+msgid "Terminology: Terminology Capabilities"
+msgstr "Terminologija: Terminologijos galimybės"
+
+# StructureMapName
+#: TerminologyCapDesc
+msgid "Parameters that define the expansion of value sets used within the implementation guide."
+msgstr "Parametrai, apibrėžiantys reikšmių rinkinių išplėtimą, naudojamą įgyvendinimo vadove."
+
+# StructureMapDesc
+#: StructureMapName
+msgid "Terminology: Structure Maps"
+msgstr "Terminologija: Struktūros žemėlapiai"
+
+# ConceptMapName
+#: StructureMapDesc
+msgid "These define transformations to convert between data structures used by systems conforming to this implementation guide."
+msgstr "Jie apibrėžia transformacijas, skirtas konvertuoti tarp duomenų struktūrų, naudojamų sistemų, atitinkančių šį įgyvendinimo vadovą."
+
+# ConceptMapDesc
+#: ConceptMapName
+msgid "Terminology: Concept Maps"
+msgstr "Terminologija: Koncepto žemėlapiai"
+
+# TestPlanName
+#: ConceptMapDesc
+msgid "These define transformations to convert between codes by systems conforming with this implementation guide."
+msgstr "Jie apibrėžia transformacijas, skirtas konvertuoti tarp kodų sistemų, atitinkančių šį įgyvendinimo vadovą."
+
+# TestPlanDesc
+#: TestPlanName
+msgid "Testing Artifacts: TestPlans"
+msgstr "Testavimo artefaktai: Testavimo planai"
+
+# TestScriptName
+#: TestPlanDesc
+msgid "These test plans are available to verify test coverage for this implementation guide"
+msgstr "Šie testavimo planai yra prieinami siekiant patikrinti testų aprėptį šiam įgyvendinimo vadovui"
+
+# TestScriptDesc
+#: TestScriptName
+msgid "Testing Artifacts: TestScripts"
+msgstr "Testavimo artefaktai: Testavimo scenarijai"
+
+# ConditionDefinitionName
+#: TestScriptDesc
+msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
+msgstr "Šie testavimo apibrėžimai yra prieinami FHIR testavimo varikliams, siekiant patikrinti, ar sistemos atitinka šį įgyvendinimo vadovą."
+
+# ConditionDefinitionDesc
+#: ConditionDefinitionName
+msgid "Clinical: Condition Definitions"
+msgstr "Klinikiniai: Būklės apibrėžimai"
+
+# ObservationDefinitionName
+#: ConditionDefinitionDesc
+msgid "Formal descriptions of conditions and symptoms relevant to the use of this implementation guide."
+msgstr "Formalūs būklių ir simptomų aprašymai, susiję su šio įgyvendinimo vadovo naudojimu."
+
+# ObservationDefinitionDesc
+#: ObservationDefinitionName
+msgid "Clinical: Observation Definitions"
+msgstr "Klinikiniai: Stebėjimo apibrėžimai"
+
+# SpecimenDefinitionName
+#: ObservationDefinitionDesc
+msgid "Formal descriptions of types of observations relevant to the use of this implementation guide."
+msgstr "Formalūs stebėjimų tipų aprašymai, susiję su šio įgyvendinimo vadovo naudojimu."
+
+# SpecimenDefinitionDesc
+#: SpecimenDefinitionName
+msgid "Clinical: Specimen Definitions"
+msgstr "Klinikiniai: Mėginių apibrėžimai"
+
+# ChargeItemDefinitionName
+#: SpecimenDefinitionDesc
+msgid "Formal descriptions of the types of specimens relevant to the use of this implementation guide."
+msgstr "Formalūs mėginių tipų aprašymai, susiję su šio įgyvendinimo vadovo naudojimu."
+
+# ChargeItemDefinitionDesc
+#: ChargeItemDefinitionName
+msgid "Clinical: Charge Item Definitions"
+msgstr "Klinikiniai: Mokestinių elementų apibrėžimai"
+
+# ExampleScenarioName
+#: ChargeItemDefinitionDesc
+msgid "Definitions of chargeable costs relevant to the use of this implementation guide."
+msgstr "Apmokestinamų išlaidų apibrėžimai, susiję su šio įgyvendinimo vadovo naudojimu."
+
+# ExampleScenarioDesc
+#: ExampleScenarioName
+msgid "Example: Example Scenarios"
+msgstr "Pavyzdys: Pavyzdiniai scenarijai"
+
+# ExampleName
+#: ExampleScenarioDesc
+msgid "These define groups of interrelated examples that demonstrate one or more of the workflows supported by this implementation guide."
+msgstr "Jie apibrėžia tarpusavyje susijusių pavyzdžių grupes, kurios demonstruoja vieną ar kelias darbo eigas, palaikomas šio įgyvendinimo vadovo."
+
+# ExampleDesc
+#: ExampleName
+msgid "Example: Example Instances"
+msgstr "Pavyzdys: Pavyzdiniai egzemplioriai"
+
+# ExampleSupportingName
+#: ExampleDesc
+msgid "These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
+msgstr "Tai yra pavyzdiniai egzemplioriai, kurie parodo, kaip gali atrodyti duomenys, sukurti ir sunaudoti sistemų, atitinkančių šį įgyvendinimo vadovą."
+
+# ExampleSupportingDesc
+#: ExampleSupportingName
+msgid "Example: Example Supporting Instances"
+msgstr "Pavyzdys: Pavyzdiniai pagalbiniai egzemplioriai"
+
+# OtherName
+#: ExampleSupportingDesc
+msgid "These are example instances that are not governed by this implementation guide, but which are necessary to support other examples defined in the IG."
+msgstr "Tai yra pavyzdiniai egzemplioriai, kuriems netaikomos šio įgyvendinimo vadovo taisyklės, bet kurie yra būtini, siekiant palaikyti kitus pavyzdžius, apibrėžtus įgyvendinimo vadove (IG)."
+
+# OtherDesc
+#: OtherName
+msgid "Other"
+msgstr "Kita"
+
+# null
+#: OtherDesc
+msgid "These are resources that are used within this implementation guide that do not fit into one of the other categories."
+msgstr "Tai yra resursai, naudojami šiame įgyvendinimo vadove, kurie nepatenka į jokią kitą kategoriją."
+
+# CitationName
+#: CitationName
+msgid "Knowledge Artifacts: Citations"
+msgstr "Žinių artefaktai: Citatos"
+
+# CitationDesc
+#: CitationDesc
+msgid "Supports referencing artifacts defined in this implementation guide."
+msgstr "Palaiko nuorodas į artefaktus, apibrėžtus šiame įgyvendinimo vadove."
+
+# ExtensionDesc
+#: ExtensionDesc
+msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
+msgstr "Jie apibrėžia FHIR duomenų tipų apribojimus sistemoms, atitinkančioms šį įgyvendinimo vadovą."
+
