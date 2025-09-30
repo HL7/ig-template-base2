@@ -117,6 +117,23 @@
       "template-change-history": "template/layouts/layout-changehistory.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     },
+    "StructureDefinition:resource": {
+      "template-base": "template/layouts/layout-resource.html",
+      "template-defns": "template/layouts/layout-profile-definitions.html",
+      "template-mappings": "template/layouts/layout-profile-mappings.html",
+      "template-testing": "template/layouts/layout-profile-testing.html",
+      "template-examples": "",
+      "template-profile-history": "template/layouts/layout-profile-history.html",
+      "template-format": "template/layouts/layout-profile-format.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "defns": "{{[type]}}-{{[id]}}-definitions.html",
+      "mappings": "{{[type]}}-{{[id]}}-mappings.html",
+      "testing": "{{[type]}}-{{[id]}}-testing.html",
+      "examples": "{{[type]}}-{{[id]}}-examples.html",
+      "format": "{{[type]}}-{{[id]}}.profile.{{[fmt]}}.html",
+      "profile-history": "{{[type]}}-{{[id]}}.profile.history.html",
+      "template-change-history": ""
+    },
     "StructureDefinition:extension": {
       "template-base": "template/layouts/layout-ext.html",
       "template-defns": "template/layouts/layout-profile-definitions.html",

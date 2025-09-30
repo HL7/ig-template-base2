@@ -13,7 +13,8 @@
     "Contained": "Contained resources",
     "FormalExtension": "Formal Views of Extension Content",
     "FormalProfile": "Formal Views of Profile Content",
-    "ReadingStructures": "Description of Profiles, Differentials, Snapshots, and their representations",
+    "FormalResource": "Formal Views of Resource Content",
+    "ReadingStructures": "Description Differentials, Snapshots, and other representations",
     "ReadingTerminology": "Description of the above table(s)",
     "KeyElementsTable": "Key Elements Table",
     "DifferentialTable": "Differential Table",
@@ -31,6 +32,7 @@
     "JSONTemplate": "JSON Template",
     "TTLTemplate": "TTL Template",
     "OtherReps": "Other representations of profile:",
+    "ResourceOtherReps": "Other representations of resource:",
     "CSV": "CSV",
     "Excel": "Excel",
     "Schematron": "Schematron",
@@ -41,8 +43,11 @@
     "DetailedDescriptions": "Detailed Descriptions",
     "DefinitionsFor": "Definitions for the %MODEL%",
     "ExamplesForProfile": "Examples for the %ID% Profile.",
+    "ExamplesForResource": "Examples for the %ID% Resource.",
     "NoExamples": "No examples are currently available for the %ID% Profile.",
+    "ResourceNoExamples": "No examples are currently available for the %ID% Resource",
     "FormatProfile": "%FMT% Profile",
+    "FormatResource": "%FMT% Resource",
     "FormatRep": "%FMT% representation of the %ID% %TYPE%.",
     "Mappings": "Mappings",
     "MappingsFor": "Mappings for the %ID% %TYPE%.",
@@ -58,6 +63,7 @@
     "History": "History",
     "Extension": "Extension",
     "LogicalModel": "Logical Model",
+    "ResourceModel": "Resource",
     "ResourceProfile": "Resource Profile",
     "DataTypeProfile": "Data Type Profile",
     "Links": "Links",
@@ -111,6 +117,8 @@
     "TestQuestionnaire": "Test this Questionnaire",
     "ResponsesQuestionnaire": "Responses for this Questionnaire",
     "NoQuestionnaireResponses": "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG.",
-    "ADL": "ADL"
+    "ADL": "ADL",
+    "Structure": "Structure",
+    "SearchParameters": "Search Parameters"
   }
 }

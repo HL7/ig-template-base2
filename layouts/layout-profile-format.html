@@ -20,7 +20,13 @@
 <a name="root"> </a>
 {% assign formatUpper = format | upcase %}
 {% assign respath = site.data.resources[resource_].path %}
-<h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['FormatProfile'] | replace: "%FMT%", formatUpper}}</h2>
+<h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - 
+{% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
+{{site.data.stringsBase['{{[lang]}}']['FormatResource'] | replace: "%FMT%", formatUpper}}
+{% else %}
+{{site.data.stringsBase['{{[lang]}}']['FormatProfile'] | replace: "%FMT%", formatUpper}}
+{% endif %}
+</h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 
 {% assign modelLower = modelType | downcase %}

@@ -1,0 +1,220 @@
+---
+---
+{% assign localPage = page.path | split: "/" | last %}
+{% include fragment-modelType.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
+{% include fragment-pagebegin.html lang="{{[lang]}}" %}
+<!-- layouts\layout-profile -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' lang="{{[lang]}}" %}
+
+  <a name="root"> </a>
+{% assign respath = site.data.resources[resource_].path %}
+  <h2 id="root">{{modelType}}:
+{% if site.data.structuredefinitions["{{[id]}}"].abstract == true %}
+<i> {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}</i>
+{% else %}
+{{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}
+{% endif %}
+{% if site.data.resources[resource_].experimental == true or site.data.structuredefinitions["{{[id]}}"].abstract == true %}({% endif %}
+{% if site.data.structuredefinitions["{{[id]}}"].abstract == true %}{{site.data.stringsBase['{{[lang]}}']['Abstract']}}{% endif %}
+{% if site.data.resources[resource_].experimental == true %}{{site.data.stringsBase['{{[lang]}}']['Experimental']}}{% endif %}
+{% if site.data.resources[resource_].experimental == true or site.data.structuredefinitions["{{[id]}}"].abstract == true %}){% endif %}
+  </h2>
+
+{% include fragment-resourceTable.html lang="{{[lang]}}" %}
+{%if site.data.resources[resource_].description %}
+<p>
+{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
+</p>
+{% endif %}{%if site.data.resources[resource_].purpose %}
+<p>
+{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
+</p>
+{% endif %}
+
+<!-- insert intro if present -->
+{% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
+
+{% include StructureDefinition-{{[id]}}-sd-xref{{[langsuffix]}}.xhtml %}
+{% capture sdlink %}
+  <a href="{{ site.data.structuredefinitions['{{[id]}}'].basepath }}">{{ site.data.structuredefinitions['{{[id]}}'].basename }}</a>
+{% endcapture %}
+
+  <!-- no uri -->
+  <a name="resource"> </a>
+  <h3 id="resource">{{site.data.stringsBase['{{[lang]}}']['FormalResource']}}</h3>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">{{site.data.stringsBase['{{[lang]}}']['ReadingStructures']}}</a>.
+  </p>
+  <div id="tabs">
+    <ul>
+      <li>
+        <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['Structure']}}</a>
+      </li>
+{% if site.data.structuredefinitions["{{[id]}}"].uml %}
+      <li>
+        <a href="#tabs-uml">{{site.data.stringsBase['{{[lang]}}']['UMLDiagram']}}</a>
+      </li>
+{% endif %}
+<!-- TODO: Put Psuedo back -->
+{% unless excludexml == 'y' %}
+<!--      <li>
+        <a href="#tabs-xml">{{site.data.stringsBase['{{[lang]}}']['PseudoXML']}}</a>
+      </li>-->
+{% endunless %}
+{% unless excludejson == 'y' %}
+<!--      <li>
+        <a href="#tabs-json">{{site.data.stringsBase['{{[lang]}}']['PseudoJSON']}}</a>
+      </li>-->
+{% endunless %}
+{% unless excludettl == 'y' %}
+      <!--<li>
+        <a href="#tabs-ttl">{{site.data.stringsBase['{{[lang]}}']['PseudoTTL']}}</a>
+      </li>-->
+{% endunless %}
+<!-- TODO - inter-version changes? -->
+      <li>
+        <a href="#tabs-all">{{site.data.stringsBase['{{[lang]}}']['AllTables']}}</a>
+      </li>
+    </ul>
+    <a name="tabs-diff"> </a>
+    <div id="tabs-diff">
+      <div id="tbl-diff">
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <div id="tbl-diff-inner">
+          {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
+
+          <a name="tx"> </a>
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv-diff"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+    </div>
+{% if site.data.structuredefinitions["{{[id]}}"].uml %}
+    <a name="tabs-uml"> </a>
+    <div id="tabs-uml">
+      <div id="tbl-uml">
+        <div id="tbl-uml-inner">
+          {% include StructureDefinition-{{[id]}}-uml.xhtml %}
+<!--          {% include StructureDefinition-{{[id]}}-uml{{[langsuffix]}}.xhtml %}-->
+        </div>
+      </div>
+    </div>
+{% endif %}
+{% unless excludexml == 'y' %}
+<!--    <a name="tabs-xml"> </a>
+    <div id="tabs-xml">
+      <div id="xml">
+        <div id="xml-inner">
+          {% include StructureDefinition-{{[id]}}-pseudo-xml{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>
+    </div>-->
+{% endunless %}
+{% unless excludejson == 'y' %}
+<!--    <a name="tabs-json"> </a>
+    <div id="tabs-json">
+      <div id="json">
+        <div id="json-inner">
+          {% include StructureDefinition-{{[id]}}-pseudo-json{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>
+    </div>-->
+{% endunless %}
+{% unless excludettl == 'y' %}
+    <!--<a name="tabs-ttl"> </a>
+    <div id="tabs-ttl">
+      <div id="ttl">
+        <div id="ttl-inner">
+          {% include StructureDefinition-{{[id]}}-pseudo-ttl{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>
+    </div>-->
+{% endunless %}
+    <a name="tabs-all"> </a>
+    <div id="tabs-all">
+      <div id="all-tbl-diff">
+        <p>
+          <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView']}}</b>
+        </p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <div id="all-tbl-diff-inner">
+          {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv-all-diff"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+{% if site.data.structuredefinitions["{{[id]}}"].uml %}
+      <div id="all-tbl-uml">
+        <div id="all-tbl-uml-inner">
+          {% include StructureDefinition-{{[id]}}-uml-all.xhtml %}
+<!--          {% include StructureDefinition-{{[id]}}-uml-all{{[langsuffix]}}.xhtml %}-->
+        </div>
+      </div>
+{% endif %}
+{% unless excludexml == 'y' %}
+      <!--<div id="all-xml">
+        <p>
+          <b>{{site.data.stringsBase['{{[lang]}}']['XMLTemplate']}}</b>
+        </p>
+        <div id="all-xml-inner">
+          {% include StructureDefinition-{{[id]}}-pseudo-xml{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>-->
+{% endunless %}
+{% unless excludejson == 'y' %}
+      <!--<div id="all-json">
+        <p>
+          <b>{{site.data.stringsBase['{{[lang]}}']['JSONTemplate']}}</b>
+        </p>
+        <div id="all-json-inner">
+          {% include StructureDefinition-{{[id]}}-pseudo-json{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>-->
+{% endunless %}
+{% unless excludettl == 'y' %}
+      <!--<div id="all-ttl">
+        <p>
+          <b>{{site.data.stringsBase['{{[lang]}}']['TTLTemplate']}}</b>
+        </p>
+        <div id="all-ttl-inner">
+          {% include StructureDefinition-{{[id]}}-pseudo-ttl{{[langsuffix]}}.xhtml %}
+        </div>
+      </div>-->
+{% endunless %}
+    </div>
+  </div>
+  <p>&#160;</p>
+  <p>{{site.data.stringsBase['{{[lang]}}']['ResourceOtherReps']}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV']}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel']}}</a></p>
+
+<!-- insert notes if present -->
+{% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
+
+  <a name="search"> </a>
+  <h3 id="search">{{site.data.stringsBase['{{[lang]}}']['SearchParameters']}}</h3>
+  {% include StructureDefinition-{{[id]}}-search-params{{[langsuffix]}}.xhtml %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html lang="{{[lang]}}" %}

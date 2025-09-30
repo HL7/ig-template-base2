@@ -18,7 +18,11 @@
 
 {% assign basepath = localPage | replace: '-examples.html', '.html' %}
 {% if site.data.pages[basepath].examples.size > 0 %}
+{% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
   <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForProfile'] | replace: "%ID%", "{{[id]}}"}}</p>
+{% else %}
+  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForResource'] | replace: "%ID%", "{{[id]}}"}}</p>
+{% endif %}
   <table style="grid">
     <tbody>
       {% for example in site.data.pages[basepath].examples %}
@@ -31,7 +35,11 @@
     </tbody>
   </table>
 {% else %}
+{% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
+  <p><b>{{site.data.stringsBase['{{[lang]}}']['ResourceNoExamples'] | replace: "%ID%", "{{[id]}}"}}</b></p>
+{% else %}
   <p><b>{{site.data.stringsBase['{{[lang]}}']['NoExamples'] | replace: "%ID%", "{{[id]}}"}}</b></p>
+{% endif %}
 {% endif %}
 
 <!-- insert notes if present -->
