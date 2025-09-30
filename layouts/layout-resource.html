@@ -211,9 +211,11 @@
 <!-- insert notes if present -->
 {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 
+{% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
   <a name="search"> </a>
   <h3 id="search">{{site.data.stringsBase['{{[lang]}}']['SearchParameters']}}</h3>
   {% include StructureDefinition-{{[id]}}-search-params{{[langsuffix]}}.xhtml %}
+{% endif %}
 
 </div>
 {% assign includetabscripts = 'true' %}
