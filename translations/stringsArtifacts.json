@@ -30,6 +30,8 @@
     "EvidenceVariableDesc": "Components of the research that justify or support the information exchange defined in this implementation guide",
     "CitationName": "Knowledge Artifacts: Citations",
     "CitationDesc": "Supports referencing artifacts defined in this implementation guide.",
+    "ResourceName": "Structures: Additional Resources",
+    "ResourceDesc": "'Additional' resources that are not yet published in the FHIR core specification.",
     "GraphDefinitionName": "Structures: Graph Definitions",
     "GraphDefinitionDesc": "These define collections of interrelated resources that are useful to pass around as a group.",
     "LogicalModelName": "Structures: Logical Models",

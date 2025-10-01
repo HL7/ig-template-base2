@@ -589,9 +589,50 @@ msgstr "Ответы на этот Опросный лист"
 
 # NoQuestionnaireResponses
 #: NoQuestionnaireResponses
-msgid ""
-"There are currently no QuestionnaireResponse instances for this "
-"Questionnaire defined in this IG."
-msgstr ""
-"В настоящее время в данном ИГ не определено ни одного экземпляра "
-"QuestionnaireResponse для этого вопросника."
+msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
+msgstr "В настоящее время в данном ИГ не определено ни одного экземпляра QuestionnaireResponse для этого вопросника."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Формальные представления содержимого ресурса"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Другие представления ресурса:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Примеры для ресурса %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Примеры для ресурса %ID% пока недоступны"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "Ресурс %FMT%"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Ресурс"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Структура"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Параметры поиска"

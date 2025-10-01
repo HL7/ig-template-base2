@@ -71,6 +71,7 @@
               <xsl:when test="$infoExt='Evidence'">-ka-evidence</xsl:when>
               <xsl:when test="$infoExt='EvidenceVariable'">-ka-evidencevariable</xsl:when>
               <xsl:when test="$infoExt='Citation'">-ka-citation</xsl:when>
+              <xsl:when test="$infoExt='StructureDefinition:resourcedefn'">-str-resource</xsl:when>
               <xsl:when test="$infoExt='GraphDefinition'">-str-graphdefinition</xsl:when>
               <xsl:when test="starts-with($infoExt,'StructureDefinition:logical')">-str-logicalmodel</xsl:when>
               <xsl:when test="$infoExt='Questionnaire'">-str-questionnaire</xsl:when>

@@ -147,6 +147,21 @@ msgstr "قطع المعرفة: الاستشهادات"
 msgid "Supports referencing artifacts defined in this implementation guide."
 msgstr "يدعم الإشارة إلى القطع الأثرية المحددة في دليل التنفيذ هذا."
 
+# ResourceName
+#: ResourceName
+msgid "Structures: Additional Resources"
+msgstr "الهياكل: موارد إضافية"
+
+# ResourceDesc
+#: ResourceDesc
+msgid "'Additional' resources that are not yet published in the FHIR core specification."
+msgstr "الموارد 'الإضافية' التي لم تُنشر بعد في المواصفات الأساسية لـ FHIR."
+
+# GraphDefinitionDesc
+#: GraphDefinitionDesc
+msgid "These define collections of interrelated resources that are useful to pass around as a group."
+msgstr "هذه تحدد مجموعات من الموارد المترابطة التي من المفيد تمريرها كمجموعة."
+
 # GraphDefinitionName
 #: GraphDefinitionName
 msgid "Structures: Graph Definitions"

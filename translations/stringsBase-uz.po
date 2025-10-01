@@ -589,9 +589,50 @@ msgstr "Ushbu So‘rovnoma uchun javoblar"
 
 # NoQuestionnaireResponses
 #: NoQuestionnaireResponses
-msgid ""
-"There are currently no QuestionnaireResponse instances for this "
-"Questionnaire defined in this IG."
-msgstr ""
-"Ushbu IG doirasida ushbu So‘rovnoma uchun hozircha QuestionnaireResponse "
-"namunalar mavjud emas."
+msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
+msgstr "Ushbu IG doirasida ushbu So‘rovnoma uchun hozircha QuestionnaireResponse namunalar mavjud emas."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Resurs tarkibining rasmiy ko‘rinishlari"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Resursning boshqa ko‘rinishlari:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "%ID% resursi uchun misollar."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Hozircha %ID% resursi uchun misollar mavjud emas"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "%FMT% resursi"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Resurs"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Tuzilishi"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Qidiruv parametrlari"

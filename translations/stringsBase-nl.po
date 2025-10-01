@@ -562,3 +562,48 @@ msgstr "Antwoorden voor deze vragenlijst"
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "Er zijn momenteel geen QuestionnaireResponse instanties voor deze vragenlijst gedefinieerd in deze IG."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Formele weergaven van resource-inhoud"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Andere weergaven van de resource:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Voorbeelden voor resource %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Er zijn momenteel geen voorbeelden beschikbaar voor resource %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "%FMT% resource"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Resource"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Structuur"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Zoekparameters"

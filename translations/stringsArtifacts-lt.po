@@ -166,6 +166,16 @@ msgstr "Žinių artefaktai: Citatos"
 msgid "Supports referencing artifacts defined in this implementation guide."
 msgstr "Palaiko nuorodas į artefaktus, apibrėžtus šiame įgyvendinimo vadove."
 
+# ResourceName
+#: ResourceName
+msgid "Structures: Additional Resources"
+msgstr "Struktūros: Papildomi ištekliai"
+
+# ResourceDesc
+#: ResourceDesc
+msgid "'Additional' resources that are not yet published in the FHIR core specification."
+msgstr "'Papildomi' ištekliai, kurie dar nepaskelbti FHIR pagrindinėje specifikacijoje."
+
 # GraphDefinitionDesc
 #: GraphDefinitionName
 msgid "Structures: Graph Definitions"

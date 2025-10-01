@@ -165,6 +165,16 @@ msgstr "Артефакты знаний: Цитаты"
 msgid "Supports referencing artifacts defined in this implementation guide."
 msgstr "Поддерживает ссылки на артефакты, определенные в этом руководстве по внедрению."
 
+# ResourceName
+#: ResourceName
+msgid "Structures: Additional Resources"
+msgstr "Структуры: Дополнительные ресурсы"
+
+# ResourceDesc
+#: ResourceDesc
+msgid "'Additional' resources that are not yet published in the FHIR core specification."
+msgstr "«Дополнительные» ресурсы, которые еще не опубликованы в основной спецификации FHIR."
+
 # GraphDefinitionName
 #: GraphDefinitionName
 msgid "Structures: Graph Definitions"

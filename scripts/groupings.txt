@@ -13,6 +13,7 @@
 <grouping xmlns="http://hl7.org/fhir" id="-ka-evidence" name="Evidence"/>
 <grouping xmlns="http://hl7.org/fhir" id="-ka-evidencevariable" name="EvidenceVariable"/>
 <grouping xmlns="http://hl7.org/fhir" id="-ka-citation" name="Citation"/>
+<grouping xmlns="http://hl7.org/fhir" id="-str-resource" name="Resource"/>
 <grouping xmlns="http://hl7.org/fhir" id="-str-graphdefinition" name="GraphDefinition"/>
 <grouping xmlns="http://hl7.org/fhir" id="-str-logicalmodel" name="LogicalModel"/>
 <grouping xmlns="http://hl7.org/fhir" id="-str-questionnaire" name="Questionnaire"/>

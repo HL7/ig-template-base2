@@ -560,3 +560,48 @@ msgstr "الردود على هذا الاستبيان"
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "لا توجد حاليًا أي مثيلات استبيان استبيانات محددة لهذا الاستبيان في هذا الدليل."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "طرق رسمية لعرض محتوى المورد"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "طرق أخرى لتمثيل المورد:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "أمثلة على مورد %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "لا توجد أمثلة حالياً لمورد %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "مورد %FMT%"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "مورد"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "الهيكل"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "خيارات البحث"

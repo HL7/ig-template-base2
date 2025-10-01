@@ -157,6 +157,16 @@ msgstr ""
 "Bular ushbu qo‘llanma mazmuni tarkibidagi mantiqiy qoidalar, aktivlar "
 "to‘plamlari va boshqa kutubxonalarni belgilaydi."
 
+# ResourceName
+#: ResourceName
+msgid "Structures: Additional Resources"
+msgstr "Tuzilmalar: Qo‘shimcha resurslar"
+
+# ResourceDesc
+#: ResourceDesc
+msgid "'Additional' resources that are not yet published in the FHIR core specification."
+msgstr "'Qo‘shimcha' resurslar hozircha FHIR asosiy spetsifikatsiyasida chop etilmagan."
+
 # GraphDefinitionName
 #: GraphDefinitionName
 msgid "Structures: Graph Definitions"

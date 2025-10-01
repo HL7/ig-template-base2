@@ -562,3 +562,48 @@ msgstr "Réponses à ce questionnaire"
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "Il n'y a actuellement aucune instance de QuestionnaireResponse pour ce questionnaire défini dans cet IG."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Vues formelles du contenu de la ressource"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Autres représentations de la ressource :"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Exemples pour la ressource %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Aucun exemple n’est actuellement disponible pour la ressource %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "Ressource %FMT%"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Ressource"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Structure"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Paramètres de recherche"

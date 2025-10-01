@@ -571,8 +571,47 @@ msgstr "Atsakymai į šį klausimyną"
 msgid "There are currently no Questionnaire Response instances for this Questionnaire defined in this IG."
 msgstr "Šiuo metu šiame IG nėra apibrėžta jokių šio klausimyno atsakymo pavyzdžių."
 
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Oficialūs ištekliaus turinio rodiniai"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Kitos ištekliaus formos:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Pavyzdžiai ištekliui %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Šiuo metu nėra pavyzdžių ištekliui %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "%FMT% išteklius"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Išteklius"
+
 # ADL
 #: ADL
 msgid "ADL"
 msgstr "ADL"
 
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Struktūra"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Paieškos parametrai"
