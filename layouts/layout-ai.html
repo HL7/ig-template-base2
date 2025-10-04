@@ -1,6 +1,6 @@
 ---
 ---
-{% assign localPage = page.path | split: "/" | last %}
+{% assign localPage = page.path | split: "/" | last | replace: ".ai", "" %}
 {% include fragment-modelType.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 {% include fragment-pagebegin.html lang='{{[lang]}}' lang="{{[lang]}}" %}
 <!-- layouts\layout-ai -->

@@ -117,7 +117,7 @@
       "template-change-history": "template/layouts/layout-changehistory.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     },
-    "StructureDefinition:resource": {
+    "StructureDefinition:resourcedefn": {
       "template-base": "template/layouts/layout-resource.html",
       "template-defns": "template/layouts/layout-profile-definitions.html",
       "template-mappings": "template/layouts/layout-profile-mappings.html",

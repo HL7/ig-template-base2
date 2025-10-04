@@ -59,19 +59,19 @@
 {% endif %}
 <!-- TODO: Put Psuedo back -->
 {% unless excludexml == 'y' %}
-<!--      <li>
+      <li>
         <a href="#tabs-xml">{{site.data.stringsBase['{{[lang]}}']['PseudoXML']}}</a>
-      </li>-->
+      </li>
 {% endunless %}
 {% unless excludejson == 'y' %}
-<!--      <li>
+      <li>
         <a href="#tabs-json">{{site.data.stringsBase['{{[lang]}}']['PseudoJSON']}}</a>
-      </li>-->
+      </li>
 {% endunless %}
 {% unless excludettl == 'y' %}
-      <!--<li>
+      <li>
         <a href="#tabs-ttl">{{site.data.stringsBase['{{[lang]}}']['PseudoTTL']}}</a>
-      </li>-->
+      </li>
 {% endunless %}
 <!-- TODO - inter-version changes? -->
       <li>
@@ -113,34 +113,34 @@
     </div>
 {% endif %}
 {% unless excludexml == 'y' %}
-<!--    <a name="tabs-xml"> </a>
+    <a name="tabs-xml"> </a>
     <div id="tabs-xml">
       <div id="xml">
         <div id="xml-inner">
-          {% include StructureDefinition-{{[id]}}-pseudo-xml{{[langsuffix]}}.xhtml %}
+          {% include StructureDefinition-{{[id]}}-template-xml{{[langsuffix]}}.xhtml %}
         </div>
       </div>
-    </div>-->
+    </div>
 {% endunless %}
 {% unless excludejson == 'y' %}
-<!--    <a name="tabs-json"> </a>
+    <a name="tabs-json"> </a>
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
-          {% include StructureDefinition-{{[id]}}-pseudo-json{{[langsuffix]}}.xhtml %}
+          {% include StructureDefinition-{{[id]}}-template-json{{[langsuffix]}}.xhtml %}
         </div>
       </div>
-    </div>-->
+    </div>
 {% endunless %}
 {% unless excludettl == 'y' %}
-    <!--<a name="tabs-ttl"> </a>
+    <a name="tabs-ttl"> </a>
     <div id="tabs-ttl">
       <div id="ttl">
         <div id="ttl-inner">
-          {% include StructureDefinition-{{[id]}}-pseudo-ttl{{[langsuffix]}}.xhtml %}
+          {% include StructureDefinition-{{[id]}}-template-ttl{{[langsuffix]}}.xhtml %}
         </div>
       </div>
-    </div>-->
+    </div>
 {% endunless %}
     <a name="tabs-all"> </a>
     <div id="tabs-all">
