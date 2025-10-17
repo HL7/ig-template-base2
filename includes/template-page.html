@@ -1,5 +1,4 @@
-{% assign localPage = page.path | split: "/" | last %}
-{% include fragment-pagebegin.html lang=include.lang %}
+{% assign localPage = page.path | split: "/" | last %}{% include fragment-pagebegin.html lang=include.lang %}
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
