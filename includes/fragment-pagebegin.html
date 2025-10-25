@@ -72,7 +72,7 @@
 {% assign igId = site.data.fhir.ig.id | prepend: "ImplementationGuide/" %}
 {% for jurisdiction in site.data.resources[igId].jurisdictions %}
 {% if jurisdiction.flag %}
-  <img alt="{{jurisdiction.name}} {{site.data.stringsBase[include.lang]['CountryFlag']}}" src="assets/images/{{jurisdiction.flag}}.svg" height="16" title="{{jurisdiction.name}}"/>
+  <img alt="{{jurisdiction.name}} {{site.data.stringsBase[include.lang]['CountryFlag']}}" src="../assets/images/{{jurisdiction.flag}}.svg" height="16" title="{{jurisdiction.name}}"/>
 {% elsif jurisdiction.code %}
   <span title="{{jurisdiction.name}}">{{jurisdiction.code}}</span>
 {% else %}
