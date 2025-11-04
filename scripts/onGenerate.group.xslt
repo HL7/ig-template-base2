@@ -37,6 +37,9 @@
       <groups xmlns="http://hl7.org/fhir">
         <xsl:comment>TEMPLATE_GROUPS_HERE</xsl:comment>
       </groups>
+      <artifactTranslations xmlns="http://hl7.org/fhir">
+        <xsl:comment>ARTIFACT_TRANSLATIONS_HERE</xsl:comment>
+      </artifactTranslations>
       <xsl:apply-templates select="f:resource|f:page|f:parameter|f:template|comment()[preceding-sibling::f:resource|preceding-sibling::f:page]"/>
     </xsl:copy>
   </xsl:template>
