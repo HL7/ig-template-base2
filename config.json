@@ -122,7 +122,7 @@
       "template-defns": "template/layouts/layout-profile-definitions.html",
       "template-mappings": "template/layouts/layout-profile-mappings.html",
       "template-testing": "template/layouts/layout-profile-testing.html",
-      "template-examples": "",
+      "template-examples": "template/layouts/layout-profile-examples.html",
       "template-profile-history": "template/layouts/layout-profile-history.html",
       "template-format": "template/layouts/layout-profile-format.html",
       "base": "{{[type]}}-{{[id]}}.html",
