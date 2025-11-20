@@ -22,7 +22,7 @@
 
   <div id="tabs">
     <ul>
-{% unless modelType = site.data.stringsBase[include.lang]['ResourceModel'] %}
+{% unless modelType == site.data.stringsBase[include.lang]['ResourceModel'] %}
       <li>
         <a href="#tabs-key">{{site.data.stringsBase['{{[lang]}}']['KeyElementsTable']}}</a>
       </li>
@@ -38,7 +38,7 @@
     <div id="tabs-key">
       {% include StructureDefinition-{{[id]}}-dict-key{{[langsuffix]}}.xhtml %}
     </div>
-{% unless modelType = site.data.stringsBase[include.lang]['ResourceModel'] %}
+{% unless modelType == site.data.stringsBase[include.lang]['ResourceModel'] %}
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       {% include StructureDefinition-{{[id]}}-dict-diff{{[langsuffix]}}.xhtml %}
