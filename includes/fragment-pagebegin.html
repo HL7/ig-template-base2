@@ -61,7 +61,7 @@
 {% endif %}
         {% include fragment-header.html lang=include.lang %}
 {% if site.data.info.releaselabel != '' %}
-{% assign status = site.data.info.releaselabellang[include.lang] %}
+{% assign status = site.data.fhir.releaselabellang[include.lang] %}
 {% else %}
 {% assign status = site.data.fhir.ig.status %}
 {% endif %}
