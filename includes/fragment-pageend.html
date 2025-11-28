@@ -47,7 +47,11 @@
         <p>
 {% capture pkg %}{{site.data.fhir.packageId}}#{{site.data.fhir.igVer}}{% endcapture %}
 {% capture fhirver %}<a style="color: var(--footer-hyperlink-text-color)" href="{{site.data.fhir.path}}">FHIR {{site.data.fhir.version}}</a>{% endcapture %}
-{% capture gendate %}<span title="{{site.data.fhir.genDate}}">{{site.data.fhir.genDate | date: "%Y-%m-%d"}}</span>{% endcapture %}
+{% capture gendate %}
+  <span title="{{ site.data.fhir.genDate | date: "%Y-%m-%d %H:%M:%S %z" }}">
+    {{ site.data.fhir.genDate | date: "%Y-%m-%d" }}
+  </span>
+{% endcapture %}
           {{site.data.stringsBase[include.lang]['IGCopyright'] | replace: "%YEAR%", site.data.info.copyrightyear}} <a style="color:var(--footer-hyperlink-text-color)" href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher | escape}}</a>.  
           {{site.data.stringsBase[include.lang]['IGPackage'] | replace: "%PKG%", pkg | replace: "%FHIRVER%", fhirver}}
           {{site.data.stringsBase[include.lang]['GeneratedDate'] | replace: "%DATE%", gendate}}
