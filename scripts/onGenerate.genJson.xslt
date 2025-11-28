@@ -68,6 +68,11 @@
         <xsl:with-param name="name" select="'fmm-definition'"/>
       </xsl:call-template>
     </xsl:variable>
+    <xsl:variable name="togglechanges">
+      <xsl:call-template name="getBoolean">
+        <xsl:with-param name="property" select="'toggle-changes'"/>
+      </xsl:call-template>
+    </xsl:variable>
     <xsl:value-of select="concat('{&#xa;',
     '  &quot;releaselabel&quot;:&quot;', $releaselabel, '&quot;,&#xa;',
     '  &quot;copyrightyear&quot;:&quot;', $copyrightyear, '&quot;,&#xa;',
@@ -80,6 +85,7 @@
     '  &quot;excludeflags&quot;:&quot;', $excludeflags, '&quot;,&#xa;',
     '  &quot;openehr&quot;:&quot;', $openehr, '&quot;,&#xa;',
     '  &quot;fcpspec&quot;:&quot;', $fcp, '&quot;,&#xa;',
+    '  &quot;togglechanges&quot;:&quot;', $togglechanges, '&quot;,&#xa;',
     '  &quot;fmm-definition&quot;:&quot;', $fmm, '&quot;&#xa;}')"/>
   </xsl:template>
 	<xsl:template name="getParameter">
@@ -100,6 +106,11 @@
         <xsl:with-param name="name" select="$property"/>
       </xsl:call-template>
     </xsl:variable>
+<xsl:if test="$property='toggle-changes'">
+<xsl:message>
+<xsl:value-of select="$boolean"/>
+</xsl:message>
+</xsl:if>
     <xsl:choose>
       <xsl:when test="starts-with(translate($boolean, 'y', 'Y'), 'Y') or starts-with(translate($boolean, 't', 'T'), 'T')">y</xsl:when>
       <xsl:when test="$boolean='' or starts-with(translate($boolean, 'n', 'N'), 'N') or starts-with(translate($boolean, 'f', 'F'), 'F')">N</xsl:when>

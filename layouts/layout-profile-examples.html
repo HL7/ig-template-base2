@@ -17,15 +17,18 @@
     {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 
 {% assign basepath = localPage | replace: '-examples.html', '.html' %}
+
+Lloyd: {{basepath}};{{modelType}};{{site.data.stringsBase['{{[lang]}}']['ResourceModel']}}
 {% if site.data.pages[basepath].examples.size > 0 %}
 {% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
-  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForProfile'] | replace: "%ID%", "{{[id]}}"}}</p>
-{% else %}
   <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForResource'] | replace: "%ID%", "{{[id]}}"}}</p>
+{% else %}
+  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForProfile'] | replace: "%ID%", "{{[id]}}"}}</p>
 {% endif %}
   <table style="grid">
     <tbody>
       {% for example in site.data.pages[basepath].examples %}
+Got here
         <tr>
           <td>
             <a href="{{example.url}}">{{example.titlelang["{{[lang]}}"] | escape_once}}</a>

@@ -636,3 +636,23 @@ msgstr "Структура"
 #: SearchParameters
 msgid "Search Parameters"
 msgstr "Параметры поиска"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Выделять изменения в тексте?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Включите это, чтобы увидеть изменения с момента последнего официального выпуска"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Matn o‘zgarishlarini ajratib ko‘rsatilsinmi?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "So‘nggi rasmiy relizdan beri kiritilgan o‘zgarishlarni ko‘rish uchun buni yoqing"

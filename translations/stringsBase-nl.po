@@ -607,3 +607,13 @@ msgstr "Structuur"
 #: SearchParameters
 msgid "Search Parameters"
 msgstr "Zoekparameters"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Tekstwijzigingen markeren?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Schakel dit in om wijzigingen sinds de laatste officiële release te zien"

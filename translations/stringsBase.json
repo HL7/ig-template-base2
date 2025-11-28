@@ -119,6 +119,8 @@
     "NoQuestionnaireResponses": "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG.",
     "ADL": "ADL",
     "Structure": "Structure",
-    "SearchParameters": "Search Parameters"
+    "SearchParameters": "Search Parameters",
+    "HighlightChanges": "Highlight text changes?",
+    "HighlightChangesHelp": "Enable this to see changes since the last official release"
   }
 }

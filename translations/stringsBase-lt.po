@@ -615,3 +615,13 @@ msgstr "Struktūra"
 #: SearchParameters
 msgid "Search Parameters"
 msgstr "Paieškos parametrai"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Paryškinti teksto pakeitimus?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Įjunkite, kad matytumėte pakeitimus nuo paskutinio oficialaus leidimo"

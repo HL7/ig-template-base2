@@ -605,3 +605,13 @@ msgstr "الهيكل"
 #: SearchParameters
 msgid "Search Parameters"
 msgstr "خيارات البحث"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "تمييز تغييرات النص؟"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "فعّل هذا لرؤية التغييرات منذ الإصدار الرسمي الأخير"
