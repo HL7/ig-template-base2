@@ -67,15 +67,18 @@
     </xsl:for-each>
     <xsl:for-each select="f:grouping[starts-with(@id, $prefix)]">
       <xsl:if test="not(parent::*/f:groups/f:grouping[@id=current()/@id])">
-        <xsl:copy>
-          <xsl:apply-templates select="@*"/>
-          <xsl:attribute name="name">
-            <xsl:value-of select="translate(f:name/@value, ' ', '')"/>
-          </xsl:attribute>
-          <xsl:apply-templates select="node()"/>
-        </xsl:copy>
+        <xsl:apply-templates select="."/>
       </xsl:if>
     </xsl:for-each>
+  </xsl:template>
+  <xsl:template match="f:grouping">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:attribute name="name">
+        <xsl:value-of select="translate(f:name/@value, ' ', '')"/>
+      </xsl:attribute>
+      <xsl:apply-templates select="node()"/>
+    </xsl:copy>
   </xsl:template>
   <xsl:variable name="defaultLang">
     <xsl:call-template name="getParameter">

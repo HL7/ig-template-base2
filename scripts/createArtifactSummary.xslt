@@ -18,7 +18,7 @@
         </xsl:if>
         <xsl:for-each select="f:definition/f:grouping">
           <li>
-            <a href="#{position()}">{{site.data.stringsArtifacts[lang]['<xsl:value-of select="@name|f:name/@value"/>Name']}}</a>
+            <a href="#{position()}">{{site.data.stringsArtifacts[lang]['<xsl:value-of select="@name"/>Name']}}</a>
           </li>
         </xsl:for-each>
       </ul>
@@ -42,7 +42,7 @@
           <a name="{position()}">
             <xsl:value-of select="' '"/>
           </a>
-          <h3>{{site.data.stringsArtifacts[lang]['<xsl:value-of select="@name|f:name/@value"/>Name']}} </h3>
+          <h3>{{site.data.stringsArtifacts[lang]['<xsl:value-of select="@name"/>Name']}} </h3>
           <xsl:apply-templates select="."/>
         </xsl:if>
       </xsl:for-each>
