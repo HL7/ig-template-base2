@@ -56,7 +56,7 @@ msgstr "Ce système de codes est référencé dans la définition des ensembles 
 # Contained
 #: Contained
 msgid "Contained resources"
-msgstr "Ressources confinées"
+msgstr "Ressources contenues"
 
 # FormalExtension
 #: FormalExtension
@@ -81,12 +81,12 @@ msgstr "Tableau des éléments clés"
 # DifferentialTable
 #: DifferentialTable
 msgid "Differential Table"
-msgstr "Tableau différentiel"
+msgstr "Tableau différentiel (differential)"
 
 # SnapshotTable
 #: SnapshotTable
 msgid "Snapshot Table"
-msgstr "Tableau récapitulatif"
+msgstr "Tableau récapitulatif (snapshot)"
 
 # PseudoXML
 #: PseudoXML
@@ -271,7 +271,7 @@ msgstr "TTL"
 # History
 #: History
 msgid "History"
-msgstr "L'histoire"
+msgstr "Historique"
 
 # Extension
 #: Extension
@@ -286,7 +286,7 @@ msgstr "Modèle logique"
 # ResourceProfile
 #: ResourceProfile
 msgid "Resource Profile"
-msgstr "Profil des ressources"
+msgstr "Profil de ressource"
 
 # DataTypeProfile
 #: DataTypeProfile
@@ -316,7 +316,7 @@ msgstr "drapeau"
 # PrevPage
 #: PrevPage
 msgid "< prev"
-msgstr "< prev"
+msgstr "< précédent"
 
 # NextPage
 #: NextPage
@@ -326,12 +326,12 @@ msgstr "suivant >"
 # PageBottom
 #: PageBottom
 msgid "bottom"
-msgstr "fond"
+msgstr "bas de page"
 
 # PageTop
 #: PageTop
 msgid "top"
-msgstr "sommet"
+msgstr "haut"
 
 # IGCopyright
 #: IGCopyright
@@ -341,12 +341,12 @@ msgstr "IG © %YEAR%"
 # IGPackage
 #: IGPackage
 msgid "Package %PKG% based on %FHIRVER%."
-msgstr "Le paquet %PKG% est basé sur %FHIRVER%."
+msgstr "Le papackagequet %PKG% est basé sur %FHIRVER%."
 
 # GeneratedDate
 #: GeneratedDate
 msgid "Generated %DATE%"
-msgstr "Généré %DATE%"
+msgstr "Date de génération : %DATE%"
 
 # PageStandardsStatus
 #: PageStandardsStatus
@@ -371,7 +371,7 @@ msgstr "Niveau de maturité"
 # OfficialURL
 #: OfficialURL
 msgid "Official URL"
-msgstr "URL officiel"
+msgstr "URL officielle"
 
 # CopyURL
 #: CopyURL
@@ -526,7 +526,7 @@ msgstr "Obligations"
 # OpenEHR
 #: OpenEHR
 msgid "openEHR View"
-msgstr "Vue de l'openEHR"
+msgstr "Vue openEHR"
 
 # QuestionnaireTree
 #: QuestionnaireTree
@@ -606,7 +606,7 @@ msgstr "Structure"
 # SearchParameters
 #: SearchParameters
 msgid "Search Parameters"
-msgstr "Paramètres de recherche"
+msgstr "Paramètres de recherche (SearchParameter)"
 
 # HighlightChanges
 #: HighlightChanges
