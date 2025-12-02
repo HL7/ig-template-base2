@@ -98,9 +98,6 @@
   </xsl:template>
   <xsl:template match="f:artifactTranslations">
     <xsl:copy>
-      <xsl:message>
-        <xsl:value-of select="$defaultLang"/>
-      </xsl:message>
       <translations xmlns="http://hl7.org/fhir">
         <xsl:for-each select="/f:ImplementationGuide/f:definition/f:groups/f:grouping">
           <xsl:variable name="id" select="@id"/>
