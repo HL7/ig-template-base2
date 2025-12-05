@@ -5,9 +5,9 @@
       </td>
       <td><i>{{site.data.stringsBase[include.lang]['Version']}}</i>:
 {% if site.data.info.togglechanges == 'y' %}
-      <span id="toggle-change-display" style="float:right">
+      <span id="toggle-change-display" style="float:right" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
         <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
-        <input style="margin:0" type="checkbox" id="showChanges" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}" onchange="toggleChanges()"/>
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
       </span>
 {% endif %}
       <span class="copy-text">{{site.data.resources[resource_].version}}<button title="{{site.data.stringsBase[include.lang]['CopyVersioned']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}|{{site.data.resources[resource_].version}}"/></span>

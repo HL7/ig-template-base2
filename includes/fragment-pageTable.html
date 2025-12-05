@@ -15,9 +15,9 @@
       </td>
   {% endif %}
   {% if site.data.info.togglechanges == 'y' %}
-      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden">
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
         <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
-        <input style="margin:0" type="checkbox" id="showChanges" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}" onchange="toggleChanges()"/>
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
       </td>
   {% endif %}
     </tr>
