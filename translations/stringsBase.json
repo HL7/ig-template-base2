@@ -121,6 +121,8 @@
     "Structure": "Structure",
     "SearchParameters": "Search Parameters",
     "HighlightChanges": "Highlight text changes?",
-    "HighlightChangesHelp": "Enable this to see changes since the last official release"
+    "HighlightChangesHelp": "Enable this to see changes since the last official release",
+    "NewContent": "New Content",
+    "ModifiedContent": "Modified Content"
   }
 }

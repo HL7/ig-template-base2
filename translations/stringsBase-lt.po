@@ -625,3 +625,13 @@ msgstr "Paryškinti teksto pakeitimus?"
 #: HighlightChangesHelp
 msgid "Enable this to see changes since the last official release"
 msgstr "Įjunkite, kad matytumėte pakeitimus nuo paskutinio oficialaus leidimo"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Pakeistas turinys"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Naujas turinys"

@@ -656,3 +656,13 @@ msgstr "Matn o‘zgarishlarini ajratib ko‘rsatilsinmi?"
 #: HighlightChangesHelp
 msgid "Enable this to see changes since the last official release"
 msgstr "So‘nggi rasmiy relizdan beri kiritilgan o‘zgarishlarni ko‘rish uchun buni yoqing"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Изменённое содержание"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Новое содержание"

@@ -607,3 +607,13 @@ msgstr "Struktur"
 #: SearchParameters
 msgid "Search Parameters"
 msgstr "Suchparameter"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Geänderter Inhalt"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Neuer Inhalt"

@@ -617,3 +617,13 @@ msgstr "Mettre en surbrillance les modifications du texte ?"
 #: HighlightChangesHelp
 msgid "Enable this to see changes since the last official release"
 msgstr "Activez ceci pour voir les modifications depuis la dernière version officielle"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Contenu modifié"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Nouveau contenu"

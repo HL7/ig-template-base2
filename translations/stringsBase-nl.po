@@ -617,3 +617,13 @@ msgstr "Tekstwijzigingen markeren?"
 #: HighlightChangesHelp
 msgid "Enable this to see changes since the last official release"
 msgstr "Schakel dit in om wijzigingen sinds de laatste officiële release te zien"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Gewijzigde inhoud"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Nieuwe inhoud"

@@ -636,3 +636,13 @@ msgstr "Tuzilishi"
 #: SearchParameters
 msgid "Search Parameters"
 msgstr "Qidiruv parametrlari"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "O'zgartirilgan mazmun"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Yangi mazmun"
