@@ -705,7 +705,7 @@ li a[href^="http://"]:not([no-external^="true"]):after,li a[href^="https://"]:no
 
 span.new-content::before,
 li.new-content::before {
-  content: "New Content{{site.data.stringsBase[lang]['NewContent']}}: ";
+  content: "New Content{{site.data.stringsBase['{{[lang]}}']['NewContent']}}: ";
   color: red;
   font-weight: bold;
   display: inline-block;
@@ -714,7 +714,7 @@ li.new-content::before {
 p.new-content::before,
 div.new-content::before {
   white-space: pre;
-  content: "New Content{{site.data.stringsBase[lang]['NewContent']}}\A ";
+  content: "New Content{{site.data.stringsBase['{{[lang]}}']['NewContent']}}\A ";
   color: red;
   font-weight: bold;}
 span.new-content,
@@ -747,7 +747,7 @@ div.new-content{
 
 span.modified-content::before,
 li.modified-content::before {
-  content: "Modified Content{{site.data.stringsBase[lang]['ModifiedContent']}}: ";
+  content: "Modified Content{{site.data.stringsBase['{{[lang]}}']['ModifiedContent']}}: ";
   color: red;
   font-weight: bold;
   display: inline-block;
@@ -756,7 +756,7 @@ li.modified-content::before {
 p.modified-content::before,
 div.modified-content::before {
   white-space: pre;
-  content: "Modified Content{{site.data.stringsBase[lang]['ModifiedContent']}}\A ";
+  content: "Modified Content{{site.data.stringsBase['{{[lang]}}']['ModifiedContent']}}\A ";
   color: red;
   font-weight: bold;}
 span.modified-content,
