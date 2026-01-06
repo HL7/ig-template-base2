@@ -25,7 +25,9 @@ $(function () {
       .get();
 
     const categories = $("input[name^='category']:checked")
-      .map(function () { return $(this).next("a").text().trim(); })
+      .map(function () {
+        return this.nextSibling.nodeValue.trim();
+      })
       .get();
 
     const conditional = $("input[name='conditionFilter']:checked").val();
