@@ -6,27 +6,32 @@ $(function () {
   const $rows = $table.find("tr").slice(2);
 
   function normalize(text) {
-    return text.replace(/\s+/g, "").toLowerCase();
+    return text.replace(/\s+/g, " ").trim();
   }
 
   function applyFilters() {
 
-    const idFilter   = normalize($("input[name='filterid']").val() || "");
-    const ruleFilter = normalize($("input[name='filterrule']").val() || "");
+    const idFilter   = normalize($("input[name='filterid']").val() || "").toLowerCase();
+    const ruleFilter = normalize($("input[name='filterrule']").val() || "").toLowerCase();
 
+    /* Selected expectations (exact tokens) */
     const expectations = $("input[name^='expect']:checked")
       .map(function () {
-        return $(this)[0].nextSibling.nodeValue.trim();
+        return normalize(this.nextSibling.nodeValue);
       })
       .get();
 
+    /* Selected actors */
     const actors = $("input[name^='actor']:checked")
-      .map(function () { return $(this).next("a").text().trim(); })
+      .map(function () {
+        return $(this).next("a").text().trim();
+      })
       .get();
 
+    /* Selected categories */
     const categories = $("input[name^='category']:checked")
       .map(function () {
-        return this.nextSibling.nodeValue.trim();
+        return normalize(this.nextSibling.nodeValue);
       })
       .get();
 
@@ -36,14 +41,32 @@ $(function () {
 
       const $cells = $(this).children("th,td");
 
-      const idText          = normalize($cells.eq(0).text());
-      const expectationText = $cells.eq(1).text().replace(/\s+/g, " ").trim();
-      const conditionalText = $cells.eq(2).text();
-      const actorText       = $cells.eq(3).text();
-      const categoryText    = $cells.eq(4).text();
-      const ruleText        = normalize($cells.eq(5).text());
+      const idText   = $cells.eq(0).text().toLowerCase();
+      const ruleText = $cells.eq(5).text().toLowerCase();
+      const condText = $cells.eq(2).text();
 
-      const hasConditionalX = /\bX\b/.test(conditionalText);
+      const hasConditionalX = /\bX\b/.test(condText);
+
+      /* Extract expectation tokens (split on <br/>) */
+      const rowExpectations = $cells.eq(1)
+        .html()
+        .split(/<br\s*\/?>/i)
+        .map(e => normalize($("<div>").html(e).text()))
+        .filter(Boolean);
+
+      /* Extract actors (exact anchor match) */
+      const rowActors = $cells.eq(3).find("a")
+        .map(function () {
+          return $(this).text().trim();
+        })
+        .get();
+
+      /* Extract categories (exact tokens) */
+      const rowCategories = $cells.eq(4)
+        .text()
+        .split(/\s*[\r\n]+\s*/)
+        .map(c => c.trim())
+        .filter(Boolean);
 
       let visible = true;
 
@@ -52,8 +75,9 @@ $(function () {
         visible = false;
       }
 
-      /* Expectation filter */
-      if (expectations.length && !expectations.includes(expectationText)) {
+      /* Expectation filter — exact token match */
+      if (expectations.length &&
+          !expectations.some(e => rowExpectations.includes(e))) {
         visible = false;
       }
 
@@ -66,12 +90,14 @@ $(function () {
       }
 
       /* Actor filter */
-      if (actors.length && !actors.some(a => actorText.includes(a))) {
+      if (actors.length &&
+          !actors.some(a => rowActors.includes(a))) {
         visible = false;
       }
 
       /* Category filter */
-      if (categories.length && !categories.some(c => categoryText.includes(c))) {
+      if (categories.length &&
+          !categories.some(c => rowCategories.includes(c))) {
         visible = false;
       }
 
