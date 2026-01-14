@@ -20,6 +20,7 @@
       </xsl:for-each>
       <xsl:text>&#xa;</xsl:text>
     </xsl:if>
-    <xsl:if test="f:definition/f:parameter[f:code/@value='globals-in-artifacts']/f:value/@value='true'">globals=Y</xsl:if>
+    <xsl:if test="f:definition/f:parameter[f:code/@value='globals-in-artifacts']/f:value/@value='true'">globals=Y&#xa;</xsl:if>
+    <xsl:if test="f:definition/f:parameter[f:code/@value='term-params-in-artifacts']/f:value/@value='true'">termparams=Y&#xa;</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>

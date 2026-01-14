@@ -172,6 +172,7 @@
   <target name="onGenerate.artifactList" depends="onGenerate.checkVersions,onGenerate.igQa,onGenerate.setup">
     <xslt in="${onGenerate.ig.dest}xml" out="${dir.temp.includes}/artifacts.xml" style="${ig.scripts}/createArtifactSummary.xslt">
       <param name="globals" expression="${globals}"/>
+      <param name="termparams" expression="${termparams}"/>
     </xslt>
     <fileset id="onGenerate.artifacts.id" dir="${ig.root}">
       <include name="${dir.temp.includes}/artifacts.xml"/>
