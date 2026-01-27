@@ -3,7 +3,38 @@ $(function () {
   const $table = $("table.fhir-conformance-list");
 
   /* Exclude header row (0) and filter row (1) */
+  const $header = $table.find("tr").first();
   const $rows = $table.find("tr").slice(2);
+
+  const colId = 0;
+  const colExpect = 1;
+  const colCond = 2;
+  var colActor = -1;
+  var colCat = -1;
+  var colRule = -1;
+  
+  var i = 0;
+  var hasIds = false;
+  $headerCells = $header.children("th,td");
+  $headerCells.each(function () {
+    if ($(this).attr("id") === "fcl-actor" || $(this).text() == "Actor(s)") {
+      colActor = i;
+      hasIds = true;
+    } else if ($(this).attr("id") === "fcl-cat" || $(this).text() == "Category(ies)") {
+      colCat = i;
+      hasIds = true;
+    } else if ($(this).attr("id") === "fcl-rule" || $(this).text() == "Rule") {
+      colRule = i;
+      hasIds = true;
+    }
+    i++;
+  });
+  
+  if (!hasIds) {
+    colActor = 3;
+    colCat = 4;
+    colRule = 5;
+  }
 
   function normalize(text) {
     return text.replace(/\s+/g, " ").trim();
@@ -13,6 +44,8 @@ $(function () {
 
     const idFilter   = normalize($("input[name='filterid']").val() || "").toLowerCase();
     const ruleFilter = normalize($("input[name='filterrule']").val() || "").toLowerCase();
+
+
 
     /* Selected expectations (exact tokens) */
     const expectations = $("input[name^='expect']:checked")
@@ -41,32 +74,34 @@ $(function () {
 
       const $cells = $(this).children("th,td");
 
-      const idText   = $cells.eq(0).text().toLowerCase();
-      const ruleText = $cells.eq(5).text().toLowerCase();
-      const condText = $cells.eq(2).text();
+      const idText   = $cells.eq(colId).text().toLowerCase();
+      const condText = $cells.eq(colCond).text();
+      const ruleText = $cells.eq(colRule).text().toLowerCase();
 
       const hasConditionalX = /\bX\b/.test(condText);
 
       /* Extract expectation tokens (split on <br/>) */
-      const rowExpectations = $cells.eq(1)
+      const rowExpectations = $cells.eq(colExpect)
         .html()
         .split(/<br\s*\/?>/i)
         .map(e => normalize($("<div>").html(e).text()))
         .filter(Boolean);
 
       /* Extract actors (exact anchor match) */
-      const rowActors = $cells.eq(3).find("a")
+      const rowActors = $cells.eq(colActor).find("a")
         .map(function () {
           return $(this).text().trim();
         })
         .get();
 
       /* Extract categories (exact tokens) */
-      const rowCategories = $cells.eq(4)
-        .text()
-        .split(/\s*[\r\n]+\s*/)
-        .map(c => c.trim())
-        .filter(Boolean);
+      if (colCat != -1) {
+        const rowCategories = $cells.eq(colCat)
+          .text()
+          .split(/\s*[\r\n]+\s*/)
+          .map(c => c.trim())
+          .filter(Boolean);
+      }
 
       let visible = true;
 
@@ -96,9 +131,11 @@ $(function () {
       }
 
       /* Category filter */
-      if (categories.length &&
-          !categories.some(c => rowCategories.includes(c))) {
-        visible = false;
+      if (colCat != -1) {
+        if (categories.length &&
+            !categories.some(c => rowCategories.includes(c))) {
+          visible = false;
+        }
       }
 
       /* Rule filter */
