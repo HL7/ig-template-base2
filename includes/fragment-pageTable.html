@@ -14,12 +14,14 @@
         <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel']}}</a>: {{site.data.pages[localPage].fmm}}
       </td>
   {% endif %}
-  {% if site.data.info.togglechanges == 'y' %}
       <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
         <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
+  {% if site.data.info.togglechanges == 'y' %}
+        <input style="margin:0" type="checkbox" id="showChanges" checked="checked" onchange="toggleChanges()"/>
+  {% else %}
         <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
-      </td>
   {% endif %}
+      </td>
     </tr>
   </table>
 {% endif %}
