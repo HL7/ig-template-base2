@@ -27,7 +27,6 @@
   <table style="grid">
     <tbody>
       {% for example in site.data.pages[basepath].examples %}
-Got here
         <tr>
           <td>
             <a href="{{example.url}}">{{example.titlelang["{{[lang]}}"] | escape_once}}</a>
