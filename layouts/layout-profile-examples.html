@@ -18,7 +18,6 @@
 
 {% assign basepath = localPage | replace: '-examples.html', '.html' %}
 
-Lloyd: {{basepath}};{{modelType}};{{site.data.stringsBase['{{[lang]}}']['ResourceModel']}}
 {% if site.data.pages[basepath].examples.size > 0 %}
 {% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
   <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForResource'] | replace: "%ID%", "{{[id]}}"}}</p>
