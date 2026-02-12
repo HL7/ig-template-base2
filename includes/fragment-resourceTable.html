@@ -39,7 +39,7 @@
 {% endcapture %}
 {% assign trimmedJurisdictions = newJurisdictions | strip %}
 
-{% assign colspan = 1 %}
+{% assign colspan = 2 %}
 {% if site.data.resources[resource_].status.fmm == nil %}
   {% assign colspan = colspan | plus: 1 %}
 {% endif %}
@@ -100,14 +100,14 @@
     </tr>
 {% if site.data.resources[resource_].identifiers %}
     <tr>
-      <td colspan="5">
+      <td colspan="6">
         <i>{{site.data.stringsBase[include.lang]['OtherIdentifiers']}}:</i> {{site.data.resources[resource_].identifiers}}
       </td>
     </tr>
 {% endif %}
 {% if site.data.resources[resource_].keywords %}
     <tr>
-      <td colspan="5">
+      <td colspan="6">
         <i>{{site.data.stringsBase[include.lang]['Keywords']}}:</i> {{site.data.resources[resource_].keywords}}
       </td>
     </tr>
@@ -115,13 +115,13 @@
 {% if site.data.resources[resource_].contexts %}
     <tr>
 {% assign usageLabel = "*" | append: site.data.stringsBase[include.lang]['Usage'] | append: "*: " %}
-      <td colspan="5">{{site.data.resources[resource_].contexts | prepend: usageLabel | markdownify}}</td>
+      <td colspan="6">{{site.data.resources[resource_].contexts | prepend: usageLabel | markdownify}}</td>
     </tr>
 {% endif %}
 {%if site.data.resources[resource_].copyright %}
 {% assign copyrightLabel = "*" | append: site.data.stringsBase[include.lang]['CopyrightLegal'] | append: "*: " %}
     <tr>
-      <td colspan="5">{{site.data.resources[resource_].copyrightlang[include.lang] | prepend: copyrightLabel | markdownify}}</td>
+      <td colspan="6">{{site.data.resources[resource_].copyrightlang[include.lang] | prepend: copyrightLabel | markdownify}}</td>
     </tr>
 {% endif %}
   </table>
