@@ -6,13 +6,14 @@
       <td><i>{{site.data.stringsBase[include.lang]['Version']}}</i>:
       <span class="copy-text">{{site.data.resources[resource_].version}}<button title="{{site.data.stringsBase[include.lang]['CopyVersioned']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}|{{site.data.resources[resource_].version}}"/></span>
       </td>
-      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
-        <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
+      <td style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
   {% if site.data.info.togglechanges == 'y' %}
         <input style="margin:0" type="checkbox" id="showChanges" checked="checked" onchange="toggleChanges()"/>
   {% else %}
         <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
   {% endif %}
+      </span>
       </td>
     </tr>
 {% endif %}
