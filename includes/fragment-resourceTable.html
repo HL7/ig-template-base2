@@ -4,6 +4,8 @@
       <td colspan="4"><i>{{site.data.stringsBase[include.lang]['OfficialURL']}}</i>: <span class="copy-text">{{site.data.resources[resource_].url}}<button title="{{site.data.stringsBase[include.lang]['CopyURL']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}"/></span>
       </td>
       <td><i>{{site.data.stringsBase[include.lang]['Version']}}</i>:
+      <span class="copy-text">{{site.data.resources[resource_].version}}<button title="{{site.data.stringsBase[include.lang]['CopyVersioned']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}|{{site.data.resources[resource_].version}}"/></span>
+      </td>
       <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
         <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
   {% if site.data.info.togglechanges == 'y' %}
@@ -11,8 +13,6 @@
   {% else %}
         <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
   {% endif %}
-      </td>
-      <span class="copy-text">{{site.data.resources[resource_].version}}<button title="{{site.data.stringsBase[include.lang]['CopyVersioned']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}|{{site.data.resources[resource_].version}}"/></span>
       </td>
     </tr>
 {% endif %}
