@@ -295,6 +295,25 @@ blockquote.stu-note {
   border-left-color: var(--stu-note-border-left-color);
 }
 
+div.fhir-conformance {
+  position: relative;
+  padding-left: 0;        /* no indentation */
+  margin-left: 0;         /* don't add any margin */
+}
+
+div.fhir-conformance::before {
+  content: '';
+  position: absolute;
+  left: -12px;            /* floats outside to the left */
+  top: 0.55em;
+  bottom: 0;
+  width: 8px;
+
+  border-left: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
 div.flaglist {
   cursor: pointer;
   width: 150px;
