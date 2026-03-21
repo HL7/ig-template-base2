@@ -6,7 +6,18 @@
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
 
+{% if site.data.artifacts[localPage].logical %}
+  <p>{{site.data.stringsBase['{{[lang]}}']['ModelOf']}} 
+  {% if site.data.artifacts[localPage].logicalInstanceOfLocal %}
+    {% assign localRef = site.data.artifacts[localPage].logicalInstanceOfLocal %}
+    <a href="{{site.data.resources[localRef].path}}">{{site.data.resources[localRef].titlelang['{{[lang]}}']}}</a>
+  {% else %}
+    {{site.data.artifacts[localPage].logicalInstanceOf}}
+  {% endif %}
+  </p>
+{% else %}
   {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' lang="{{[lang]}}" %}
+{% endif %}
 
   <a name="root"> </a>
 {% if site.data.artifacts[localPage].example %}
@@ -14,7 +25,7 @@
 {% endif %}
 {% assign prefix = site.data.artifacts[localPage].type %}
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}</h2>
+  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[localPage].titlelang['{{[lang]}}'] | escape_once}}</h2>
 
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 {% unless example %}

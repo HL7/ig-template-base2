@@ -26,6 +26,26 @@
         <xsl:value-of select="concat(',&quot;exampleOf&quot;:{&quot;name&quot;:&quot;', f:name/@value, '&quot;,&quot;url&quot;:&quot;', $page, '&quot;}')"/>
       </xsl:for-each>
     </xsl:for-each>
+    <xsl:for-each select="f:extension[@url='http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical']/f:valueCanonical">
+      <xsl:text>,"logical":true</xsl:text>
+      <xsl:variable name="baseUrl" select="substring-before(ancestor::f:ImplementationGuide/f:url/@value, 'ImplementationGuide/')"/>
+      <xsl:choose>
+        <xsl:when test="contains(@value, $baseUrl)">
+          <xsl:variable name="localUrl" select="substring-after(@value, $baseUrl)"/>
+          <xsl:choose>
+            <xsl:when test="contains($localUrl, '|')">
+              <xsl:value-of select="concat(',&quot;logicalInstanceOfLocal&quot;:&quot;', substring-before($localUrl, '|'), '&quot;')"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="concat(',&quot;logicalInstanceOfLocal&quot;:&quot;', $localUrl, '&quot;')"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat(',&quot;logicalInstanceOf&quot;:&quot;', @value, '&quot;')"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
     <xsl:text>}</xsl:text>
   </xsl:template>
 </xsl:stylesheet>  

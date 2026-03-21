@@ -62,6 +62,11 @@
     </div>
   </div>
 
+  {% if site.data.resources[resource_].contained != nil %}
+  <h4>{{site.data.stringsBase['{{[lang]}}']['Contained']}}</h4>
+  {% include {{[type]}}-{{[id]}}-contained-index{{[langsuffix]}}.xhtml %}
+  {% endif %}
+
   <a name="test"> </a>
   <h3>{{site.data.stringsBase['{{[lang]}}']['TestQuestionnaire']}}</h3>
   {% include {{[type]}}-{{[id]}}-links{{[langsuffix]}}.xhtml %}
@@ -73,11 +78,6 @@
   <p>{{site.data.stringsBase['{{[lang]}}']['NoQuestionnaireResponses']}}</p>
   {% else %}
     {{responses}}
-  {% endif %}
-
-  {% if site.data.resources[resource_].contained != nil %}
-  <h4>{{site.data.stringsBase['{{[lang]}}']['Contained']}}</h4>
-  {% include {{[type]}}-{{[id]}}-contained-index{{[langsuffix]}}.xhtml %}
   {% endif %}
 
   <!-- insert notes if present -->
