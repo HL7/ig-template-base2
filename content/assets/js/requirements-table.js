@@ -45,8 +45,6 @@ $(function () {
     const idFilter   = normalize($("input[name='filterid']").val() || "").toLowerCase();
     const ruleFilter = normalize($("input[name='filterrule']").val() || "").toLowerCase();
 
-
-
     /* Selected expectations (exact tokens) */
     const expectations = $("input[name^='expect']:checked")
       .map(function () {
@@ -64,7 +62,7 @@ $(function () {
     /* Selected categories */
     const categories = $("input[name^='category']:checked")
       .map(function () {
-        return normalize(this.nextSibling.nodeValue);
+        return normalize(this.nextSibling.nodeValue).replace(/^\xa0/, "");
       })
       .get();
 
@@ -95,11 +93,12 @@ $(function () {
         .get();
 
       /* Extract categories (exact tokens) */
+      rowCategories = [];
       if (colCat != -1) {
-        const rowCategories = $cells.eq(colCat)
+        rowCategories = $cells.eq(colCat)
           .text()
-          .split(/\s*[\r\n]+\s*/)
-          .map(c => c.trim())
+          .split(/<br\s*\/?>/i)
+          .map(c => $("<div>").html(c).text().trim())
           .filter(Boolean);
       }
 
