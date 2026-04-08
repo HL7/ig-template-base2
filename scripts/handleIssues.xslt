@@ -36,7 +36,7 @@
     <xsl:text>","code":"</xsl:text>
     <xsl:value-of select="$code"/>
     <xsl:text>","details":{"text":"</xsl:text>
-    <xsl:value-of select="$details"/>
+    <xsl:value-of select="translate(translate($details, '\', '\\'), '&quot;', '\&quot;')"/>
     <xsl:text>"},"location":["</xsl:text>
     <xsl:value-of select="$location"/>
     <xsl:text>"]}&#xa;,</xsl:text>
