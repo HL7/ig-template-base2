@@ -45,7 +45,9 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 {% assign label = {{site.data.pages[localPage].label}} | split: '.0' %}
-	  <script src="{{site.data.info.assets}}assets/js/prism.js"></script>
+	  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism.js"></script>
+	  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid.js"></script>
     <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"{{site.data.info.headingOffset}}{{label}}"}
