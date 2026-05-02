@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
-{% assign baselang = include.lang | slice: 0,2 %}
-{% if "ar;dv;fa;ha;he;iw;ji;ps;sd;ug;ur;yi;" contains baselang %}
+{% assign baselang = include.lang | default: '' | slice: 0,2 | downcase %}
+{% assign rtl_langs = "ar,dv,fa,ha,he,iw,ji,ps,sd,ug,ur,yi" | split: "," %}
+{% if baselang != "" and rtl_langs contains baselang %}
 {% assign dir = 'rtl' %}
 {% else %}
 {% assign dir = 'ltr' %}
