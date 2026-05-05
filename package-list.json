@@ -18,7 +18,15 @@
       "status" : "release",
       "sequence" : "Publications",
       "current" : true,
-      "date" : "2025-06-03"
+      "date" : "2025-07-06"
+    },
+    {
+      "version" : "0.0.1",
+      "desc" : "First release",
+      "path" : "http://fhir.org/templates/hl7.au.base.template/0.1.0",
+      "status" : "release",
+      "sequence" : "Publications",
+      "date" : "2020-07-03"
     }
   ]
 }

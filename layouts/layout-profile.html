@@ -49,9 +49,11 @@
   </p>
   <div id="tabs">
     <ul>
+{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}
       <li>
         <a href="#tabs-key">{{site.data.stringsBase['{{[lang]}}']['KeyElementsTable']}}</a>
       </li>
+{% endunless %}
       <li>
         <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['DifferentialTable']}}</a>
       </li>
@@ -100,6 +102,7 @@
         <a href="#tabs-all">{{site.data.stringsBase['{{[lang]}}']['AllTables']}}</a>
       </li>
     </ul>
+{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}
     <a name="tabs-key"> </a>
     <div id="tabs-key">
       <div id="tbl-key">
@@ -124,6 +127,7 @@
         </div>
       </div>
     </div>
+{% endunless %}
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
@@ -259,6 +263,7 @@
     </div>
     <a name="tabs-all"> </a>
     <div id="tabs-all">
+{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}
       <div id="all-tbl-key">
         <p>
           <b>{{site.data.stringsBase['{{[lang]}}']['KeyElementsView']}}</b>
@@ -282,6 +287,7 @@
           {% endunless%}
         </div>
       </div>
+{% endunless %}
       <div id="all-tbl-diff">
         <p>
           <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView']}}</b>

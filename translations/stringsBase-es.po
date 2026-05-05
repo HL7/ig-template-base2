@@ -560,3 +560,68 @@ msgstr "Respuestas a este cuestionario"
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "Actualmente no hay instancias QuestionnaireResponse para este cuestionario definidas en este IG."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Vistas formales del contenido del recurso"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Otras representaciones del recurso:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Ejemplos para el recurso %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Actualmente no hay ejemplos disponibles para el recurso %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "Recurso %FMT%"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Recurso"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Estructura"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Parámetros de búsqueda"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "¿Resaltar los cambios en el texto?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Habilite esto para ver los cambios desde la última versión oficial"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Contenido modificado"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Contenido nuevo"

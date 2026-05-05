@@ -17,7 +17,7 @@
     </xsl:copy>
   </xsl:template>
   <xsl:template match="f:extension[@url='http://hl7.org/fhir/StructureDefinition/igpublisher-spreadsheet']"/>
-  <xsl:template match="f:translations"/>
+  <xsl:template match="f:translations|f:artifactTranslations"/>
   <xsl:template match="f:grouping">
     <xsl:if test="parent::f:definition/f:resource/f:groupingId[@value=current()/@id]">
       <xsl:copy>

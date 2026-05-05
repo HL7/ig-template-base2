@@ -56,7 +56,7 @@ msgstr "Ce système de codes est référencé dans la définition des ensembles 
 # Contained
 #: Contained
 msgid "Contained resources"
-msgstr "Ressources confinées"
+msgstr "Ressources contenues"
 
 # FormalExtension
 #: FormalExtension
@@ -81,12 +81,12 @@ msgstr "Tableau des éléments clés"
 # DifferentialTable
 #: DifferentialTable
 msgid "Differential Table"
-msgstr "Tableau différentiel"
+msgstr "Tableau différentiel (differential)"
 
 # SnapshotTable
 #: SnapshotTable
 msgid "Snapshot Table"
-msgstr "Tableau récapitulatif"
+msgstr "Tableau récapitulatif (snapshot)"
 
 # PseudoXML
 #: PseudoXML
@@ -271,7 +271,7 @@ msgstr "TTL"
 # History
 #: History
 msgid "History"
-msgstr "L'histoire"
+msgstr "Historique"
 
 # Extension
 #: Extension
@@ -286,7 +286,7 @@ msgstr "Modèle logique"
 # ResourceProfile
 #: ResourceProfile
 msgid "Resource Profile"
-msgstr "Profil des ressources"
+msgstr "Profil de ressource"
 
 # DataTypeProfile
 #: DataTypeProfile
@@ -316,7 +316,7 @@ msgstr "drapeau"
 # PrevPage
 #: PrevPage
 msgid "< prev"
-msgstr "< prev"
+msgstr "< précédent"
 
 # NextPage
 #: NextPage
@@ -326,12 +326,12 @@ msgstr "suivant >"
 # PageBottom
 #: PageBottom
 msgid "bottom"
-msgstr "fond"
+msgstr "bas de page"
 
 # PageTop
 #: PageTop
 msgid "top"
-msgstr "sommet"
+msgstr "haut"
 
 # IGCopyright
 #: IGCopyright
@@ -341,12 +341,12 @@ msgstr "IG © %YEAR%"
 # IGPackage
 #: IGPackage
 msgid "Package %PKG% based on %FHIRVER%."
-msgstr "Le paquet %PKG% est basé sur %FHIRVER%."
+msgstr "Le papackagequet %PKG% est basé sur %FHIRVER%."
 
 # GeneratedDate
 #: GeneratedDate
 msgid "Generated %DATE%"
-msgstr "Généré %DATE%"
+msgstr "Date de génération : %DATE%"
 
 # PageStandardsStatus
 #: PageStandardsStatus
@@ -371,7 +371,7 @@ msgstr "Niveau de maturité"
 # OfficialURL
 #: OfficialURL
 msgid "Official URL"
-msgstr "URL officiel"
+msgstr "URL officielle"
 
 # CopyURL
 #: CopyURL
@@ -526,7 +526,7 @@ msgstr "Obligations"
 # OpenEHR
 #: OpenEHR
 msgid "openEHR View"
-msgstr "Vue de l'openEHR"
+msgstr "Vue openEHR"
 
 # QuestionnaireTree
 #: QuestionnaireTree
@@ -562,3 +562,68 @@ msgstr "Réponses à ce questionnaire"
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "Il n'y a actuellement aucune instance de QuestionnaireResponse pour ce questionnaire défini dans cet IG."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Vues formelles du contenu de la ressource"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Autres représentations de la ressource :"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Exemples pour la ressource %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Aucun exemple n’est actuellement disponible pour la ressource %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "Ressource %FMT%"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Ressource"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Structure"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Paramètres de recherche (SearchParameter)"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Mettre en surbrillance les modifications du texte ?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Activez ceci pour voir les modifications depuis la dernière version officielle"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Contenu modifié"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Nouveau contenu"
