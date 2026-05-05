@@ -1,0 +1,143 @@
+{% comment %}
+  DataTables-based equivalent of artifacts.xml.
+  Drop {% include artifacts2.xml %} into a page (e.g. artifacts2.md) — one such page per language folder.
+  Picks the right translation per row at Jekyll time, falling back to the IG's source-language string when missing.
+{% endcomment %}
+{% assign lang = page.path | split: "/" | first %}
+{% assign groupingStrings = site.data.stringsArtifacts[lang] %}
+{% if groupingStrings == nil %}{% assign groupingStrings = site.data.stringsArtifacts.en %}{% endif %}
+
+<link rel="stylesheet" href="assets/css/dataTables.min.css"/>
+<link rel="stylesheet" href="assets/css/dataTables.rowGroup.min.css"/>
+<style>
+  #artifactsTable tr.dtrg-group td.artifacts-group-header { background:#f5f5f5; padding:.5em .75em; }
+  #artifactsTable .artifacts-group-name { font-weight:600; font-size:1.05em; }
+  #artifactsTable .artifacts-group-desc { font-weight:normal; font-size:.95em; margin-top:.25em; color:#444; }
+  #artifactsTable .artifacts-group-desc p:last-child { margin-bottom:0; }
+  #artifactsTable tbody td p { margin:0 0 .25em 0; }
+  #artifactsTable tbody td p:last-child { margin-bottom:0; }
+  #artifactsTable thead tr.filters th { padding:.25em .5em; background:#fafafa; }
+  #artifactsTable thead tr.filters input { width:100%; box-sizing:border-box; padding:.2em .4em; font-weight:normal; font-size:.9em; }
+  #artifactsTable thead tr.filters th.sorting,
+  #artifactsTable thead tr.filters th.sorting_asc,
+  #artifactsTable thead tr.filters th.sorting_desc { background-image:none !important; cursor:default; }
+</style>
+
+{%- assign nameLabel = site.data.stringsBase[lang]['Name'] | default: 'Name' -%}
+{%- assign typeLabel = site.data.stringsBase[lang]['Type'] | default: 'Type' -%}
+{%- assign descLabel = site.data.stringsBase[lang]['Description'] | default: 'Description' -%}
+{%- assign searchVerb = site.data.stringsBase[lang]['Search'] | default: 'Search' -%}
+
+<table id="artifactsTable" class="display" style="width:100%" data-fhir="generated">
+  <thead>
+    <tr>
+      <th></th>
+      <th>{{ site.data.stringsBase[lang]['Grouping'] | default: 'Grouping' }}</th>
+      <th>{{ nameLabel }}</th>
+      <th>{{ typeLabel }}</th>
+      <th>{{ descLabel }}</th>
+    </tr>
+    <tr class="filters">
+      <th></th>
+      <th></th>
+      <th><input type="text" placeholder="{{ searchVerb }} {{ nameLabel | downcase }}"/></th>
+      <th><input type="text" placeholder="{{ searchVerb }} {{ typeLabel | downcase }}"/></th>
+      <th><input type="text" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
+    </tr>
+  </thead>
+</table>
+
+<script defer src="assets/js/dataTables.min.js"></script>
+<script defer src="assets/js/dataTables.rowGroup.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var data = [
+{%- for r in site.data.artifactsTable -%}
+{%- assign nm = r.name[lang] | default: r.name.src -%}
+{%- assign descRaw = r.description[lang] | default: r.description.src | default: '' -%}
+{%- assign desc = descRaw | markdownify | strip -%}
+{%- assign gKey = r.groupingName | append: 'Name' -%}
+{%- assign groupLabel = groupingStrings[gKey] | default: r.groupingName -%}
+    { "p":{{ r.groupingPos }}, "gid":{{ r.groupingId | jsonify }}, "g":{{ groupLabel | jsonify }}, "n":{{ nm | jsonify }}, "t":{{ r.type | jsonify }}, "u":{{ r.url | jsonify }}, "r":{{ r.ref | jsonify }}, "d":{{ desc | jsonify }} }{%- unless forloop.last -%},{%- endunless %}
+{%- endfor %}
+  ];
+
+  var groupDescriptions = {};
+{%- assign seenGids = "|" -%}
+{%- for r in site.data.artifactsTable -%}
+{%- assign marker = r.groupingId | prepend: "|" | append: "|" -%}
+{%- unless seenGids contains marker -%}
+{%- assign seenGids = seenGids | append: r.groupingId | append: "|" -%}
+{%- assign descKey = r.groupingName | append: 'Desc' -%}
+{%- assign descMd = groupingStrings[descKey] -%}
+{%- if descMd == nil or descMd == '' -%}
+  {%- assign descMd = r.groupingDescription[lang] | default: r.groupingDescription.src -%}
+{%- endif -%}
+{%- if descMd and descMd != '' %}
+  groupDescriptions[{{ r.groupingId | jsonify }}] = {{ descMd | markdownify | jsonify }};
+{%- endif -%}
+{%- endunless -%}
+{%- endfor %}
+
+  function escapeHtml(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  }); }
+
+  function htmlToText(s){ return jQuery('<div/>').html(s || '').text(); }
+
+  var table = jQuery('#artifactsTable').DataTable({
+    orderCellsTop: true,
+    layout: {
+      topStart: 'pageLength',
+      topEnd: ['search', 'paging'],
+      bottomStart: 'info',
+      bottomEnd: 'paging'
+    },
+    data: data,
+    columns: [
+      { data: 'p', visible: false, searchable: false },
+      { data: 'g', visible: false },
+      { data: 'n', render: function(d, t, row){
+          if (t === 'display') {
+            return '<a href="' + encodeURI(row.u) + '" title="' + escapeHtml(row.r) + '">' + escapeHtml(d) + '</a>';
+          }
+          return d;
+        }
+      },
+      { data: 't' },
+      { data: 'd', render: function(d, t){
+          if (t === 'display') return d;
+          return htmlToText(d);
+        }
+      }
+    ],
+    order: [[0, 'asc']],
+    orderFixed: [[0, 'asc']],
+    rowGroup: {
+      dataSrc: 'g',
+      startRender: function(rows, group){
+        var first = rows.data().toArray()[0];
+        var desc = first && groupDescriptions[first.gid];
+        var $header = jQuery('<tr/>').append(
+          jQuery('<td/>').attr('colspan', 3).addClass('artifacts-group-header')
+        );
+        var $cell = $header.find('td');
+        jQuery('<div/>').addClass('artifacts-group-name').text(group).appendTo($cell);
+        if (desc) {
+          jQuery('<div/>').addClass('artifacts-group-desc').html(desc).appendTo($cell);
+        }
+        return $header;
+      }
+    },
+    pageLength: 200,
+    lengthMenu: [[10, 25, 50, 100, 200, 500, 1000], [10, 25, 50, 100, 200, 500, 1000]]
+  });
+
+  jQuery('#artifactsTable thead tr.filters input').on('keyup change clear', function(){
+    var idx = jQuery(this).closest('th').index();
+    var col = table.column(idx);
+    if (col.search() !== this.value) col.search(this.value).draw();
+  }).on('click', function(e){ e.stopPropagation(); });
+});
+</script>
