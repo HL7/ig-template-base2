@@ -10,17 +10,65 @@
 <link rel="stylesheet" href="assets/css/dataTables.min.css"/>
 <link rel="stylesheet" href="assets/css/dataTables.rowGroup.min.css"/>
 <style>
-  #artifactsTable tr.dtrg-group td.artifacts-group-header { background:#f5f5f5; padding:.5em .75em; }
-  #artifactsTable .artifacts-group-name { font-weight:600; font-size:1.05em; }
-  #artifactsTable .artifacts-group-desc { font-weight:normal; font-size:.95em; margin-top:.25em; color:#444; }
+  /* Group header — neutral overlay, no theme color */
+  #artifactsTable tr.dtrg-group td.artifacts-group-header {
+    background:rgba(0,0,0,0.08);
+    border-top:1px solid rgba(0,0,0,0.15);
+    border-bottom:1px solid rgba(0,0,0,0.15);
+    padding:.6em .9em;
+  }
+  #artifactsTable .artifacts-group-name { font-weight:700; font-size:1.1em; }
+  #artifactsTable .artifacts-group-desc { font-weight:normal; font-size:.92em; margin-top:.3em; opacity:.75; }
   #artifactsTable .artifacts-group-desc p:last-child { margin-bottom:0; }
+
+  /* Body markdown spacing */
   #artifactsTable tbody td p { margin:0 0 .25em 0; }
   #artifactsTable tbody td p:last-child { margin-bottom:0; }
-  #artifactsTable thead tr.filters th { padding:.25em .5em; background:#fafafa; }
-  #artifactsTable thead tr.filters input { width:100%; box-sizing:border-box; padding:.2em .4em; font-weight:normal; font-size:.9em; }
+
+  /* Per-column filter row */
+  #artifactsTable thead tr.filters th { padding:.25em .5em; background:rgba(0,0,0,0.03); }
+  #artifactsTable thead tr.filters input { width:100%; box-sizing:border-box; padding:.25em .5em; border:1px solid rgba(0,0,0,0.2); border-radius:3px; font-weight:normal; font-size:.9em; background:#fff; }
   #artifactsTable thead tr.filters th.sorting,
   #artifactsTable thead tr.filters th.sorting_asc,
   #artifactsTable thead tr.filters th.sorting_desc { background-image:none !important; cursor:default; }
+
+  /* Top/bottom controls — neutral, no theme color */
+  .dt-container .dt-layout-row { padding:.4em 0; align-items:center; }
+  .dt-container .dt-search input,
+  .dt-container .dt-length select {
+    padding:.3em .5em;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius:3px;
+    background:#fff;
+    font-size:.9em;
+  }
+  .dt-container .dt-search label,
+  .dt-container .dt-length label { font-weight:normal; opacity:.75; }
+  .dt-container .dt-info { opacity:.75; font-size:.9em; }
+  .dt-container .dt-paging .dt-paging-button {
+    border:1px solid rgba(0,0,0,0.2) !important;
+    background:#fff !important;
+    padding:.25em .65em !important;
+    margin:0 2px !important;
+    border-radius:3px !important;
+    font-size:.9em !important;
+    cursor:pointer;
+  }
+  .dt-container .dt-paging .dt-paging-button.current,
+  .dt-container .dt-paging .dt-paging-button.current:hover {
+    background:rgba(0,0,0,0.12) !important;
+    border-color:rgba(0,0,0,0.3) !important;
+    font-weight:bold;
+  }
+  .dt-container .dt-paging .dt-paging-button:hover:not(.current):not(.disabled) {
+    background:rgba(0,0,0,0.05) !important;
+  }
+  .dt-container .dt-paging .dt-paging-button.disabled,
+  .dt-container .dt-paging .dt-paging-button.disabled:hover {
+    opacity:.4;
+    cursor:default;
+    background:#fff !important;
+  }
 </style>
 
 {%- assign nameLabel = site.data.stringsBase[lang]['Name'] | default: 'Name' -%}
