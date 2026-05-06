@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   - Produces _data/artifactsTable.json: a flat array of artifact rows with all
-  - per-row translations baked in. Consumed by includes/artifacts2.xml.
+  - per-row translations baked in. Consumed by includes/artifacts-table.xml.
   - Each row: { groupingPos, groupingId, groupingName, type, url, ref,
   -            name: { src, <lang>... }, description: { src, <lang>... } }
   -->

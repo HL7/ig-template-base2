@@ -1,6 +1,6 @@
 {% comment %}
   DataTables-based equivalent of artifacts.xml.
-  Drop {% include artifacts2.xml %} into a page (e.g. artifacts2.md) — one such page per language folder.
+  Drop {% include artifacts-table.xml %} into a page (e.g. artifacts-table.md) — one such page per language folder.
   Picks the right translation per row at Jekyll time, falling back to the IG's source-language string when missing.
 {% endcomment %}
 {% assign lang = page.path | split: "/" | first %}
@@ -31,6 +31,23 @@
   #artifactsTable thead tr.filters th.sorting,
   #artifactsTable thead tr.filters th.sorting_asc,
   #artifactsTable thead tr.filters th.sorting_desc { background-image:none !important; cursor:default; }
+
+  /* Grouping toggle — sits inside DataTables top control row, looks like a checkbox */
+  .dt-grouping-toggle {
+    display:inline-flex;
+    align-items:center;
+    gap:.4em;
+    margin:0 2em;
+    font-size:.9em;
+    cursor:pointer;
+    user-select:none;
+    opacity:.85;
+  }
+  .dt-grouping-toggle input { margin:0; cursor:pointer; }
+  .dt-grouping-toggle:hover { opacity:1; }
+
+  /* Intro paragraph above the table */
+  .artifacts-table-intro { margin:.25em 0 1em 0; }
 
   /* Top/bottom controls — neutral, no theme color */
   .dt-container .dt-layout-row { padding:.4em 0; align-items:center; }
@@ -75,6 +92,10 @@
 {%- assign typeLabel = site.data.stringsBase[lang]['Type'] | default: 'Type' -%}
 {%- assign descLabel = site.data.stringsBase[lang]['Description'] | default: 'Description' -%}
 {%- assign searchVerb = site.data.stringsBase[lang]['Search'] | default: 'Search' -%}
+
+{%- assign useGroupingLabel = site.data.stringsBase[lang]['UseGrouping'] | default: 'Use grouping' -%}
+
+<p class="artifacts-table-intro">{{ site.data.stringsBase[lang]['ArtifactsTableIntro'] | default: 'This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide.' }}</p>
 
 <table id="artifactsTable" class="display" style="width:100%" data-fhir="generated">
   <thead>
@@ -134,58 +155,97 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function htmlToText(s){ return jQuery('<div/>').html(s || '').text(); }
 
-  var table = jQuery('#artifactsTable').DataTable({
-    orderCellsTop: true,
-    layout: {
-      topStart: 'pageLength',
-      topEnd: ['search', 'paging'],
-      bottomStart: 'info',
-      bottomEnd: 'paging'
-    },
-    data: data,
-    columns: [
-      { data: 'p', visible: false, searchable: false },
-      { data: 'g', visible: false },
-      { data: 'n', render: function(d, t, row){
-          if (t === 'display') {
-            return '<a href="' + encodeURI(row.u) + '" title="' + escapeHtml(row.r) + '">' + escapeHtml(d) + '</a>';
-          }
-          return d;
-        }
-      },
-      { data: 't' },
-      { data: 'd', render: function(d, t){
-          if (t === 'display') return d;
-          return htmlToText(d);
-        }
-      }
-    ],
-    order: [[0, 'asc']],
-    orderFixed: [[0, 'asc']],
-    rowGroup: {
-      dataSrc: 'g',
-      startRender: function(rows, group){
-        var first = rows.data().toArray()[0];
-        var desc = first && groupDescriptions[first.gid];
-        var $header = jQuery('<tr/>').append(
-          jQuery('<td/>').attr('colspan', 3).addClass('artifacts-group-header')
-        );
-        var $cell = $header.find('td');
-        jQuery('<div/>').addClass('artifacts-group-name').text(group).appendTo($cell);
-        if (desc) {
-          jQuery('<div/>').addClass('artifacts-group-desc').html(desc).appendTo($cell);
-        }
-        return $header;
-      }
-    },
-    pageLength: 200,
-    lengthMenu: [[10, 25, 50, 100, 200, 500, 1000], [10, 25, 50, 100, 200, 500, 1000]]
-  });
+  var useGroupingLabel = {{ useGroupingLabel | jsonify }};
+  var grouping = true;
 
-  jQuery('#artifactsTable thead tr.filters input').on('keyup change clear', function(){
-    var idx = jQuery(this).closest('th').index();
-    var col = table.column(idx);
-    if (col.search() !== this.value) col.search(this.value).draw();
-  }).on('click', function(e){ e.stopPropagation(); });
+  // Register a custom DataTables feature for the grouping checkbox
+  if (!jQuery.fn.dataTable.feature.__artifactsGroupRegistered) {
+    jQuery.fn.dataTable.feature.__artifactsGroupRegistered = true;
+    jQuery.fn.dataTable.feature.register('artifactsGroupToggle', function(){
+      var label = document.createElement('label');
+      label.className = 'dt-grouping-toggle';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.id = 'artifactsGroupToggle';
+      cb.checked = grouping;
+      var span = document.createElement('span');
+      span.textContent = useGroupingLabel;
+      label.appendChild(cb);
+      label.appendChild(span);
+      return label;
+    });
+  }
+
+  function buildConfig(grouping){
+    var cfg = {
+      orderCellsTop: true,
+      layout: {
+        topStart: ['search', 'artifactsGroupToggle'],
+        topEnd: ['paging', 'pageLength'],
+        bottomStart: 'info',
+        bottomEnd: 'paging'
+      },
+      data: data,
+      columns: [
+        { data: 'p', visible: false, searchable: false },
+        { data: 'g', visible: false },
+        { data: 'n', render: function(d, t, row){
+            if (t === 'display') {
+              return '<a href="' + encodeURI(row.u) + '" title="' + escapeHtml(row.r) + '">' + escapeHtml(d) + '</a>';
+            }
+            return d;
+          }
+        },
+        { data: 't' },
+        { data: 'd', render: function(d, t){
+            if (t === 'display') return d;
+            return htmlToText(d);
+          }
+        }
+      ],
+      order: grouping ? [[0, 'asc']] : [[2, 'asc']],
+      pageLength: 200,
+      lengthMenu: [[10, 25, 50, 100, 200, 500, 1000], [10, 25, 50, 100, 200, 500, 1000]]
+    };
+    if (grouping) {
+      cfg.orderFixed = [[0, 'asc']];
+      cfg.rowGroup = {
+        dataSrc: 'g',
+        startRender: function(rows, group){
+          var first = rows.data().toArray()[0];
+          var desc = first && groupDescriptions[first.gid];
+          var $header = jQuery('<tr/>').append(
+            jQuery('<td/>').attr('colspan', 3).addClass('artifacts-group-header')
+          );
+          var $cell = $header.find('td');
+          jQuery('<div/>').addClass('artifacts-group-name').text(group).appendTo($cell);
+          if (desc) {
+            jQuery('<div/>').addClass('artifacts-group-desc').html(desc).appendTo($cell);
+          }
+          return $header;
+        }
+      };
+    }
+    return cfg;
+  }
+
+  var table;
+  function renderTable(grouping){
+    if (table) table.destroy();
+    table = jQuery('#artifactsTable').DataTable(buildConfig(grouping));
+    jQuery('#artifactsTable thead tr.filters input').off('.artifactsFilter').on('keyup.artifactsFilter change.artifactsFilter clear.artifactsFilter', function(){
+      var idx = jQuery(this).closest('th').index();
+      var col = table.column(idx);
+      if (col.search() !== this.value) col.search(this.value).draw();
+    }).on('click.artifactsFilter', function(e){ e.stopPropagation(); });
+  }
+
+  renderTable(grouping);
+
+  // Document-delegated handler — survives table rebuild (which destroys the checkbox DOM)
+  jQuery(document).on('change', '#artifactsGroupToggle', function(){
+    grouping = this.checked;
+    renderTable(grouping);
+  });
 });
 </script>

@@ -177,7 +177,7 @@
     <xslt in="${onGenerate.ig.dest}xml" out="${ig.temp}/_data/artifactsTable.json" style="${ig.scripts}/onGenerate.artifactsTable.xslt"/>
     <fileset id="onGenerate.artifacts.id" dir="${ig.root}">
       <include name="${dir.temp.includes}/artifacts.xml"/>
-      <include name="${dir.temp.includes}/artifacts2.xml"/>
+      <include name="${dir.temp.includes}/artifacts-table.xml"/>
       <include name="${dir.temp.includes}/*.svg"/>
     </fileset>
     <property name="onGenerate.artifacts.files" refid="onGenerate.artifacts.id"/>
