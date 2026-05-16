@@ -111,7 +111,25 @@
             </page>
           </xsl:if>
         </xsl:otherwise>
-      </xsl:choose>      
+      </xsl:choose>
+      <xsl:if test="not(descendant-or-self::f:page[f:nameUrl/@value='artifacts-table.html'])">
+        <page xmlns="http://hl7.org/fhir">
+          <nameUrl value="artifacts-table.html"/>
+          <title value="Artifacts Table">
+            <xsl:for-each select="ancestor::f:definition/f:translations/f:translation[@name='ArtifactsTable']/@*[not(local-name(.)='name')]">
+              <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                <extension url="lang">
+                  <valueCode value="{local-name(.)}"/>
+                </extension>
+                <extension url="content">
+                  <valueString value="{.}"/>
+                </extension>
+              </extension>
+            </xsl:for-each>
+          </title>
+          <generation value="html"/>
+        </page>
+      </xsl:if>
     </xsl:copy>
   </xsl:template>
   <xsl:template match="f:page[f:nameUrl/@value='artifacts.html']">
