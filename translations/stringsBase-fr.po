@@ -611,7 +611,7 @@ msgstr "Paramètres de recherche (SearchParameter)"
 # HighlightChanges
 #: HighlightChanges
 msgid "Highlight text changes?"
-msgstr "Mettre en surbrillance les modifications du texte ?"
+msgstr "Surligner les changements ?"
 
 # HighlightChangesHelp
 #: HighlightChangesHelp
