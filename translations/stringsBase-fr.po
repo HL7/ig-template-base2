@@ -341,7 +341,7 @@ msgstr "IG © %YEAR%"
 # IGPackage
 #: IGPackage
 msgid "Package %PKG% based on %FHIRVER%."
-msgstr "Le papackagequet %PKG% est basé sur %FHIRVER%."
+msgstr "Le package %PKG% est basé sur %FHIRVER%."
 
 # GeneratedDate
 #: GeneratedDate
@@ -476,7 +476,7 @@ msgstr "Instances"
 # WorkInProgress
 #: WorkInProgress
 msgid "The content in this section has not undergone work group review and may be significantly revised prior to the next ballot."
-msgstr "Le contenu de cette section n'a pas été revu par le groupe de travail et peut être révisé de manière significative avant le prochain scrutin."
+msgstr "Le contenu de cette section n'a pas été revu par le groupe de travail et peut être révisé de manière significative avant la prochaine concertation."
 
 # Contents
 #: Contents
@@ -611,7 +611,7 @@ msgstr "Paramètres de recherche (SearchParameter)"
 # HighlightChanges
 #: HighlightChanges
 msgid "Highlight text changes?"
-msgstr "Mettre en surbrillance les modifications du texte ?"
+msgstr "Surligner les changements ?"
 
 # HighlightChangesHelp
 #: HighlightChangesHelp
