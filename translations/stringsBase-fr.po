@@ -391,7 +391,7 @@ msgstr "Version"
 # ResourceDate
 #: ResourceDate
 msgid "as of %RESDATE%"
-msgstr "à partir de %RESDATE%"
+msgstr "à date du %RESDATE%"
 
 # Responsible
 #: Responsible
