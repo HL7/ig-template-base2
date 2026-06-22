@@ -181,7 +181,7 @@ msgstr "Exemples"
 # Raw
 #: Raw
 msgid "Raw %FMT%"
-msgstr "Brut %FMT%"
+msgstr "%FMT% brut"
 
 # Abstract
 #: Abstract
