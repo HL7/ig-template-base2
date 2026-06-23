@@ -225,7 +225,7 @@ msgstr "Structures: Définitions de l'extension"
 # ExtensionDesc
 #: ExtensionDesc
 msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
-msgstr "Ils définissent des contraintes sur les types de données FHIR pour les systèmes conformes à ce guide d'implémentation."
+msgstr "Ils définissent les extensions FHIR définies dans ce guide d'implémentation."
 
 # ValueSetName
 #: ValueSetName
