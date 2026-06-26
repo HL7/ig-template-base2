@@ -90,7 +90,7 @@
   },
   "defaults": {
     "_documentation": "this object contains the default publishing policy for different types. Anything not mentioned defaults to true",
-    "ImplementationGuide": {
+    "ImplementationGuide:base": {
       "template-base": "",
       "template-format": "",
       "template-change-history":"",
