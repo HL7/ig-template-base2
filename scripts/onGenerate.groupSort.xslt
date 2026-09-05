@@ -54,13 +54,7 @@
   </xsl:template>
   <xsl:template name="doGrouping">
     <xsl:param name="prefix"/>
-<xsl:if test="$prefix='-str-resource' and f:groups/f:grouping[starts-with(@id, $prefix)]">
-<xsl:message>Got here</xsl:message>
-</xsl:if>
     <xsl:for-each select="f:groups/f:grouping[starts-with(@id, $prefix) and (@id!='-str-resource' or $prefix=@id)]">
-<xsl:if test="$prefix='-str-resource'">
-<xsl:message>Got here2</xsl:message>
-</xsl:if>
       <xsl:copy>
         <xsl:choose>
           <xsl:when test="parent::f:groups/parent::*/f:grouping[@id=current()/@id]">
