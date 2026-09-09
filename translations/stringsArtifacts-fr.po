@@ -175,7 +175,7 @@ msgstr "Structures: Modèles logiques"
 # LogicalModelDesc
 #: LogicalModelDesc
 msgid "These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."
-msgstr "Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation en termes plus conviviaux que les ressources FHIR sous-jacentes."
+msgstr "Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation."
 
 # QuestionnaireName
 #: QuestionnaireName
