@@ -11,7 +11,7 @@
   <a name="root"> </a>
 {% assign respath = site.data.resources[resource_].path %}
   <h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory']}}</h2>
-  <h2 id="root">{{modelType}}: {{site.data.resources[resource_].titlelang['{{[lang]}}']}}
+  <h2 id="root">{{modelType}}: {{site.data.resources[resource_].titlelang['{{[lang]}}']}}</h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 {% assign modelLower = modelType | downcase %}
   <p>{{site.data.stringsBase['{{[lang]}}']['ChangesIn'] | replace: "%ID%", "{{[id]}}" | replace: "%TYPE%", modelLower}}</p>
