@@ -123,6 +123,8 @@
     "HighlightChanges": "Highlight text changes?",
     "HighlightChangesHelp": "Enable this to see changes since the last official release",
     "NewContent": "New Content",
-    "ModifiedContent": "Modified Content"
+    "ModifiedContent": "Modified Content",
+    "TermParameters": "Terminology Parameters",
+    "ModelOf": "Instance of logical model"
   }
 }
