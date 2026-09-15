@@ -125,6 +125,16 @@
     "NewContent": "New Content",
     "ModifiedContent": "Modified Content",
     "TermParameters": "Terminology Parameters",
-    "ModelOf": "Instance of logical model"
+    "ModelOf": "Instance of logical model",
+    "ArtifactsTableIntro": "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide.",
+    "Grouping": "Grouping",
+    "Title": "Title",
+    "Id": "Id",
+    "Type": "Type",
+    "Description": "Description",
+    "Search": "Search",
+    "Category": "Category",
+    "UseGrouping": "Use grouping",
+    "ClearAll": "Clear all"
   }
 }
