@@ -5,7 +5,7 @@ msgstr "Exigences: Définitions des acteurs"
 # ActorDefinitionDesc
 #: ActorDefinitionDesc
 msgid "The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide."
-msgstr "Les artefacts suivants définissent les types de personnes et/ou de systèmes qui interagiront dans le cadre des cas d'utilisation couverts par le présent guide de mise en œuvre."
+msgstr "Les artefacts suivants définissent les types de personnes et/ou de systèmes qui interagiront dans le cadre des cas d'utilisation couverts par le présent guide d'implémentation."
 
 # RequirementsName
 #: RequirementsName
@@ -15,17 +15,17 @@ msgstr "Exigences: Exigences formelles"
 # RequirementsDesc
 #: RequirementsDesc
 msgid "The following artifacts describe the specific requirements to be met by systems compliant with the implementation guide."
-msgstr "Les artefacts suivants décrivent les exigences spécifiques auxquelles doivent répondre les systèmes conformes au guide de mise en œuvre."
+msgstr "Les artefacts suivants décrivent les exigences spécifiques auxquelles doivent répondre les systèmes conformes au guide d'implémentation."
 
 # CapabilityStatementName
 #: CapabilityStatementName
 msgid "Behavior: Capability Statements"
-msgstr "Comportement: Énoncés de capacités"
+msgstr "Comportement: Déclarations de capacités (CapabilityStatement)"
 
 # CapabilityStatementDesc
 #: CapabilityStatementDesc
 msgid "The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."
-msgstr "Les artefacts suivants définissent les capacités spécifiques que les différents types de systèmes sont censés posséder pour se conformer au présent guide de mise en œuvre.  Les systèmes conformes à ce guide de mise en œuvre sont censés déclarer leur conformité à une ou plusieurs des déclarations de capacité suivantes."
+msgstr "Les artefacts suivants définissent les capacités spécifiques que les différents types de systèmes sont censés posséder pour se conformer au présent guide d'implémentation.  Les systèmes conformes à ce guide d'implémentation sont censés déclarer leur conformité à une ou plusieurs des déclarations de capacité suivantes."
 
 # OperationDefinitionName
 #: OperationDefinitionName
@@ -35,7 +35,7 @@ msgstr "Comportement: Définitions des opérations"
 # OperationDefinitionDesc
 #: OperationDefinitionDesc
 msgid "These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide."
-msgstr "Il s'agit d'opérations personnalisées qui peuvent être prises en charge et/ou invoquées par des systèmes conformes au présent guide de mise en œuvre."
+msgstr "Il s'agit d'opérations personnalisées qui peuvent être prises en charge et/ou invoquées par des systèmes conformes au présent guide d'implémentation."
 
 # EventDefinitionName
 #: EventDefinitionName
@@ -45,7 +45,7 @@ msgstr "Comportement: définitions d'événements"
 # EventDefinitionDesc
 #: EventDefinitionDesc
 msgid "Defines system and business occurrences that drive a need for data to flow from systems in this implementation guide."
-msgstr "Définit les événements système et métier qui entraînent un besoin de flux de données à partir des systèmes dans ce guide de mise en œuvre."
+msgstr "Définit les événements système et métier qui entraînent un besoin de flux de données à partir des systèmes dans ce guide d'implémentation."
 
 # MessageDefinitionName
 #: MessageDefinitionName
@@ -55,17 +55,17 @@ msgstr "Comportement: Définitions des messages"
 # MessageDefinitionDesc
 #: MessageDefinitionDesc
 msgid "These define the types of messages that can be sent and/or received by systems conforming to this implementation guide."
-msgstr "Ils définissent les types de messages qui peuvent être envoyés et/ou reçus par les systèmes conformes au présent guide de mise en œuvre."
+msgstr "Ils définissent les types de messages qui peuvent être envoyés et/ou reçus par les systèmes conformes au présent guide d'implémentation."
 
 # SearchParameterName
 #: SearchParameterName
 msgid "Behavior: Search Parameters"
-msgstr "Comportement: Paramètres de recherche"
+msgstr "Comportement: Paramètres de recherche (SearchParameter)"
 
 # SearchParameterDesc
 #: SearchParameterDesc
 msgid "These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."
-msgstr "Ils définissent les propriétés permettant d'effectuer des recherches dans un serveur RESTful.  Elles peuvent également être utilisées pour trier et inclure des ressources connexes."
+msgstr "Ils définissent les propriétés permettant d'effectuer des recherches dans un serveur RESTful. Elles peuvent également être utilisées pour trier et inclure des ressources connexes."
 
 # SubscriptionTopicName
 #: SubscriptionTopicName
@@ -85,7 +85,7 @@ msgstr "Artefacts de connaissance: Définitions des activités"
 # ActivityDefinitionDesc
 #: ActivityDefinitionDesc
 msgid "These define activities that can be performed as part of content in this implementation guide."
-msgstr "Ils définissent les activités qui peuvent être réalisées dans le cadre du contenu de ce guide de mise en œuvre."
+msgstr "Ils définissent les activités qui peuvent être réalisées dans le cadre du contenu de ce guide d'implémentation."
 
 # PlanDefinitionName
 #: PlanDefinitionName
@@ -95,7 +95,7 @@ msgstr "Artéfacts de connaissance: Définitions du plan"
 # PlanDefinitionDesc
 #: PlanDefinitionDesc
 msgid "These define workflows, rules, strategies, or protocols as part of content in this implementation guide."
-msgstr "Ils définissent des flux de travail, des règles, des stratégies ou des protocoles dans le cadre du contenu de ce guide de mise en œuvre."
+msgstr "Ils définissent des flux de travail, des règles, des stratégies ou des protocoles dans le cadre du contenu de ce guide d'implémentation."
 
 # MeasureName
 #: MeasureName
@@ -105,7 +105,7 @@ msgstr "Artefacts de connaissance: Mesure"
 # MeasureDesc
 #: MeasureDesc
 msgid "These define measures as part of content in this implementation guide."
-msgstr "Ces mesures sont définies dans le cadre du contenu du présent guide de mise en œuvre."
+msgstr "Ces mesures sont définies dans le cadre du contenu du présent guide d'implémentation."
 
 # LibraryName
 #: LibraryName
@@ -115,7 +115,7 @@ msgstr "Artefacts de la connaissance: Bibliothèques"
 # LibraryDesc
 #: LibraryDesc
 msgid "These define logic, asset collections and other libraries as part of content in this implementation guide."
-msgstr "Celles-ci définissent la logique, les collections d'actifs et d'autres bibliothèques qui font partie du contenu de ce guide de mise en œuvre."
+msgstr "Celles-ci définissent la logique, les collections d'actifs et d'autres bibliothèques qui font partie du contenu de ce guide d'implémentation."
 
 # EvidenceName
 #: EvidenceName
@@ -125,7 +125,7 @@ msgstr "Artefacts de connaissance: preuves"
 # EvidenceDesc
 #: EvidenceDesc
 msgid "Indicates research or other information that justifies or support the information exchange defined in this implemetnation guide."
-msgstr "Indique une recherche ou d’autres informations qui justifient ou soutiennent l’échange d’informations défini dans ce guide de mise en œuvre."
+msgstr "Indique une recherche ou d’autres informations qui justifient ou soutiennent l’échange d’informations défini dans ce guide d'implémentation."
 
 # EvidenceVariableName
 #: EvidenceVariableName
@@ -135,7 +135,7 @@ msgstr "Artefacts de connaissance: variables de preuve"
 # EvidenceVariableDesc
 #: EvidenceVariableDesc
 msgid "Components of the research that justify or support the information exchange defined in this implementation guide."
-msgstr "Composantes de la recherche qui justifient ou soutiennent l’échange d’informations défini dans ce guide de mise en œuvre."
+msgstr "Composantes de la recherche qui justifient ou soutiennent l’échange d’informations défini dans ce guide d'implémentation."
 
 # CitationNameName
 #: CitationNameName
@@ -175,7 +175,7 @@ msgstr "Structures: Modèles logiques"
 # LogicalModelDesc
 #: LogicalModelDesc
 msgid "These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."
-msgstr "Ils définissent des modèles de données qui représentent le domaine couvert par ce guide de mise en œuvre en termes plus conviviaux que les ressources FHIR sous-jacentes."
+msgstr "Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation en termes plus conviviaux que les ressources FHIR sous-jacentes."
 
 # QuestionnaireName
 #: QuestionnaireName
@@ -185,7 +185,7 @@ msgstr "Structures: Questionnaires"
 # QuestionnaireDesc
 #: QuestionnaireDesc
 msgid "These define forms used by systems conforming to this implementation guide to capture or expose data to end users."
-msgstr "Ils définissent les formulaires utilisés par les systèmes conformes au présent guide de mise en œuvre pour capturer ou exposer des données aux utilisateurs finaux."
+msgstr "Ils définissent les formulaires utilisés par les systèmes conformes au présent guide d'implémentation pour capturer ou exposer des données aux utilisateurs finaux."
 
 # AbstractProfileName
 #: AbstractProfileName
@@ -205,17 +205,17 @@ msgstr "Structures: Profils de ressources"
 # ResourceProfileDesc
 #: ResourceProfileDesc
 msgid "These define constraints on FHIR resources for systems conforming to this implementation guide."
-msgstr "Ils définissent les contraintes sur les ressources FHIR pour les systèmes conformes à ce guide de mise en œuvre."
+msgstr "Ils définissent les contraintes sur les ressources FHIR pour les systèmes conformes à ce guide d'implémentation."
 
 # DataTypeName
 #: DataTypeName
 msgid "Structures: Data Type Profiles"
-msgstr "Structures: Profils des types de données"
+msgstr "Structures: Profils de types de données"
 
 # DataTypeDesc
 #: DataTypeDesc
 msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
-msgstr "Ils définissent des contraintes sur les types de données FHIR pour les systèmes conformes à ce guide de mise en œuvre."
+msgstr "Ils définissent des contraintes sur les types de données FHIR pour les systèmes conformes à ce guide d'implémentation."
 
 # ExtensionName
 #: ExtensionName
@@ -225,37 +225,37 @@ msgstr "Structures: Définitions de l'extension"
 # ExtensionDesc
 #: ExtensionDesc
 msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
-msgstr "Ils définissent des contraintes sur les types de données FHIR pour les systèmes conformes à ce guide de mise en œuvre."
+msgstr "Ils définissent des contraintes sur les types de données FHIR pour les systèmes conformes à ce guide d'implémentation."
 
 # ValueSetName
 #: ValueSetName
 msgid "Terminology: Value Sets"
-msgstr "Terminologie: Ensembles de valeurs"
+msgstr "Terminologie: Jeux de valeurs (ValueSets)"
 
 # ValueSetDesc
 #: ValueSetDesc
 msgid "These define sets of codes used by systems conforming to this implementation guide."
-msgstr "Ils définissent des ensembles de codes utilisés par les systèmes conformes au présent guide de mise en œuvre."
+msgstr "Ils définissent des ensembles de codes utilisés par les systèmes conformes au présent guide d'implémentation."
 
 # CodeSystemName
 #: CodeSystemName
 msgid "Terminology: Code Systems"
-msgstr "Terminologie: Systèmes de codes"
+msgstr "Terminologie: Systèmes de codes (CodeSystems)"
 
 # CodeSystemDesc
 #: CodeSystemDesc
 msgid "These define new code systems used by systems conforming to this implementation guide."
-msgstr "Ils définissent les nouveaux systèmes de codes utilisés par les systèmes conformes au présent guide de mise en œuvre."
+msgstr "Ils définissent les nouveaux systèmes de codes utilisés par les systèmes conformes au présent guide d'implémentation."
 
 # NamingSystemName
 #: NamingSystemName
 msgid "Terminology: Naming Systems"
-msgstr "Terminologie: Systèmes de dénomination"
+msgstr "Terminologie: Systèmes de dénomination (NamingSystem)"
 
 # NamingSystemDesc
 #: NamingSystemDesc
 msgid "These define identifier and/or code system identities used by systems conforming to this implementation guide."
-msgstr "Ils définissent les identités des systèmes d'identification et/ou de codage utilisés par les systèmes conformes au présent guide de mise en œuvre."
+msgstr "Ils définissent les identités des systèmes d'identification et/ou de codage utilisés par les systèmes conformes au présent guide d'implémentation."
 
 # TerminologyCapName
 #: TerminologyCapName
@@ -270,27 +270,27 @@ msgstr "Paramètres qui définissent l’extension des ensembles de valeurs util
 # StructureMapName
 #: StructureMapName
 msgid "Terminology: Structure Maps"
-msgstr "Terminologie: Cartes de structure"
+msgstr "Terminologie: Structure Maps"
 
 # StructureMapDesc
 #: StructureMapDesc
 msgid "These define transformations to convert between data structures used by systems conforming to this implementation guide."
-msgstr "Ils définissent les transformations permettant de convertir les structures de données utilisées par les systèmes conformes au présent guide de mise en œuvre."
+msgstr "Ils définissent les transformations permettant de convertir les structures de données utilisées par les systèmes conformes au présent guide d'implémentation."
 
 # ConceptMapName
 #: ConceptMapName
 msgid "Terminology: Concept Maps"
-msgstr "Terminologie: Cartes conceptuelles"
+msgstr "Terminologie: Concept Maps"
 
 # ConceptMapDesc
 #: ConceptMapDesc
 msgid "These define transformations to convert between codes by systems conforming with this implementation guide."
-msgstr "Ils définissent les transformations permettant de convertir les codes par des systèmes conformes au présent guide de mise en œuvre."
+msgstr "Ils définissent les transformations permettant de convertir les codes par des systèmes conformes au présent guide d'implémentation."
 
 # TestPlanName
 #: TestPlanName
 msgid "Testing Artifacts: TestPlans"
-msgstr "Artéfacts de test: Plans de test"
+msgstr "Artéfacts de test: Plans de test (TestPlan)"
 
 # TestPlanDesc
 #: TestPlanDesc
@@ -305,7 +305,7 @@ msgstr "Artéfacts de test: TestScripts"
 # TestScriptDesc
 #: TestScriptDesc
 msgid "These test definitions are available to FHIR test engines to verify systems are conforming to this implementation guide"
-msgstr "Ces définitions de test sont disponibles pour les moteurs de test FHIR afin de vérifier que les systèmes sont conformes à ce guide de mise en œuvre."
+msgstr "Ces définitions de test sont disponibles pour les moteurs de test FHIR afin de vérifier que les systèmes sont conformes à ce guide d'implémentation."
 
 # ConditionDefinitionName
 #: ConditionDefinitionName
@@ -315,7 +315,7 @@ msgstr "Clinique: Définitions des conditions"
 # ConditionDefinitionDesc
 #: ConditionDefinitionDesc
 msgid "Formal descriptions of conditions and symptoms relevant to the use of this implementation guide."
-msgstr "Descriptions formelles des conditions et des symptômes pertinents à l’utilisation de ce guide de mise en œuvre."
+msgstr "Descriptions formelles des conditions et des symptômes pertinents à l’utilisation de ce guide d'implémentation."
 
 # ObservationDefinitionName
 #: ObservationDefinitionName
@@ -325,7 +325,7 @@ msgstr "Clinique: Observation Définitions"
 # ObservationDefinitionDesc
 #: ObservationDefinitionDesc
 msgid "Formal descriptions of types of observations relevant to the use of this implementation guide."
-msgstr "Descriptions formelles des types d’observations pertinentes pour l’utilisation de ce guide de mise en œuvre."
+msgstr "Descriptions formelles des types d’observations pertinentes pour l’utilisation de ce guide d'implémentation."
 
 # SpecimenDefinitionName
 #: SpecimenDefinitionName
@@ -335,7 +335,7 @@ msgstr "Clinique: Définitions des échantillons"
 # SpecimenDefinitionDesc
 #: SpecimenDefinitionDesc
 msgid "Formal descriptions of the types of specimens relevant to the use of this implementation guide."
-msgstr "Descriptions formelles des types de spécimens pertinents pour l’utilisation de ce guide de mise en œuvre."
+msgstr "Descriptions formelles des types de spécimens pertinents pour l’utilisation de ce guide d'implémentation."
 
 # ChargeItemDefinitionName
 #: ChargeItemDefinitionName
@@ -345,7 +345,7 @@ msgstr "Clinique: définitions des éléments de facturation"
 # ChargeItemDefinitionDesc
 #: ChargeItemDefinitionDesc
 msgid "Definitions of chargeable costs relevant to the use of this implementation guide."
-msgstr "Définitions des coûts facturables pertinentes pour l’utilisation de ce guide de mise en œuvre."
+msgstr "Définitions des coûts facturables pertinentes pour l’utilisation de ce guide d'implémentation."
 
 # ExampleScenarioName
 #: ExampleScenarioName
@@ -355,7 +355,7 @@ msgstr "Exemple: Scénarios types"
 # ExampleScenarioDesc
 #: ExampleScenarioDesc
 msgid "These define groups of interrelated examples that demonstrate one or more of the workflows supported by this implementation guide."
-msgstr "Ils définissent des groupes d'exemples interdépendants qui illustrent un ou plusieurs des flux de travail pris en charge par le présent guide de mise en œuvre."
+msgstr "Ils définissent des groupes d'exemples interdépendants qui illustrent un ou plusieurs des flux de travail pris en charge par le présent guide d'implémentation."
 
 # ExampleName
 #: ExampleName
@@ -365,7 +365,7 @@ msgstr "Exemple: Exemples d'instances"
 # ExampleDesc
 #: ExampleDesc
 msgid "These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."
-msgstr "Il s'agit d'exemples d'instances qui montrent à quoi peuvent ressembler les données produites et consommées par des systèmes conformes au présent guide de mise en œuvre."
+msgstr "Il s'agit d'exemples d'instances qui montrent à quoi peuvent ressembler les données produites et consommées par des systèmes conformes au présent guide d'implémentation."
 
 # ExampleSupportingName
 #: ExampleSupportingName
@@ -375,7 +375,7 @@ msgstr "Exemple: Exemple d'instances de soutien"
 # ExampleSupportingDesc
 #: ExampleSupportingDesc
 msgid "These are example instances that are not governed by this implementation guide, but which are necessary to support other examples defined in the IG."
-msgstr "Il s'agit d'exemples d'instances qui ne sont pas régies par le présent guide de mise en œuvre, mais qui sont nécessaires pour étayer d'autres exemples définis dans l'IG."
+msgstr "Il s'agit d'exemples d'instances qui ne sont pas régies par le présent guide d'implémentation, mais qui sont nécessaires pour étayer d'autres exemples définis dans l'IG."
 
 # OtherName
 #: OtherName
@@ -385,4 +385,4 @@ msgstr "Autres"
 # OtherDesc
 #: OtherDesc
 msgid "These are resources that are used within this implementation guide that do not fit into one of the other categories."
-msgstr "Il s'agit de ressources utilisées dans le cadre de ce guide de mise en œuvre qui n'entrent pas dans l'une des autres catégories."
+msgstr "Il s'agit de ressources utilisées dans le cadre de ce guide d'implémentation qui n'entrent pas dans l'une des autres catégories."

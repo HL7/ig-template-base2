@@ -1,0 +1,634 @@
+# en -> sv
+
+# NO_TRANS
+msgid ""
+msgstr ""
+
+#: NO_TRANS
+msgid "There is no translation page available for the current page, so it has been rendered in the default language"
+msgstr "Det finns ingen översättningssida tillgänglig för den aktuella sidan, så den har visats på standardspråket"
+
+# TRANS_HLP
+#: TRANS_HLP
+msgid "This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)."
+msgstr "Denna sida innehåller översättningar från det ursprungliga källspråk som guiden skrevs på. Information om dessa översättningar och instruktioner om hur man ger återkoppling på översättningarna finns [här](translationinfo.html)."
+
+# Experimental
+#: Experimental
+msgid "Experimental"
+msgstr "Experimentell"
+
+# Swagger
+#: Swagger
+msgid "Raw OpenAPI-Swagger Definition file"
+msgstr "Rå OpenAPI-Swagger-definitionsfil"
+
+# Download
+#: Download
+msgid "Download"
+msgstr "Ladda ner"
+
+# NoTestPlan
+#: NoTestPlan
+msgid "No test plans are currently available for the %ARTIFACT%."
+msgstr "Det finns för närvarande inga testplaner tillgängliga för %ARTIFACT%."
+
+# NoTestScript
+#: NoTestScript
+msgid "No test scripts are currently available for the %ARTIFACT%."
+msgstr "Det finns för närvarande inga testskript tillgängliga för %ARTIFACT%."
+
+# ChangeHistory
+#: ChangeHistory
+msgid "Change History"
+msgstr "Ändringshistorik"
+
+# HistoryOfChange
+#: HistoryOfChange
+msgid "History of changes for %ARTIFACT%."
+msgstr "Ändringshistorik för %ARTIFACT%."
+
+# CodeSystemValuesets
+#: CodeSystemValuesets
+msgid "This Code system is referenced in the definition of the following value sets:"
+msgstr "Detta kodsystem refereras i definitionen av följande värdemängder:"
+
+# Contained
+#: Contained
+msgid "Contained resources"
+msgstr "Inneslutna resurser"
+
+# FormalExtension
+#: FormalExtension
+msgid "Formal Views of Extension Content"
+msgstr "Formella vyer av extensioninnehåll"
+
+# FormalProfile
+#: FormalProfile
+msgid "Formal Views of Profile Content"
+msgstr "Formella vyer av profilinnehåll"
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Formella vyer av resursinnehåll"
+
+# ReadingStructures
+#: ReadingStructures
+msgid "Description Differentials, Snapshots, and other representations"
+msgstr "Beskrivningsdifferentialer, ögonblicksbilder och andra representationer"
+
+# ReadingTerminology
+#: ReadingTerminology
+msgid "Description of the above table(s)"
+msgstr "Beskrivning av ovanstående tabell(er)"
+
+# KeyElementsTable
+#: KeyElementsTable
+msgid "Key Elements Table"
+msgstr "Tabell med nyckelelement"
+
+# DifferentialTable
+#: DifferentialTable
+msgid "Differential Table"
+msgstr "Differentialtabell"
+
+# SnapshotTable
+#: SnapshotTable
+msgid "Snapshot Table"
+msgstr "Ögonblicksbildstabell"
+
+# PseudoXML
+#: PseudoXML
+msgid "Pseudo XML"
+msgstr "Pseudo-XML"
+
+# PseudoJSON
+#: PseudoJSON
+msgid "Pseudo JSON"
+msgstr "Pseudo-JSON"
+
+# PseudoTTL
+#: PseudoTTL
+msgid "Pseudo TTL"
+msgstr "Pseudo-TTL"
+
+# StatisticsReferences
+#: StatisticsReferences
+msgid "Statistics/References"
+msgstr "Statistik/referenser"
+
+# AllTables
+#: AllTables
+msgid "All"
+msgstr "Alla"
+
+# Derive
+#: Derive
+msgid "This structure is derived from %ARTIFACT%"
+msgstr "Denna struktur är härledd från %ARTIFACT%"
+
+# KeyElementsView
+#: KeyElementsView
+msgid "Key Elements View"
+msgstr "Vy med nyckelelement"
+
+# DifferentialView
+#: DifferentialView
+msgid "Differential View"
+msgstr "Differentialvy"
+
+# SnapshotView
+#: SnapshotView
+msgid "Snapshot View"
+msgstr "Ögonblicksbildsvy"
+
+# XMLTemplate
+#: XMLTemplate
+msgid "XML Template"
+msgstr "XML-mall"
+
+# JSONTemplate
+#: JSONTemplate
+msgid "JSON Template"
+msgstr "JSON-mall"
+
+# TTLTemplate
+#: TTLTemplate
+msgid "TTL Template"
+msgstr "TTL-mall"
+
+# OtherReps
+#: OtherReps
+msgid "Other representations of profile:"
+msgstr "Andra representationer av profilen:"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Andra representationer av resursen:"
+
+# CSV
+#: CSV
+msgid "CSV"
+msgstr "CSV"
+
+# Excel
+#: Excel
+msgid "Excel"
+msgstr "Excel"
+
+# Schematron
+#: Schematron
+msgid "Schematron"
+msgstr "Schematron"
+
+# Example
+#: Example
+msgid "Example"
+msgstr "Exempel"
+
+# Examples
+#: Examples
+msgid "Examples"
+msgstr "Exempel"
+
+# Raw
+#: Raw
+msgid "Raw %FMT%"
+msgstr "Rå %FMT%"
+
+# Abstract
+#: Abstract
+msgid "Abstract"
+msgstr "Abstrakt"
+
+# DetailedDescriptions
+#: DetailedDescriptions
+msgid "Detailed Descriptions"
+msgstr "Detaljerade beskrivningar"
+
+# DefinitionsFor
+#: DefinitionsFor
+msgid "Definitions for the %MODEL%"
+msgstr "Definitioner för %MODEL%"
+
+# ExamplesForProfile
+#: ExamplesForProfile
+msgid "Examples for the %ID% Profile."
+msgstr "Exempel för profilen %ID%."
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Exempel för resursen %ID%."
+
+# NoExamples
+#: NoExamples
+msgid "No examples are currently available for the %ID% Profile."
+msgstr "Det finns för närvarande inga exempel tillgängliga för profilen %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Det finns för närvarande inga exempel tillgängliga för resursen %ID%"
+
+# FormatProfile
+#: FormatProfile
+msgid "%FMT% Profile"
+msgstr "%FMT%-profil"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "%FMT%-resurs"
+
+# FormatRep
+#: FormatRep
+msgid "%FMT% representation of the %ID% %TYPE%."
+msgstr "%FMT%-representation av %ID% %TYPE%."
+
+# Mappings
+#: Mappings
+msgid "Mappings"
+msgstr "Mappningar"
+
+# MappingsFor
+#: MappingsFor
+msgid "Mappings for the %ID% %TYPE%."
+msgstr "Mappningar för %ID% %TYPE%."
+
+# ChangesIn
+#: ChangesIn
+msgid "Changes in the %ID% %TYPE%."
+msgstr "Ändringar i %ID% %TYPE%."
+
+# Testing
+#: Testing
+msgid "Testing"
+msgstr "Testning"
+
+# TestPlans
+#: TestPlans
+msgid "Test Plans"
+msgstr "Testplaner"
+
+# TestScripts
+#: TestScripts
+msgid "Test Scripts"
+msgstr "Testskript"
+
+# Expansion
+#: Expansion
+msgid "Expansion"
+msgstr "Expansion"
+
+# Content
+#: Content
+msgid "Content"
+msgstr "Innehåll"
+
+# XML
+#: XML
+msgid "XML"
+msgstr "XML"
+
+# JSON
+#: JSON
+msgid "JSON"
+msgstr "JSON"
+
+# TTL
+#: TTL
+msgid "TTL"
+msgstr "TTL"
+
+# History
+#: History
+msgid "History"
+msgstr "Historik"
+
+# Extension
+#: Extension
+msgid "Extension"
+msgstr "Extension"
+
+# LogicalModel
+#: LogicalModel
+msgid "Logical Model"
+msgstr "Logisk modell"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Resurs"
+
+# ResourceProfile
+#: ResourceProfile
+msgid "Resource Profile"
+msgstr "Resursprofil"
+
+# DataTypeProfile
+#: DataTypeProfile
+msgid "Data Type Profile"
+msgstr "Datatypsprofil"
+
+# Links
+#: Links
+msgid "Links"
+msgstr "Länkar"
+
+# Notes
+#: Notes
+msgid "Notes"
+msgstr "Anteckningar"
+
+# VisitFCP
+#: VisitFCP
+msgid "Visit the FHIR Community Process Specification Registry"
+msgstr "Besök FHIR Community Process Specification Registry"
+
+# CountryFlag
+#: CountryFlag
+msgid "flag"
+msgstr "flagga"
+
+# PrevPage
+#: PrevPage
+msgid "< prev"
+msgstr "< föreg"
+
+# NextPage
+#: NextPage
+msgid "next >"
+msgstr "nästa >"
+
+# PageBottom
+#: PageBottom
+msgid "bottom"
+msgstr "botten"
+
+# PageTop
+#: PageTop
+msgid "top"
+msgstr "topp"
+
+# IGCopyright
+#: IGCopyright
+msgid "IG © %YEAR%"
+msgstr "IG © %YEAR%"
+
+# IGPackage
+#: IGPackage
+msgid "Package %PKG% based on %FHIRVER%."
+msgstr "Paket %PKG% baserat på %FHIRVER%."
+
+# GeneratedDate
+#: GeneratedDate
+msgid "Generated %DATE%"
+msgstr "Genererad %DATE%"
+
+# PageStandardsStatus
+#: PageStandardsStatus
+msgid "Page standards status"
+msgstr "Sidans standardstatus"
+
+# StandardsStatus
+#: StandardsStatus
+msgid "Standards Status"
+msgstr "Standardstatus"
+
+# FromNormative
+#: FromNormative
+msgid "from v%NORMVER%"
+msgstr "från v%NORMVER%"
+
+# MaturityLevel
+#: MaturityLevel
+msgid "Maturity Level"
+msgstr "Mognadsnivå"
+
+# OfficialURL
+#: OfficialURL
+msgid "Official URL"
+msgstr "Officiell URL"
+
+# CopyURL
+#: CopyURL
+msgid "Click to copy URL"
+msgstr "Klicka för att kopiera URL"
+
+# CopyVersioned
+#: CopyVersioned
+msgid "Click to copy versioned URL"
+msgstr "Klicka för att kopiera versionsspecificerad URL"
+
+# Version
+#: Version
+msgid "Version"
+msgstr "Version"
+
+# ResourceDate
+#: ResourceDate
+msgid "as of %RESDATE%"
+msgstr "per %RESDATE%"
+
+# Responsible
+#: Responsible
+msgid "Responsible"
+msgstr "Ansvarig"
+
+# Realm
+#: Realm
+msgid "Realm"
+msgstr "Domän"
+
+# ComputableName
+#: ComputableName
+msgid "Computable Name"
+msgstr "Beräkningsbart namn"
+
+# OtherIdentifiers
+#: OtherIdentifiers
+msgid "Other Identifiers"
+msgstr "Andra identifierare"
+
+# Keywords
+#: Keywords
+msgid "Keywords"
+msgstr "Nyckelord"
+
+# Usage
+#: Usage
+msgid "Usage"
+msgstr "Användning"
+
+# CopyrightLegal
+#: CopyrightLegal
+msgid "Copyright/Legal"
+msgstr "Upphovsrätt/juridik"
+
+# NarrativeContent
+#: NarrativeContent
+msgid "Narrative Content"
+msgstr "Berättande innehåll"
+
+# TableOfContents
+#: TableOfContents
+msgid "Table of Contents"
+msgstr "Innehållsförteckning"
+
+# QAReport
+#: QAReport
+msgid "QA Report"
+msgstr "QA-rapport"
+
+# Actors
+#: Actors
+msgid "Actors"
+msgstr "Aktörer"
+
+# Diagram
+#: Diagram
+msgid "Diagram"
+msgstr "Diagram"
+
+# Processes
+#: Processes
+msgid "Processes"
+msgstr "Processer"
+
+# Instances
+#: Instances
+msgid "Instances"
+msgstr "Instanser"
+
+# WorkInProgress
+#: WorkInProgress
+msgid "The content in this section has not undergone work group review and may be significantly revised prior to the next ballot."
+msgstr "Innehållet i detta avsnitt har inte genomgått arbetsgruppsgranskning och kan komma att revideras betydligt före nästa omröstning."
+
+# Contents
+#: Contents
+msgid "Contents"
+msgstr "Innehåll"
+
+# Globals
+#: Globals
+msgid "Globals"
+msgstr "Globaler"
+
+# GlobalProfiles
+#: GlobalProfiles
+msgid "Global Profiles"
+msgstr "Globala profiler"
+
+# ArtifactsIntro
+#: ArtifactsIntro
+msgid "This page provides a list of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Denna sida innehåller en lista över de FHIR-artefakter som definieras som en del av denna implementationsguide."
+
+# ArtifactsSummary
+#: ArtifactsSummary
+msgid "Artifacts Summary"
+msgstr "Sammanfattning av artefakter"
+
+# Language
+#: Language
+msgid "Language"
+msgstr "Språk"
+
+# UMLDiagram
+#: UMLDiagram
+msgid "UML Diagram"
+msgstr "UML-diagram"
+
+# Obligations
+#: Obligations
+msgid "Obligations"
+msgstr "Skyldigheter"
+
+# OpenEHR
+#: OpenEHR
+msgid "openEHR View"
+msgstr "openEHR-vy"
+
+# QuestionnaireTree
+#: QuestionnaireTree
+msgid "Tree view"
+msgstr "Trädvy"
+
+# QuestionnaireSample
+#: QuestionnaireSample
+msgid "Sample Rendering"
+msgstr "Exempelvisning"
+
+# QuestionnaireLogic
+#: QuestionnaireLogic
+msgid "Form Logic"
+msgstr "Formulärlogik"
+
+# QuestionnaireResponses
+#: QuestionnaireResponses
+msgid "Sample completed form"
+msgstr "Exempel på ifyllt formulär"
+
+# TestQuestionnaire
+#: TestQuestionnaire
+msgid "Test this Questionnaire"
+msgstr "Testa detta frågeformulär"
+
+# ResponsesQuestionnaire
+#: ResponsesQuestionnaire
+msgid "Responses for this Questionnaire"
+msgstr "Svar för detta frågeformulär"
+
+# NoQuestionnaireResponses
+#: NoQuestionnaireResponses
+msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
+msgstr "Det finns för närvarande inga QuestionnaireResponse-instanser för detta frågeformulär definierade i denna IG."
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Struktur"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Sökparametrar"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Markera textändringar?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Aktivera detta för att se ändringar sedan den senaste officiella versionen"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Nytt innehåll"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Modifierat innehåll"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Terminologiparametrar"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Instans av logisk modell"
