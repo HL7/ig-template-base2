@@ -199,7 +199,11 @@
       </filterchain>
     </concat>
     <echo file="${ig.template}/onGenerate-validation.json" message="]}&#x0a;" append="yes"/>
-    <replace file="${ig.template}/onGenerate-validation.json" token=",]}" value="]}"/>
+    <!-- strip the trailing comma left by the last fragment. The literal ",]}" replace this
+         used to do never matched anything: each fragment ends with a newline after its comma,
+         so the file actually reads ",\n]}" - and the outcome shipped with a null last entry in
+         issue[], which the publisher then refused to parse -->
+    <replaceregexp file="${ig.template}/onGenerate-validation.json" match=",(\s*\]\}\s*)$" replace="\1" flags="s"/>
   </target>
   <scriptdef name="appendArtifacts" language="javascript" description="Adds additional values to the to the onGenerate.files list">
     <attribute name="files"/>
@@ -234,7 +238,11 @@
       </filterchain>
     </concat>
     <echo file="${ig.template}/onCheck-validation.json" message="]}&#x0a;" append="yes"/>
-    <replace file="${ig.template}/onCheck-validation.json" token=",]}" value="]}"/>
+    <!-- strip the trailing comma left by the last fragment. The literal ",]}" replace this
+         used to do never matched anything: each fragment ends with a newline after its comma,
+         so the file actually reads ",\n]}" - and the outcome shipped with a null last entry in
+         issue[], which the publisher then refused to parse -->
+    <replaceregexp file="${ig.template}/onCheck-validation.json" match=",(\s*\]\}\s*)$" replace="\1" flags="s"/>
   </target>
   <scriptdef name="appendArtifacts" language="javascript" description="Adds additional values to the to the onGenerate.files list">
     <attribute name="files"/>
