@@ -1,6 +1,7 @@
 ---
 ---
 {% assign localPage = page.path | split: "/" | last %}
+{% include fragment-modelType.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 {% include fragment-pagebegin.html lang="{{[lang]}}" %}
 <!-- layouts\layout-changehistory.html -->
 
@@ -9,8 +10,10 @@
   {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='history' lang="{{[lang]}}" %}
 
   <a name="root"> </a>
-  <h2 id="root">{{type}}: {{site.data.resources[resource_].titlelang['{{[lang]}}']}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory']}}</h2>
-  <p>{{site.data.stringsBase['{{[lang]}}']['HistoryOfChange'] | replace: "%ARTIFACT%", "{{[id]}} {{[type]}} | downcase"}}</p>
+  <h2 id="root">{{modelType}}: {{site.data.resources[resource_].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory']}}</h2>
+{% assign modelLower = modelType | downcase %}
+{% capture artifact %}{{[id]}} {{modelLower}}{% endcapture %}
+  <p>{{site.data.stringsBase['{{[lang]}}']['HistoryOfChange'] | replace: "%ARTIFACT%", artifact}}</p>
 
   {% include {{[type]}}-{{[id]}}-history{{[langsuffix]}}.xhtml %}
 
