@@ -516,6 +516,11 @@ msgstr "Šiame puslapyje pateikiamas FHIR artefaktų, apibrėžtų šiame diegim
 msgid "Artifacts Summary"
 msgstr "Artefaktų santrauka"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Artefaktų lentelė"
+
 # UMLDiagram
 #: Language
 msgid "Language"

@@ -506,6 +506,11 @@ msgstr "هذا التركيب مشتق من %ARTIFACT%"
 msgid "Artifacts Summary"
 msgstr "ملخص القطع الأثرية"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "جدول القطع الأثرية"
+
 # Language
 #: Language
 msgid "Language"

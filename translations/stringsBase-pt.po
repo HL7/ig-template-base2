@@ -448,6 +448,11 @@ msgstr "Índice"
 msgid "Artifacts Summary"
 msgstr "Resumen de Artefactos"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Tabela de Artefatos"
+
 # QAReport
 #: QAReport
 msgid "QA Report"

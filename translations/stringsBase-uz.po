@@ -537,6 +537,11 @@ msgstr ""
 msgid "Artifacts Summary"
 msgstr "Artefaktlar sharhi"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Artefaktlar jadvali"
+
 # Language
 #: Language
 msgid "Language"

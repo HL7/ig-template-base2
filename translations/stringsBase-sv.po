@@ -533,6 +533,11 @@ msgstr "Denna sida innehåller en lista över de FHIR-artefakter som definieras 
 msgid "Artifacts Summary"
 msgstr "Sammanfattning av artefakter"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Tabell över artefakter"
+
 # Language
 #: Language
 msgid "Language"

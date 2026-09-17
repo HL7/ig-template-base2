@@ -506,6 +506,11 @@ msgstr "Esta estructura se deriva de %ARTIFACT%."
 msgid "Artifacts Summary"
 msgstr "Resumen de artefactos"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Tabla de artefactos"
+
 # Language
 #: Language
 msgid "Language"

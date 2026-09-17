@@ -508,6 +508,11 @@ msgstr "Deze structuur is afgeleid van %ARTIFACT%"
 msgid "Artifacts Summary"
 msgstr "Samenvatting artefacten"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Tabel artefacten"
+
 # Language
 #: Language
 msgid "Language"

@@ -537,6 +537,11 @@ msgstr ""
 msgid "Artifacts Summary"
 msgstr "Краткое описание артефактов"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Таблица артефактов"
+
 # Language
 #: Language
 msgid "Language"

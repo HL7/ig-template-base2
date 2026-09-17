@@ -106,6 +106,7 @@
     "GlobalProfiles": "Global Profiles",
     "ArtifactsIntro": "This page provides a list of the FHIR artifacts defined as part of this implementation guide.",
     "ArtifactsSummary": "Artifacts Summary",
+    "ArtifactsTable": "Artifacts Table",
     "Language": "Language",
     "UMLDiagram": "UML Diagram",
     "Obligations": "Obligations",

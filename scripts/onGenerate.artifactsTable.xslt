@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   - Produces _data/artifactsTable.json: a flat array of artifact rows with all
-  - per-row translations baked in. Consumed by includes/artifacts-table.xml.
+  - per-row translations baked in. Consumed by includes/fragment-artifacts-table.html.
   - Each row: { groupingPos, groupingId, groupingName, type, id, url, ref,
   -            title: { src, <lang>... }, description: { src, <lang>... } }
   - "title" comes from ImplementationGuide.definition.resource.name, which the

@@ -1,0 +1,7 @@
+{% assign oldartifacts = site.data.info.oldartifacts | downcase | slice: 0 %}
+
+{% if oldartifacts == 'y' %}
+  {% include fragment-artifacts.html %}
+{% else %}
+  {% include fragment-artifacts-table.html %}
+{% endif %}

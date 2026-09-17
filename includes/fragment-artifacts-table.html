@@ -1,0 +1,70 @@
+{% comment %}
+  DataTables-based equivalent of artifacts.xml.
+  Drop {% include fragment-artifacts-table.html %} into a page (e.g. artifacts-table.md) — one such page per language folder.
+  This include is markup only:
+    - labels come from site.data.stringsBase[include.lang]; include.lang is inherited from the page template
+      ({% include template-page-md.html lang='xx' %});
+    - styling lives in assets/css/artifacts-table.css;
+    - the per-language row data is rendered by Jekyll into assets/js/artifacts-table-data.js;
+    - the behaviour (DataTables setup, filters, persisted view) lives in assets/js/artifacts-table.js.
+{% endcomment %}
+{% assign lang = page.path | split: "/" | first %}
+{%- assign groupingLabel = site.data.stringsBase[include.lang]['Grouping']    | default: 'Grouping' -%}
+{%- assign titleLabel    = site.data.stringsBase[include.lang]['Title']       | default: 'Title' -%}
+{%- assign idLabel       = site.data.stringsBase[include.lang]['Id']          | default: 'Id' -%}
+{%- assign typeLabel     = site.data.stringsBase[include.lang]['Type']        | default: 'Type' -%}
+{%- assign descLabel     = site.data.stringsBase[include.lang]['Description'] | default: 'Description' -%}
+{%- assign searchVerb    = site.data.stringsBase[include.lang]['Search']      | default: 'Search' -%}
+
+<link rel="stylesheet" href="assets/css/dataTables.min.css"/>
+<link rel="stylesheet" href="assets/css/dataTables.rowGroup.min.css"/>
+<link rel="stylesheet" href="assets/css/artifacts-table.css"/>
+
+<div data-fhir="generated">
+  <p>{{site.data.stringsBase[lang]['ArtifactsIntro']}}</p>
+  <xsl:if test="$globals='Y'">
+    <a name="globals">
+      <xsl:value-of select="' '"/>
+    </a>
+    <h3>{{site.data.stringsBase[lang]['GlobalProfiles']}}</h3>
+    {% assign globals = "globals-table-" | append: lang | append: ".xhtml" %}
+    {% include {{globals}} %}
+  </xsl:if>
+  <xsl:if test="$termparams='Y'">
+    <a name="termparams">
+      <xsl:value-of select="' '"/>
+    </a>
+    <h3>{{site.data.stringsBase[lang]['TermParameters']}}</h3>
+    {% assign termparams = "expansion-params-" | append: lang | append: ".xhtml" %}
+    {% include {{termparams}} %}
+  </xsl:if>
+
+  <a name="table"> </a>
+  <h3>{{site.data.stringsBase[lang]['ArtifactsTable']}}</h3>
+  
+  <table id="artifactsTable" class="display" style="width:100%" data-fhir="generated">
+    <thead>
+      <tr>
+        <th></th>
+        <th>{{ groupingLabel }}</th>
+        <th>{{ titleLabel }}</th>
+        <th>{{ idLabel }}</th>
+        <th>{{ typeLabel }}</th>
+        <th>{{ descLabel }}</th>
+      </tr>
+      <tr class="filters">
+        <th></th>
+        <th></th>
+        <th><input type="text" data-col="n" placeholder="{{ searchVerb }} {{ titleLabel | downcase }}"/></th>
+        <th><input type="text" data-col="i" placeholder="{{ searchVerb }} {{ idLabel | downcase }}"/></th>
+        <th id="filterCellType"></th>
+        <th><input type="text" data-col="d" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+<script defer="defer" src="assets/js/dataTables.min.js"> </script>
+<script defer="defer" src="assets/js/dataTables.rowGroup.min.js"> </script>
+<script defer="defer" src="assets/js/artifacts-table-data.js"> </script>
+<script defer="defer" src="assets/js/artifacts-table.js"> </script>
