@@ -4,8 +4,8 @@
 
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-   <meta charset="UTF-8"/>
-  <title>Search {{site.data.fhir.ig.title}} (Current Build)</title>
+  <meta charset="UTF-8"/>
+  <title>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="http://www.hl7.org"/>
@@ -40,7 +40,7 @@
     </a>
 			</div>       	
       <div id="ig-status" style="font-size:24px;padding-top: 20px;">
-        <b id="ig-title">Search {{site.data.fhir.ig.title}} (Current Build)</b>
+        <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
 			</div>       	
 		</div>
 		<div class="container">  <!-- container -->
@@ -62,8 +62,8 @@
      <a class="navbar-brand hidden" href="https://hl7.org/fhir/index.html">FHIR</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="index.html">Specification</a></li>
-              <li><a href="history.html">History</a></li>
+              <li><a href="index.html">{{site.data.stringsBase[lang]['Specification']}}</a></li>
+              <li><a href="history.html">{{site.data.stringsBase[lang]['History']}}</a></li>
             </ul>
 
 					</div>  <!-- /.nav-collapse -->
@@ -84,14 +84,14 @@
 
 <div class="col-12">
 
-<h2>Search {{site.data.fhir.ig.title}} (Current Build)</h2>
+<h2>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</h2>
 
 <iframe src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://'}}&amp;prefill=Search {{site.data.fhir.ig.title}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
 
 <hr/>
 
 <p>
-Note: this search searches the current build of {{site.data.fhir.ig.title}}.
+{{site.data.stringsBase[lang]['CISearchMsg']}}
 </p>
 </div>
 

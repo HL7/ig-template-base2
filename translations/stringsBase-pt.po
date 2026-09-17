@@ -446,12 +446,12 @@ msgstr "Índice"
 # ArtifactsSummary
 #: ArtifactsSummary
 msgid "Artifacts Summary"
-msgstr "Resumen de Artefactos"
+msgstr "Resumo de Artefactos"
 
 # ArtifactsTable
 #: ArtifactsTable
 msgid "Artifacts Table"
-msgstr "Tabela de Artefatos"
+msgstr "Tabela de Artefactos"
 
 # QAReport
 #: QAReport
@@ -631,3 +631,17 @@ msgstr "Conteúdo modificado"
 #: NewContent
 msgid "New Content"
 msgstr "Conteúdo novo"
+# CurrentBuild
+#: CurrentBuild
+msgid "Current Build"
+msgstr "Build atual"
+
+# CISearchMsg
+#: CISearchMsg
+msgid "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Nota: esta pesquisa pesquisa a build atual de {{site.data.fhir.ig.title}}.  Esta página só existe para a build de CI - versões publicadas usarão uma página de pesquisa diferente."
+
+# Specification
+#: Specification
+msgid "Specification"
+msgstr "Especificação"

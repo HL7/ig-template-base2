@@ -651,3 +651,17 @@ msgstr "O'zgartirilgan mazmun"
 #: NewContent
 msgid "New Content"
 msgstr "Yangi mazmun"
+# CurrentBuild
+#: CurrentBuild
+msgid "Current Build"
+msgstr "Joriy versiya"
+
+# CISearchMsg
+#: CISearchMsg
+msgid "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Eslatma: bu qidiruv {{site.data.fhir.ig.title}} ning joriy versiyasida qidiradi.  Bu sahifa faqat CI versiyasi uchun mavjud - nashr etilgan versiyalar boshqa qidiruv sahifasidan foydalanadi."
+
+# Specification
+#: Specification
+msgid "Specification"
+msgstr "Spetsifikatsiya"

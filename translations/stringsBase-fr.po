@@ -632,3 +632,18 @@ msgstr "Contenu modifié"
 #: NewContent
 msgid "New Content"
 msgstr "Nouveau contenu"
+
+# CurrentBuild
+#: CurrentBuild
+msgid "Current Build"
+msgstr "Build actuel"
+
+# CISearchMsg
+#: CISearchMsg
+msgid "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Remarque : cette recherche porte sur le build actuel de {{site.data.fhir.ig.title}}.  Cette page n'existe que pour le build CI - les versions publiées utiliseront une page de recherche différente."
+
+# Specification
+#: Specification
+msgid "Specification"
+msgstr "Spécification"
