@@ -19,7 +19,7 @@ $( '#tabs' ).tabs({
   }
 });
 
-$(document).ready(function() {
+function activateTabForHash() {
 // Check if there's a hash/fragment in the URL
     if (window.location.hash) {
         var hash = window.location.hash;
@@ -58,4 +58,9 @@ $(document).ready(function() {
             }
         }
     }
-});
+}
+
+// Also run when the fragment changes without a page reload, e.g. clicking an
+// in-page link whose target lives in another tab panel.
+$(document).ready(activateTabForHash);
+$(window).on('hashchange', activateTabForHash);
