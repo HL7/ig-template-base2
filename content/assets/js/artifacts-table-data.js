@@ -22,7 +22,8 @@ window.artifactsTableData = {
       "type":        {{ strings['Type']        | default: 'Type'         | jsonify }},
       "category":    {{ strings['Category']    | default: 'Category'     | jsonify }},
       "useGrouping": {{ strings['UseGrouping'] | default: 'Use grouping' | jsonify }},
-      "clearAll":    {{ strings['ClearAll']    | default: 'Clear all'    | jsonify }}
+      "clearAll":      {{ strings['ClearAll']           | default: 'Clear all'             | jsonify }},
+      "linkToSection": {{ strings['LinkToThisSection'] | default: 'Link to this section' | jsonify }}
     },
     "groupDescriptions": {
 {%- assign seenGids = "|" -%}
