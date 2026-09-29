@@ -2436,7 +2436,7 @@ Expecting `+Y.join(", ")+", got '"+(this.terminals_[B]||B)+"'":ae="Parse error o
   }
 
   .label text {
-    fill: #000000;
+    fill: #333333;
   }
   .label {
     color: ${t.textColor}
