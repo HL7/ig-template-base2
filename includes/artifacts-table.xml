@@ -228,10 +228,10 @@
     <tr class="filters">
       <th></th>
       <th></th>
-      <th><input type="text" data-col="n" placeholder="{{ searchVerb }} {{ titleLabel | downcase }}"/></th>
-      <th><input type="text" data-col="i" placeholder="{{ searchVerb }} {{ idLabel | downcase }}"/></th>
+      <th><input aria-label="Title Filter" type="text" data-col="n" placeholder="{{ searchVerb }} {{ titleLabel | downcase }}"/></th>
+      <th><input aria-label="Id Filter" type="text" data-col="i" placeholder="{{ searchVerb }} {{ idLabel | downcase }}"/></th>
       <th id="filterCellType"></th>
-      <th><input type="text" data-col="d" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
+      <th><input aria-label="Description Filter" type="text" data-col="d" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
     </tr>
   </thead>
 </table>

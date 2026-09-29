@@ -1,2 +1,6 @@
 
 output/
+
+.index.json
+
+.index.db
