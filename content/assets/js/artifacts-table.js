@@ -82,6 +82,44 @@ document.addEventListener('DOMContentLoaded', function(){
   var colTextFilters = {};
   var pageLength = 200;
 
+  // ----- URL Parameters view request -----
+  // Uses filters, grouping, sort order, page length and the current page so that a visitor
+  // can be directed to this page with specific view parameters selected.
+  function loadParameters(queryString = window.location.search) {
+    try {
+      const params = new URLSearchParams(queryString);
+
+      if(params.size > 0)
+      {
+        const commaList = (name, fallback = []) =>
+          params.has(name)
+            ? params.get(name).split(",").map(value => value.trim()).filter(Boolean)
+            : fallback;
+
+        return {
+          grouping: params.has("grouping")
+            ? params.get("grouping") === "true"
+            : true,
+          types: commaList("types"),
+          categories: commaList("categories", []),
+          text: params.has("text") ? { value: params.get("text") } : {},
+          start: params.has("start") ? Number(params.get("start")) : 0,
+          length: params.has("length") ? Number(params.get("length")) : 200,
+          order: params.has("order")
+            ? [commaList("order").map((value, index) =>
+                index === 0 ? Number(value) : value
+              )]
+            : [[0, "asc"]]
+        };
+      }
+      else
+      {
+        // No Parameters
+        return {};
+      }
+    } catch(e) { return {}; }
+  }
+
   // ----- Persisted view state (localStorage, per page) -----
   // Stores filters, grouping, sort order, page length and the current page so that a visitor
   // returning to this page gets the same view back.
@@ -119,23 +157,27 @@ document.addEventListener('DOMContentLoaded', function(){
     return o.map(function(e){ return [e[0], e[1]]; });
   }
 
-  var saved = loadState();
-  if (typeof saved.grouping === 'boolean') grouping = saved.grouping;
-  if (Array.isArray(saved.types)) {
-    selectedTypes = saved.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
+  var viewState = loadParameters();
+  if(!viewState)
+  {
+    viewState = loadState();
   }
-  if (Array.isArray(saved.categories)) {
-    selectedCategories = saved.categories.filter(function(v){ return uniqueCategories.indexOf(v) !== -1; });
+  if (typeof viewState.grouping === 'boolean') grouping = viewState.grouping;
+  if (Array.isArray(viewState.types)) {
+    selectedTypes = viewState.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
   }
-  if (saved.text && typeof saved.text === 'object') {
+  if (Array.isArray(viewState.categories)) {
+    selectedCategories = viewState.categories.filter(function(v){ return uniqueCategories.indexOf(v) !== -1; });
+  }
+  if (viewState.text && typeof viewState.text === 'object') {
     TEXT_FILTER_KEYS.forEach(function(k){
-      if (typeof saved.text[k] === 'string' && saved.text[k]) colTextFilters[k] = saved.text[k];
+      if (typeof viewState.text[k] === 'string' && viewState.text[k]) colTextFilters[k] = viewState.text[k];
     });
   }
-  if (typeof saved.length === 'number' && saved.length > 0) pageLength = saved.length;
+  if (typeof viewState.length === 'number' && viewState.length > 0) pageLength = viewState.length;
   var initialView = {
-    start: (typeof saved.start === 'number' && saved.start > 0) ? saved.start : 0,
-    order: validOrder(saved.order)
+    start: (typeof viewState.start === 'number' && viewState.start > 0) ? viewState.start : 0,
+    order: validOrder(viewState.order)
   };
 
   // Custom row filter — registered once globally
