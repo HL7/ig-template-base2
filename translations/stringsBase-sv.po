@@ -533,6 +533,11 @@ msgstr "Denna sida innehåller en lista över de FHIR-artefakter som definieras 
 msgid "Artifacts Summary"
 msgstr "Sammanfattning av artefakter"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Tabell över artefakter"
+
 # Language
 #: Language
 msgid "Language"
@@ -632,3 +637,18 @@ msgstr "Terminologiparametrar"
 #: ModelOf
 msgid "Instance of logical model"
 msgstr "Instans av logisk modell"
+
+# CurrentBuild
+#: CurrentBuild
+msgid "Current Build"
+msgstr "Aktuell build"
+
+# CISearchMsg
+#: CISearchMsg
+msgid "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Obs: den här sökningen söker i den aktuella builden av {{site.data.fhir.ig.title}}.  Den här sidan finns endast för CI-builden - publicerade versioner använder en annan söksida."
+
+# Specification
+#: Specification
+msgid "Specification"
+msgstr "Specifikation"

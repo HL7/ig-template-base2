@@ -106,6 +106,7 @@
     "GlobalProfiles": "Global Profiles",
     "ArtifactsIntro": "This page provides a list of the FHIR artifacts defined as part of this implementation guide.",
     "ArtifactsSummary": "Artifacts Summary",
+    "ArtifactsTable": "Artifacts Table",
     "Language": "Language",
     "UMLDiagram": "UML Diagram",
     "Obligations": "Obligations",
@@ -135,6 +136,9 @@
     "Search": "Search",
     "Category": "Category",
     "UseGrouping": "Use grouping",
-    "ClearAll": "Clear all"
+    "ClearAll": "Clear all",
+    "CurrentBuild": "Current Build",
+    "CISearchMsg": "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page.",
+    "Specification": "Specification"
   }
 }

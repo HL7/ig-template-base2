@@ -1,276 +1,24 @@
-{% comment %}
-  DataTables-based equivalent of artifacts.xml.
-  Drop {% include artifacts-table.xml %} into a page (e.g. artifacts-table.md) — one such page per language folder.
-  Labels come from site.data.stringsBase[include.lang]; include.lang is inherited from the page template
-  ({% include template-page-md.html lang='xx' %}). Row text picks the right translation per row at Jekyll time,
-  falling back to the IG's source-language string when missing.
-  The view (column filters, grouping, sort, page length and current page) is persisted in localStorage per page,
-  so a visitor returning to the page sees the same filtered view and page they left.
-{% endcomment %}
-{% assign lang = include.lang %}
-{% if lang == nil or lang == '' %}{% assign lang = page.path | split: "/" | first %}{% endif %}
-{% assign groupingStrings = site.data.stringsArtifacts[lang] %}
-{% if groupingStrings == nil %}{% assign groupingStrings = site.data.stringsArtifacts.en %}{% endif %}
-
-<link rel="stylesheet" href="assets/css/dataTables.min.css"/>
-<link rel="stylesheet" href="assets/css/dataTables.rowGroup.min.css"/>
-<style>
-  /* Group header */
-  #artifactsTable tr.dtrg-group td.artifacts-group-header {
-    background:rgba(0,0,0,0.08);
-    border-top:1px solid rgba(0,0,0,0.15);
-    border-bottom:1px solid rgba(0,0,0,0.15);
-    padding:.6em .9em;
-  }
-  #artifactsTable .artifacts-group-name { font-weight:700; font-size:1.1em; }
-  #artifactsTable .artifacts-group-desc { font-weight:normal; font-size:.92em; margin-top:.3em; opacity:.75; }
-  #artifactsTable .artifacts-group-desc p:last-child { margin-bottom:0; }
-
-  /* Body markdown spacing */
-  #artifactsTable tbody td p { margin:0 0 .25em 0; }
-  #artifactsTable tbody td p:last-child { margin-bottom:0; }
-  #artifactsTable tbody td.artifacts-id { font-family:monospace; font-size:.9em; white-space:nowrap; }
-
-  /* Per-column filter row */
-  #artifactsTable thead tr.filters th { padding:.25em .5em; background:rgba(0,0,0,0.03); }
-  #artifactsTable thead tr.filters input { width:100%; box-sizing:border-box; padding:.25em .5em; border:1px solid rgba(0,0,0,0.2); border-radius:3px; font-weight:normal; font-size:.9em; background:#fff; }
-  #artifactsTable thead tr.filters th.sorting,
-  #artifactsTable thead tr.filters th.sorting_asc,
-  #artifactsTable thead tr.filters th.sorting_desc { background-image:none !important; cursor:default; }
-  /* Active text filter — funnel icon + tinted background */
-  #artifactsTable thead tr.filters input[type=text]:not(:placeholder-shown) {
-    background-color:rgba(0,0,0,0.06);
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='black' fill-opacity='0.55' d='M1 2h14l-5 7v5l-4-1V9z'/></svg>");
-    background-repeat:no-repeat;
-    background-position:right .4em center;
-    background-size:.95em;
-    padding-right:1.7em;
-    border-color:rgba(0,0,0,0.45);
-    font-weight:600;
-  }
-
-  /* Active-filter indicator on column header */
-  #artifactsTable thead tr:first-child th { position:relative; }
-  #artifactsTable thead tr:first-child th.has-filter {
-    font-weight:700;
-    background:rgba(0,0,0,0.12);
-    box-shadow:inset 0 -3px 0 rgba(0,0,0,0.55);
-  }
-  #artifactsTable thead tr:first-child th.has-filter::after {
-    content:"⏷";
-    position:absolute;
-    top:50%;
-    right:1.6em;     /* leave room for the sort arrows */
-    transform:translateY(-50%);
-    font-size:.8em;
-    opacity:.6;
-  }
-
-  /* Multi-select popup */
-  .dt-filter-popup { display:inline-block; position:relative; margin:0 .5em; }
-  /* When the popup is inline inside a filter <th>, fill the cell width */
-  #artifactsTable thead tr.filters th .dt-filter-popup { display:block; margin:0; }
-  #artifactsTable thead tr.filters th .dt-filter-trigger { width:100%; text-align:left; display:flex; align-items:center; justify-content:space-between; }
-
-  .dt-filter-trigger {
-    background:#fff;
-    border:1px solid rgba(0,0,0,0.2);
-    border-radius:3px;
-    padding:.3em .65em;
-    font-size:.9em;
-    cursor:pointer;
-    color:inherit;
-    line-height:1.2;
-  }
-  .dt-filter-trigger.has-filter {
-    background:rgba(0,0,0,0.08);
-    border-color:rgba(0,0,0,0.35);
-    font-weight:600;
-  }
-  .dt-filter-trigger .caret { margin-left:.35em; opacity:.6; font-size:.7em; }
-
-  /* Selected-value chips — shown below the trigger, grow the cell vertically */
-  .dt-filter-selected { display:flex; flex-wrap:wrap; gap:.25em; margin-top:.35em; }
-  .dt-filter-selected:empty { display:none; }
-  .dt-filter-chip {
-    display:inline-flex; align-items:center; gap:4px;
-    background:rgba(0,0,0,0.08);
-    border:1px solid rgba(0,0,0,0.2);
-    border-radius:2px;
-    padding:1px 4px 1px 6px;
-    line-height:1.4;
-    font-size:.8em;
-    white-space:nowrap;
-    max-width:100%;
-    overflow:hidden;
-    text-overflow:ellipsis;
-  }
-  .dt-filter-chip-remove {
-    background:none; border:none; padding:0;
-    font-size:1.1em; line-height:1; cursor:pointer; opacity:.55;
-    color:inherit;
-  }
-  .dt-filter-chip-remove:hover { opacity:1; }
-  .dt-filter-menu {
-    position:absolute;
-    top:calc(100% + 4px);
-    left:0;
-    background:#fff;
-    border:1px solid rgba(0,0,0,0.25);
-    border-radius:3px;
-    padding:.25em 0;
-    z-index:1000;
-    min-width:16em;
-    max-height:26em;
-    overflow:auto;
-    box-shadow:0 2px 8px rgba(0,0,0,0.18);
-  }
-  #artifactsTable thead tr.filters th .dt-filter-menu { left:0; right:auto; }
-  .dt-filter-menu[hidden] { display:none; }
-  .dt-filter-menu-header {
-    display:flex; justify-content:space-between; align-items:center; gap:.5em;
-    padding:.25em .75em .35em .75em;
-    border-bottom:1px solid rgba(0,0,0,0.08);
-    margin-bottom:.25em;
-    font-size:.85em;
-  }
-  .dt-filter-menu-clear { background:none; border:none; padding:0; font-size:inherit; cursor:pointer; opacity:.7; color:inherit; }
-  .dt-filter-menu-clear:hover { opacity:1; text-decoration:underline; }
-  .dt-filter-menu { text-align:left !important; direction:ltr !important; }
-  .dt-filter-menu label {
-    display:block !important;
-    padding:.3em .75em !important;
-    margin:0 !important;
-    cursor:pointer;
-    font-weight:normal !important;
-    text-align:left !important;
-    white-space:nowrap;
-    user-select:none;
-  }
-  .dt-filter-menu label:hover { background:rgba(0,0,0,0.05); }
-  .dt-filter-menu label input[type="checkbox"] {
-    display:inline-block !important;
-    vertical-align:middle !important;
-    margin:0 .5em 0 0 !important;
-    width:auto !important;
-    float:none !important;
-    cursor:pointer;
-  }
-  .dt-filter-menu label span {
-    display:inline !important;
-    vertical-align:middle !important;
-    float:none !important;
-  }
-  /* Grouping toggle row inside the Category menu */
-  .dt-filter-menu .dt-grouping-row { background:rgba(0,0,0,0.04); font-style:italic; padding:.4em .75em; }
-  .dt-filter-menu .dt-menu-divider { border-top:1px solid rgba(0,0,0,0.1); margin:.25em 0; }
-
-  /* Intro paragraph */
-  .artifacts-table-intro { margin:.25em 0 1em 0; }
-
-  /* Top/bottom controls — neutral */
-  .dt-container .dt-layout-row { padding:.4em 0; align-items:center; }
-  .dt-container .dt-length select {
-    padding:.3em .5em;
-    border:1px solid rgba(0,0,0,0.2);
-    border-radius:3px;
-    background:#fff;
-    font-size:.9em;
-  }
-  .dt-container .dt-length label { font-weight:normal; opacity:.75; }
-  .dt-container .dt-info { opacity:.75; font-size:.9em; }
-  .dt-container .dt-paging .dt-paging-button {
-    border:1px solid rgba(0,0,0,0.2) !important;
-    background:#fff !important;
-    padding:.25em .65em !important;
-    margin:0 2px !important;
-    border-radius:3px !important;
-    font-size:.9em !important;
-    cursor:pointer;
-  }
-  .dt-container .dt-paging .dt-paging-button.current,
-  .dt-container .dt-paging .dt-paging-button.current:hover {
-    background:rgba(0,0,0,0.12) !important;
-    border-color:rgba(0,0,0,0.3) !important;
-    font-weight:bold;
-  }
-  .dt-container .dt-paging .dt-paging-button:hover:not(.current):not(.disabled) {
-    background:rgba(0,0,0,0.05) !important;
-  }
-  .dt-container .dt-paging .dt-paging-button.disabled,
-  .dt-container .dt-paging .dt-paging-button.disabled:hover {
-    opacity:.4; cursor:default; background:#fff !important;
-  }
-</style>
-
-{%- assign groupingLabel    = site.data.stringsBase[include.lang]['Grouping']    | default: 'Grouping' -%}
-{%- assign titleLabel       = site.data.stringsBase[include.lang]['Title']       | default: 'Title' -%}
-{%- assign idLabel          = site.data.stringsBase[include.lang]['Id']          | default: 'Id' -%}
-{%- assign typeLabel        = site.data.stringsBase[include.lang]['Type']        | default: 'Type' -%}
-{%- assign descLabel        = site.data.stringsBase[include.lang]['Description'] | default: 'Description' -%}
-{%- assign searchVerb       = site.data.stringsBase[include.lang]['Search']      | default: 'Search' -%}
-{%- assign useGroupingLabel = site.data.stringsBase[include.lang]['UseGrouping'] | default: 'Use grouping' -%}
-{%- assign categoryLabel    = site.data.stringsBase[include.lang]['Category']    | default: 'Category' -%}
-{%- assign clearAllLabel    = site.data.stringsBase[include.lang]['ClearAll']    | default: 'Clear all' -%}
-
-<p class="artifacts-table-intro">{{ site.data.stringsBase[include.lang]['ArtifactsTableIntro'] | default: 'This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide.' }}</p>
-
-<table id="artifactsTable" class="display" style="width:100%" data-fhir="generated">
-  <thead>
-    <tr>
-      <th></th>
-      <th>{{ groupingLabel }}</th>
-      <th>{{ titleLabel }}</th>
-      <th>{{ idLabel }}</th>
-      <th>{{ typeLabel }}</th>
-      <th>{{ descLabel }}</th>
-    </tr>
     <tr class="filters">
-      <th></th>
-      <th></th>
-      <th><input aria-label="Title Filter" type="text" data-col="n" placeholder="{{ searchVerb }} {{ titleLabel | downcase }}"/></th>
-      <th><input aria-label="Id Filter" type="text" data-col="i" placeholder="{{ searchVerb }} {{ idLabel | downcase }}"/></th>
-      <th id="filterCellType"></th>
-      <th><input aria-label="Description Filter" type="text" data-col="d" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
-    </tr>
-  </thead>
-</table>
-
-<script defer src="assets/js/dataTables.min.js"></script>
-<script defer src="assets/js/dataTables.rowGroup.min.js"></script>
-
-<script>
+/*
+ * Artifacts table (DataTables) — behaviour for includes/fragment-artifacts-table.html.
+ *
+ * Reads its data from window.artifactsTableData (assets/js/artifacts-table-data.js, rendered by Jekyll
+ * with one block per language) and picks the block matching the page's <html lang="..."> attribute.
+ *
+ * The view (column filters, grouping, sort, page length and current page) is persisted in localStorage
+ * per page path, so a visitor returning to the page sees the same filtered view and page they left.
+ */
 document.addEventListener('DOMContentLoaded', function(){
-  var data = [
-{%- for r in site.data.artifactsTable -%}
-{%- assign titleSrc = r.title | default: r.name -%}
-{%- assign ttl = titleSrc[lang] | default: titleSrc.src -%}
-{%- assign rid = r.id | default: '' -%}
-{%- if rid == '' -%}{%- assign rid = r.ref | split: "/" | last -%}{%- endif -%}
-{%- assign descRaw = r.description[lang] | default: r.description.src | default: '' -%}
-{%- assign desc = descRaw | markdownify | strip -%}
-{%- assign gKey = r.groupingName | append: 'Name' -%}
-{%- assign groupLabel = groupingStrings[gKey] | default: r.groupingName -%}
-    { "p":{{ r.groupingPos }}, "gid":{{ r.groupingId | jsonify }}, "g":{{ groupLabel | jsonify }}, "n":{{ ttl | jsonify }}, "i":{{ rid | jsonify }}, "t":{{ r.type | jsonify }}, "u":{{ r.url | jsonify }}, "r":{{ r.ref | jsonify }}, "d":{{ desc | jsonify }} }{%- unless forloop.last -%},{%- endunless %}
-{%- endfor %}
-  ];
+  var tableEl = document.getElementById('artifactsTable');
+  if (!tableEl || !window.jQuery || !jQuery.fn || !jQuery.fn.dataTable) return;
 
-  var groupDescriptions = {};
-{%- assign seenGids = "|" -%}
-{%- for r in site.data.artifactsTable -%}
-{%- assign marker = r.groupingId | prepend: "|" | append: "|" -%}
-{%- unless seenGids contains marker -%}
-{%- assign seenGids = seenGids | append: r.groupingId | append: "|" -%}
-{%- assign descKey = r.groupingName | append: 'Desc' -%}
-{%- assign descMd = groupingStrings[descKey] -%}
-{%- if descMd == nil or descMd == '' -%}
-  {%- assign descMd = r.groupingDescription[lang] | default: r.groupingDescription.src -%}
-{%- endif -%}
-{%- if descMd and descMd != '' %}
-  groupDescriptions[{{ r.groupingId | jsonify }}] = {{ descMd | markdownify | jsonify }};
-{%- endif -%}
-{%- endunless -%}
-{%- endfor %}
+  // ----- Pick the language block -----
+  var blocks = window.artifactsTableData || {};
+  var pageLang = document.documentElement.getAttribute('lang') || '';
+  var block = blocks[pageLang] || blocks[pageLang.split('-')[0]] || blocks[Object.keys(blocks)[0]] || {};
+  var data = block.rows || [];
+  var groupDescriptions = block.groupDescriptions || {};
+  var labels = block.labels || {};
 
   function escapeHtml(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
@@ -279,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function(){
   function regexEscape(s){ return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
   function buildSearchPattern(values){ return values.length ? '^(' + values.map(regexEscape).join('|') + ')$' : ''; }
 
-  var useGroupingLabel = {{ useGroupingLabel | jsonify }};
-  var typeLabel        = {{ typeLabel | jsonify }};
-  var categoryLabel    = {{ categoryLabel | jsonify }};
-  var clearAllLabel    = {{ clearAllLabel | jsonify }};
+  var useGroupingLabel = labels.useGrouping || 'Use grouping';
+  var typeLabel        = labels.type        || 'Type';
+  var categoryLabel    = labels.category    || 'Category';
+  var clearAllLabel    = labels.clearAll    || 'Clear all';
 
   // Column model. Data keys: p=grouping position, g=grouping label, n=title, i=id, t=type, d=description.
   var columnDefs = [
@@ -631,4 +379,3 @@ document.addEventListener('DOMContentLoaded', function(){
     applyFilter(id);
   });
 });
-</script>
