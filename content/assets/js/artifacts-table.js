@@ -74,6 +74,20 @@ document.addEventListener('DOMContentLoaded', function(){
     return out;
   })();
 
+  // Category fragments: an exact group name or its 1-based position in the
+  // complete category list (before filtering/pagination). Unknown anchors are ignored.
+  function categoryFromFragment(hash = window.location.hash) {
+    var value;
+    try { value = decodeURIComponent(hash.replace(/^#/, '')); }
+    catch(e) { return null; }
+    if (!value) return null;
+    if (uniqueCategories.indexOf(value) !== -1) return value;
+    if (/^[1-9]\d*$/.test(value)) {
+      return uniqueCategories[Number(value) - 1] || null;
+    }
+    return null;
+  }
+
   // ----- View state -----
   var grouping = true;
   var selectedTypes = [];
@@ -114,10 +128,10 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       else
       {
-        // No Parameters
-        return {};
+        // null lets the caller fall back to saved state when there is no URL view.
+        return null;
       }
-    } catch(e) { return {}; }
+    } catch(e) { return null; }
   }
 
   // ----- Persisted view state (localStorage, per page) -----
@@ -157,11 +171,20 @@ document.addEventListener('DOMContentLoaded', function(){
     return o.map(function(e){ return [e[0], e[1]]; });
   }
 
-  var viewState = loadParameters();
-  if(!viewState)
-  {
-    viewState = loadState();
+  // Explicit query categories win; otherwise a recognized fragment supplies
+  // one category. A fragment-only URL uses the same defaults as ?categories=...
+  // rather than inheriting unrelated saved filters.
+  function loadUrlView(search = window.location.search, hash = window.location.hash) {
+    var state = loadParameters(search);
+    var category = categoryFromFragment(hash);
+    if (category !== null && !(new URLSearchParams(search)).has('categories')) {
+      state = state || loadParameters('?categories=');
+      state.categories = [category];
+    }
+    return state;
   }
+
+  var viewState = loadUrlView() || loadState();
   if (typeof viewState.grouping === 'boolean') grouping = viewState.grouping;
   if (Array.isArray(viewState.types)) {
     selectedTypes = viewState.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
@@ -267,6 +290,10 @@ document.addEventListener('DOMContentLoaded', function(){
       table.column(colIdx).search(buildSearchPattern(values), true, false);
     }
     var $popup = jQuery('.dt-filter-popup[data-id="' + id + '"]');
+    // Keep checkboxes aligned with URL-driven changes as well as user changes.
+    $popup.find('input[type=checkbox]:not(#artifactsGroupToggle)').each(function(){
+      this.checked = values.indexOf(this.value) !== -1;
+    });
     // Re-render selected chips
     $popup.find('.dt-filter-selected').html(values.map(chipHtml).join(''));
     if (values.length) {
@@ -359,6 +386,26 @@ document.addEventListener('DOMContentLoaded', function(){
   jQuery(document).on('draw.dt', '#artifactsTable', saveState);
 
   renderTable(grouping, initialView);
+
+  // Apply fragment links and Back/Forward navigation without reloading the page.
+  // Preserve the current grouping, other filters, length and sort; start on page 1.
+  var fragmentControlsCategory = categoryFromFragment() !== null &&
+    !(new URLSearchParams(window.location.search)).has('categories');
+  window.addEventListener('hashchange', function(){
+    if ((new URLSearchParams(window.location.search)).has('categories')) return;
+    var category = categoryFromFragment();
+    if (category === null) {
+      // Unrelated/invalid anchors do not alter the current view. Removing a
+      // previously recognized fragment clears its category filter.
+      if (window.location.hash || !fragmentControlsCategory) return;
+      selectedCategories = [];
+      fragmentControlsCategory = false;
+    } else {
+      selectedCategories = [category];
+      fragmentControlsCategory = true;
+    }
+    applyFilter('category');
+  });
 
   // ----- Document-delegated handlers (survive table rebuilds) -----
 
