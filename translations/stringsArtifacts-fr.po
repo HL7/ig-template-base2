@@ -220,7 +220,7 @@ msgstr "Ils définissent des contraintes sur les types de données FHIR pour les
 # ExtensionName
 #: ExtensionName
 msgid "Structures: Extension Definitions"
-msgstr "Structures: Définitions de l'extension"
+msgstr "Structures: Définitions des extensions"
 
 # ExtensionDesc
 #: ExtensionDesc
