@@ -1,8 +1,9 @@
 ---
 ---
+{% assign lang = page.path | split: "/" | first %}
 <!DOCTYPE HTML>
 
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xml:lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{lang}}">
 <head>
   <meta charset="UTF-8"/>
   <title>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</title>
@@ -23,10 +24,10 @@
   <link href="{{site.data.info.assets}}assets/css/fhir-ig.css" rel="stylesheet"/>
 
     <!-- Favicons -->
-  <link rel="fhir-logo" sizes="144x144" href="{{site.data.info.assets}}assets/ico/icon-fhir-144.png"/>
-  <link rel="fhir-logo" sizes="114x114" href="{{site.data.info.assets}}assets/ico/icon-fhir-114.png"/>
-  <link rel="fhir-logo" sizes="72x72" href="{{site.data.info.assets}}assets/ico/icon-fhir-72.png"/>
-  <link rel="fhir-logo" href="{{site.data.info.assets}}assets/ico/icon-fhir-57.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.data.info.assets}}assets/ico/icon-fhir-144.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.data.info.assets}}assets/ico/icon-fhir-114.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.data.info.assets}}assets/ico/icon-fhir-72.png"/>
+  <link rel="apple-touch-icon-precomposed" href="{{site.data.info.assets}}assets/ico/icon-fhir-57.png"/>
   <link rel="shortcut icon" href="{{site.data.info.assets}}assets/ico/favicon.png"/>
 </head>
 
@@ -39,7 +40,7 @@
      <img alt="visit the hl7 website" width="42" height="50" src="{{site.data.info.assets}}assets/images/hl7-logo-header.png"/>
     </a>
 			</div>       	
-      <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+      <div id="ig-status" style="font-size:24px;padding-top: 20px;"> 
         <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
 			</div>       	
 		</div>
@@ -83,7 +84,7 @@
 
 
 <div class="col-12">
-
+{{site.data.fhir.ig.title}}
 <h2>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</h2>
 
 <iframe title="search" src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://'}}&amp;prefill=Search {{site.data.fhir.ig.title}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
@@ -91,7 +92,7 @@
 <hr/>
 
 <p>
-{{site.data.stringsBase[lang]['CISearchMsg']}}
+{{site.data.stringsBase[lang]['CISearchMsg'] | replace: "@@@", site.data.fhir.ig.title}}
 </p>
 </div>
 
@@ -108,7 +109,7 @@
 				<p>
           <span id="ig-footer">{{site.data.fhir.ig.title}} </span> &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org">HL7</a> |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/license.html"><img style="border-style: none;" alt="Creative Commons 0" src="cc0.png"/></a>
         </p>
 			</div>  <!-- /inner-wrapper -->
 		</div>  <!-- /container -->
