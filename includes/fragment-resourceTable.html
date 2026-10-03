@@ -116,13 +116,13 @@
 {% if site.data.resources[resource_].contexts %}
     <tr>
 {% assign usageLabel = "*" | append: site.data.stringsBase[include.lang]['Usage'] | append: "*: " %}
-      <td colspan="6">{{site.data.resources[resource_].contexts | prepend: usageLabel | markdownify}}</td>
+      <td colspan="6" data-fhir="generated">{{site.data.resources[resource_].contexts | prepend: usageLabel | markdownify}}</td>
     </tr>
 {% endif %}
 {%if site.data.resources[resource_].copyright %}
 {% assign copyrightLabel = "*" | append: site.data.stringsBase[include.lang]['CopyrightLegal'] | append: "*: " %}
     <tr>
-      <td colspan="6">{{site.data.resources[resource_].copyrightlang[include.lang] | prepend: copyrightLabel | markdownify}}</td>
+      <td colspan="6" data-fhir="generated">{{site.data.resources[resource_].copyrightlang[include.lang] | prepend: copyrightLabel | markdownify}}</td>
     </tr>
 {% endif %}
   </table>
