@@ -75,6 +75,20 @@ document.addEventListener('DOMContentLoaded', function(){
     return out;
   })();
 
+  // Category fragments: an exact group name or its 1-based position in the
+  // complete category list (before filtering/pagination). Unknown anchors are ignored.
+  function categoryFromFragment(hash = window.location.hash) {
+    var value;
+    try { value = decodeURIComponent(hash.replace(/^#/, '')); }
+    catch(e) { return null; }
+    if (!value) return null;
+    if (uniqueCategories.indexOf(value) !== -1) return value;
+    if (/^[1-9]\d*$/.test(value)) {
+      return uniqueCategories[Number(value) - 1] || null;
+    }
+    return null;
+  }
+
   // ----- View state -----
   var grouping = true;
   var selectedTypes = [];
@@ -82,6 +96,44 @@ document.addEventListener('DOMContentLoaded', function(){
   // Per-column text filters keyed by data key (plain substring, case-insensitive)
   var colTextFilters = {};
   var pageLength = 200;
+
+  // ----- URL Parameters view request -----
+  // Uses filters, grouping, sort order, page length and the current page so that a visitor
+  // can be directed to this page with specific view parameters selected.
+  function loadParameters(queryString = window.location.search) {
+    try {
+      const params = new URLSearchParams(queryString);
+
+      if(params.size > 0)
+      {
+        const commaList = (name, fallback = []) =>
+          params.has(name)
+            ? params.get(name).split(",").map(value => value.trim()).filter(Boolean)
+            : fallback;
+
+        return {
+          grouping: params.has("grouping")
+            ? params.get("grouping") === "true"
+            : true,
+          types: commaList("types"),
+          categories: commaList("categories", []),
+          text: params.has("text") ? { value: params.get("text") } : {},
+          start: params.has("start") ? Number(params.get("start")) : 0,
+          length: params.has("length") ? Number(params.get("length")) : 200,
+          order: params.has("order")
+            ? [commaList("order").map((value, index) =>
+                index === 0 ? Number(value) : value
+              )]
+            : [[0, "asc"]]
+        };
+      }
+      else
+      {
+        // null lets the caller fall back to saved state when there is no URL view.
+        return null;
+      }
+    } catch(e) { return null; }
+  }
 
   // ----- Persisted view state (localStorage, per page) -----
   // Stores filters, grouping, sort order, page length and the current page so that a visitor
@@ -120,23 +172,36 @@ document.addEventListener('DOMContentLoaded', function(){
     return o.map(function(e){ return [e[0], e[1]]; });
   }
 
-  var saved = loadState();
-  if (typeof saved.grouping === 'boolean') grouping = saved.grouping;
-  if (Array.isArray(saved.types)) {
-    selectedTypes = saved.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
+  // Explicit query categories win; otherwise a recognized fragment supplies
+  // one category. A fragment-only URL uses the same defaults as ?categories=...
+  // rather than inheriting unrelated saved filters.
+  function loadUrlView(search = window.location.search, hash = window.location.hash) {
+    var state = loadParameters(search);
+    var category = categoryFromFragment(hash);
+    if (category !== null && !(new URLSearchParams(search)).has('categories')) {
+      state = state || loadParameters('?categories=');
+      state.categories = [category];
+    }
+    return state;
   }
-  if (Array.isArray(saved.categories)) {
-    selectedCategories = saved.categories.filter(function(v){ return uniqueCategories.indexOf(v) !== -1; });
+
+  var viewState = loadUrlView() || loadState();
+  if (typeof viewState.grouping === 'boolean') grouping = viewState.grouping;
+  if (Array.isArray(viewState.types)) {
+    selectedTypes = viewState.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
   }
-  if (saved.text && typeof saved.text === 'object') {
+  if (Array.isArray(viewState.categories)) {
+    selectedCategories = viewState.categories.filter(function(v){ return uniqueCategories.indexOf(v) !== -1; });
+  }
+  if (viewState.text && typeof viewState.text === 'object') {
     TEXT_FILTER_KEYS.forEach(function(k){
-      if (typeof saved.text[k] === 'string' && saved.text[k]) colTextFilters[k] = saved.text[k];
+      if (typeof viewState.text[k] === 'string' && viewState.text[k]) colTextFilters[k] = viewState.text[k];
     });
   }
-  if (typeof saved.length === 'number' && saved.length > 0) pageLength = saved.length;
+  if (typeof viewState.length === 'number' && viewState.length > 0) pageLength = viewState.length;
   var initialView = {
-    start: (typeof saved.start === 'number' && saved.start > 0) ? saved.start : 0,
-    order: validOrder(saved.order)
+    start: (typeof viewState.start === 'number' && viewState.start > 0) ? viewState.start : 0,
+    order: validOrder(viewState.order)
   };
 
   // Custom row filter — registered once globally
@@ -226,6 +291,10 @@ document.addEventListener('DOMContentLoaded', function(){
       table.column(colIdx).search(buildSearchPattern(values), true, false);
     }
     var $popup = jQuery('.dt-filter-popup[data-id="' + id + '"]');
+    // Keep checkboxes aligned with URL-driven changes as well as user changes.
+    $popup.find('input[type=checkbox]:not(#artifactsGroupToggle)').each(function(){
+      this.checked = values.indexOf(this.value) !== -1;
+    });
     // Re-render selected chips
     $popup.find('.dt-filter-selected').html(values.map(chipHtml).join(''));
     if (values.length) {
@@ -318,6 +387,26 @@ document.addEventListener('DOMContentLoaded', function(){
   jQuery(document).on('draw.dt', '#artifactsTable', saveState);
 
   renderTable(grouping, initialView);
+
+  // Apply fragment links and Back/Forward navigation without reloading the page.
+  // Preserve the current grouping, other filters, length and sort; start on page 1.
+  var fragmentControlsCategory = categoryFromFragment() !== null &&
+    !(new URLSearchParams(window.location.search)).has('categories');
+  window.addEventListener('hashchange', function(){
+    if ((new URLSearchParams(window.location.search)).has('categories')) return;
+    var category = categoryFromFragment();
+    if (category === null) {
+      // Unrelated/invalid anchors do not alter the current view. Removing a
+      // previously recognized fragment clears its category filter.
+      if (window.location.hash || !fragmentControlsCategory) return;
+      selectedCategories = [];
+      fragmentControlsCategory = false;
+    } else {
+      selectedCategories = [category];
+      fragmentControlsCategory = true;
+    }
+    applyFilter('category');
+  });
 
   // ----- Document-delegated handlers (survive table rebuilds) -----
 
