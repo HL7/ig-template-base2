@@ -12,8 +12,9 @@
     {% assign dlibraryName = include.extension.extension.where(url = 'libraryName').value %}
     {% assign dname = include.extension.extension.where(url = 'name').value %}
     {% assign ddefinitionUrl = dlibraryName.lower().replace(' ', '-') + '-' + dname.lower().replace(' ', '-') %}
-    {% if ddefinitionUrl.exists() %}
+    {% if ddefinitionUrl.exists() and (seenLogicDefs.exists().not() or seenLogicDefs.contains('|' + ddefinitionUrl + '|').not()) %}
       <a name="{{ddefinitionUrl}}"> </a>
+      {% assign seenLogicDefs = iif(seenLogicDefs.exists(), seenLogicDefs, '|') + ddefinitionUrl + '|' %}
     {% endif %}
     <pre class="content-container highlight language-cql" style="border: none;"><code class="language-cql">{{statementExtension.value}}</code></pre>
   </td>
