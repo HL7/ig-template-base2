@@ -41,7 +41,7 @@
     </a>
 			</div>       	
       <div id="ig-status" style="font-size:24px;padding-top: 20px;"> 
-        <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
+        <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title | escape_once }} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
 			</div>       	
 		</div>
 		<div class="container">  <!-- container -->
