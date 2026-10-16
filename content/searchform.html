@@ -6,7 +6,7 @@
 <html xml:lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{lang}}">
 <head>
   <meta charset="UTF-8"/>
-  <title>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</title>
+  <title>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.titlelang[lang]}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="http://www.hl7.org"/>
@@ -41,7 +41,7 @@
     </a>
 			</div>       	
       <div id="ig-status" style="font-size:24px;padding-top: 20px;"> 
-        <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title | escape_once }} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
+        <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.titlelang[lang] | escape_once }} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
 			</div>       	
 		</div>
 		<div class="container">  <!-- container -->
@@ -84,15 +84,14 @@
 
 
 <div class="col-12">
-{{site.data.fhir.ig.title}}
-<h2>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.title}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</h2>
+<h2>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.titlelang[lang]}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</h2>
 
-<iframe title="search" src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://'}}&amp;prefill=Search {{site.data.fhir.ig.title}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+<iframe title="search" src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://'}}&amp;prefill=Search {{site.data.fhir.ig.titlelang[lang]}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
 
 <hr/>
 
 <p>
-{{site.data.stringsBase[lang]['CISearchMsg'] | replace: "@@@", site.data.fhir.ig.title}}
+{{site.data.stringsBase[lang]['CISearchMsg'] | replace: "@@@", site.data.fhir.ig.titlelang[lang] | escape_once}}
 </p>
 </div>
 
@@ -107,7 +106,7 @@
 		<div class="container">  <!-- container -->
 			<div class="inner-wrapper">
 				<p>
-          <span id="ig-footer">{{site.data.fhir.ig.title}} </span> &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org">HL7</a> |
+          <span id="ig-footer">{{site.data.fhir.ig.titlelang[lang]}} </span> &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org">HL7</a> |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/license.html"><img style="border-style: none;" alt="Creative Commons 0" src="cc0.png"/></a>
         </p>
