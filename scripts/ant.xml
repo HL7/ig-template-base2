@@ -127,9 +127,9 @@
   </target>
   <target name="onGenerate.processIg">
     <xslt in="${onGenerate.ig.source}xml" out="${onGenerate.ig.source}1.xml" style="${ig.scripts}/onGenerate.group.xslt"/>
-    <replace file="${onGenerate.ig.source}1.xml" token="&lt;!--TEMPLATE_GROUPS_HERE--&gt;" value="${groupings}"/>
-    <replace file="${onGenerate.ig.source}1.xml" token="&lt;!--TRANSLATIONS_HERE--&gt;" value="${translations}"/>
-    <replace file="${onGenerate.ig.source}1.xml" token="&lt;!--ARTIFACT_TRANSLATIONS_HERE--&gt;" value="${artifactTranslations}"/>
+    <replace file="${onGenerate.ig.source}1.xml" encoding="UTF-8" token="&lt;!--TEMPLATE_GROUPS_HERE--&gt;" value="${groupings}"/>
+    <replace file="${onGenerate.ig.source}1.xml" encoding="UTF-8" token="&lt;!--TRANSLATIONS_HERE--&gt;" value="${translations}"/>
+    <replace file="${onGenerate.ig.source}1.xml" encoding="UTF-8" token="&lt;!--ARTIFACT_TRANSLATIONS_HERE--&gt;" value="${artifactTranslations}"/>
     <xslt in="${onGenerate.ig.source}1.xml" out="${onGenerate.ig.source}2.xml" style="${ig.scripts}/onGenerate.groupSort.xslt"/>
     <xslt in="${onGenerate.ig.source}2.xml" out="${onGenerate.ig.dest}xml" style="${ig.scripts}/onGenerate.final.xslt"/>
     <xslt in="${onGenerate.ig.source}2.xml" out="${ig.temp}/_data/stringsArtifacts.json" style="${ig.scripts}/onGenerate.extractArtifacts.xslt"/>
