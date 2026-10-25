@@ -30,19 +30,19 @@
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 
 <a name="actors"> </a>
-<h4>{{site.data.stringsBase['{{[lang]}}']['Actors']}}</h4>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Actors']}}</h3>
   {% include {{[type]}}-{{[id]}}-actor-table{{[langsuffix]}}.xhtml %}
 
 <a name="diagram"> </a>
-<h4>{{site.data.stringsBase['{{[lang]}}']['Diagram']}}</h4>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Diagram']}}</h3>
   {% include {{[type]}}-{{[id]}}-process-diagram{{[langsuffix]}}.xhtml %}
 
 <a name="processes"> </a>
-<h4>{{site.data.stringsBase['{{[lang]}}']['Processes']}}</h4>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Processes']}}</h3>
   {% include {{[type]}}-{{[id]}}-processes{{[langsuffix]}}.xhtml %}
 
 <a name="instances"> </a>
-<h4>{{site.data.stringsBase['{{[lang]}}']['Instances']}}</h4>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Instances']}}</h3>
   {% include {{[type]}}-{{[id]}}-instance-table{{[langsuffix]}}.xhtml %}
 
   <!-- insert notes if present -->
