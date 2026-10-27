@@ -324,6 +324,11 @@ document.addEventListener('DOMContentLoaded', function(){
       setHeaderFilterMark(colIndex(key), !!this.value);
     }).off('.artifactsFilter').on('input.artifactsFilter change.artifactsFilter', function(){
       var key = this.getAttribute('data-col');
+      // Only redraw when the value really changed. 'input' has already applied every keystroke, so
+      // the 'change' that fires when the field loses focus is a no-op — and it must stay one: it
+      // arrives on mousedown, and redrawing there replaces the row nodes between mousedown and
+      // mouseup, which swallows the first click on a link in the table (Chrome).
+      if ((colTextFilters[key] || '') === this.value) return;
       colTextFilters[key] = this.value;
       table.draw();
       setHeaderFilterMark(colIndex(key), !!this.value);
