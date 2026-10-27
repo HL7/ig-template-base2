@@ -50,7 +50,15 @@ window.artifactsTableData = {
 {%- assign ttl = titleSrc[lang] | default: titleSrc.src -%}
 {%- assign rid = r.id | default: '' -%}
 {%- if rid == '' -%}{%- assign rid = r.ref | split: "/" | last -%}{%- endif -%}
-{%- assign descRaw = r.description[lang] | default: r.description.src | default: '' -%}
+{%- comment -%}
+  Prefer the resource's own description -- the same field the resource pages render -- so the table
+  cannot drift from them; fall back to the IG-level description the XSLT scraped.
+  descriptionlang is indexed with the Liquid variable lang, unlike the layouts, which index it with
+  the publisher's per-language placeholder: those are rendered once per language, whereas this file
+  emits every language in a single pass.
+{%- endcomment -%}
+{%- assign resource = site.data.resources[r.ref] -%}
+{%- assign descRaw = resource.descriptionlang[lang] | default: resource.description | default: r.description[lang] | default: r.description.src | default: '' -%}
 {%- assign desc = descRaw | markdownify | strip -%}
 {%- assign gKey = r.groupingName | append: 'Name' -%}
 {%- assign groupLabel = groupingStrings[gKey] | default: r.groupingName %}
