@@ -281,9 +281,9 @@ document.addEventListener('DOMContentLoaded', function(){
             jQuery('<td/>').attr('colspan', VISIBLE_COLS).addClass('artifacts-group-header')
           );
           var $cell = $header.find('td');
-          // The grouping id doubles as the section anchor, so artifacts.html#<groupingId>
-          // links to this section the same way the stock artifacts page does.
-          if (gid) $header.attr('id', gid);
+          // The section anchor (<a name="<groupingId>">) is emitted statically into the page, so the
+          // publisher's link checker can see it; this row is only tagged, to avoid a duplicate id.
+          if (gid) $header.attr('data-gid', gid);
           var $name = jQuery('<div/>').addClass('artifacts-group-name').text(group).appendTo($cell);
           if (gid) {
             var anchor = document.createElement('a');
@@ -324,6 +324,11 @@ document.addEventListener('DOMContentLoaded', function(){
       setHeaderFilterMark(colIndex(key), !!this.value);
     }).off('.artifactsFilter').on('input.artifactsFilter change.artifactsFilter', function(){
       var key = this.getAttribute('data-col');
+      // Only redraw when the value really changed. 'input' has already applied every keystroke, so
+      // the 'change' that fires when the field loses focus is a no-op — and it must stay one: it
+      // arrives on mousedown, and redrawing there replaces the row nodes between mousedown and
+      // mouseup, which swallows the first click on a link in the table (Chrome).
+      if ((colTextFilters[key] || '') === this.value) return;
       colTextFilters[key] = this.value;
       table.draw();
       setHeaderFilterMark(colIndex(key), !!this.value);
@@ -362,8 +367,18 @@ document.addEventListener('DOMContentLoaded', function(){
     return null;
   }
 
+  // The live group header row, located by its data-gid tag (the matching id/name belongs to the
+  // static anchor the publisher emits, which sits above the table).
+  function groupHeaderEl(gid){
+    var rows = document.querySelectorAll('#artifactsTable tr.dtrg-group');
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i].getAttribute('data-gid') === gid) return rows[i];
+    }
+    return null;
+  }
+
   function scrollToGroup(gid){
-    var el = document.getElementById(gid);
+    var el = groupHeaderEl(gid);
     if (!el) return false;
     var top = el.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - 12;
     window.scrollTo(0, top > 0 ? top : 0);
