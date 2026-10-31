@@ -638,8 +638,8 @@ msgstr "Build atual"
 
 # CISearchMsg
 #: CISearchMsg
-msgid "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page."
-msgstr "Nota: esta pesquisa pesquisa a build atual de {{site.data.fhir.ig.title}}.  Esta página só existe para a build de CI - versões publicadas usarão uma página de pesquisa diferente."
+msgid "Note: this search searches the current build of @@@.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Nota: esta pesquisa pesquisa a build atual de @@@.  Esta página só existe para a build de CI - versões publicadas usarão uma página de pesquisa diferente."
 
 # Specification
 #: Specification

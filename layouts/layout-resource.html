@@ -24,13 +24,13 @@
 
 {% include fragment-resourceTable.html lang="{{[lang]}}" %}
 {%if site.data.resources[resource_].description %}
-<p>
+<div data-fhir="generated">
 {{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
-</p>
+</div>
 {% endif %}{%if site.data.resources[resource_].purpose %}
-<p>
+<div data-fhir="generated">
 {{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
-</p>
+</div>
 {% endif %}
 
 <!-- insert intro if present -->
@@ -81,7 +81,7 @@
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
 
@@ -148,7 +148,7 @@
         <p>
           <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView']}}</b>
         </p>
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
           <!--Terminology Bindings heading in the fragment -->

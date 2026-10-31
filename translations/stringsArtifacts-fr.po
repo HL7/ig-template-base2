@@ -175,7 +175,7 @@ msgstr "Structures: Modèles logiques"
 # LogicalModelDesc
 #: LogicalModelDesc
 msgid "These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources."
-msgstr "Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation en termes plus conviviaux que les ressources FHIR sous-jacentes."
+msgstr "Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation."
 
 # QuestionnaireName
 #: QuestionnaireName
@@ -220,12 +220,12 @@ msgstr "Ils définissent des contraintes sur les types de données FHIR pour les
 # ExtensionName
 #: ExtensionName
 msgid "Structures: Extension Definitions"
-msgstr "Structures: Définitions de l'extension"
+msgstr "Structures: Définitions des extensions"
 
 # ExtensionDesc
 #: ExtensionDesc
 msgid "These define constraints on FHIR data types for systems conforming to this implementation guide."
-msgstr "Ils définissent des contraintes sur les types de données FHIR pour les systèmes conformes à ce guide d'implémentation."
+msgstr "Ils définissent les extensions FHIR définies dans ce guide d'implémentation."
 
 # ValueSetName
 #: ValueSetName

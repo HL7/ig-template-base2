@@ -647,8 +647,8 @@ msgstr "Dabartinė versija"
 
 # CISearchMsg
 #: CISearchMsg
-msgid "Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page."
-msgstr "Pastaba: ši paieška ieško dabartinėje {{site.data.fhir.ig.title}} versijoje.  Šis puslapis egzistuoja tik CI versijai - paskelbtos versijos naudos kitą paieškos puslapį."
+msgid "Note: this search searches the current build of @@@.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Pastaba: ši paieška ieško dabartinėje @@@ versijoje.  Šis puslapis egzistuoja tik CI versijai - paskelbtos versijos naudos kitą paieškos puslapį."
 
 # Specification
 #: Specification

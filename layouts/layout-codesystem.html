@@ -15,13 +15,13 @@
 
 {% include fragment-resourceTable.html lang="{{[lang]}}" %}
 {%if site.data.resources[resource_].description %}
-<p>
+<div data-fhir="generated">
 {{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
-</p>
+</div>
 {% endif %}{%if site.data.resources[resource_].purpose %}
-<p>
+<div data-fhir="generated">
 {{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
-</p>
+</div>
 {% endif %}
   <!-- insert intro if present -->
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
@@ -37,7 +37,7 @@
     <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">{{site.data.stringsBase['{{[lang]}}']['ReadingTerminology']}}</a>.
   </p>
   {% if site.data.resources[resource_].contained != nil %}
-  <h4>{{site.data.stringsBase['{{[lang]}}']['Contained']}}</h4>
+  <h3>{{site.data.stringsBase['{{[lang]}}']['Contained']}}</h3>
   {% include {{[type]}}-{{[id]}}-contained-index{{[langsuffix]}}.xhtml %}
   {% endif %}
 
