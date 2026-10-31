@@ -42,6 +42,18 @@
   <a name="table"> </a>
   <h3>{{site.data.stringsBase[lang]['ArtifactsTable']}}</h3>
   
+  {% comment %}
+    Static targets for Publisher link checking for ordinal artifact links; 
+    JavaScript filters the selected group when an ordinal fragment is followed. 
+    Targets stay outside DataTables so redraws cannot remove them.
+  {% endcomment %}
+{%- assign artifactGroups = site.data.artifactsTable | map: 'groupingPos' | uniq | sort -%}
+<div class="artifacts-group-anchors">
+  {%- for group in artifactGroups -%}
+    <a id="{{ forloop.index }}" name="{{ forloop.index }}"> </a>
+  {%- endfor -%}
+</div>
+
   <table id="artifactsTable" class="display" style="width:100%;border:solid;border-width:1px;" data-fhir="generated">
     <thead>
       <tr>
