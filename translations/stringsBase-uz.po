@@ -665,3 +665,98 @@ msgstr "Eslatma: bu qidiruv @@@ ning joriy versiyasida qidiradi.  Bu sahifa faqa
 #: Specification
 msgid "Specification"
 msgstr "Spetsifikatsiya"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Matndagi o‘zgarishlar ajratib ko‘rsatilsinmi?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Oxirgi rasmiy nashrdan beri kiritilgan o‘zgarishlarni ko‘rish uchun buni yoqing"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Terminologiya parametrlari"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Mantiqiy model nusxasi"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Ushbu sahifada ushbu amalga oshirish qo‘llanmasi doirasida ta’riflangan FHIR artefaktlari jadval ko‘rinishida keltirilgan."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Guruhlash"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Sarlavha"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Turi"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Tavsif"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Qidirish"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Toifa"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Guruhlashdan foydalanish"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Hammasini tozalash"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Ushbu bo‘limga havola"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Sarlavhalar"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "To‘liq"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "Sarlavha"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "Yo‘q"

@@ -644,3 +644,88 @@ msgstr "ملاحظة: يبحث هذا البحث في الإصدار الحال�
 #: Specification
 msgid "Specification"
 msgstr "المواصفات"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "معلمات المصطلحات"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "مثيل لنموذج منطقي"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "توفر هذه الصفحة عرضًا جدوليًا لأدوات FHIR المحددة كجزء من دليل التنفيذ هذا."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "التجميع"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "العنوان"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "المعرّف"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "النوع"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "الوصف"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "بحث"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "الفئة"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "استخدام التجميع"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "مسح الكل"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "رابط إلى هذا القسم"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "العناوين"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "كاملة"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "العنوان"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "بلا"

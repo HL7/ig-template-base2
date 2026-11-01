@@ -652,3 +652,78 @@ msgstr "Obs: den här sökningen söker i den aktuella builden av @@@.  Den här
 #: Specification
 msgid "Specification"
 msgstr "Specifikation"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Denna sida ger en tabellvy över de FHIR-artefakter som definieras som en del av denna implementationsguide."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Gruppering"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Titel"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Typ"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Beskrivning"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Sök"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Kategori"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Använd gruppering"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Rensa alla"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Länk till detta avsnitt"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Rubriker"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "Fullständiga"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "Titel"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "Inga"

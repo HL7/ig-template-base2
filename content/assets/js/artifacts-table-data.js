@@ -23,7 +23,11 @@ window.artifactsTableData = {
       "category":    {{ strings['Category']    | default: 'Category'     | jsonify }},
       "useGrouping": {{ strings['UseGrouping'] | default: 'Use grouping' | jsonify }},
       "clearAll":      {{ strings['ClearAll']           | default: 'Clear all'             | jsonify }},
-      "linkToSection": {{ strings['LinkToThisSection'] | default: 'Link to this section' | jsonify }}
+      "linkToSection": {{ strings['LinkToThisSection'] | default: 'Link to this section' | jsonify }},
+      "headings":      {{ strings['Headings']          | default: 'Headings'             | jsonify }},
+      "headingsFull":  {{ strings['HeadingsFull']      | default: 'Full'                 | jsonify }},
+      "headingsTitle": {{ strings['HeadingsTitle']     | default: 'Title'                | jsonify }},
+      "headingsNone":  {{ strings['HeadingsNone']      | default: 'None'                 | jsonify }}
     },
     "groupDescriptions": {
 {%- assign seenGids = "|" -%}

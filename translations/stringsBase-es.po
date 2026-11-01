@@ -644,3 +644,88 @@ msgstr "Nota: esta búsqueda busca en la compilación actual de @@@.  Esta pági
 #: Specification
 msgid "Specification"
 msgstr "Especificación"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Parámetros de terminología"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Instancia del modelo lógico"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Esta página proporciona una vista tabular de los artefactos FHIR definidos como parte de esta guía de implementación."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Agrupación"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Título"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Tipo"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Descripción"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Buscar"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Categoría"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Usar agrupación"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Borrar todo"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Enlace a esta sección"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Encabezados"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "Completos"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "Título"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "Ninguno"

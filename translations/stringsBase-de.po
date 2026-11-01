@@ -636,3 +636,98 @@ msgstr "Hinweis: Diese Suche durchsucht den aktuellen Build von @@@.  Diese Seit
 #: Specification
 msgid "Specification"
 msgstr "Spezifikation"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Textänderungen hervorheben?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Terminologieparameter"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Instanz des logischen Modells"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Diese Seite bietet eine tabellarische Ansicht der FHIR-Artefakte, die in diesem Implementierungsleitfaden definiert sind."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Gruppierung"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Titel"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Typ"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Beschreibung"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Suche"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Kategorie"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Gruppierung verwenden"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Alle entfernen"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Link zu diesem Abschnitt"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Überschriften"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "Vollständig"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "Titel"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "Keine"

@@ -685,3 +685,88 @@ msgstr "Примечание: этот поиск выполняется по т
 #: Specification
 msgid "Specification"
 msgstr "Спецификация"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Параметры терминологии"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Экземпляр логической модели"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "На этой странице в виде таблицы представлены артефакты FHIR, определенные в рамках данного руководства по внедрению."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Группировка"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Название"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Тип"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Описание"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Поиск"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Категория"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Использовать группировку"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Очистить все"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Ссылка на этот раздел"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Заголовки"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "Полностью"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "Название"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "Нет"

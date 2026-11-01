@@ -140,6 +140,10 @@
     "CurrentBuild": "Current Build",
     "CISearchMsg": "Note: this search searches the current build of @@@.  This page only exists for the CI build - published versions will use a different search page.",
     "Specification": "Specification",
-    "LinkToThisSection": "Link to this section"
+    "LinkToThisSection": "Link to this section",
+    "Headings": "Headings",
+    "HeadingsFull": "Full",
+    "HeadingsTitle": "Title",
+    "HeadingsNone": "None"
   }
 }

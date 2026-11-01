@@ -654,3 +654,88 @@ msgstr "Pastaba: ši paieška ieško dabartinėje @@@ versijoje.  Šis puslapis 
 #: Specification
 msgid "Specification"
 msgstr "Specifikacija"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Terminologijos parametrai"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Loginio modelio egzempliorius"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Šiame puslapyje pateikiamas FHIR artefaktų, apibrėžtų šiame diegimo vadove, lentelės vaizdas."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Grupavimas"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Pavadinimas"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Tipas"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Aprašymas"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Paieška"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Kategorija"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Naudoti grupavimą"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Išvalyti viską"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Nuoroda į šį skyrių"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Antraštės"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Full"
+msgstr "Visos"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Title"
+msgstr "Pavadinimas"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "None"
+msgstr "Nėra"

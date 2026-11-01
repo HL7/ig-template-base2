@@ -31,6 +31,14 @@
 }
 #artifactsTable .artifacts-group-desc { font-weight:normal; font-size:.92em; margin-top:.3em; opacity:.75; }
 #artifactsTable .artifacts-group-desc p:last-child { margin-bottom:0; }
+/* Headings dropdown: Title hides group descriptions, None hides the whole group header row */
+#artifactsTable.artifacts-headings-title .artifacts-group-desc,
+#artifactsTable.artifacts-headings-none tr.dtrg-group { display:none; }
+/* With group rows hidden, stripe from the script-assigned artifacts-stripe class instead of tr:nth-child */
+#artifactsTable.artifacts-headings-none > tbody > tr:not(.artifacts-stripe) { --dt-row-stripe-alpha:0; }
+#artifactsTable.artifacts-headings-none > tbody > tr.artifacts-stripe:nth-child(even):not(:hover) > * {
+  box-shadow:inset 0 0 0 9999px rgba(var(--dt-row-stripe), var(--dt-row-stripe-alpha));
+}
 
 /* Body markdown spacing */
 #artifactsTable tbody td p { margin:0 0 .25em 0; }
@@ -154,7 +162,8 @@
   user-select:none;
 }
 .dt-filter-menu label:hover { background:rgba(0,0,0,0.05); }
-.dt-filter-menu label input[type="checkbox"] {
+.dt-filter-menu label input[type="checkbox"],
+.dt-filter-menu label input[type="radio"] {
   display:inline-block !important;
   vertical-align:middle !important;
   margin:0 .5em 0 0 !important;

@@ -4,7 +4,7 @@
  * Reads its data from window.artifactsTableData (assets/js/artifacts-table-data.js, rendered by Jekyll
  * with one block per language) and picks the block matching the page's <html lang="..."> attribute.
  *
- * The view (column filters, grouping, sort, page length and current page) is persisted in localStorage
+ * The view (column filters, grouping, headings, sort, page length and current page) is persisted in localStorage
  * per page path, so a visitor returning to the page sees the same filtered view and page they left.
  */
 document.addEventListener('DOMContentLoaded', function(){
@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', function(){
   var typeLabel        = labels.type        || 'Type';
   var categoryLabel    = labels.category    || 'Category';
   var clearAllLabel    = labels.clearAll    || 'Clear all';
+  var headingsLabel    = labels.headings    || 'Headings';
+  var HEADINGS_MODES = ['full', 'title', 'none'];
+  var headingsModeLabels = {
+    full:  labels.headingsFull  || 'Full',
+    title: labels.headingsTitle || 'Title',
+    none:  labels.headingsNone  || 'None'
+  };
 
   // Column model. Data keys: p=grouping position, g=grouping label, n=title, i=id, t=type, d=description.
   var columnDefs = [
@@ -90,10 +97,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // ----- View state -----
   var grouping = true;
+  // Group header display: 'full' (name + description), 'title' (name only) or 'none'
+  var headings = 'full';
   var selectedTypes = [];
   var selectedCategories = [];
   // Per-column text filters keyed by data key (plain substring, case-insensitive)
   var colTextFilters = {};
+  // Free-text filter from ?text=, matched against any of TEXT_FILTER_KEYS
+  var anyTextFilter = '';  
   var pageLength = 200;
 
   // ----- URL Parameters view request -----
@@ -151,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
     pageLength = info.length;
     var st = {
       grouping:   grouping,
+      headings:   headings,
       types:      selectedTypes,
       categories: selectedCategories,
       text:       colTextFilters,
@@ -186,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   var viewState = loadUrlView() || loadState();
   if (typeof viewState.grouping === 'boolean') grouping = viewState.grouping;
+  if (HEADINGS_MODES.indexOf(viewState.headings) !== -1) headings = viewState.headings;
   if (Array.isArray(viewState.types)) {
     selectedTypes = viewState.types.filter(function(v){ return uniqueTypes.indexOf(v) !== -1; });
   }
@@ -197,6 +210,9 @@ document.addEventListener('DOMContentLoaded', function(){
       if (typeof viewState.text[k] === 'string' && viewState.text[k]) colTextFilters[k] = viewState.text[k];
     });
   }
+  if (viewState.text && typeof viewState.text.value === 'string') {
+    anyTextFilter = viewState.text.value;
+  }  
   if (typeof viewState.length === 'number' && viewState.length > 0) pageLength = viewState.length;
   var initialView = {
     start: (typeof viewState.start === 'number' && viewState.start > 0) ? viewState.start : 0,
@@ -209,6 +225,13 @@ document.addEventListener('DOMContentLoaded', function(){
     jQuery.fn.dataTable.ext.search.push(function(settings, dataArr, dataIndex){
       if (settings.nTable.id !== 'artifactsTable') return true;
       var row = settings.aoData[dataIndex]._aData;
+      if (anyTextFilter) {
+        var anyNeedle = anyTextFilter.toLowerCase();
+        var anyMatch = TEXT_FILTER_KEYS.some(function(k){
+          return String(row[k] == null ? '' : row[k]).replace(/<[^>]*>/g, '').toLowerCase().indexOf(anyNeedle) !== -1;
+        });
+        if (!anyMatch) return false;
+      }
       for (var key in colTextFilters) {
         var needle = colTextFilters[key];
         if (!needle) continue;
@@ -266,10 +289,37 @@ document.addEventListener('DOMContentLoaded', function(){
     return wrap;
   }
 
-  // Register Category popup as a layout feature
+  // Headings popup: single choice, so radios instead of checkboxes, and no chips or Clear all
+  function makeHeadingsPopup(){
+    var wrap = document.createElement('div');
+    wrap.className = 'dt-filter-popup';
+    wrap.setAttribute('data-id', 'headings');
+    wrap.innerHTML =
+      '<button type="button" class="dt-filter-trigger' + (headings !== 'full' ? ' has-filter' : '') + '" aria-expanded="false">' +
+        '<span>' + escapeHtml(headingsLabel) + '</span>' +
+        '<span class="caret">▾</span>' +
+      '</button>' +
+      '<div class="dt-filter-menu" hidden>' +
+        '<div class="dt-filter-menu-header"><span>' + escapeHtml(headingsLabel) + '</span></div>' +
+        HEADINGS_MODES.map(function(v){
+          return '<label><input type="radio" name="artifactsHeadings" value="' + v + '"' + (headings === v ? ' checked' : '') + '/><span>' + escapeHtml(headingsModeLabels[v]) + '</span></label>';
+        }).join('') +
+      '</div>';
+    return wrap;
+  }
+
+  // Register Category and Headings popups as layout features
   if (!jQuery.fn.dataTable.feature.__artifactsToolsRegistered) {
     jQuery.fn.dataTable.feature.__artifactsToolsRegistered = true;
     jQuery.fn.dataTable.feature.register('filterByCategory', makeCategoryPopup);
+    jQuery.fn.dataTable.feature.register('headingsSelect', makeHeadingsPopup);
+  }
+
+  // Hiding is done with CSS classes on the table so switching modes needs no redraw
+  function applyHeadings(){
+    jQuery(tableEl).removeClass('artifacts-headings-title artifacts-headings-none');
+    if (headings !== 'full') jQuery(tableEl).addClass('artifacts-headings-' + headings);
+    jQuery('.dt-filter-popup[data-id="headings"] .dt-filter-trigger').toggleClass('has-filter', headings !== 'full');
   }
 
   function setHeaderFilterMark(colIdx, active){
@@ -310,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var cfg = {
       orderCellsTop: true,
       layout: {
-        topStart: ['filterByCategory'],
+        topStart: ['filterByCategory', 'headingsSelect'],
         topEnd: ['paging', 'pageLength'],
         bottomStart: 'info',
         bottomEnd: 'paging'
@@ -349,6 +399,7 @@ document.addEventListener('DOMContentLoaded', function(){
     view = view || {};
     if (table) table.destroy();
     table = jQuery('#artifactsTable').DataTable(buildConfig(grouping, view));
+    applyHeadings();
 
     // Drop the Type multi-select into its column's filter cell
     var typeCell = document.getElementById('filterCellType');
@@ -385,6 +436,14 @@ document.addEventListener('DOMContentLoaded', function(){
   // Persist the view after every draw (page change, sort, length change, filter)
   jQuery(document).on('draw.dt', '#artifactsTable', saveState);
 
+  // DataTables stripes with tr:nth-child, which counts group rows even when Headings = None hides
+  // them. Mark alternate data rows so the CSS can stripe on data rows alone in that mode.
+  jQuery(document).on('draw.dt', '#artifactsTable', function(){
+    jQuery('#artifactsTable > tbody > tr').not('.dtrg-group').each(function(i){
+      jQuery(this).toggleClass('artifacts-stripe', i % 2 === 0);
+    });
+  });
+
   renderTable(grouping, initialView);
 
   // Apply fragment links and Back/Forward navigation without reloading the page.
@@ -415,6 +474,12 @@ document.addEventListener('DOMContentLoaded', function(){
     grouping = this.checked;
     // Sort semantics differ between grouped and flat views, so fall back to the default order and first page
     renderTable(grouping, {});
+  });
+
+  jQuery(document).on('change', 'input[name=artifactsHeadings]', function(){
+    headings = this.value;
+    applyHeadings();
+    saveState();
   });
 
   // Open/close popup
