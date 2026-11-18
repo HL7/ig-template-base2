@@ -9,17 +9,6 @@
     <xsl:if test="f:fhirVersion/@value[starts-with(., '3.')]">R3=Y&#xa;</xsl:if>
     <xsl:if test="f:fhirVersion/@value[starts-with(., '1.4')]">R2B=Y&#xa;</xsl:if>
     <xsl:if test="f:fhirVersion/@value[starts-with(., '1.0')]">R2=Y&#xa;</xsl:if>
-    <xsl:value-of select="concat('igVersion=', f:version/@value, '&#xa;')"/>
-    <xsl:if test="f:definition/f:parameter[f:code/@value='i18n-lang']|f:definition/f:extension[@url='http://hl7.org/fhir/tools/StructureDefinition/ig-parameter'][f:extension[@url='code']/f:valueString/@value='i18n-lang']/f:extension[@url='value']/f:valueString/@value">
-      <xsl:text>langs=</xsl:text>
-      <xsl:for-each select="f:definition/f:parameter[f:code/@value='i18n-default-lang']/f:code/f:valueString/@value|f:definition/f:extension[@url='http://hl7.org/fhir/tools/StructureDefinition/ig-parameter'][f:extension[@url='code']/f:valueString/@value='i18n-default-lang']/f:extension[@url='value']/f:valueString/@value">
-        <xsl:value-of select="concat(., ';')"/>
-      </xsl:for-each>
-      <xsl:for-each select="f:definition/f:parameter[f:code/@value='i18n-lang']/f:code/f:valueString/@value|f:definition/f:extension[@url='http://hl7.org/fhir/tools/StructureDefinition/ig-parameter'][f:extension[@url='code']/f:valueString/@value='i18n-lang']/f:extension[@url='value']/f:valueString/@value">
-        <xsl:value-of select="concat(., ';')"/>
-      </xsl:for-each>
-      <xsl:text>&#xa;</xsl:text>
-    </xsl:if>
     <xsl:if test="f:definition/f:parameter[f:code/@value='globals-in-artifacts']/f:value/@value='true'">globals=Y&#xa;</xsl:if>
     <xsl:if test="f:definition/f:parameter[f:code/@value='term-params-in-artifacts']/f:value/@value='true'">termparams=Y&#xa;</xsl:if>
 	</xsl:template>
