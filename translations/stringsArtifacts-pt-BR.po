@@ -130,7 +130,7 @@ msgstr "Indica pesquisas ou outras informações que justifiquem ou embasem a tr
 # EvidenceVariableName
 #: EvidenceVariableName
 msgid "Knowledge Artifacts: Evidence Variables"
-msgstr "Artefatos de conhecimento: Variáveis ​​de evidência"
+msgstr "Artefatos de conhecimento: Variáveis de evidência"
 
 # EvidenceVariableDesc
 #: EvidenceVariableDesc
@@ -345,7 +345,7 @@ msgstr "Clínico: Definições de itens de cobrança"
 # ChargeItemDefinitionDesc
 #: ChargeItemDefinitionDesc
 msgid "Definitions of chargeable costs relevant to the use of this implementation guide."
-msgstr "Definições de custos cobráveis ​​relevantes para o uso deste guia de implementação."
+msgstr "Definições de custos cobráveis relevantes para o uso deste guia de implementação."
 
 # ExampleScenarioName
 #: ExampleScenarioName

@@ -21,12 +21,12 @@ msgstr "Experimental"
 # Swagger
 #: Swagger
 msgid "Raw OpenAPI-Swagger Definition file"
-msgstr "Ficheiro OpenAPI-Swagger"
+msgstr "Arquivo de definição OpenAPI-Swagger"
 
 # Download
 #: Download
 msgid "Download"
-msgstr "Transferir"
+msgstr "Download"
 
 # NoTestPlan
 #: NoTestPlan
@@ -136,7 +136,7 @@ msgstr "Visão Diferencial"
 # SnapshotView
 #: SnapshotView
 msgid "Snapshot View"
-msgstr "Visão Total"
+msgstr "Visão Completa"
 
 # XMLTemplate
 #: XMLTemplate
@@ -311,7 +311,7 @@ msgstr "Notas"
 # VisitFCP
 #: VisitFCP
 msgid "Visit the FHIR Community Process Specification Registry"
-msgstr "Visite o Registo de Especificação de Processos da Comunidade FHIR"
+msgstr "Visite o Registro de Especificação de Processos da Comunidade FHIR"
 
 # CountryFlag
 #: CountryFlag
@@ -351,7 +351,7 @@ msgstr "Pacote %PKG% baseado em %FHIRVER%."
 # GeneratedDate
 #: GeneratedDate
 msgid "Generated %DATE%"
-msgstr "Gerado em %DATE%"
+msgstr "Gerado %DATE%"
 
 # PageStandardsStatus
 #: PageStandardsStatus
@@ -446,7 +446,7 @@ msgstr "Índice"
 # ArtifactsSummary
 #: ArtifactsSummary
 msgid "Artifacts Summary"
-msgstr "Artefatos"
+msgstr "Resumo de Artefatos"
 
 # ArtifactsTable
 #: ArtifactsTable
@@ -647,3 +647,88 @@ msgstr "Nota: esta pesquisa procura a build atual de @@@.  Esta página só exis
 #: Specification
 msgid "Specification"
 msgstr "Especificação"
+
+# TermParameters
+#: TermParameters
+msgid "Terminology Parameters"
+msgstr "Parâmetros de terminologia"
+
+# ModelOf
+#: ModelOf
+msgid "Instance of logical model"
+msgstr "Instância do modelo lógico"
+
+# ArtifactsTableIntro
+#: ArtifactsTableIntro
+msgid "This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."
+msgstr "Esta página fornece uma visão tabular dos artefatos FHIR definidos como parte deste guia de implementação."
+
+# Grouping
+#: Grouping
+msgid "Grouping"
+msgstr "Agrupamento"
+
+# Title
+#: Title
+msgid "Title"
+msgstr "Título"
+
+# Id
+#: Id
+msgid "Id"
+msgstr "Id"
+
+# Type
+#: Type
+msgid "Type"
+msgstr "Tipo"
+
+# Description
+#: Description
+msgid "Description"
+msgstr "Descrição"
+
+# Search
+#: Search
+msgid "Search"
+msgstr "Pesquisar"
+
+# Category
+#: Category
+msgid "Category"
+msgstr "Categoria"
+
+# UseGrouping
+#: UseGrouping
+msgid "Use grouping"
+msgstr "Usar agrupamento"
+
+# ClearAll
+#: ClearAll
+msgid "Clear all"
+msgstr "Limpar tudo"
+
+# LinkToThisSection
+#: LinkToThisSection
+msgid "Link to this section"
+msgstr "Link para esta seção"
+
+# Headings
+#: Headings
+msgid "Headings"
+msgstr "Cabeçalhos"
+
+# HeadingsFull
+#: HeadingsFull
+msgid "Headings Full"
+msgstr "Completos"
+
+# HeadingsTitle
+#: HeadingsTitle
+msgid "Headings Title"
+msgstr "Título"
+
+# HeadingsNone
+#: HeadingsNone
+msgid "Headings None"
+msgstr "Nenhum"
