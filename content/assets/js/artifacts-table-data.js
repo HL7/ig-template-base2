@@ -63,6 +63,7 @@ window.artifactsTableData = {
 {%- endcomment -%}
 {%- assign resource = site.data.resources[r.ref] -%}
 {%- assign descRaw = resource.descriptionlang[lang] | default: resource.description | default: r.description[lang] | default: r.description.src | default: '' -%}
+{%- comment -%}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{%- endcomment -%}
 {%- assign desc = descRaw | markdownify | strip -%}
 {%- assign gKey = r.groupingName | append: 'Name' -%}
 {%- assign groupLabel = groupingStrings[gKey] | default: r.groupingName %}
