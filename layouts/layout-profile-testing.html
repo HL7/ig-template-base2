@@ -25,7 +25,7 @@
       {% for testplan in site.data.pages[basepath].testplans %}
         <tr>
           <td>
-            <a href="{{testplan.url}}">{{testplan.titlelang["{{[lang]}}"] | escape_once}}</a>
+            <a href="{{testplan.url | escape}}">{{testplan.titlelang["{{[lang]}}"] | escape_once}}</a>
           </td>
         </tr>
       {% endfor %}
@@ -42,7 +42,7 @@
       {% for testscript in site.data.pages[basepath].testscripts %}
         <tr>
           <td>
-            <a href="{{testscript.url}}">{{testscript.titlelang["{{[lang]}}"] | escape_once}}</a>
+            <a href="{{testscript.url | escape}}">{{testscript.titlelang["{{[lang]}}"] | escape_once}}</a>
           </td>
         </tr>
       {% endfor %}

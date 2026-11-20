@@ -3,15 +3,15 @@
     </div>  <!-- /container -->
   </div>  <!-- /segment-content -->
 
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/jquery-ui.min.js"> </script>
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/flags.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/flags.js"> </script>
 {% if includetabscripts %}
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/tabs.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/tabs.js"> </script>
 {% endif %}
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/window-hash.js"> </script>
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/togglechanges.js"> </script>
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/requirements-table.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/requirements-table.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container" data-fhir="generated">  <!-- container -->
@@ -22,7 +22,7 @@
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 {% if site.data.pages[localPage].previous %}
-                <a href="{{site.data.pages[localPage].previous}}">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</a>
+                <a href="{{site.data.pages[localPage].previous | escape}}">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</a>
 {% else %}
                 <span style="visibility:hidden">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</span>
 {% endif %}
@@ -32,7 +32,7 @@
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 {% if site.data.pages[localPage].next %}
-                <a href="{{site.data.pages[localPage].next}}">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</a>
+                <a href="{{site.data.pages[localPage].next | escape}}">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</a>
 {% else %}
                 <span style="visibility:hidden">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</span>
 {% endif %}
@@ -44,16 +44,16 @@
 {% endif %}
       <div class="inner-wrapper">
         <p>
-{% capture pkg %}{{site.data.fhir.packageId}}#{{site.data.fhir.igVer}}{% endcapture %}
-{% capture fhirver %}<a style="color: var(--footer-hyperlink-text-color)" href="{{site.data.fhir.path}}">FHIR {{site.data.fhir.version}}</a>{% endcapture %}
+{% capture pkg %}{{site.data.fhir.packageId | escape}}#{{site.data.fhir.igVer | escape}}{% endcapture %}
+{% capture fhirver %}<a style="color: var(--footer-hyperlink-text-color)" href="{{site.data.fhir.path | escape}}">FHIR {{site.data.fhir.version | escape}}</a>{% endcapture %}
 {% capture gendate %}
-  <span title="{{ site.data.fhir.genDate | date: "%Y-%m-%d %H:%M:%S %z" }}">
-    {{ site.data.fhir.genDate | date: "%Y-%m-%d" }}
+  <span title="{{ site.data.fhir.genDate | date: "%Y-%m-%d %H:%M:%S %z" | escape }}">
+    {{ site.data.fhir.genDate | date: "%Y-%m-%d" | escape }}
   </span>
 {% endcapture %}
-          {{site.data.stringsBase[include.lang]['IGCopyright'] | replace: "%YEAR%", site.data.info.copyrightyear | escape_once}} <a style="color:var(--footer-hyperlink-text-color)" href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher | escape}}</a>.  
-          {{site.data.stringsBase[include.lang]['IGPackage'] | replace: "%PKG%", pkg | replace: "%FHIRVER%", fhirver | escape_once}}
-          {{site.data.stringsBase[include.lang]['GeneratedDate'] | replace: "%DATE%", gendate | escape_once}}
+          {{site.data.stringsBase[include.lang]['IGCopyright'] | replace: "%YEAR%", site.data.info.copyrightyear | escape_once}}{% comment %}IG-supplied link: only http, https, mailto or relative{% endcomment %}{% assign contactUrl = site.data.fhir.ig.contact[0].telecom[0] | strip %}{% assign linkScheme = contactUrl | split: ':' | first | downcase %}{% if contactUrl contains ':' and linkScheme != 'http' and linkScheme != 'https' and linkScheme != 'mailto' %}{% assign contactUrl = '' %}{% endif %}{% if contactUrl != '' %} <a style="color:var(--footer-hyperlink-text-color)" href="{{contactUrl | escape}}">{{site.data.fhir.ig.publisher | escape}}</a>{% else %} {{site.data.fhir.ig.publisher | escape}}{% endif %}.  
+          {{site.data.stringsBase[include.lang]['IGPackage'] | escape_once | replace: "%PKG%", pkg | replace: "%FHIRVER%", fhirver}}
+          {{site.data.stringsBase[include.lang]['GeneratedDate'] | escape_once | replace: "%DATE%", gendate}}
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             {% include fragment-footer.html lang=include.lang %}
@@ -72,12 +72,12 @@
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/anchor-hover.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

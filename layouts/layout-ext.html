@@ -13,9 +13,9 @@
 
 {% include fragment-resourceTable.html lang="{{[lang]}}" %}
 {%if site.data.resources[resource_].description %}
-<div data-fhir="generated">{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}</div>
+<div data-fhir="generated">{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}</div>
 {% endif %}{%if site.data.resources[resource_].purpose %}
-<div data-fhir="generated">{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}</div>
+<div data-fhir="generated">{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}</div>
 {% endif %}
 
   <p><b>Context of Use</b></p>
@@ -71,12 +71,12 @@
       </li>
     </ul>
     {% capture sdlink %}
-      <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+      <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath | escape}}">{{site.data.structuredefinitions['{{[id]}}'].basename | escape}}</a>
     {% endcapture %}
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink | escape_once}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | escape_once | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
 
@@ -169,7 +169,7 @@
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
       <div id="tbl-summ">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink | escape_once}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | escape_once | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="tbl-summ-inner">
           <a name="summary"> </a>
           {% include StructureDefinition-{{[id]}}-summary{{[langsuffix]}}.xhtml %}
@@ -182,7 +182,7 @@
         <p>
           <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView'] | escape_once}}</b>
         </p>
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink | escape_once}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | escape_once | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
 {% if site.data.structuredefinitions["{{[id]}}"].obligations %}
@@ -263,7 +263,7 @@
       </div>-->
 {% endunless %}
       <div id="all-summ">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink | escape_once}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | escape_once | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-summ-inner">
           {% include StructureDefinition-{{[id]}}-summary-all{{[langsuffix]}}.xhtml %}
         </div>

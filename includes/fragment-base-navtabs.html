@@ -24,7 +24,7 @@
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}.html">{{site.data.stringsBase[include.lang]['NarrativeContent'] | escape_once}}</a>
+    <a href="{{include.type | escape}}-{{include.id | escape}}.html">{{site.data.stringsBase[include.lang]['NarrativeContent'] | escape_once}}</a>
   </li>
 {% endif %}
 {% if site.data.resources[resource_].['testplan'] or site.data.resources[resource_].['testscript'] %}
@@ -34,7 +34,7 @@
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}-testing.html">{{site.data.stringsBase[include.lang]['Testing'] | escape_once}}</a>
+      <a href="{{include.type | escape}}-{{include.id | escape}}-testing.html">{{site.data.stringsBase[include.lang]['Testing'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endif %}
@@ -45,7 +45,7 @@
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.xml.html">{{site.data.stringsBase[include.lang]['XML'] | escape_once}}</a>
+      <a href="{{include.type | escape}}-{{include.id | escape}}.xml.html">{{site.data.stringsBase[include.lang]['XML'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
@@ -56,7 +56,7 @@
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.json.html">{{site.data.stringsBase[include.lang]['JSON'] | escape_once}}</a>
+      <a href="{{include.type | escape}}-{{include.id | escape}}.json.html">{{site.data.stringsBase[include.lang]['JSON'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
@@ -67,7 +67,7 @@
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.ttl.html">{{site.data.stringsBase[include.lang]['TTL'] | escape_once}}</a>
+      <a href="{{include.type | escape}}-{{include.id | escape}}.ttl.html">{{site.data.stringsBase[include.lang]['TTL'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
@@ -78,7 +78,7 @@
     </li>
     {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.change.history.html">{{site.data.stringsBase[include.lang]['History'] | escape_once}}</a>
+      <a href="{{include.type | escape}}-{{include.id | escape}}.change.history.html">{{site.data.stringsBase[include.lang]['History'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endif %}

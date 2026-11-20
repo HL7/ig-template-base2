@@ -80,16 +80,23 @@
     <property name="dir.template.includes" value="${ig.template}/includes" relative="yes"/>
     <property name="dir.template.translations" value="${ig.template}/translations" relative="yes"/>
     <loadfile property="groupings" srcFile="${ig.scripts}/groupings.txt" encoding="UTF-8"/>
-    <loadfile property="translations" srcFile="${dir.template.translations}/stringsBase.xml" encoding="UTF-8">
-      <filterchain>
-        <headfilter lines="-1" skip="1"/>
-      </filterchain>
-    </loadfile>
-    <loadfile property="artifactTranslations" srcFile="${dir.template.translations}/stringsArtifacts.xml" encoding="UTF-8">
-      <filterchain>
-        <headfilter lines="-1" skip="1"/>
-      </filterchain>
-    </loadfile>
+    <!-- The translation files can be replaced by a child template, so they are checked and rebuilt by our own
+         stylesheet before being pasted into the IG: a DOCTYPE could make the parser read other files, and raw
+         pasting would let other markup into the IG -->
+    <fail message="translations/stringsBase.xml and translations/stringsArtifacts.xml must not contain a DOCTYPE or entity declarations">
+      <condition>
+        <or>
+          <resourcecontains resource="${dir.template.translations}/stringsBase.xml" substring="&lt;!DOCTYPE" casesensitive="false"/>
+          <resourcecontains resource="${dir.template.translations}/stringsBase.xml" substring="&lt;!ENTITY" casesensitive="false"/>
+          <resourcecontains resource="${dir.template.translations}/stringsArtifacts.xml" substring="&lt;!DOCTYPE" casesensitive="false"/>
+          <resourcecontains resource="${dir.template.translations}/stringsArtifacts.xml" substring="&lt;!ENTITY" casesensitive="false"/>
+        </or>
+      </condition>
+    </fail>
+    <xslt in="${dir.template.translations}/stringsBase.xml" out="${ig.template}/stringsBase.clean.xml" force="true" style="${ig.scripts}/onGenerate.cleanTranslations.xslt"/>
+    <xslt in="${dir.template.translations}/stringsArtifacts.xml" out="${ig.template}/stringsArtifacts.clean.xml" force="true" style="${ig.scripts}/onGenerate.cleanTranslations.xslt"/>
+    <loadfile property="translations" srcFile="${ig.template}/stringsBase.clean.xml" encoding="UTF-8"/>
+    <loadfile property="artifactTranslations" srcFile="${ig.template}/stringsArtifacts.clean.xml" encoding="UTF-8"/>
   </target>
   <target name="check-plantumlfiles">
     <condition property="ig.plantumlfiles.exist">
@@ -114,14 +121,24 @@
       <jvmarg line="-Dfile.encoding=UTF-8"/>
       <!-- SANDBOX stops diagrams from reading local files or URLs (!include, !includeurl, %load_json, etc.) -->
       <jvmarg line="-DPLANTUML_SECURITY_PROFILE=SANDBOX"/>
-      <arg line="-nometadata -failfast2 -tsvg -o &quot;${basedir}/${dir.temp.includes}&quot; &quot;${basedir}/${folder.input}/images-source/**.plantuml&quot;"/>
+      <arg value="-nometadata"/>
+      <arg value="-failfast2"/>
+      <arg value="-tsvg"/>
+      <arg value="-o"/>
+      <arg value="${basedir}/${dir.temp.includes}"/>
+      <arg value="${basedir}/${folder.input}/images-source/**.plantuml"/>
     </java>
   </target>
   <target name="onGenerate.plantUml.template" depends="check-plantumlfiles" if="template.plantumlfiles.exist">
     <java jar="${ig.scripts}/plantuml.jar" fork="true" failonerror="true">
       <jvmarg line="-Dfile.encoding=UTF-8"/>
       <jvmarg line="-DPLANTUML_SECURITY_PROFILE=SANDBOX"/>
-      <arg line="-nometadata -failfast2 -tsvg -o &quot;${basedir}/${dir.temp.includes}&quot; &quot;${ig.template}/images-source/**.plantuml&quot;"/>
+      <arg value="-nometadata"/>
+      <arg value="-failfast2"/>
+      <arg value="-tsvg"/>
+      <arg value="-o"/>
+      <arg value="${basedir}/${dir.temp.includes}"/>
+      <arg value="${ig.template}/images-source/**.plantuml"/>
     </java>
   </target>
   <target name="onGenerate.plantUml" depends="onGenerate.plantUml.ig,onGenerate.plantUml.template"/>

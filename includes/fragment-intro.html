@@ -9,7 +9,7 @@
 {% include {{include.lang}}/{{intro}} type=include.type id=include.id %}
 {% endcapture %}
 <div style="display:inline-block" markdown="1">
-{{ intro-content | markdownify }}
+{% comment %}Unescaped on purpose: intro page content, rendered as the page itself{% endcomment %}{{ intro-content | markdownify }}
 </div>
 {% endif %}
 {% endif %}

@@ -10,9 +10,9 @@
   <p>{{site.data.stringsBase['{{[lang]}}']['ModelOf'] | escape_once}} 
   {% if site.data.artifacts[localPage].logicalInstanceOfLocal %}
     {% assign localRef = site.data.artifacts[localPage].logicalInstanceOfLocal %}
-    <a href="{{site.data.resources[localRef].path}}">{{site.data.resources[localRef].titlelang['{{[lang]}}']}}</a>
+    <a href="{{site.data.resources[localRef].path | escape}}">{{site.data.resources[localRef].titlelang['{{[lang]}}'] | escape}}</a>
   {% else %}
-    {{site.data.artifacts[localPage].logicalInstanceOf}}
+    {{site.data.artifacts[localPage].logicalInstanceOf | escape}}
   {% endif %}
   </p>
 {% else %}
@@ -25,10 +25,10 @@
 {% endif %}
 {% assign prefix = site.data.artifacts[localPage].type %}
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{example | escape_once}}{{prefix}}: {{site.data.pages[localPage].titlelang['{{[lang]}}'] | escape_once}}</h2>
+  <h2 id="root">{{example | escape_once}}{{prefix | escape}}: {{site.data.pages[localPage].titlelang['{{[lang]}}'] | escape_once}}</h2>
 
 {% if site.data.resources.descriptionlang['{{[lang]}}'] != '' %}
-  <p>{{site.data.resources.descriptionlang['{{[lang]}}']}}</p>
+  <p>{{site.data.resources.descriptionlang['{{[lang]}}'] | escape}}</p>
 {% endif %}
 
 {% include fragment-simpletable.html lang="{{[lang]}}" %}

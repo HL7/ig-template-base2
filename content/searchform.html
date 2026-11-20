@@ -3,7 +3,7 @@
 {% assign lang = page.path | split: "/" | first %}
 <!DOCTYPE HTML>
 
-<html xml:lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{lang}}">
+<html xml:lang="{{lang | escape}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{lang | escape}}">
 <head>
   <meta charset="UTF-8"/>
   <title>{{site.data.stringsBase[lang]['Search'] | escape_once}} {{site.data.fhir.ig.titlelang[lang] | escape_once}} ({{site.data.stringsBase[lang]['CurrentBuild'] | escape_once}})</title>
@@ -11,33 +11,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="http://www.hl7.org"/>
 
-  <link href="{{site.data.info.assets}}fhir.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}fhir.css" rel="stylesheet"/>
 
     <!-- Bootstrap core CSS -->
-  <link href="{{site.data.info.assets}}assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
     <!-- Project extras -->
-  <link href="{{site.data.info.assets}}assets/css/project.css" rel="stylesheet"/>
-  <link href="{{site.data.info.assets}}assets/css/pygments-manni.css" rel="stylesheet"/>
-  <link href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet"/>
-  <link href="{{site.data.info.assets}}assets/css/hl7.css" rel="stylesheet"/>
-  <link href="{{site.data.info.assets}}assets/css/fhir-ig.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}assets/css/project.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}assets/css/pygments-manni.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}assets/css/jquery-ui.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}assets/css/hl7.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets | escape}}assets/css/fhir-ig.css" rel="stylesheet"/>
 
     <!-- Favicons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.data.info.assets}}assets/ico/icon-fhir-144.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.data.info.assets}}assets/ico/icon-fhir-114.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.data.info.assets}}assets/ico/icon-fhir-72.png"/>
-  <link rel="apple-touch-icon-precomposed" href="{{site.data.info.assets}}assets/ico/icon-fhir-57.png"/>
-  <link rel="shortcut icon" href="{{site.data.info.assets}}assets/ico/favicon.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-144.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-114.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-72.png"/>
+  <link rel="apple-touch-icon-precomposed" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-57.png"/>
+  <link rel="shortcut icon" href="{{site.data.info.assets | escape}}assets/ico/favicon.png"/>
 </head>
 
 <body>
 	<div id="segment-header" class="segment">  <!-- segment-header -->	
 		<div class="container">  <!-- container -->
-   <a id="logo" data-no-external="true" href="https://hl7.org/fhir"><img src="{{site.data.info.assets}}assets/images/fhir-logo-www.png" alt="logo fhir" width="249" height="60"/></a>
+   <a id="logo" data-no-external="true" href="https://hl7.org/fhir"><img src="{{site.data.info.assets | escape}}assets/images/fhir-logo-www.png" alt="logo fhir" width="249" height="60"/></a>
 <div>
 <a id="hl7-logo" data-no-external="true" href="https://www.hl7.org">
-     <img alt="visit the hl7 website" width="42" height="50" src="{{site.data.info.assets}}assets/images/hl7-logo-header.png"/>
+     <img alt="visit the hl7 website" width="42" height="50" src="{{site.data.info.assets | escape}}assets/images/hl7-logo-header.png"/>
     </a>
 			</div>       	
       <div id="ig-status" style="font-size:24px;padding-top: 20px;"> 
@@ -86,7 +86,7 @@
 <div class="col-12">
 <h2>{{site.data.stringsBase[lang]['Search'] | escape_once}} {{site.data.fhir.ig.titlelang[lang] | escape_once}} ({{site.data.stringsBase[lang]['CurrentBuild'] | escape_once}})</h2>
 
-<iframe title="search" src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://'}}&amp;prefill=Search {{site.data.fhir.ig.titlelang[lang] | escape_once}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+<iframe title="search" src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://' | escape}}&amp;prefill=Search {{site.data.fhir.ig.titlelang[lang] | escape_once}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
 
 <hr/>
 

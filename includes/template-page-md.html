@@ -44,9 +44,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 {% assign h3headers = "### " %}
 
 {% if teststring contains h3headers %}
-    {{ toc-content | markdownify }}
+    {% comment %}Unescaped on purpose: page content, rendered as the page itself{% endcomment %}{{ toc-content | markdownify }}
 {% else %}
-    {{ no-toc-content | markdownify }}
+    {% comment %}Unescaped on purpose: page content, rendered as the page itself{% endcomment %}{{ no-toc-content | markdownify }}
 {% endif %}
 
 </div>

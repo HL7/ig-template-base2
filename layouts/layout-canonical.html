@@ -18,12 +18,12 @@
 
 {%if site.data.resources[resource_].description %}
 <div data-fhir="generated">
-{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
+{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
 </div>
 {% endif %}
 {%if site.data.resources[resource_].purpose %}
 <div data-fhir="generated">
-{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
+{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
 </div>
 {% endif %}
   <!-- insert intro if present -->

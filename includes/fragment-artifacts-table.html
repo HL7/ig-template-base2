@@ -50,7 +50,7 @@
 {%- assign artifactGroups = site.data.artifactsTable | map: 'groupingPos' | uniq | sort -%}
 <div class="artifacts-group-anchors">
   {%- for group in artifactGroups -%}
-    <a id="{{ forloop.index }}" name="{{ forloop.index }}"> </a>
+    <a id="{{ forloop.index | escape }}" name="{{ forloop.index | escape }}"> </a>
   {%- endfor -%}
 </div>
 
@@ -58,19 +58,19 @@
     <thead>
       <tr>
         <th></th>
-        <th>{{ groupingLabel }}</th>
-        <th>{{ titleLabel }}</th>
-        <th>{{ idLabel }}</th>
-        <th>{{ typeLabel }}</th>
-        <th>{{ descLabel }}</th>
+        <th>{{ groupingLabel | escape_once }}</th>
+        <th>{{ titleLabel | escape_once }}</th>
+        <th>{{ idLabel | escape_once }}</th>
+        <th>{{ typeLabel | escape_once }}</th>
+        <th>{{ descLabel | escape_once }}</th>
       </tr>
       <tr class="filters">
         <th></th>
         <th></th>
-        <th><input aria-label="Title Filter" type="text" data-col="n" placeholder="{{ searchVerb }} {{ titleLabel | downcase }}"/></th>
-        <th><input aria-label="Id Filter" type="text" data-col="i" placeholder="{{ searchVerb }} {{ idLabel | downcase }}"/></th>
+        <th><input aria-label="Title Filter" type="text" data-col="n" placeholder="{{ searchVerb | escape_once }} {{ titleLabel | downcase | escape_once }}"/></th>
+        <th><input aria-label="Id Filter" type="text" data-col="i" placeholder="{{ searchVerb | escape_once }} {{ idLabel | downcase | escape_once }}"/></th>
         <th id="filterCellType"></th>
-        <th><input aria-label="Description Filter" type="text" data-col="d" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
+        <th><input aria-label="Description Filter" type="text" data-col="d" placeholder="{{ searchVerb | escape_once }} {{ descLabel | downcase | escape_once }}"/></th>
       </tr>
     </thead>
   </table>

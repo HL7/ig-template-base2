@@ -1,22 +1,22 @@
 {% if site.data.resources[resource_].status.status or site.data.resources[resource_].status.standards-status %}
-  <table class="{{site.data.resources[resource_].status.class}}" data-fhir="generated">
+  <table class="{{site.data.resources[resource_].status.class | escape}}" data-fhir="generated">
     <tr>
 {% if site.data.resources[resource_].status.fmm %}
   {% assign colspan = 1 %}
 {% else %}
   {% assign colspan = 2 %}
 {% endif %}
-      <td colspan="{{colspan}}">
+      <td colspan="{{colspan | escape}}">
         {% if site.data.resources[resource_].status.standards-status %}
-          <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus'] | escape_once}}:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus'] | escape_once}}">{{site.data.resources[resource_].status.standards-status|capitalize}}</a>
+          <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus'] | escape_once}}:</i> <a href="{{site.data.fhir.path | escape}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus'] | escape_once}}">{{site.data.resources[resource_].status.standards-status|capitalize | escape}}</a>
           {% if site.data.resources[resource_].status.normativeVersion %}
             ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion | escape_once}})
           {% endif %}
         {% else %}
-          {{site.data.resources[resource_].status.status}}
+          {{site.data.resources[resource_].status.status | escape}}
           {% if site.data.resources[resource_].date %}
 {% capture resourcedate %}
-{{site.data.resources[resource_].date | date: "%Y-%m-%d"}}
+{{site.data.resources[resource_].date | date: "%Y-%m-%d" | escape}}
 {% endcapture %}
             {{site.data.stringsBase[include.lang]['ResourceDate'] | replace: "%RESDATE%", resourcedate | escape_once}}
           {% endif %}
@@ -24,9 +24,9 @@
       </td>
 {% if site.data.resources[resource_].status.fmm %}
       <td>
-        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel'] | escape_once}}</a>: {{site.data.resources[resource_].status.fmm}}
+        <a href="{{site.data.info.fmm-definition | escape}}">{{site.data.stringsBase[include.lang]['MaturityLevel'] | escape_once}}</a>: {{site.data.resources[resource_].status.fmm | escape}}
         {% if site.data.resources[resource_].status.fmmSource %}
-          <span title="{{site.data.resources[resource_].status.fmmSource}}">*</span>
+          <span title="{{site.data.resources[resource_].status.fmmSource | escape}}">*</span>
         {% endif %}
       </td>
 {% endif %}
