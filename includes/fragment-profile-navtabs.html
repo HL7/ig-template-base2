@@ -16,32 +16,32 @@
 <ul class="nav nav-tabs">
 {% if include.active == 'content' %}
   <li class="active">
-    <a href="#">{{site.data.stringsBase[include.lang]['Content']}}</a>
+    <a href="#">{{site.data.stringsBase[include.lang]['Content'] | escape_once}}</a>
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}.html">{{site.data.stringsBase[include.lang]['Content']}}</a>
+    <a href="{{include.type}}-{{include.id}}.html">{{site.data.stringsBase[include.lang]['Content'] | escape_once}}</a>
   </li>
 {% endif %}
 
 {% if include.active == 'definition' %}
   <li class="active">
-    <a href="#">{{site.data.stringsBase[include.lang]['DetailedDescriptions']}}</a>
+    <a href="#">{{site.data.stringsBase[include.lang]['DetailedDescriptions'] | escape_once}}</a>
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}-definitions.html">{{site.data.stringsBase[include.lang]['DetailedDescriptions']}}</a>
+    <a href="{{include.type}}-{{include.id}}-definitions.html">{{site.data.stringsBase[include.lang]['DetailedDescriptions'] | escape_once}}</a>
   </li>
 {% endif %}
 
 {% unless excludemaps == 'y' %}
   {% if include.active == 'mapping' %}
     <li class="active">
-      <a href="#">{{site.data.stringsBase[include.lang]['Mappings']}}</a>
+      <a href="#">{{site.data.stringsBase[include.lang]['Mappings'] | escape_once}}</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}-mappings.html">{{site.data.stringsBase[include.lang]['Mappings']}}</a>
+      <a href="{{include.type}}-{{include.id}}-mappings.html">{{site.data.stringsBase[include.lang]['Mappings'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
@@ -49,11 +49,11 @@
 {% if site.data.resources[resource_].['testplan'] or site.data.resources[resource_].['testscript'] %}
   {% if include.active == 'testing' %}
     <li class="active">
-      <a href="#">{{site.data.stringsBase[include.lang]['Testing']}}</a>
+      <a href="#">{{site.data.stringsBase[include.lang]['Testing'] | escape_once}}</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}-testing.html">{{site.data.stringsBase[include.lang]['Testing']}}</a>
+      <a href="{{include.type}}-{{include.id}}-testing.html">{{site.data.stringsBase[include.lang]['Testing'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endif %}
@@ -63,11 +63,11 @@
   {% unless excludeexamples == 'y' %}
     {% if include.active == 'example' %}
       <li class="active">
-        <a href="#">{{site.data.stringsBase[include.lang]['Examples']}}</a>
+        <a href="#">{{site.data.stringsBase[include.lang]['Examples'] | escape_once}}</a>
       </li>
     {% else %}
       <li>
-        <a href="{{include.type}}-{{include.id}}-examples.html">{{site.data.stringsBase[include.lang]['Examples']}}</a>
+        <a href="{{include.type}}-{{include.id}}-examples.html">{{site.data.stringsBase[include.lang]['Examples'] | escape_once}}</a>
       </li>
     {% endif %}
   {% endunless %}
@@ -77,44 +77,44 @@
 {% unless excludexml == 'y' or contained_resource == 'y' %}
   {% if include.active == 'xml' %}
     <li class="active">
-      <a href="#">{{site.data.stringsBase[include.lang]['XML']}}</a>
+      <a href="#">{{site.data.stringsBase[include.lang]['XML'] | escape_once}}</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.profile.xml.html">{{site.data.stringsBase[include.lang]['XML']}}</a>
+      <a href="{{include.type}}-{{include.id}}.profile.xml.html">{{site.data.stringsBase[include.lang]['XML'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
 {% unless excludejson == 'y' or contained_resource == 'y' %}
   {% if include.active == 'json' %}
     <li class="active">
-      <a href="#">{{site.data.stringsBase[include.lang]['JSON']}}</a>
+      <a href="#">{{site.data.stringsBase[include.lang]['JSON'] | escape_once}}</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.profile.json.html">{{site.data.stringsBase[include.lang]['JSON']}}</a>
+      <a href="{{include.type}}-{{include.id}}.profile.json.html">{{site.data.stringsBase[include.lang]['JSON'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
 {% unless excludettl == 'y' or contained_resource == 'y' %}
   {% if include.active == 'ttl' %}
     <li class="active">
-      <a href="#">{{site.data.stringsBase[include.lang]['TTL']}}</a>
+      <a href="#">{{site.data.stringsBase[include.lang]['TTL'] | escape_once}}</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.profile.ttl.html">{{site.data.stringsBase[include.lang]['TTL']}}</a>
+      <a href="{{include.type}}-{{include.id}}.profile.ttl.html">{{site.data.stringsBase[include.lang]['TTL'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endunless %}
 {% if  site.data.resources[resource_].['history'] %}
   {% if include.active == 'history' %}
     <li class="active">
-      <a href="#">{{site.data.stringsBase[include.lang]['History']}}</a>
+      <a href="#">{{site.data.stringsBase[include.lang]['History'] | escape_once}}</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.profile.history.html">{{site.data.stringsBase[include.lang]['History']}}</a>
+      <a href="{{include.type}}-{{include.id}}.profile.history.html">{{site.data.stringsBase[include.lang]['History'] | escape_once}}</a>
     </li>
   {% endif %}
 {% endif %}

@@ -249,9 +249,5 @@
          issue[], which the publisher then refused to parse -->
     <replaceregexp file="${ig.template}/onCheck-validation.json" match=",(\s*\]\}\s*)$" replace="\1" flags="s"/>
   </target>
-  <scriptdef name="appendArtifacts" language="javascript" description="Adds additional values to the to the onGenerate.files list">
-    <attribute name="files"/>
-    self.project.setProperty("onGenerate.files", self.project.getProperty("onGenerate.files").concat(";").concat(attributes.get("files")));
-  </scriptdef>
 
 </project>

@@ -28,13 +28,13 @@
 {% endif %}
               </td>
               <td style="text-align:center">
-                <a href="#top">{{site.data.stringsBase[include.lang]['PageTop']}}</a>
+                <a href="#top">{{site.data.stringsBase[include.lang]['PageTop'] | escape_once}}</a>
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 {% if site.data.pages[localPage].next %}
-                <a href="{{site.data.pages[localPage].next}}">{{site.data.stringsBase[include.lang]['NextPage']}}</a>
+                <a href="{{site.data.pages[localPage].next}}">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</a>
 {% else %}
-                <span style="visibility:hidden">{{site.data.stringsBase[include.lang]['NextPage']}}</span>
+                <span style="visibility:hidden">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</span>
 {% endif %}
               </td>
             </tr>
@@ -51,9 +51,9 @@
     {{ site.data.fhir.genDate | date: "%Y-%m-%d" }}
   </span>
 {% endcapture %}
-          {{site.data.stringsBase[include.lang]['IGCopyright'] | replace: "%YEAR%", site.data.info.copyrightyear}} <a style="color:var(--footer-hyperlink-text-color)" href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher | escape}}</a>.  
-          {{site.data.stringsBase[include.lang]['IGPackage'] | replace: "%PKG%", pkg | replace: "%FHIRVER%", fhirver}}
-          {{site.data.stringsBase[include.lang]['GeneratedDate'] | replace: "%DATE%", gendate}}
+          {{site.data.stringsBase[include.lang]['IGCopyright'] | replace: "%YEAR%", site.data.info.copyrightyear | escape_once}} <a style="color:var(--footer-hyperlink-text-color)" href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher | escape}}</a>.  
+          {{site.data.stringsBase[include.lang]['IGPackage'] | replace: "%PKG%", pkg | replace: "%FHIRVER%", fhirver | escape_once}}
+          {{site.data.stringsBase[include.lang]['GeneratedDate'] | replace: "%DATE%", gendate | escape_once}}
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             {% include fragment-footer.html lang=include.lang %}

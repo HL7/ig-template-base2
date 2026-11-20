@@ -3,19 +3,19 @@
     <tr>
   {% if site.data.pages[localPage].status %}
       <td>
-        <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus']}}:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus']}}">{{site.data.pages[localPage].status|capitalize}}</a>
+        <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus'] | escape_once}}:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus'] | escape_once}}">{{site.data.pages[localPage].status|capitalize}}</a>
         {% if site.data.pages[localPage].normativeVersion %}
-          ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion}})
+          ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion | escape_once}})
         {% endif %}
       </td>
   {% endif %}
   {% if site.data.pages[localPage].fmm %}
       <td>
-        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel']}}</a>: {{site.data.pages[localPage].fmm}}
+        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel'] | escape_once}}</a>: {{site.data.pages[localPage].fmm}}
       </td>
   {% endif %}
-      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
-        <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp'] | escape_once}}">
+        <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges'] | escape_once}}</label>
   {% if site.data.info.togglechanges == 'y' %}
         <input style="margin:0" type="checkbox" id="showChanges" checked="checked" onchange="toggleChanges()"/>
   {% else %}

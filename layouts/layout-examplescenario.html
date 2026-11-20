@@ -10,8 +10,8 @@
   <a name="root"> </a>
 
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}
-{% if site.data.resources[resource_].experimental == true %}({{site.data.stringsBase['{{[lang]}}']['Experimental']}}){% endif %}
+  <h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}
+{% if site.data.resources[resource_].experimental == true %}({{site.data.stringsBase['{{[lang]}}']['Experimental'] | escape_once}}){% endif %}
   </h2>
 
 {% include fragment-resourceTable.html lang="{{[lang]}}" %}
@@ -30,19 +30,19 @@
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 
 <a name="actors"> </a>
-<h3>{{site.data.stringsBase['{{[lang]}}']['Actors']}}</h3>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Actors'] | escape_once}}</h3>
   {% include {{[type]}}-{{[id]}}-actor-table{{[langsuffix]}}.xhtml %}
 
 <a name="diagram"> </a>
-<h3>{{site.data.stringsBase['{{[lang]}}']['Diagram']}}</h3>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Diagram'] | escape_once}}</h3>
   {% include {{[type]}}-{{[id]}}-process-diagram{{[langsuffix]}}.xhtml %}
 
 <a name="processes"> </a>
-<h3>{{site.data.stringsBase['{{[lang]}}']['Processes']}}</h3>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Processes'] | escape_once}}</h3>
   {% include {{[type]}}-{{[id]}}-processes{{[langsuffix]}}.xhtml %}
 
 <a name="instances"> </a>
-<h3>{{site.data.stringsBase['{{[lang]}}']['Instances']}}</h3>
+<h3>{{site.data.stringsBase['{{[lang]}}']['Instances'] | escape_once}}</h3>
   {% include {{[type]}}-{{[id]}}-instance-table{{[langsuffix]}}.xhtml %}
 
   <!-- insert notes if present -->

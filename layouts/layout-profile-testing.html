@@ -10,7 +10,7 @@
 
   <a name="root"> </a>
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['Testing']}}</h2>
+  <h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['Testing'] | escape_once}}</h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 
 {% assign basepath = page.path | replace: '-testing.html', '.html' %}
@@ -32,10 +32,10 @@
     </tbody>
   </table>
 {% else %}
-  <p><b>{{ site.data.stringsBase['{{[lang]}}']['NoTestPlan'] | replace: "%ARTIFACT%", "{{[id]}} {{[type]}}"}}</b></p>
+  <p><b>{{ site.data.stringsBase['{{[lang]}}']['NoTestPlan'] | replace: "%ARTIFACT%", "{{[id]}} {{[type]}}" | escape_once}}</b></p>
 {% endif %}
 
-<h3>{{site.data.stringsBase['{{[lang]}}']['TestScripts']}}</h3>
+<h3>{{site.data.stringsBase['{{[lang]}}']['TestScripts'] | escape_once}}</h3>
 {% if site.data.pages[basepath].testscripts.size > 0 %}
   <table style="grid">
     <tbody>
@@ -49,7 +49,7 @@
     </tbody>
   </table>
 {% else %}
-  <p><b>{{ site.data.stringsBase['{{[lang]}}']['NoTestScript'] | replace: "%ARTIFACT%", "{{[id]}} {{[type]}}"}}</b></p>
+  <p><b>{{ site.data.stringsBase['{{[lang]}}']['NoTestScript'] | replace: "%ARTIFACT%", "{{[id]}} {{[type]}}" | escape_once}}</b></p>
 {% endif %}
 
 <!-- insert notes if present -->

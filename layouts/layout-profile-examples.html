@@ -10,7 +10,7 @@
 
   <a name="root"> </a>
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['Examples']}}</h2>
+  <h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['Examples'] | escape_once}}</h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 
    <!-- insert intro if present -->
@@ -20,9 +20,9 @@
 
 {% if site.data.pages[basepath].examples.size > 0 %}
 {% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
-  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForResource'] | replace: "%ID%", "{{[id]}}"}}</p>
+  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForResource'] | replace: "%ID%", "{{[id]}}" | escape_once}}</p>
 {% else %}
-  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForProfile'] | replace: "%ID%", "{{[id]}}"}}</p>
+  <p>{{site.data.stringsBase['{{[lang]}}']['ExamplesForProfile'] | replace: "%ID%", "{{[id]}}" | escape_once}}</p>
 {% endif %}
   <table style="grid">
     <tbody>
@@ -37,9 +37,9 @@
   </table>
 {% else %}
 {% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
-  <p><b>{{site.data.stringsBase['{{[lang]}}']['ResourceNoExamples'] | replace: "%ID%", "{{[id]}}"}}</b></p>
+  <p><b>{{site.data.stringsBase['{{[lang]}}']['ResourceNoExamples'] | replace: "%ID%", "{{[id]}}" | escape_once}}</b></p>
 {% else %}
-  <p><b>{{site.data.stringsBase['{{[lang]}}']['NoExamples'] | replace: "%ID%", "{{[id]}}"}}</b></p>
+  <p><b>{{site.data.stringsBase['{{[lang]}}']['NoExamples'] | replace: "%ID%", "{{[id]}}" | escape_once}}</b></p>
 {% endif %}
 {% endif %}
 

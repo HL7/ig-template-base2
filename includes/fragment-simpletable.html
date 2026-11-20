@@ -8,9 +8,9 @@
 {% endif %}
       <td colspan="{{colspan}}">
         {% if site.data.resources[resource_].status.standards-status %}
-          <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus']}}:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus']}}">{{site.data.resources[resource_].status.standards-status|capitalize}}</a>
+          <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus'] | escape_once}}:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus'] | escape_once}}">{{site.data.resources[resource_].status.standards-status|capitalize}}</a>
           {% if site.data.resources[resource_].status.normativeVersion %}
-            ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion}})
+            ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion | escape_once}})
           {% endif %}
         {% else %}
           {{site.data.resources[resource_].status.status}}
@@ -18,13 +18,13 @@
 {% capture resourcedate %}
 {{site.data.resources[resource_].date | date: "%Y-%m-%d"}}
 {% endcapture %}
-            {{site.data.stringsBase[include.lang]['ResourceDate'] | replace: "%RESDATE%", resourcedate}}
+            {{site.data.stringsBase[include.lang]['ResourceDate'] | replace: "%RESDATE%", resourcedate | escape_once}}
           {% endif %}
         {% endif %}
       </td>
 {% if site.data.resources[resource_].status.fmm %}
       <td>
-        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel']}}</a>: {{site.data.resources[resource_].status.fmm}}
+        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel'] | escape_once}}</a>: {{site.data.resources[resource_].status.fmm}}
         {% if site.data.resources[resource_].status.fmmSource %}
           <span title="{{site.data.resources[resource_].status.fmmSource}}">*</span>
         {% endif %}

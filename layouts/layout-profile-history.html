@@ -10,10 +10,10 @@
 
   <a name="root"> </a>
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory']}}</h2>
+  <h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory'] | escape_once}}</h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 {% assign modelLower = modelType | downcase %}
-  <p>{{site.data.stringsBase['{{[lang]}}']['ChangesIn'] | replace: "%ID%", "{{[id]}}" | replace: "%TYPE%", modelLower}}</p>
+  <p>{{site.data.stringsBase['{{[lang]}}']['ChangesIn'] | replace: "%ID%", "{{[id]}}" | replace: "%TYPE%", modelLower | escape_once}}</p>
 
   {% include {{[type]}}-{{[id]}}-history{{[langsuffix]}}.xhtml %}
 

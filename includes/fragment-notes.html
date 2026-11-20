@@ -1,6 +1,6 @@
 {% assign notes = site.data.pages[localPage].notes %}
 {% if notes != null %}
-<h3>{{site.data.stringsBase[include.lang]['Notes']}}:</h3>
+<h3>{{site.data.stringsBase[include.lang]['Notes'] | escape_once}}:</h3>
 {% if site.data.pages[localPage].notes-type == 'xml' %}
 {% include {{include.lang}}/{{notes}} type=include.type id=include.id %}
 {% else %}

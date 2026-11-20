@@ -10,15 +10,15 @@
 
   <a name="root"> </a>
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{modelType}}:
+  <h2 id="root">{{modelType | escape_once}}:
 {% if site.data.structuredefinitions["{{[id]}}"].abstract == true %}
 <i> {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}</i>
 {% else %}
 {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}
 {% endif %}
 {% if site.data.resources[resource_].experimental == true or site.data.structuredefinitions["{{[id]}}"].abstract == true %}({% endif %}
-{% if site.data.structuredefinitions["{{[id]}}"].abstract == true %}{{site.data.stringsBase['{{[lang]}}']['Abstract']}}{% endif %}
-{% if site.data.resources[resource_].experimental == true %}{{site.data.stringsBase['{{[lang]}}']['Experimental']}}{% endif %}
+{% if site.data.structuredefinitions["{{[id]}}"].abstract == true %}{{site.data.stringsBase['{{[lang]}}']['Abstract'] | escape_once}}{% endif %}
+{% if site.data.resources[resource_].experimental == true %}{{site.data.stringsBase['{{[lang]}}']['Experimental'] | escape_once}}{% endif %}
 {% if site.data.resources[resource_].experimental == true or site.data.structuredefinitions["{{[id]}}"].abstract == true %}){% endif %}
   </h2>
 
@@ -43,45 +43,45 @@
 
   <!-- no uri -->
   <a name="resource"> </a>
-  <h3 id="resource">{{site.data.stringsBase['{{[lang]}}']['FormalResource']}}</h3>
+  <h3 id="resource">{{site.data.stringsBase['{{[lang]}}']['FormalResource'] | escape_once}}</h3>
   <p>
-    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">{{site.data.stringsBase['{{[lang]}}']['ReadingStructures']}}</a>.
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">{{site.data.stringsBase['{{[lang]}}']['ReadingStructures'] | escape_once}}</a>.
   </p>
   <div id="tabs">
     <ul>
       <li>
-        <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['Structure']}}</a>
+        <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['Structure'] | escape_once}}</a>
       </li>
 {% if site.data.structuredefinitions["{{[id]}}"].uml %}
       <li>
-        <a href="#tabs-uml">{{site.data.stringsBase['{{[lang]}}']['UMLDiagram']}}</a>
+        <a href="#tabs-uml">{{site.data.stringsBase['{{[lang]}}']['UMLDiagram'] | escape_once}}</a>
       </li>
 {% endif %}
 <!-- TODO: Put Psuedo back -->
 {% unless excludexml == 'y' %}
       <li>
-        <a href="#tabs-xml">{{site.data.stringsBase['{{[lang]}}']['PseudoXML']}}</a>
+        <a href="#tabs-xml">{{site.data.stringsBase['{{[lang]}}']['PseudoXML'] | escape_once}}</a>
       </li>
 {% endunless %}
 {% unless excludejson == 'y' %}
       <li>
-        <a href="#tabs-json">{{site.data.stringsBase['{{[lang]}}']['PseudoJSON']}}</a>
+        <a href="#tabs-json">{{site.data.stringsBase['{{[lang]}}']['PseudoJSON'] | escape_once}}</a>
       </li>
 {% endunless %}
 {% unless excludettl == 'y' %}
       <li>
-        <a href="#tabs-ttl">{{site.data.stringsBase['{{[lang]}}']['PseudoTTL']}}</a>
+        <a href="#tabs-ttl">{{site.data.stringsBase['{{[lang]}}']['PseudoTTL'] | escape_once}}</a>
       </li>
 {% endunless %}
 <!-- TODO - inter-version changes? -->
       <li>
-        <a href="#tabs-all">{{site.data.stringsBase['{{[lang]}}']['AllTables']}}</a>
+        <a href="#tabs-all">{{site.data.stringsBase['{{[lang]}}']['AllTables'] | escape_once}}</a>
       </li>
     </ul>
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink | escape_once}}</p>
         <div id="tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
 
@@ -146,9 +146,9 @@
     <div id="tabs-all">
       <div id="all-tbl-diff">
         <p>
-          <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView']}}</b>
+          <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView'] | escape_once}}</b>
         </p>
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink | escape_once}}</p>
         <div id="all-tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
           <!--Terminology Bindings heading in the fragment -->
@@ -176,7 +176,7 @@
 {% unless excludexml == 'y' %}
       <!--<div id="all-xml">
         <p>
-          <b>{{site.data.stringsBase['{{[lang]}}']['XMLTemplate']}}</b>
+          <b>{{site.data.stringsBase['{{[lang]}}']['XMLTemplate'] | escape_once}}</b>
         </p>
         <div id="all-xml-inner">
           {% include StructureDefinition-{{[id]}}-pseudo-xml{{[langsuffix]}}.xhtml %}
@@ -186,7 +186,7 @@
 {% unless excludejson == 'y' %}
       <!--<div id="all-json">
         <p>
-          <b>{{site.data.stringsBase['{{[lang]}}']['JSONTemplate']}}</b>
+          <b>{{site.data.stringsBase['{{[lang]}}']['JSONTemplate'] | escape_once}}</b>
         </p>
         <div id="all-json-inner">
           {% include StructureDefinition-{{[id]}}-pseudo-json{{[langsuffix]}}.xhtml %}
@@ -196,7 +196,7 @@
 {% unless excludettl == 'y' %}
       <!--<div id="all-ttl">
         <p>
-          <b>{{site.data.stringsBase['{{[lang]}}']['TTLTemplate']}}</b>
+          <b>{{site.data.stringsBase['{{[lang]}}']['TTLTemplate'] | escape_once}}</b>
         </p>
         <div id="all-ttl-inner">
           {% include StructureDefinition-{{[id]}}-pseudo-ttl{{[langsuffix]}}.xhtml %}
@@ -206,14 +206,14 @@
     </div>
   </div>
   <p>&#160;</p>
-  <p>{{site.data.stringsBase['{{[lang]}}']['ResourceOtherReps']}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV']}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel']}}</a></p>
+  <p>{{site.data.stringsBase['{{[lang]}}']['ResourceOtherReps'] | escape_once}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV'] | escape_once}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel'] | escape_once}}</a></p>
 
 <!-- insert notes if present -->
 {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
 
 {% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
   <a name="search"> </a>
-  <h3 id="search">{{site.data.stringsBase['{{[lang]}}']['SearchParameters']}}</h3>
+  <h3 id="search">{{site.data.stringsBase['{{[lang]}}']['SearchParameters'] | escape_once}}</h3>
   {% include StructureDefinition-{{[id]}}-search-params{{[langsuffix]}}.xhtml %}
 {% endif %}
 
