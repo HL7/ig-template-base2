@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="{{site.data.info.assets | escape}}assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
-{% assign label = {{site.data.pages[localPage].label}} | split: '.0' %}
+{% assign label = {{site.data.pages[localPage].label}} | split: '.0' | join: '' %}
 	  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/prism.js"></script>
 	  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/prism-cql.js"></script>
