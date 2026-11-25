@@ -119,10 +119,8 @@
   <target name="onGenerate.plantUml.ig" depends="check-plantumlfiles" if="ig.plantumlfiles.exist">
     <java jar="${ig.scripts}/plantuml.jar" fork="true" failonerror="true">
       <jvmarg line="-Dfile.encoding=UTF-8"/>
-      <!-- ALLOWLIST lets diagrams !include files from their own images-source folder only.  plantuml.allowlist.url is
-           deliberately unset, so URLs (!includeurl, %load_json from a URL, etc.) stay blocked -->
-      <jvmarg value="-DPLANTUML_SECURITY_PROFILE=ALLOWLIST"/>
-      <jvmarg value="-Dplantuml.allowlist.path=${ig.root}/${folder.input}/images-source"/>
+      <!-- SANDBOX stops diagrams from reading local files or URLs (!include, !includeurl, %load_json, etc.) -->
+      <jvmarg line="-DPLANTUML_SECURITY_PROFILE=SANDBOX"/>
       <arg value="-nometadata"/>
       <arg value="-failfast2"/>
       <arg value="-tsvg"/>
