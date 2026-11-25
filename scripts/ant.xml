@@ -187,9 +187,10 @@
       <fileset dir="${dir.template.includes}" includes="*"/>
     </copy>
   </target>-->
+  <!-- the menu checks are advisory: a menu that isn't well-formed XML (SUSHI doesn't escape & in menu links) mustn't stop the build -->
   <target name="onGenerate.igQa" depends="onGenerate.processIg">
-    <xslt in="${dir.input}/includes/menu.xml" out="${ig.template}/ongenerate-validation-menuqa.json" failonerror="false" style="${ig.scripts}/onGenerate.qa.checkMenu.xslt"/>
-    <xslt in="${ig.root}/fsh-generated/includes/menu.xml" out="${ig.template}/ongenerate-validation-menuqa.json" failonerror="false" style="${ig.scripts}/onGenerate.qa.checkMenu.xslt"/>
+    <xslt in="${dir.input}/includes/menu.xml" out="${ig.template}/ongenerate-validation-menuqa.json" failonerror="false" failOnTransformationError="false" style="${ig.scripts}/onGenerate.qa.checkMenu.xslt"/>
+    <xslt in="${ig.root}/fsh-generated/includes/menu.xml" out="${ig.template}/ongenerate-validation-menuqa.json" failonerror="false" failOnTransformationError="false" style="${ig.scripts}/onGenerate.qa.checkMenu.xslt"/>
     <xslt in="${onGenerate.ig.dest}xml" out="${ig.template}/ongenerate-validation-igqa.json" style="${ig.scripts}/onGenerate.qa.xslt"/>
   </target>
   <target name="onGenerate.artifactList" depends="onGenerate.checkVersions,onGenerate.igQa,onGenerate.setup">
