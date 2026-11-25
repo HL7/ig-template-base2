@@ -7,12 +7,12 @@
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
 
 {% if site.data.artifacts[localPage].logical %}
-  <p>{{site.data.stringsBase['{{[lang]}}']['ModelOf']}} 
+  <p>{{site.data.stringsBase['{{[lang]}}']['ModelOf'] | escape_once}} 
   {% if site.data.artifacts[localPage].logicalInstanceOfLocal %}
     {% assign localRef = site.data.artifacts[localPage].logicalInstanceOfLocal %}
-    <a href="{{site.data.resources[localRef].path}}">{{site.data.resources[localRef].titlelang['{{[lang]}}']}}</a>
+    <a href="{{site.data.resources[localRef].path | escape}}">{{site.data.resources[localRef].titlelang['{{[lang]}}'] | escape}}</a>
   {% else %}
-    {{site.data.artifacts[localPage].logicalInstanceOf}}
+    {{site.data.artifacts[localPage].logicalInstanceOf | escape}}
   {% endif %}
   </p>
 {% else %}
@@ -25,13 +25,17 @@
 {% endif %}
 {% assign prefix = site.data.artifacts[localPage].type %}
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[localPage].titlelang['{{[lang]}}'] | escape_once}}</h2>
+  <h2 id="root">{{example | escape_once}}{{prefix | escape}}: {{site.data.pages[localPage].titlelang['{{[lang]}}'] | escape_once}}</h2>
+
+{% if site.data.resources.descriptionlang['{{[lang]}}'] != '' %}
+  <p>{{site.data.resources.descriptionlang['{{[lang]}}'] | escape}}</p>
+{% endif %}
 
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 {% unless example %}
   {% if '{{[type]}}' == 'CapabilityStatement' %}
       <p>
-      <a href="../{{[id]}}.openapi.json" no-download="true">{{site.data.stringsBase['{{[lang]}}']['Swagger']}}</a> | <a href="../{{[id]}}.openapi.json" download>{{site.data.stringsBase['{{[lang]}}']['Download']}}</a>
+      <a href="../{{[id]}}.openapi.json" no-download="true">{{site.data.stringsBase['{{[lang]}}']['Swagger'] | escape_once}}</a> | <a href="../{{[id]}}.openapi.json" download>{{site.data.stringsBase['{{[lang]}}']['Download'] | escape_once}}</a>
       </p>
   {% endif %}
 {% endunless %}
@@ -42,7 +46,7 @@
   {% include {{[type]}}-{{[id]}}-html{{[langsuffix]}}.xhtml %}
 
   {% if site.data.resources[resource_].contained != nil %}
-  <h4>{{site.data.stringsBase['{{[lang]}}']['Contained']}}</h4>
+  <h3>{{site.data.stringsBase['{{[lang]}}']['Contained'] | escape_once}}</h3>
   {% include {{[type]}}-{{[id]}}-contained-index{{[langsuffix]}}.xhtml %}
   {% endif %}
 

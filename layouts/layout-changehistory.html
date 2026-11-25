@@ -10,10 +10,10 @@
   {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='history' lang="{{[lang]}}" %}
 
   <a name="root"> </a>
-  <h2 id="root">{{modelType}}: {{site.data.resources[resource_].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory']}}</h2>
+  <h2 id="root">{{modelType | escape_once}}: {{site.data.resources[resource_].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['ChangeHistory'] | escape_once}}</h2>
 {% assign modelLower = modelType | downcase %}
-{% capture artifact %}{{[id]}} {{modelLower}}{% endcapture %}
-  <p>{{site.data.stringsBase['{{[lang]}}']['HistoryOfChange'] | replace: "%ARTIFACT%", artifact}}</p>
+{% capture artifact %}{{[id]}} {{modelLower | escape_once}}{% endcapture %}
+  <p>{{site.data.stringsBase['{{[lang]}}']['HistoryOfChange'] | replace: "%ARTIFACT%", artifact | escape_once}}</p>
 
   {% include {{[type]}}-{{[id]}}-history{{[langsuffix]}}.xhtml %}
 

@@ -1,13 +1,13 @@
-  <table class="{{site.data.resources[resource_].status.class}}" data-fhir="generated">
+  <table class="{{site.data.resources[resource_].status.class | escape}}" data-fhir="generated">
 {% if site.data.resources[resource_].url != nil %}
     <tr>
-      <td colspan="4"><i>{{site.data.stringsBase[include.lang]['OfficialURL']}}</i>: <span class="copy-text">{{site.data.resources[resource_].url}}<button title="{{site.data.stringsBase[include.lang]['CopyURL']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}"/></span>
+      <td colspan="4"><i>{{site.data.stringsBase[include.lang]['OfficialURL'] | escape_once}}</i>: <span class="copy-text">{{site.data.resources[resource_].url | escape}}<button title="{{site.data.stringsBase[include.lang]['CopyURL'] | escape_once}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url | escape}}"/></span>
       </td>
-      <td><i>{{site.data.stringsBase[include.lang]['Version']}}</i>:
-      <span class="copy-text">{{site.data.resources[resource_].version}}<button title="{{site.data.stringsBase[include.lang]['CopyVersioned']}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}|{{site.data.resources[resource_].version}}"/></span>
+      <td><i>{{site.data.stringsBase[include.lang]['Version'] | escape_once}}</i>:
+      <span class="copy-text">{{site.data.resources[resource_].version | escape}}<button title="{{site.data.stringsBase[include.lang]['CopyVersioned'] | escape_once}}" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url | escape}}|{{site.data.resources[resource_].version | escape}}"/></span>
       </td>
-      <td style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
-        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
+      <td style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp'] | escape_once}}">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges'] | escape_once}}</label>
   {% if site.data.info.togglechanges == 'y' %}
         <input style="margin:0" type="checkbox" id="showChanges" checked="checked" onchange="toggleChanges()"/>
   {% else %}
@@ -29,11 +29,11 @@
 {% endfor %}
 {% if foundRes == false %}
 {% if jurisdiction.flag %}
-  <img alt="{{jurisdiction.name}} flag" src="assets/images/{{jurisdiction.flag}}.svg" height="16" title="{{jurisdiction.name}}"/>
+  <img alt="{{jurisdiction.name | escape}} flag" src="assets/images/{{jurisdiction.flag | escape}}.svg" height="16" title="{{jurisdiction.name | escape}}"/>
 {% elsif jurisdiction.code %}
-  <span title="{{jurisdiction.name}}">{{jurisdiction.code}}</span>
+  <span title="{{jurisdiction.name | escape}}">{{jurisdiction.code | escape}}</span>
 {% else %}
-  {{jurisdiction.name}}
+  {{jurisdiction.name | escape}}
 {% endif %}
 {% endif %}
 {% endfor %}
@@ -50,79 +50,81 @@
 {% if trimmedJurisdictions == "" %}
   {% assign colspan = colspan | plus: 1 %}
 {% endif %}
-      <td colspan="{{colspan}}">
+      <td colspan="{{colspan | escape}}">
         {% if site.data.resources[resource_].status.standards-status %}
           <i>
             {% if table_prefix != nil %}
-              {{table_prefix}}
+              {{table_prefix | escape}}
             {% endif %}
             Standards status:
-          </i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus']}}">{{site.data.resources[resource_].status.standards-status|capitalize}}</a>
+          </i> <a href="{{site.data.fhir.path | escape}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus'] | escape_once}}">{{site.data.resources[resource_].status.standards-status|capitalize | escape}}</a>
           {% if site.data.resources[resource_].status.normativeVersion %}
-            ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion}})
+            ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion | escape_once}})
           {% endif %}
           {% if site.data.resources[resource_].status.standards-status-support %}
-            <span title="{{site.data.resources[resource_].status.standards-status-support }}">*</span>
+            <span title="{{site.data.resources[resource_].status.standards-status-support | escape }}">*</span>
           {% endif %}
         {% else %}
-          {{site.data.resources[resource_].status.status}}
+          {{site.data.resources[resource_].status.status | escape}}
           {% if site.data.resources[resource_].date %}
 {% capture resourcedate %}
-{{site.data.resources[resource_].date | date: "%Y-%m-%d"}}
+{{site.data.resources[resource_].date | date: "%Y-%m-%d" | escape}}
 {% endcapture %}
-            {{site.data.stringsBase[include.lang]['ResourceDate'] | replace: "%RESDATE%", resourcedate}}
+            {{site.data.stringsBase[include.lang]['ResourceDate'] | replace: "%RESDATE%", resourcedate | escape_once}}
           {% endif %}
         {% endif %}
       </td>
 {% if site.data.resources[resource_].status.fmm %}
       <td>
-        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel']}}</a>: {{site.data.resources[resource_].status.fmm}}
+        <a href="{{site.data.info.fmm-definition | escape}}">{{site.data.stringsBase[include.lang]['MaturityLevel'] | escape_once}}</a>: {{site.data.resources[resource_].status.fmm | escape}}
         {% if site.data.resources[resource_].status.fmmSource or site.data.resources[resource_].status.fmm-support %}
-          <span title="{{site.data.resources[resource_].status.fmmSource}}{{site.data.resources[resource_].status.fmm-support }}">*</span>
+          <span title="{{site.data.resources[resource_].status.fmmSource | escape}}{{site.data.resources[resource_].status.fmm-support | escape }}">*</span>
         {% endif %}
       </td>
 {% endif %}
 {% if site.data.resources[igId].status.owner != site.data.resources[resource_].status.owner and site.data.resources[resource_].status.owner != nil %}
       <td>
-        <i>{{site.data.stringsBase[include.lang]['Responsible']}}:</i> 
-{% if site.data.resources[resource_].status.link %}
-        <a href="{{site.data.resources[resource_].status.link}}">{{site.data.resources[resource_].status.owner}}</a>
+        <i>{{site.data.stringsBase[include.lang]['Responsible'] | escape_once}}:</i> 
+{% comment %}IG-supplied link: only http, https, mailto or relative{% endcomment %}
+{% assign statusLink = site.data.resources[resource_].status.link | strip %}{% assign linkScheme = statusLink | split: ':' | first | downcase %}{% if statusLink contains ':' and linkScheme != 'http' and linkScheme != 'https' and linkScheme != 'mailto' %}{% assign statusLink = '' %}{% endif %}
+{% if statusLink != '' %}
+        <a href="{{statusLink | escape}}">{{site.data.resources[resource_].status.owner | escape}}</a>
 {% else %}
-        {{site.data.resources[resource_].status.owner}}
+        {{site.data.resources[resource_].status.owner | escape}}
 {% endif %}
       </td>
 {% endif %}
 {% if trimmedJurisdictions != "" %}
       <td>
-        <i>{{site.data.stringsBase[include.lang]['Realm']}}:</i> {{trimmedJurisdictions}}
+        <i>{{site.data.stringsBase[include.lang]['Realm'] | escape_once}}:</i> {% comment %}Unescaped on purpose: HTML built above from escaped jurisdiction values{% endcomment %}{{trimmedJurisdictions}}
       </td>
 {% endif %}
-      <td><i>{{site.data.stringsBase[include.lang]['ComputableName']}}</i>: <span style="font-family: monospace;">{{site.data.resources[resource_].name}}</span></td>
+      <td><i>{{site.data.stringsBase[include.lang]['ComputableName'] | escape_once}}</i>: <span style="font-family: monospace;">{{site.data.resources[resource_].name | escape}}</span></td>
     </tr>
 {% if site.data.resources[resource_].identifiers %}
     <tr>
       <td colspan="6">
-        <i>{{site.data.stringsBase[include.lang]['OtherIdentifiers']}}:</i> {{site.data.resources[resource_].identifiers}}
+        <i>{{site.data.stringsBase[include.lang]['OtherIdentifiers'] | escape_once}}:</i> {{site.data.resources[resource_].identifiers | escape}}
       </td>
     </tr>
 {% endif %}
 {% if site.data.resources[resource_].keywords %}
     <tr>
       <td colspan="6">
-        <i>{{site.data.stringsBase[include.lang]['Keywords']}}:</i> {{site.data.resources[resource_].keywords}}
+        <i>{{site.data.stringsBase[include.lang]['Keywords'] | escape_once}}:</i> {{site.data.resources[resource_].keywords | escape}}
       </td>
     </tr>
 {% endif %}
 {% if site.data.resources[resource_].contexts %}
     <tr>
-{% assign usageLabel = "*" | append: site.data.stringsBase[include.lang]['Usage'] | append: "*: " %}
-      <td colspan="6" data-fhir="generated">{{site.data.resources[resource_].contexts | prepend: usageLabel | markdownify}}</td>
+{% assign usageLabel = "*" | append: site.data.stringsBase[include.lang]['Usage'] | append: "*: " | escape_once %}
+      <td colspan="6" data-fhir="generated">{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].contexts | prepend: usageLabel | markdownify}}</td>
     </tr>
 {% endif %}
 {%if site.data.resources[resource_].copyright %}
-{% assign copyrightLabel = "*" | append: site.data.stringsBase[include.lang]['CopyrightLegal'] | append: "*: " %}
+{% assign copyrightLabel = "*" | append: site.data.stringsBase[include.lang]['CopyrightLegal'] | append: "*: " | escape_once %}
     <tr>
-      <td colspan="6" data-fhir="generated">{{site.data.resources[resource_].copyrightlang[include.lang] | prepend: copyrightLabel | markdownify}}</td>
+      <td colspan="6" data-fhir="generated">{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].copyrightlang[include.lang] | prepend: copyrightLabel | markdownify}}</td>
     </tr>
 {% endif %}
   </table>

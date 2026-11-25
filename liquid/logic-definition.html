@@ -16,7 +16,7 @@
       <a name="{{ddefinitionUrl}}"> </a>
       {% assign seenLogicDefs = iif(seenLogicDefs.exists(), seenLogicDefs, '|') + ddefinitionUrl + '|' %}
     {% endif %}
-    <pre class="content-container highlight language-cql" style="border: none;"><code class="language-cql">{{statementExtension.value}}</code></pre>
+    <pre class="content-container highlight language-cql" style="border: none;"><code class="language-cql">{{statementExtension.value.escape('html')}}</code></pre>
   </td>
 {% endfor %}
 </tr>

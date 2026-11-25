@@ -7,7 +7,7 @@
 {% else %}
 {% assign dir = 'ltr' %}
 {% endif %}
-<html xml:lang="{{include.lang}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{include.lang}}" dir="{{dir}}">
+<html xml:lang="{{include.lang | escape}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{include.lang | escape}}" dir="{{dir | escape}}">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
     <title>{{site.data.pages[localPage].titlelang[include.lang] | escape_once}} - {{site.data.fhir.ig.title | escape_once}} v{{site.data.fhir.ig.version | escape_once}}</title>
@@ -15,21 +15,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="{{site.data.info.assets}}fhir.css" rel="stylesheet"/>
+    <link href="{{site.data.info.assets | escape}}fhir.css" rel="stylesheet"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{site.data.info.assets}}assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+    <link href="{{site.data.info.assets | escape}}assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
     <!-- Project extras -->
-    <link href="{{site.data.info.assets}}assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="{{site.data.info.assets}}assets/css/prism.css" rel="stylesheet" />
-    <link href="{{site.data.info.assets}}assets/css/project.css" rel="stylesheet"/>
-  	<link href="{{site.data.info.assets}}assets/css/cqf.css" rel="stylesheet" />
-    {% include fragment-css.html lang=include.lang %}
+    <link href="{{site.data.info.assets | escape}}assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="{{site.data.info.assets | escape}}assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="{{site.data.info.assets | escape}}assets/css/prism.css" rel="stylesheet" />
+    <link href="{{site.data.info.assets | escape}}assets/css/liquid.css" rel="stylesheet" />
+    <link href="{{site.data.info.assets | escape}}assets/css/project.css" rel="stylesheet"/>
+  	{% include fragment-css.html lang=include.lang %}
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
-    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/direction-management.js"> </script>
+    <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/direction-management.js"> </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,27 +38,26 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="{{site.data.info.assets}}assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="{{site.data.info.assets}}assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="{{site.data.info.assets}}assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="{{site.data.info.assets}}assets/ico/icon-fhir-57.png"/>
-    <link rel="shortcut icon" href="{{site.data.info.assets}}assets/ico/favicon.png"/>
+    <link rel="fhir-logo" sizes="144x144" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="{{site.data.info.assets | escape}}assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="{{site.data.info.assets | escape}}assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
-{% assign label = {{site.data.pages[localPage].label}} | split: '.0' %}
-	  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism.js"></script>
-	  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism-fhirpath.js"></script>
-	  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"{{site.data.info.headingOffset}}{{label}}"}
-    h3,h4,h5,h6{--heading-prefix:"{{site.data.info.headingOffset}}{{site.data.pages[localPage].label}}"}</style>
+{% assign label = {{site.data.pages[localPage].label}} | split: '.0' | join: '' %}
+	  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/prism.js"></script>
+	  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="{{site.data.info.assets | escape}}assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"{{site.data.info.headingOffset | escape}}{{label | escape}}"}
+    h3,h4,h5,h6{--heading-prefix:"{{site.data.info.headingOffset | escape}}{{site.data.pages[localPage].label | escape}}"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 {% if site.data.info.fcpspec == 'true' %}
         <div id="fcp-nav">
           <a id="fcp-logo" no-external="true" href="https://confluence.hl7.org/display/FCP/FCP+Specification+Registry">
-            <img height="60" alt="{{site.data.stringsBase[include.lang]['VisitFCP']}}" src="assets/images/fcp-logo.png"/>
+            <img height="60" alt="{{site.data.stringsBase[include.lang]['VisitFCP'] | escape_once}}" src="assets/images/fcp-logo.png"/>
           </a>
         </div>
 {% endif %}
@@ -71,15 +70,15 @@
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">{{site.data.fhir.ig.titlelang[include.lang] | escape_once}}</span>
             <br/>
-            <span style="display:inline-block;">{{site.data.fhir.ig.version}} - {{status}}
+            <span style="display:inline-block;">{{site.data.fhir.ig.version | escape}} - {{status | escape}}
 {% assign igId = site.data.fhir.ig.id | prepend: "ImplementationGuide/" %}
 {% for jurisdiction in site.data.resources[igId].jurisdictions %}
 {% if jurisdiction.flag %}
-  <img alt="{{jurisdiction.name}} {{site.data.stringsBase[include.lang]['CountryFlag']}}" src="../assets/images/{{jurisdiction.flag}}.svg" height="16" title="{{jurisdiction.name}}"/>
+  <img alt="{{jurisdiction.name | escape}} {{site.data.stringsBase[include.lang]['CountryFlag'] | escape_once}}" src="../assets/images/{{jurisdiction.flag | escape}}.svg" height="16" title="{{jurisdiction.name | escape}}"/>
 {% elsif jurisdiction.code %}
-  <span title="{{jurisdiction.name}}">{{jurisdiction.code}}</span>
+  <span title="{{jurisdiction.name | escape}}">{{jurisdiction.code | escape}}</span>
 {% else %}
-  {{jurisdiction.name}}
+  {{jurisdiction.name | escape}}
 {% endif %}
 {% endfor %}
             </span>
@@ -104,7 +103,7 @@
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="{{site.data.fhir.path}}index.html">FHIR</a>
+            <a class="navbar-brand hidden" href="{{site.data.fhir.path | escape}}index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
               {% include {{ include.lang }}/menu.xml %}
             </div>  <!-- /.nav-collapse -->
@@ -121,15 +120,15 @@
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          {{site.data.pages[localPage].breadcrumblang[include.lang]}}
+          {% comment %}Unescaped on purpose: breadcrumb HTML produced by the publisher{% endcomment %}{{site.data.pages[localPage].breadcrumblang[include.lang]}}
 {% if shownav == 'y' %}
           <span style="float: var(--ig-right);">
 {% if site.data.pages[localPage].previous %}
-            <a href="{{site.data.pages[localPage].previous}}">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</a> | 
+            <a href="{{site.data.pages[localPage].previous | escape}}">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</a> | 
 {% endif %}
-            <a href="#bottom">{{site.data.stringsBase[include.lang]['PageBottom']}}</a>
+            <a href="#bottom">{{site.data.stringsBase[include.lang]['PageBottom'] | escape_once}}</a>
 {% if site.data.pages[localPage].next %}
-          | <a href="{{site.data.pages[localPage].next}}">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</a>
+          | <a href="{{site.data.pages[localPage].next | escape}}">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</a>
 {% endif %}
           </span>
 {% endif %}

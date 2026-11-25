@@ -1,6 +1,6 @@
 {% assign notes = site.data.pages[localPage].notes %}
 {% if notes != null %}
-<h3>{{site.data.stringsBase[include.lang]['Notes']}}:</h3>
+<h3>{{site.data.stringsBase[include.lang]['Notes'] | escape_once}}:</h3>
 {% if site.data.pages[localPage].notes-type == 'xml' %}
 {% include {{include.lang}}/{{notes}} type=include.type id=include.id %}
 {% else %}
@@ -8,7 +8,7 @@
 {% include {{include.lang}}/{{notes}} type=include.type id=include.id %}
 {% endcapture %}
 <div style="display:inline-block" markdown="1">
-{{ note-content | markdownify }}
+{% comment %}Unescaped on purpose: notes page content, rendered as the page itself{% endcomment %}{{ note-content | markdownify }}
 </div>
 {% endif %}
 {% endif %}

@@ -10,12 +10,12 @@
 
 <a name="root"> </a>
 {% assign respath = site.data.resources[resource_].path %}
-<h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['DetailedDescriptions']}}</h2>
+<h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - {{site.data.stringsBase['{{[lang]}}']['DetailedDescriptions'] | escape_once}}</h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 
 {% assign modelTypeLower = modelType | downcase %}
 {% assign model = "{{[id]}} " | append: modelTypeLower %}
-<p>{{site.data.stringsBase['{{[lang]}}']['DefinitionsFor'] | replace: "%MODEL%", model}}</p>
+<p>{{site.data.stringsBase['{{[lang]}}']['DefinitionsFor'] | replace: "%MODEL%", model | escape_once}}</p>
 
   <!-- insert intro if present -->
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
@@ -24,14 +24,14 @@
     <ul>
 {% unless modelType == site.data.stringsBase[include.lang]['ResourceModel'] %}
       <li>
-        <a href="#tabs-key">{{site.data.stringsBase['{{[lang]}}']['KeyElementsTable']}}</a>
+        <a href="#tabs-key">{{site.data.stringsBase['{{[lang]}}']['KeyElementsTable'] | escape_once}}</a>
       </li>
 {% endunless %}
       <li>
-        <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['DifferentialTable']}}</a>
+        <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['DifferentialTable'] | escape_once}}</a>
       </li>
       <li>
-        <a href="#tabs-snap">{{site.data.stringsBase['{{[lang]}}']['SnapshotTable']}}</a>
+        <a href="#tabs-snap">{{site.data.stringsBase['{{[lang]}}']['SnapshotTable'] | escape_once}}</a>
       </li>
     </ul>
     <a name="tabs-key"> </a>

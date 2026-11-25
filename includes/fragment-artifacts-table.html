@@ -9,24 +9,24 @@
     - the behaviour (DataTables setup, filters, persisted view) lives in assets/js/artifacts-table.js.
 {% endcomment %}
 {% assign lang = page.path | split: "/" | first %}
-{%- assign groupingLabel = site.data.stringsBase[include.lang]['Grouping']    | default: 'Grouping' -%}
-{%- assign titleLabel    = site.data.stringsBase[include.lang]['Title']       | default: 'Title' -%}
-{%- assign idLabel       = site.data.stringsBase[include.lang]['Id']          | default: 'Id' -%}
-{%- assign typeLabel     = site.data.stringsBase[include.lang]['Type']        | default: 'Type' -%}
-{%- assign descLabel     = site.data.stringsBase[include.lang]['Description'] | default: 'Description' -%}
-{%- assign searchVerb    = site.data.stringsBase[include.lang]['Search']      | default: 'Search' -%}
+{%- assign groupingLabel = site.data.stringsBase[include.lang]['Grouping']    | default: 'Grouping' | escape_once -%}
+{%- assign titleLabel    = site.data.stringsBase[include.lang]['Title']       | default: 'Title' | escape_once -%}
+{%- assign idLabel       = site.data.stringsBase[include.lang]['Id']          | default: 'Id' | escape_once -%}
+{%- assign typeLabel     = site.data.stringsBase[include.lang]['Type']        | default: 'Type' | escape_once -%}
+{%- assign descLabel     = site.data.stringsBase[include.lang]['Description'] | default: 'Description' | escape_once -%}
+{%- assign searchVerb    = site.data.stringsBase[include.lang]['Search']      | default: 'Search' | escape_once -%}
 
 <link rel="stylesheet" href="assets/css/dataTables.min.css"/>
 <link rel="stylesheet" href="assets/css/dataTables.rowGroup.min.css"/>
 <link rel="stylesheet" href="assets/css/artifacts-table.css"/>
 
 <div data-fhir="generated">
-  <p>{{site.data.stringsBase[lang]['ArtifactsIntro']}}</p>
+  <p>{{site.data.stringsBase[lang]['ArtifactsIntro'] | escape_once}}</p>
   <xsl:if test="$globals='Y'">
     <a name="globals">
       <xsl:value-of select="' '"/>
     </a>
-    <h3>{{site.data.stringsBase[lang]['GlobalProfiles']}}</h3>
+    <h3>{{site.data.stringsBase[lang]['GlobalProfiles'] | escape_once}}</h3>
     {% assign globals = "globals-table-" | append: lang | append: ".xhtml" %}
     {% include {{globals}} %}
   </xsl:if>
@@ -34,31 +34,43 @@
     <a name="termparams">
       <xsl:value-of select="' '"/>
     </a>
-    <h3>{{site.data.stringsBase[lang]['TermParameters']}}</h3>
+    <h3>{{site.data.stringsBase[lang]['TermParameters'] | escape_once}}</h3>
     {% assign termparams = "expansion-params-" | append: lang | append: ".xhtml" %}
     {% include {{termparams}} %}
   </xsl:if>
 
   <a name="table"> </a>
-  <h3>{{site.data.stringsBase[lang]['ArtifactsTable']}}</h3>
+  <h3>{{site.data.stringsBase[lang]['ArtifactsTable'] | escape_once}}</h3>
   
+  {% comment %}
+    Static targets for Publisher link checking for ordinal artifact links; 
+    JavaScript filters the selected group when an ordinal fragment is followed. 
+    Targets stay outside DataTables so redraws cannot remove them.
+  {% endcomment %}
+{%- assign artifactGroups = site.data.artifactsTable | map: 'groupingPos' | uniq | sort -%}
+<div class="artifacts-group-anchors">
+  {%- for group in artifactGroups -%}
+    <a id="{{ forloop.index | escape }}" name="{{ forloop.index | escape }}"> </a>
+  {%- endfor -%}
+</div>
+
   <table id="artifactsTable" class="display" style="width:100%;border:solid;border-width:1px;" data-fhir="generated">
     <thead>
       <tr>
         <th></th>
-        <th>{{ groupingLabel }}</th>
-        <th>{{ titleLabel }}</th>
-        <th>{{ idLabel }}</th>
-        <th>{{ typeLabel }}</th>
-        <th>{{ descLabel }}</th>
+        <th>{{ groupingLabel | escape_once }}</th>
+        <th>{{ titleLabel | escape_once }}</th>
+        <th>{{ idLabel | escape_once }}</th>
+        <th>{{ typeLabel | escape_once }}</th>
+        <th>{{ descLabel | escape_once }}</th>
       </tr>
       <tr class="filters">
         <th></th>
         <th></th>
-        <th><input aria-label="Title Filter" type="text" data-col="n" placeholder="{{ searchVerb }} {{ titleLabel | downcase }}"/></th>
-        <th><input aria-label="Id Filter" type="text" data-col="i" placeholder="{{ searchVerb }} {{ idLabel | downcase }}"/></th>
+        <th><input aria-label="Title Filter" type="text" data-col="n" placeholder="{{ searchVerb | escape_once }} {{ titleLabel | downcase | escape_once }}"/></th>
+        <th><input aria-label="Id Filter" type="text" data-col="i" placeholder="{{ searchVerb | escape_once }} {{ idLabel | downcase | escape_once }}"/></th>
         <th id="filterCellType"></th>
-        <th><input aria-label="Description Filter" type="text" data-col="d" placeholder="{{ searchVerb }} {{ descLabel | downcase }}"/></th>
+        <th><input aria-label="Description Filter" type="text" data-col="d" placeholder="{{ searchVerb | escape_once }} {{ descLabel | downcase | escape_once }}"/></th>
       </tr>
     </thead>
   </table>

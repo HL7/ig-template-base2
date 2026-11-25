@@ -10,20 +10,20 @@
   <a name="root"> </a>
 
 {% assign respath = site.data.resources[resource_].path %}
-  <h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}
-{% if site.data.resources[resource_].experimental == true %}({{site.data.stringsBase['{{[lang]}}']['Experimental']}}){% endif %}
+  <h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}}
+{% if site.data.resources[resource_].experimental == true %}({{site.data.stringsBase['{{[lang]}}']['Experimental'] | escape_once}}){% endif %}
   </h2>
 
 {% include fragment-resourceTable.html lang="{{[lang]}}" %}
 
 {%if site.data.resources[resource_].description %}
 <div data-fhir="generated">
-{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
+{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
 </div>
 {% endif %}
 {%if site.data.resources[resource_].purpose %}
 <div data-fhir="generated">
-{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
+{% comment %}Unescaped on purpose: FHIR markdown, which may not contain HTML; the publisher checks it{% endcomment %}{{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
 </div>
 {% endif %}
   <!-- insert intro if present -->
@@ -35,7 +35,7 @@
 {% unless example %}
   {% if '{{[type]}}' == 'CapabilityStatement' %}
   <p>
-      <a href="../{{[id]}}.openapi.json" no-download="true">{{site.data.stringsBase['{{[lang]}}']['Swagger']}}</a> | <a href="../{{[id]}}.openapi.json" download>{{site.data.stringsBase['{{[lang]}}']['Download']}}</a>
+      <a href="../{{[id]}}.openapi.json" no-download="true">{{site.data.stringsBase['{{[lang]}}']['Swagger'] | escape_once}}</a> | <a href="../{{[id]}}.openapi.json" download>{{site.data.stringsBase['{{[lang]}}']['Download'] | escape_once}}</a>
   </p>
   {% endif %}
 {% endunless %}

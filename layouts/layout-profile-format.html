@@ -13,26 +13,26 @@
 {% endif %}
 
 {% include fragment-pagebegin.html lang="{{[lang]}}" %}
-<div style="counter-reset: section {{section}}" class="col-12">
+<div style="counter-reset: section {{section | escape}}" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='{{[type]}}' id='{{[id]}}' active=format lang="{{[lang]}}" %}
 
 <a name="root"> </a>
 {% assign formatUpper = format | upcase %}
 {% assign respath = site.data.resources[resource_].path %}
-<h2 id="root">{{modelType}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - 
+<h2 id="root">{{modelType | escape_once}}: {{site.data.pages[respath].titlelang['{{[lang]}}'] | escape_once}} - 
 {% if modelType == site.data.stringsBase['{{[lang]}}']['ResourceModel'] %}
-{{site.data.stringsBase['{{[lang]}}']['FormatResource'] | replace: "%FMT%", formatUpper}}
+{{site.data.stringsBase['{{[lang]}}']['FormatResource'] | replace: "%FMT%", formatUpper | escape_once}}
 {% else %}
-{{site.data.stringsBase['{{[lang]}}']['FormatProfile'] | replace: "%FMT%", formatUpper}}
+{{site.data.stringsBase['{{[lang]}}']['FormatProfile'] | replace: "%FMT%", formatUpper | escape_once}}
 {% endif %}
 </h2>
 {% include fragment-simpletable.html lang="{{[lang]}}" %}
 
 {% assign modelLower = modelType | downcase %}
-<p>{{site.data.stringsBase['{{[lang]}}']['FormatRep'] | replace: "%FMT%", formatUpper | replace: "%ID%", "{{[id]}}" | replace: "%TYPE%", modelLower}}</p>
+<p>{{site.data.stringsBase['{{[lang]}}']['FormatRep'] | replace: "%FMT%", formatUpper | replace: "%ID%", "{{[id]}}" | replace: "%TYPE%", modelLower | escape_once}}</p>
 
-<p><a href="{{[type]}}-{{[id]}}.{{format}}" no-download="true">Raw {{format}}</a> | <a href="{{[type]}}-{{[id]}}.{{format}}" download>Download</a></p>
+<p><a href="{{[type]}}-{{[id]}}.{{format | escape}}" no-download="true">Raw {{format | escape}}</a> | <a href="{{[type]}}-{{[id]}}.{{format | escape}}" download>Download</a></p>
 
   <!-- insert intro if present -->
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' lang="{{[lang]}}" %}
