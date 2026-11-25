@@ -115,6 +115,12 @@
         </resourcecount>
       </and>
     </condition>
+    <condition property="plantumlfiles.exist">
+      <or>
+        <isset property="ig.plantumlfiles.exist"/>
+        <isset property="template.plantumlfiles.exist"/>
+      </or>
+    </condition>
   </target>
   <target name="onGenerate.plantUml.ig" depends="check-plantumlfiles" if="ig.plantumlfiles.exist">
     <java jar="${ig.scripts}/plantuml.jar" fork="true" failonerror="true">
@@ -141,7 +147,14 @@
       <arg value="${ig.template}/images-source/**.plantuml"/>
     </java>
   </target>
-  <target name="onGenerate.plantUml" depends="onGenerate.plantUml.ig,onGenerate.plantUml.template"/>
+  <target name="onGenerate.plantUml.uniqueIds" depends="onGenerate.plantUml.ig,onGenerate.plantUml.template" if="plantumlfiles.exist">
+    <java sourcefile="${ig.scripts}/PlantUmlUniqueIds.java" fork="true" failonerror="true">
+      <arg value="${basedir}/${dir.temp.includes}"/>
+      <arg value="${basedir}/${folder.input}/images-source"/>
+      <arg value="${ig.template}/images-source"/>
+    </java>
+  </target>
+  <target name="onGenerate.plantUml" depends="onGenerate.plantUml.ig,onGenerate.plantUml.template,onGenerate.plantUml.uniqueIds"/>
   <target name="onGenerate.infoFile" depends="onGenerate.setup">
     <xslt in="${onGenerate.ig.source}xml" out="${ig.temp}/_data/info.json" style="${ig.scripts}/onGenerate.genJson.xslt"/>
   </target>
