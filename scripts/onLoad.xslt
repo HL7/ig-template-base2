@@ -242,6 +242,21 @@
       <xsl:with-param name="supplement" select="'Y'"/>
       <xsl:with-param name="extensionMode" select="$extensionMode"/>
     </xsl:call-template>
+    <!-- diagram sources (.plantuml) the publisher renders to svg in _includes -->
+    <xsl:call-template name="setParameter">
+      <xsl:with-param name="code" select="'path-image-source'"/>
+      <xsl:with-param name="system" select="$toolsSystem"/>
+      <xsl:with-param name="value" select="'input/images-source'"/>
+      <xsl:with-param name="supplement" select="'Y'"/>
+      <xsl:with-param name="extensionMode" select="$extensionMode"/>
+    </xsl:call-template>
+    <xsl:call-template name="setParameter">
+      <xsl:with-param name="code" select="'path-image-source'"/>
+      <xsl:with-param name="system" select="$toolsSystem"/>
+      <xsl:with-param name="value" select="'template/images-source'"/>
+      <xsl:with-param name="supplement" select="'Y'"/>
+      <xsl:with-param name="extensionMode" select="$extensionMode"/>
+    </xsl:call-template>
     <xsl:call-template name="setParameter">
       <xsl:with-param name="code" select="'path-qa'"/>
       <xsl:with-param name="system" select="$toolsSystem"/>

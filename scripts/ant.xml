@@ -98,50 +98,6 @@
     <loadfile property="translations" srcFile="${ig.template}/stringsBase.clean.xml" encoding="UTF-8"/>
     <loadfile property="artifactTranslations" srcFile="${ig.template}/stringsArtifacts.clean.xml" encoding="UTF-8"/>
   </target>
-  <target name="check-plantumlfiles">
-    <condition property="ig.plantumlfiles.exist">
-      <and>
-        <available type="dir" file="${basedir}/${folder.input}/images-source"/>
-        <resourcecount when="greater" count="0">
-          <fileset file="${basedir}/${folder.input}/images-source/**.plantuml"/>
-        </resourcecount>
-      </and>
-    </condition>
-    <condition property="template.plantumlfiles.exist">
-      <and>
-        <available type="dir" file="${ig.template}/images-source"/>
-        <resourcecount when="greater" count="0">
-          <fileset file="${ig.template}/images-source/**.plantuml"/>
-        </resourcecount>
-      </and>
-    </condition>
-  </target>
-  <target name="onGenerate.plantUml.ig" depends="check-plantumlfiles" if="ig.plantumlfiles.exist">
-    <java jar="${ig.scripts}/plantuml.jar" fork="true" failonerror="true">
-      <jvmarg line="-Dfile.encoding=UTF-8"/>
-      <!-- SANDBOX stops diagrams from reading local files or URLs (!include, !includeurl, %load_json, etc.) -->
-      <jvmarg line="-DPLANTUML_SECURITY_PROFILE=SANDBOX"/>
-      <arg value="-nometadata"/>
-      <arg value="-failfast2"/>
-      <arg value="-tsvg"/>
-      <arg value="-o"/>
-      <arg value="${basedir}/${dir.temp.includes}"/>
-      <arg value="${basedir}/${folder.input}/images-source/**.plantuml"/>
-    </java>
-  </target>
-  <target name="onGenerate.plantUml.template" depends="check-plantumlfiles" if="template.plantumlfiles.exist">
-    <java jar="${ig.scripts}/plantuml.jar" fork="true" failonerror="true">
-      <jvmarg line="-Dfile.encoding=UTF-8"/>
-      <jvmarg line="-DPLANTUML_SECURITY_PROFILE=SANDBOX"/>
-      <arg value="-nometadata"/>
-      <arg value="-failfast2"/>
-      <arg value="-tsvg"/>
-      <arg value="-o"/>
-      <arg value="${basedir}/${dir.temp.includes}"/>
-      <arg value="${ig.template}/images-source/**.plantuml"/>
-    </java>
-  </target>
-  <target name="onGenerate.plantUml" depends="onGenerate.plantUml.ig,onGenerate.plantUml.template"/>
   <target name="onGenerate.infoFile" depends="onGenerate.setup">
     <xslt in="${onGenerate.ig.source}xml" out="${ig.temp}/_data/info.json" style="${ig.scripts}/onGenerate.genJson.xslt"/>
   </target>
@@ -207,7 +163,7 @@
     <property name="onGenerate.artifacts.files" refid="onGenerate.artifacts.id"/>
     <property name="onGenerate.files" value="${onGenerate.artifacts.files}"/>
   </target>
-  <extension-point name="onGenerate.extend" depends="onGenerate.schemas,onGenerate.data,onGenerate.infoFile,onGenerate.processIncludes,onGenerate.artifactList,onGenerate.plantUml, onGenerate.copyDataFiles"/>
+  <extension-point name="onGenerate.extend" depends="onGenerate.schemas,onGenerate.data,onGenerate.infoFile,onGenerate.processIncludes,onGenerate.artifactList,onGenerate.copyDataFiles"/>
   <target name="onGenerate" depends="onGenerate.extend">
 <!--    <resources id="onGenerate.files.id">
       <fileset refid="onGenerate.artifacts.id"/>
